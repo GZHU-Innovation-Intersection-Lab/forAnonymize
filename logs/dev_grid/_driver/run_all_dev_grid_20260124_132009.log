@@ -1,0 +1,297 @@
+EXP_ROOT=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para
+SEED=1
+LIMIT=0
+TIMEOUT_SEC=9000
+MAX_WORKERS=6
+CLEAN_REP_STATE=0
+DATASETS=arc_challenge hellaswag winogrande mmlu humaneval mbpp gsm8k
+START_TS=20260124_132009
+
+=
+[DATASET] arc_challenge
+[TIME] 2026-01-24 13:20:09
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset arc_challenge --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/arc_challenge_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge
+Grid: dataset=arc_challenge seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Skip: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Skip: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[3/24] Skip: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[4/24] Skip: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[5/24] Skip: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[6/24] Skip: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[7/24] Skip: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[8/24] Skip: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[9/24] Skip: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[10/24] Skip: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[11/24] Skip: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[12/24] Skip: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[13/24] Skip: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[14/24] Skip: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[15/24] Skip: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[16/24] Skip: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[17/24] Skip: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[18/24] Skip: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[19/24] Skip: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[20/24] Skip: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[21/24] Skip: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[22/24] Skip: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[23/24] Skip: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[24/24] Skip: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 0.0s
+[DONE] arc_challenge
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge
+[CSV_COUNT] 25
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/arc_challenge_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/arc_challenge_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/arc_challenge_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/arc_challenge_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/arc_challenge_best.json
+[BEST] arc_challenge: acc=0.9744 cost=0.000021 lat=1.42 t1=0.85 t2=0.67 wq=0.25 wr=0.6 wc=0.15 mr=0.0
+=
+[DATASET] hellaswag
+[TIME] 2026-01-24 13:20:09
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset hellaswag --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/hellaswag_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/hellaswag --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/hellaswag
+Grid: dataset=hellaswag seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/hellaswag log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/hellaswag rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Skip: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Skip: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[3/24] Skip: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[4/24] Skip: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[5/24] Skip: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[6/24] Skip: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[7/24] Skip: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[8/24] Skip: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[9/24] Skip: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[10/24] Skip: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[11/24] Skip: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[12/24] Skip: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[13/24] Skip: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[14/24] Skip: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[15/24] Skip: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[16/24] Skip: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[17/24] Skip: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[18/24] Skip: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[19/24] Skip: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[20/24] Skip: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[21/24] Skip: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[22/24] Skip: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[23/24] Skip: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[24/24] Skip: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 0.0s
+[DONE] hellaswag
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/hellaswag
+[CSV_COUNT] 24
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/hellaswag
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/hellaswag_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/hellaswag_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/hellaswag_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/hellaswag_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/hellaswag_best.json
+[BEST] hellaswag: acc=0.8800 cost=0.002266 lat=10.38 t1=0.95 t2=1.0 wq=0.25 wr=0.6 wc=0.15 mr=0.0
+=
+[DATASET] winogrande
+[TIME] 2026-01-24 13:20:09
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset winogrande --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/winogrande_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/winogrande
+Grid: dataset=winogrande seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/winogrande rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[7/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[8/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[9/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[10/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[11/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[12/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[14/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[17/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 1384.8s
+[DONE] winogrande
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande
+[CSV_COUNT] 24
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/winogrande
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/winogrande_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/winogrande_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/winogrande_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/winogrande_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/winogrande_best.json
+[BEST] winogrande: acc=0.9444 cost=0.000945 lat=4.45 t1=0.95 t2=1.0 wq=0.25 wr=0.25 wc=0.5 mr=0.0
+=
+[DATASET] mmlu
+[TIME] 2026-01-24 13:43:15
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset mmlu --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/mmlu_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mmlu --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mmlu
+Grid: dataset=mmlu seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mmlu log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mmlu rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[7/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[8/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[9/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[10/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[11/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[12/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[14/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[17/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+All done in 1651.0s
+[DONE] mmlu
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mmlu
+[CSV_COUNT] 24
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mmlu
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/mmlu_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/mmlu_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/mmlu_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/mmlu_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/mmlu_best.json
+[BEST] mmlu: acc=0.9100 cost=0.001069 lat=5.91 t1=0.95 t2=0.67 wq=0.6 wr=0.25 wc=0.15 mr=0.0
+=
+[DATASET] humaneval
+[TIME] 2026-01-24 14:10:46
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset humaneval --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/humaneval_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/humaneval --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/humaneval
+Grid: dataset=humaneval seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/humaneval log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/humaneval rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[7/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[8/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[9/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[10/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[11/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[12/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[14/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[17/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 409.8s
+[DONE] humaneval
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/humaneval
+[CSV_COUNT] 24
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/humaneval
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/humaneval_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/humaneval_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/humaneval_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/humaneval_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/humaneval_best.json
+[BEST] humaneval: acc=1.0000 cost=0.000987 lat=8.21 t1=0.95 t2=1.0 wq=0.25 wr=0.6 wc=0.15 mr=0.0
+=
+[DATASET] mbpp
+[TIME] 2026-01-24 14:18:01
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset mbpp --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/mbpp_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mbpp --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mbpp
+Grid: dataset=mbpp seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mbpp log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mbpp rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[7/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[8/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[9/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[10/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[11/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[12/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[14/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[17/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 1500.2s
+[DONE] mbpp
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mbpp
+[CSV_COUNT] 24
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/mbpp
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/mbpp_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/mbpp_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/mbpp_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/mbpp_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/mbpp_best.json
+[BEST] mbpp: acc=0.9459 cost=0.003653 lat=15.14 t1=0.95 t2=0.67 wq=0.25 wr=0.6 wc=0.15 mr=0.0
+=
+[DATASET] gsm8k
+[TIME] 2026-01-24 14:43:58
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset gsm8k --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/gsm8k_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/gsm8k --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/gsm8k
+Grid: dataset=gsm8k seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/gsm8k log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/gsm8k rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[7/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[8/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[9/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[10/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[11/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[12/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[14/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[17/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+All done in 11025.5s
+[DONE] gsm8k
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/gsm8k
+[CSV_COUNT] 26
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/gsm8k
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/gsm8k_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/gsm8k_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/gsm8k_20260124_132009.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/gsm8k_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/gsm8k_best.json
+[BEST] gsm8k: acc=0.9000 cost=0.003718 lat=13.13 t1=0.75 t2=0.67 wq=0.25 wr=0.6 wc=0.15 mr=0.0
+ALL DONE. MASTER_LOG=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/run_all_dev_grid_20260124_132009.log

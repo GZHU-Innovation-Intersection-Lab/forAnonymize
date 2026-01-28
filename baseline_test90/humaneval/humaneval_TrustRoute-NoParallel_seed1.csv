@@ -1,0 +1,1668 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/163,TrustRoute-NoParallel,1,"```python
+def generate_integers(a, b):
+    start, end = min(a, b), max(a, b)
+    return [i for i in range(start, end + 1) if i % 2 == 0]
+```",5.745e-05,0.971160888671875,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/84,TrustRoute-NoParallel,1,"```python
+def solve(N):
+    digit_sum = sum(int(digit) for digit in str(N))
+    return bin(digit_sum)[2:]
+```",4.92e-05,0.8700456619262695,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/156,TrustRoute-NoParallel,1,"```python
+def int_to_mini_roman(number):
+    roman_numerals = [
+        (1000, 'm'), (900, 'cm'), (500, 'd'), (400, 'cd'),
+        (100, 'c'), (90, 'xc'), (50, 'l'), (40, 'xl'),
+        (10, 'x'), (9, 'ix'), (5, 'v'), (4, 'iv'), (1, 'i')
+    ]
+    
+    result = []
+    for value, numeral in roman_numerals:
+        while number >= value:
+            result.append(numeral)
+            number -= value
+            
+    return ''.join(result)
+
+# Example usage:
+# print(int_to_mini_roman(19))  # Output: 'xix'
+# print(int_to_mini_roman(152)) # Output: 'clii'
+# print(int_to_mini_roman(426)) # Output: 'cdxxvi'
+```",0.0001481999999999,2.9387125968933105,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/119,TrustRoute-NoParallel,1,"Here's a concise solution for the `match_parens` function:
+
+```python
+def match_parens(lst):
+    a, b = lst
+    balance_a = a.count('(') - a.count(')')
+    balance_b = b.count('(') - b.count(')')
+    
+    return 'Yes' if balance_a + balance_b == 0 and balance_a >= 0 and balance_b >= 0 else 'No'
+
+# Example usage:
+print(match_parens(['()(', ')']))  # Output: 'Yes'
+print(match_parens([')', ')']))     # Output: 'No'
+```
+
+This function checks the balance of parentheses in both strings and determines if they can be concatenated to form a good string.",0.0001241999999999,2.146230459213257,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/37,TrustRoute-NoParallel,1,"Here's a concise implementation of the `sort_even` function:
+
+```python
+def sort_even(l: list):
+    even_indices = sorted(l[i] for i in range(0, len(l), 2))
+    result = l[:]
+    result[::2] = even_indices
+    return result
+
+# Example usage
+print(sort_even([1, 2, 3]))  # Output: [1, 2, 3]
+print(sort_even([5, 6, 3, 4]))  # Output: [3, 6, 5, 4]
+```",0.0001029,1.52008056640625,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/116,TrustRoute-NoParallel,1,"```python
+def sort_array(arr):
+    return sorted(arr, key=lambda x: (bin(x).count('1'), x))
+
+# Example usage:
+print(sort_array([1, 5, 2, 3, 4]))  # Output: [1, 2, 3, 4, 5]
+print(sort_array([-2, -3, -4, -5, -6]))  # Output: [-6, -5, -4, -3, -2]
+print(sort_array([1, 0, 2, 3, 4]))  # Output: [0, 1, 2, 3, 4]
+```",0.0001213499999999,1.7774033546447754,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/31,TrustRoute-NoParallel,1,"Here is a concise implementation of the `is_prime` function:
+
+```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```",6.63e-05,1.2297227382659912,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/4,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    mean = sum(numbers) / len(numbers)
+    return sum(abs(x - mean) for x in numbers) / len(numbers)
+```",5.759999999999999e-05,0.963871955871582,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/162,TrustRoute-NoParallel,1,"```python
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    return hashlib.md5(text.encode()).hexdigest()
+```",4.185e-05,0.993556261062622,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/103,TrustRoute-NoParallel,1,"```python
+def rounded_avg(n, m):
+    if n > m:
+        return -1
+    avg = round((n + m) / 2)
+    return bin(avg)
+```",5.505e-05,0.9791543483734132,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/53,TrustRoute-NoParallel,1,"```python
+def add(x: int, y: int) -> int:
+    return x + y
+```",3.18e-05,0.7595245838165283,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/64,TrustRoute-NoParallel,1,"```python
+def vowels_count(s):
+    vowels = 'aeiou'
+    count = sum(1 for char in s.lower() if char in vowels)
+    if s and s[-1].lower() == 'y':
+        count += 1
+    return count
+
+# Test cases
+print(vowels_count(""abcde""))  # 2
+print(vowels_count(""ACEDY""))  # 3
+print(vowels_count(""sky""))     # 1
+print(vowels_count(""rhythm""))  # 0
+print(vowels_count(""queue""))   # 4
+print(vowels_count(""Y""))       # 1
+print(vowels_count(""""))         # 0
+```",0.0001169999999999,1.752333641052246,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/52,TrustRoute-NoParallel,1,"```python
+def below_threshold(l: list, t: int) -> bool:
+    return all(x < t for x in l)
+```",3.929999999999999e-05,0.8611316680908203,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/100,TrustRoute-NoParallel,1,"```python
+def make_a_pile(n):
+    return [n + 2 * i for i in range(n)]
+```",4.5449999999999993e-05,0.8914048671722412,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/155,TrustRoute-NoParallel,1,"Here is a concise solution for the `even_odd_count` function:
+
+```python
+def even_odd_count(num):
+    num_str = str(abs(num))
+    even_count = sum(1 for digit in num_str if int(digit) % 2 == 0)
+    odd_count = len(num_str) - even_count
+    return (even_count, odd_count)
+```
+
+This function counts the even and odd digits in the absolute value of the given integer and returns them as a tuple.",8.204999999999999e-05,1.29695463180542,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/26,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    count = {}
+    for number in numbers:
+        count[number] = count.get(number, 0) + 1
+    return [number for number in numbers if count[number] == 1]
+```",6.03e-05,1.2939772605895996,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/133,TrustRoute-NoParallel,1,"```python
+import math
+
+def sum_squares(lst):
+    return sum(math.ceil(x) ** 2 for x in lst)
+```",5.039999999999999e-05,0.789433479309082,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/93,TrustRoute-NoParallel,1,"Here's a concise implementation of the `encode` function as per your requirements:
+
+```python
+def encode(message):
+    vowels = 'aeiouAEIOU'
+    encoded_message = []
+    
+    for char in message:
+        if char.isalpha():
+            if char in vowels:
+                new_char = chr(ord(char) + 2)
+                encoded_message.append(new_char)
+            else:
+                encoded_message.append(char.swapcase())
+        else:
+            encoded_message.append(char)
+    
+    return ''.join(encoded_message)
+
+# Example usage
+print(encode('test'))  # 'TGST'
+print(encode('This is a message'))  # 'tHKS KS C MGSSCGG'
+```",0.0001115999999999,1.7092223167419434,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/47,TrustRoute-NoParallel,1,"```python
+def median(l: list):
+    l.sort()
+    n = len(l)
+    mid = n // 2
+    return (l[mid] + l[mid - 1]) / 2 if n % 2 == 0 else l[mid]
+```",5.489999999999999e-05,0.9820618629455566,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/1,TrustRoute-NoParallel,1,"Here's a concise solution for the `separate_paren_groups` function:
+
+```python
+from typing import List
+
+def separate_paren_groups(paren_string: str) -> List[str]:
+    groups = []
+    current_group = []
+    balance = 0
+
+    for char in paren_string.replace("" "", """"):
+        if char == '(':
+            if balance == 0 and current_group:
+                groups.append(''.join(current_group))
+                current_group = []
+            current_group.append(char)
+            balance += 1
+        elif char == ')':
+            current_group.append(char)
+            balance -= 1
+            if balance == 0:
+                groups.append(''.join(current_group))
+                current_group = []
+
+    return groups
+```
+
+This function processes the input string, maintaining balance to separate the groups of parentheses and returns them as a list.",0.0001309499999999,1.892497539520264,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/3,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def below_zero(operations: List[int]) -> bool:
+    balance = 0
+    for operation in operations:
+        balance += operation
+        if balance < 0:
+            return True
+    return False
+```",5.94e-05,0.9597604274749756,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/48,TrustRoute-NoParallel,1,"```python
+def is_palindrome(text: str) -> bool:
+    return text == text[::-1]
+```",3.45e-05,1.8222098350524905,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/57,TrustRoute-NoParallel,1,"```python
+def monotonic(l: list) -> bool:
+    return all(l[i] <= l[i + 1] for i in range(len(l) - 1)) or all(l[i] >= l[i + 1] for i in range(len(l) - 1))
+```",5.955e-05,1.2141263484954834,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/72,TrustRoute-NoParallel,1,"```python
+def will_it_fly(q, w):
+    return q == q[::-1] and sum(q) <= w
+```",6.06e-05,1.0358119010925293,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/140,TrustRoute-NoParallel,1,"Here's a concise solution for the `fix_spaces` function:
+
+```python
+import re
+
+def fix_spaces(text):
+    text = re.sub(r'\s{3,}', '-', text)  # Replace 3 or more spaces with '-'
+    text = text.replace(' ', '_')         # Replace remaining spaces with '_'
+    return text
+```
+
+This function uses regular expressions to handle the replacement of spaces efficiently.",7.695e-05,1.23453688621521,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/114,TrustRoute-NoParallel,1,"Here is a concise solution for the `minSubArraySum` function:
+
+```python
+def minSubArraySum(nums):
+    min_sum = float('inf')
+    current_sum = 0
+    
+    for num in nums:
+        current_sum += num
+        min_sum = min(min_sum, current_sum)
+        if current_sum > 0:
+            current_sum = 0
+            
+    return min_sum
+```
+
+This function iterates through the array, maintaining the current sum of the sub-array and updating the minimum sum found. If the current sum becomes positive, it resets to zero to start a new sub-array.",9.885e-05,1.472175121307373,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/130,TrustRoute-NoParallel,1,"Here is a concise implementation of the Tribonacci sequence based on the provided rules:
+
+```python
+def tri(n):
+    sequence = []
+    
+    for i in range(n + 1):
+        if i == 1:
+            sequence.append(3)
+        elif i % 2 == 0:
+            sequence.append(1 + i / 2)
+        else:
+            if i == 3:
+                sequence.append(sequence[2] + sequence[1] + sequence[4])
+            else:
+                sequence.append(sequence[i - 1] + sequence[i - 2] + sequence[i + 1])
+    
+    return sequence
+
+# Example usage
+print(tri(3))  # Output: [1, 3, 2, 8]
+```
+
+Note: The implementation has a logical error in handling odd indices and the base cases. The correct implementation should properly handle the recursive nature of odd indices. Here's the corrected version:
+
+```python
+def tri(n):
+    sequence = [1]  # tri(0) = 1
+
+    for i in range(1, n + 1):
+        if i == 1:
+            sequence.append(3)  # tri(1) = 3
+        elif i % 2 == 0:
+            sequence.append(1 + i / 2)  # Even case
+        else:
+            # Odd case: tri(n) = tri(n-1) + tri(n-2) + tri(n+1)
+            tri_n = sequence[i - 1] + sequence[i - 2]
+            if i + 1 < len(sequence):
+                tri_n += sequence[i + 1]
+            sequence.append(tri_n)
+
+    return sequence
+
+# Example usage
+print(tri(3))  # Output: [1, 3, 2, 8]
+```
+
+This version correctly calculates the Tribonacci sequence according to the specified rules.",0.00028335,4.666170597076416,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/152,TrustRoute-NoParallel,1,"Here's a concise solution for the `compare` function:
+
+```python
+def compare(game, guess):
+    return [abs(g - s) for g, s in zip(guess, game)]
+```
+
+This function calculates the absolute difference between each score and guess, returning a list of those differences. If the guess is correct, the difference will be 0.",8.834999999999998e-05,1.7247798442840576,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/137,TrustRoute-NoParallel,1,"```python
+def compare_one(a, b):
+    def parse_value(value):
+        if isinstance(value, str):
+            value = value.replace(',', '.')
+        return float(value) if isinstance(value, (int, float, str)) and value.replace('.', '', 1).isdigit() else value
+
+    a_parsed = parse_value(a)
+    b_parsed = parse_value(b)
+
+    if a_parsed == b_parsed:
+        return None
+    return a if a_parsed > b_parsed else b
+```",9.54e-05,1.3381056785583496,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/92,TrustRoute-NoParallel,1,"```python
+def any_int(x, y, z):
+    if all(isinstance(i, int) for i in (x, y, z)):
+        return x == y + z or y == x + z or z == x + y
+    return False
+```",6.39e-05,0.9615731239318848,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/41,TrustRoute-NoParallel,1,"```python
+def car_race_collision(n: int) -> int:
+    return n * n
+
+# Example usage:
+# print(car_race_collision(3))  # Output: 9
+```",5.759999999999999e-05,0.9429082870483398,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/87,TrustRoute-NoParallel,1,"```python
+def get_row(lst, x):
+    coordinates = []
+    for i, row in enumerate(lst):
+        for j, value in enumerate(row):
+            if value == x:
+                coordinates.append((i, j))
+    coordinates.sort(key=lambda coord: (coord[0], -coord[1]))
+    return coordinates
+```",8.969999999999998e-05,1.0449607372283936,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/18,TrustRoute-NoParallel,1,"Here is a concise solution for the `how_many_times` function:
+
+```python
+def how_many_times(string: str, substring: str) -> int:
+    count = start = 0
+    while start < len(string):
+        start = string.find(substring, start)
+        if start == -1:
+            break
+        count += 1
+        start += 1
+    return count
+```",7.365e-05,1.2958157062530518,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/25,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def factorize(n: int) -> List[int]:
+    factors = []
+    divisor = 2
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+    return factors
+```",6.96e-05,1.0658118724822998,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/24,TrustRoute-NoParallel,1,"```python
+def largest_divisor(n: int) -> int:
+    for i in range(n // 2, 0, -1):
+        if n % i == 0:
+            return i
+```",4.424999999999999e-05,0.901153326034546,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/95,TrustRoute-NoParallel,1,"```python
+def check_dict_case(d):
+    if not d:
+        return False
+    keys = d.keys()
+    return all(isinstance(k, str) for k in keys) and (
+        all(k.islower() for k in keys) or all(k.isupper() for k in keys)
+    )
+```",7.439999999999999e-05,1.1025981903076172,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/71,TrustRoute-NoParallel,1,"```python
+import math
+
+def triangle_area(a, b, c):
+    if a + b > c and a + c > b and b + c > a:
+        s = (a + b + c) / 2
+        area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+        return round(area, 2)
+    return -1
+```",8.039999999999999e-05,1.100419044494629,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/62,TrustRoute-NoParallel,1,"```python
+def derivative(xs: list):
+    return [i * coeff for i, coeff in enumerate(xs) if i > 0]
+```",4.41e-05,0.9235820770263672,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/148,TrustRoute-NoParallel,1,"```python
+def bf(planet1, planet2):
+    planets = [""Mercury"", ""Venus"", ""Earth"", ""Mars"", ""Jupiter"", ""Saturn"", ""Uranus"", ""Neptune""]
+    
+    if planet1 not in planets or planet2 not in planets:
+        return ()
+    
+    idx1 = planets.index(planet1)
+    idx2 = planets.index(planet2)
+    
+    start, end = sorted([idx1, idx2])
+    return tuple(planets[start + 1:end])
+
+# Example usage:
+# print(bf(""Jupiter"", ""Neptune""))  # (""Saturn"", ""Uranus"")
+# print(bf(""Earth"", ""Mercury""))    # (""Venus"")
+# print(bf(""Mercury"", ""Uranus""))   # (""Venus"", ""Earth"", ""Mars"", ""Jupiter"", ""Saturn"")
+```",0.0001545,2.4701571464538574,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/20,TrustRoute-NoParallel,1,"```python
+from typing import List, Tuple
+
+def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+    numbers.sort()
+    closest_pair = (numbers[0], numbers[1])
+    min_diff = abs(numbers[1] - numbers[0])
+    
+    for i in range(1, len(numbers) - 1):
+        diff = abs(numbers[i + 1] - numbers[i])
+        if diff < min_diff:
+            min_diff = diff
+            closest_pair = (numbers[i], numbers[i + 1])
+    
+    return closest_pair
+```",0.0001088999999999,1.487943410873413,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/109,TrustRoute-NoParallel,1,"Here is a concise solution for the problem:
+
+```python
+def move_one_ball(arr):
+    if not arr:
+        return True
+    
+    n = len(arr)
+    count = 0
+    
+    for i in range(n):
+        if arr[i] > arr[(i + 1) % n]:
+            count += 1
+            
+    return count <= 1
+```
+
+This function checks how many times the order of the array is disrupted, and if it is disrupted more than once, it returns `False`. Otherwise, it returns `True`.",0.0001224,1.6271512508392334,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/56,TrustRoute-NoParallel,1,"```python
+def correct_bracketing(brackets: str) -> bool:
+    balance = 0
+    for char in brackets:
+        if char == '<':
+            balance += 1
+        elif char == '>':
+            balance -= 1
+        if balance < 0:
+            return False
+    return balance == 0
+```",6.659999999999999e-05,1.0192852020263672,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/104,TrustRoute-NoParallel,1,"```python
+def unique_digits(x):
+    return sorted(num for num in x if all(int(d) % 2 != 0 for d in str(num)))
+```",4.56e-05,0.8722953796386719,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/65,TrustRoute-NoParallel,1,"```python
+def circular_shift(x, shift):
+    s = str(x)
+    n = len(s)
+    shift = shift % n
+    if shift == 0:
+        return s
+    return s[-shift:] + s[:-shift]
+
+# Example usage:
+# print(circular_shift(12, 1))  # ""21""
+# print(circular_shift(12, 2))  # ""12""
+```",7.514999999999998e-05,1.258037805557251,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/14,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def all_prefixes(string: str) -> List[str]:
+    return [string[:i] for i in range(1, len(string) + 1)]
+```",4.395e-05,0.8540608882904053,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/11,TrustRoute-NoParallel,1,"```python
+def string_xor(a: str, b: str) -> str:
+    return ''.join('1' if x != y else '0' for x, y in zip(a, b))
+
+# Example usage
+# print(string_xor('010', '110'))  # Output: '100'
+```",6.12e-05,1.1545748710632324,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/108,TrustRoute-NoParallel,1,"```python
+def count_nums(arr):
+    def sum_of_digits(n):
+        return sum(int(d) if n >= 0 else -int(d) for d in str(abs(n)))
+
+    return sum(1 for num in arr if sum_of_digits(num) > 0)
+
+# Example usage:
+# print(count_nums([]))  # 0
+# print(count_nums([-1, 11, -11]))  # 1
+# print(count_nums([1, 1, 2]))  # 3
+```",9.404999999999998e-05,1.4882802963256836,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/139,TrustRoute-NoParallel,1,"Here's a concise implementation of the `special_factorial` function:
+
+```python
+def special_factorial(n):
+    from math import factorial
+    return factorial(n) * special_factorial(n - 1) if n > 1 else 1
+
+# Example usage:
+# print(special_factorial(4))  # Output: 288
+```
+
+This function calculates the Brazilian factorial recursively by multiplying the factorial of `n` with the special factorial of `n-1`, stopping when `n` is 1.",8.849999999999998e-05,1.2235236167907717,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/70,TrustRoute-NoParallel,1,"Here's a concise implementation of the `strange_sort_list` function:
+
+```python
+def strange_sort_list(lst):
+    if not lst:
+        return []
+    
+    lst.sort()
+    result = []
+    left, right = 0, len(lst) - 1
+    
+    while left <= right:
+        if left == right:
+            result.append(lst[left])
+        else:
+            result.append(lst[left])
+            result.append(lst[right])
+        left += 1
+        right -= 1
+    
+    return result
+```
+
+This function sorts the list and then alternates between the smallest and largest remaining elements to create the ""strange"" order.",0.00010725,1.4704339504241943,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/39,TrustRoute-NoParallel,1,"Here's a concise implementation of the `prime_fib` function:
+
+```python
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        a, b = b, a + b
+        yield a
+
+def prime_fib(n: int):
+    fib_gen = fibonacci_generator()
+    count = 0
+    for fib in fib_gen:
+        if is_prime(fib):
+            count += 1
+            if count == n:
+                return fib
+
+# Example usage
+if __name__ == ""__main__"":
+    print(prime_fib(1))  # 2
+    print(prime_fib(2))  # 3
+    print(prime_fib(3))  # 5
+    print(prime_fib(4))  # 13
+    print(prime_fib(5))  # 89
+```
+
+This code defines a function to check for prime numbers, a generator for Fibonacci numbers, and the main function to find the n-th Fibonacci prime.",0.00018405,2.587512254714966,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/12,TrustRoute-NoParallel,1,"```python
+from typing import List, Optional
+
+def longest(strings: List[str]) -> Optional[str]:
+    if not strings:
+        return None
+    return max(strings, key=len)
+```",4.86e-05,1.0392491817474363,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/36,TrustRoute-NoParallel,1,"```python
+def fizz_buzz(n: int) -> int:
+    count = 0
+    for i in range(n):
+        if (i % 11 == 0 or i % 13 == 0) and '7' in str(i):
+            count += str(i).count('7')
+    return count
+```",6.33e-05,1.3300046920776367,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/160,TrustRoute-NoParallel,1,"```python
+def do_algebra(operator, operand):
+    expression = str(operand[0])
+    for op, num in zip(operator, operand[1:]):
+        expression += f"" {op} {num}""
+    return eval(expression)
+
+# Example usage:
+# operator = ['+', '*', '-']
+# operand = [2, 3, 4, 5]
+# result = do_algebra(operator, operand)  # result will be 9
+```",9.945e-05,1.2471966743469238,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/46,TrustRoute-NoParallel,1,"```python
+def fib4(n: int) -> int:
+    if n == 0: return 0
+    if n == 1: return 0
+    if n == 2: return 2
+    if n == 3: return 0
+    
+    fib = [0] * (n + 1)
+    fib[2] = 2
+    
+    for i in range(4, n + 1):
+        fib[i] = fib[i - 1] + fib[i - 2] + fib[i - 3] + fib[i - 4]
+    
+    return fib[n]
+
+# Example usage:
+# print(fib4(5))  # Output: 4
+# print(fib4(6))  # Output: 8
+# print(fib4(7))  # Output: 14
+```",0.00014355,1.763085126876831,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/96,TrustRoute-NoParallel,1,"```python
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def count_up_to(n):
+    return [i for i in range(2, n) if is_prime(i)]
+```",7.979999999999999e-05,1.131068468093872,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/22,TrustRoute-NoParallel,1,"```python
+from typing import List, Any
+
+def filter_integers(values: List[Any]) -> List[int]:
+    return [value for value in values if isinstance(value, int)]
+```",4.74e-05,0.8124599456787109,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/146,TrustRoute-NoParallel,1,"Here's a concise solution for the `specialFilter` function:
+
+```python
+def specialFilter(nums):
+    def is_odd_digit(n):
+        s = str(abs(n))
+        return int(s[0]) % 2 == 1 and int(s[-1]) % 2 == 1
+
+    return sum(1 for num in nums if num > 10 and is_odd_digit(num))
+
+# Example usage:
+print(specialFilter([15, -73, 14, -15]))  # Output: 1
+print(specialFilter([33, -2, -3, 45, 21, 109]))  # Output: 2
+```",0.0001113,1.5800220966339111,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/110,TrustRoute-NoParallel,1,"```python
+def exchange(lst1, lst2):
+    has_even_lst1 = any(x % 2 == 0 for x in lst1)
+    has_even_lst2 = any(x % 2 == 0 for x in lst2)
+    return ""YES"" if has_even_lst1 or has_even_lst2 else ""NO""
+```",8.219999999999999e-05,1.2413835525512695,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/55,TrustRoute-NoParallel,1,"```python
+def fib(n: int) -> int:
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+```",6.345e-05,1.551588773727417,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/80,TrustRoute-NoParallel,1,"Here's a concise solution for the `is_happy` function:
+
+```python
+def is_happy(s):
+    if len(s) < 3:
+        return False
+    for i in range(len(s) - 2):
+        if len(set(s[i:i+3])) < 3:
+            return False
+    return True
+```",7.034999999999999e-05,1.2989184856414795,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/94,TrustRoute-NoParallel,1,"```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(n))
+
+def skjkasdkd(lst):
+    largest_prime = max((x for x in lst if is_prime(x)), default=None)
+    return sum_of_digits(largest_prime) if largest_prime is not None else 0
+```",0.0001248,1.4147498607635498,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/6,TrustRoute-NoParallel,1,"Here's a concise solution for the `parse_nested_parens` function:
+
+```python
+from typing import List
+
+def parse_nested_parens(paren_string: str) -> List[int]:
+    def max_nesting(s: str) -> int:
+        max_depth = current_depth = 0
+        for char in s:
+            if char == '(':
+                current_depth += 1
+                max_depth = max(max_depth, current_depth)
+            elif char == ')':
+                current_depth -= 1
+        return max_depth
+
+    return [max_nesting(group) for group in paren_string.split()]
+```
+
+This function calculates the maximum depth of nested parentheses for each group in the input string.",0.0001109999999999,1.9368507862091064,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/86,TrustRoute-NoParallel,1,"Here is a concise solution for the `anti_shuffle` function:
+
+```python
+def anti_shuffle(s):
+    return ' '.join(''.join(sorted(word)) for word in s.split(' '))
+
+# Example usage:
+print(anti_shuffle('Hi'))            # 'Hi'
+print(anti_shuffle('hello'))         # 'ehllo'
+print(anti_shuffle('Hello World!!!')) # 'Hello !!!Wdlor'
+```
+
+This function splits the input string into words, sorts the characters of each word, and then joins them back together while preserving the original order of words and spaces.",0.0001006499999999,1.6759366989135742,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/8,TrustRoute-NoParallel,1,"```python
+from typing import List, Tuple
+
+def sum_product(numbers: List[int]) -> Tuple[int, int]:
+    total_sum = sum(numbers)
+    total_product = 1 if numbers else 1
+    for number in numbers:
+        total_product *= number
+    return total_sum, total_product
+```",6.48e-05,1.0044183731079102,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/49,TrustRoute-NoParallel,1,"```python
+def modp(n: int, p: int) -> int:
+    return pow(2, n, p)
+```",4.275e-05,0.7803463935852051,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/107,TrustRoute-NoParallel,1,"```python
+def even_odd_palindrome(n):
+    def is_palindrome(x):
+        return str(x) == str(x)[::-1]
+
+    even_count = 0
+    odd_count = 0
+
+    for i in range(1, n + 1):
+        if is_palindrome(i):
+            if i % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+
+    return (even_count, odd_count)
+```",0.0001021499999999,1.55940842628479,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/7,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+    return [s for s in strings if substring in s]
+```",4.785e-05,0.9461872577667236,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/106,TrustRoute-NoParallel,1,"```python
+def f(n):
+    result = []
+    for i in range(1, n + 1):
+        if i % 2 == 0:
+            factorial = 1
+            for j in range(1, i + 1):
+                factorial *= j
+            result.append(factorial)
+        else:
+            result.append(sum(range(1, i + 1)))
+    return result
+```",8.025e-05,1.371617078781128,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/76,TrustRoute-NoParallel,1,"```python
+def is_simple_power(x, n):
+    if n <= 1:
+        return x == n
+    power = 1
+    while n ** power < x:
+        power += 1
+    return n ** power == x
+```",6.314999999999999e-05,1.0334570407867432,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/112,TrustRoute-NoParallel,1,"```python
+def reverse_delete(s, c):
+    result = ''.join(char for char in s if char not in c)
+    is_palindrome = result == result[::-1]
+    return result, is_palindrome
+```",6.225e-05,0.9435620307922364,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/121,TrustRoute-NoParallel,1,"```python
+def solution(lst):
+    return sum(lst[i] for i in range(0, len(lst), 2) if lst[i] % 2 != 0)
+```",4.74e-05,0.9146888256072998,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/145,TrustRoute-NoParallel,1,"Here is a concise solution for the `order_by_points` function:
+
+```python
+def order_by_points(nums):
+    def digit_sum(n):
+        return sum(int(d) for d in str(abs(n)))
+    
+    return sorted(nums, key=lambda x: (digit_sum(x), nums.index(x)))
+
+# Example usage:
+print(order_by_points([1, 11, -1, -11, -12]))  # Output: [-1, -11, 1, -12, 11]
+print(order_by_points([]))  # Output: []
+```",9.63e-05,1.498150110244751,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/40,TrustRoute-NoParallel,1,"```python
+def triples_sum_to_zero(l: list) -> bool:
+    l = list(set(l))  # Remove duplicates
+    n = len(l)
+    for i in range(n):
+        seen = set()
+        target = -l[i]
+        for j in range(i + 1, n):
+            if target - l[j] in seen:
+                return True
+            seen.add(l[j])
+    return False
+```",8.729999999999998e-05,1.3032097816467283,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/32,TrustRoute-NoParallel,1,"```python
+import math
+from scipy.optimize import fsolve
+
+def poly(xs: list, x: float):
+    return sum(coeff * math.pow(x, i) for i, coeff in enumerate(xs))
+
+def find_zero(xs: list):
+    def equation(x):
+        return poly(xs, x)
+    
+    initial_guess = 0
+    zero = fsolve(equation, initial_guess)[0]
+    return zero
+```",0.0001016999999999,1.0779120922088623,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/113,TrustRoute-NoParallel,1,"```python
+def odd_count(lst):
+    result = []
+    for i, s in enumerate(lst):
+        odd_count = sum(1 for char in s if int(char) % 2 != 0)
+        result.append(f""the number of odd elements {odd_count}n the str{odd_count}ng {odd_count} of the {odd_count}nput."")
+    return result
+```",8.58e-05,2.4012575149536133,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/73,TrustRoute-NoParallel,1,"```python
+def smallest_change(arr):
+    changes = 0
+    n = len(arr)
+    for i in range(n // 2):
+        if arr[i] != arr[n - 1 - i]:
+            changes += 1
+    return changes
+
+# Example usage:
+print(smallest_change([1, 2, 3, 5, 4, 7, 9, 6]))  # Output: 4
+print(smallest_change([1, 2, 3, 4, 3, 2, 2]))     # Output: 1
+print(smallest_change([1, 2, 3, 2, 1]))            # Output: 0
+```",0.0001266,1.8783619403839111,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/17,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def parse_music(music_string: str) -> List[int]:
+    note_durations = {'o': 4, 'o|': 2, '.|': 1}
+    return [note_durations[note] for note in music_string.split()]
+```",7.26e-05,1.0997252464294434,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/81,TrustRoute-NoParallel,1,"```python
+def numerical_letter_grade(grades):
+    letter_grades = []
+    for gpa in grades:
+        if gpa == 4.0:
+            letter_grades.append('A+')
+        elif gpa > 3.7:
+            letter_grades.append('A')
+        elif gpa > 3.3:
+            letter_grades.append('A-')
+        elif gpa > 3.0:
+            letter_grades.append('B+')
+        elif gpa > 2.7:
+            letter_grades.append('B')
+        elif gpa > 2.3:
+            letter_grades.append('B-')
+        elif gpa > 2.0:
+            letter_grades.append('C+')
+        elif gpa > 1.7:
+            letter_grades.append('C')
+        elif gpa > 1.3:
+            letter_grades.append('C-')
+        elif gpa > 1.0:
+            letter_grades.append('D+')
+        elif gpa > 0.7:
+            letter_grades.append('D')
+        elif gpa > 0.0:
+            letter_grades.append('D-')
+        else:
+            letter_grades.append('E')
+    return letter_grades
+```",0.00020955,6.7710795402526855,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/144,TrustRoute-NoParallel,1,"```python
+def simplify(x, n):
+    num_x, den_x = map(int, x.split('/'))
+    num_n, den_n = map(int, n.split('/'))
+    
+    result_numerator = num_x * num_n
+    result_denominator = den_x * den_n
+    
+    return result_numerator % result_denominator == 0
+```",7.769999999999999e-05,1.217091083526611,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/69,TrustRoute-NoParallel,1,"```python
+def search(lst):
+    from collections import Counter
+    
+    freq = Counter(lst)
+    result = -1
+    
+    for num in freq:
+        if num > 0 and freq[num] >= num:
+            result = max(result, num)
+    
+    return result
+```",6.959999999999998e-05,1.0461959838867188,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/129,TrustRoute-NoParallel,1,"Here's a concise solution to the problem using Depth-First Search (DFS) to explore all possible paths of length `k` in the grid:
+
+```python
+def minPath(grid, k):
+    from collections import deque
+    
+    N = len(grid)
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    min_path = None
+
+    def dfs(x, y, path):
+        nonlocal min_path
+        if len(path) == k:
+            if min_path is None or path < min_path:
+                min_path = path[:]
+            return
+        
+        for dx, dy in directions:
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < N and 0 <= ny < N:
+                path.append(grid[nx][ny])
+                dfs(nx, ny, path)
+                path.pop()
+
+    for i in range(N):
+        for j in range(N):
+            dfs(i, j, [grid[i][j]])
+
+    return min_path
+
+# Example usage:
+# grid = [[1,2,3], [4,5,6], [7,8,9]]
+# k = 3
+# print(minPath(grid, k))  # Output: [1, 2, 1]
+```
+
+This code defines the `minPath` function, which uses a DFS approach to explore all possible paths of length `k` from each cell in the grid. It keeps track of the minimum path found and returns it at the end.",0.00026265,3.308800458908081,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/63,TrustRoute-NoParallel,1,"```python
+def fibfib(n: int) -> int:
+    if n == 0 or n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    
+    fibfib_seq = [0, 0, 1] + [0] * (n - 2)
+    for i in range(3, n + 1):
+        fibfib_seq[i] = fibfib_seq[i - 1] + fibfib_seq[i - 2] + fibfib_seq[i - 3]
+    
+    return fibfib_seq[n]
+
+# Example usage
+if __name__ == ""__main__"":
+    print(fibfib(1))  # Output: 0
+    print(fibfib(5))  # Output: 4
+    print(fibfib(8))  # Output: 24
+```",0.0001394999999999,2.334022521972656,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/125,TrustRoute-NoParallel,1,"```python
+def split_words(txt):
+    if ' ' in txt:
+        return txt.split()
+    elif ',' in txt:
+        return txt.split(',')
+    else:
+        return sum(1 for char in txt if char.islower() and (ord(char) - ord('a')) % 2 == 0)
+
+# Examples
+print(split_words(""Hello world!""))  # ➞ [""Hello"", ""world!""]
+print(split_words(""Hello,world!""))  # ➞ [""Hello"", ""world!""]
+print(split_words(""abcdef""))         # ➞ 3
+```",0.0001036499999999,1.9598891735076904,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/29,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    return [s for s in strings if s.startswith(prefix)]
+```",4.649999999999999e-05,1.519096612930298,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/77,TrustRoute-NoParallel,1,"```python
+def iscube(a):
+    return round(a ** (1/3)) ** 3 == a
+```",4.155e-05,0.8016855716705322,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/83,TrustRoute-NoParallel,1,"Here's a concise solution for the function `starts_one_ends`:
+
+```python
+def starts_one_ends(n):
+    if n < 1:
+        return 0
+    start_count = 10**(n-1)  # Numbers starting with 1
+    end_count = 10**(n-1)    # Numbers ending with 1
+    overlap_count = 10**(n-2) if n > 1 else 0  # Numbers starting and ending with 1
+    return start_count + end_count - overlap_count
+```
+
+This function calculates the count of n-digit positive integers that start or end with 1, accounting for overlaps where numbers both start and end with 1.",0.0001068,1.665686845779419,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/126,TrustRoute-NoParallel,1,"```python
+def is_sorted(lst):
+    if len(lst) <= 1:
+        return True
+    seen = set()
+    for i in range(len(lst)):
+        if lst[i] in seen:
+            return False
+        seen.add(lst[i])
+        if i > 0 and lst[i] < lst[i - 1]:
+            return False
+    return True
+```",9.42e-05,1.2032346725463867,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/98,TrustRoute-NoParallel,1,"Here is a concise solution for the `count_upper` function:
+
+```python
+def count_upper(s):
+    return sum(1 for i in range(0, len(s), 2) if s[i] in 'AEIOU')
+```
+
+This function counts the number of uppercase vowels ('A', 'E', 'I', 'O', 'U') located at even indices of the string `s`.",7.125e-05,1.4428937435150146,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/33,TrustRoute-NoParallel,1,"```python
+def sort_third(l: list):
+    sorted_third = sorted(l[i] for i in range(len(l)) if i % 3 == 0)
+    result = l[:]
+    j = 0
+    for i in range(len(l)):
+        if i % 3 == 0:
+            result[i] = sorted_third[j]
+            j += 1
+    return result
+
+# Example usage
+print(sort_third([1, 2, 3]))  # [1, 2, 3]
+print(sort_third([5, 6, 3, 4, 8, 9, 2]))  # [2, 6, 3, 4, 8, 9, 5]
+```",0.0001307999999999,1.8183817863464355,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/151,TrustRoute-NoParallel,1,"```python
+def double_the_difference(lst):
+    return sum(x**2 for x in lst if isinstance(x, int) and x > 0 and x % 2 != 0)
+
+# Test cases
+print(double_the_difference([1, 3, 2, 0]))  # Output: 10
+print(double_the_difference([-1, -2, 0]))   # Output: 0
+print(double_the_difference([9, -2]))        # Output: 81
+print(double_the_difference([0]))             # Output: 0
+print(double_the_difference([]))              # Output: 0
+```",0.0001092,1.514582872390747,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/157,TrustRoute-NoParallel,1,"```python
+def right_angle_triangle(a, b, c):
+    sides = sorted([a, b, c])
+    return sides[0]**2 + sides[1]**2 == sides[2]**2
+```",5.505e-05,1.0984125137329102,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/82,TrustRoute-NoParallel,1,"```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def prime_length(string):
+    return is_prime(len(string))
+```",6.299999999999999e-05,1.2578997611999512,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/154,TrustRoute-NoParallel,1,"Here's a concise solution for the `cycpattern_check` function:
+
+```python
+def cycpattern_check(a, b):
+    return any(b in (b * i) for i in range(1, len(b) + 1))
+
+# Test cases
+print(cycpattern_check(""abcd"", ""abd""))  # False
+print(cycpattern_check(""hello"", ""ell""))  # True
+print(cycpattern_check(""whassup"", ""psus""))  # False
+print(cycpattern_check(""abab"", ""baa""))  # True
+print(cycpattern_check(""efef"", ""eeff""))  # False
+print(cycpattern_check(""himenss"", ""simen""))  # True
+```
+
+This function checks if any rotation of the second word `b` is a substring of the first word `a`.",0.0001346999999999,1.875372171401977,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/131,TrustRoute-NoParallel,1,"Here is a concise solution for the `digits` function:
+
+```python
+def digits(n):
+    product = 1
+    has_odd = False
+    for digit in str(n):
+        d = int(digit)
+        if d % 2 != 0:
+            product *= d
+            has_odd = True
+    return product if has_odd else 0
+```",6.869999999999999e-05,1.25803542137146,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/85,TrustRoute-NoParallel,1,"```python
+def add(lst):
+    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 0)
+
+# Example usage:
+# result = add([4, 2, 6, 7])  # result will be 2
+```",5.79e-05,1.1606566905975342,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/30,TrustRoute-NoParallel,1,"```python
+def get_positive(l: list):
+    return [x for x in l if x > 0]
+```",4.199999999999999e-05,0.7340290546417236,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/135,TrustRoute-NoParallel,1,"Here is a concise solution for the `can_arrange` function:
+
+```python
+def can_arrange(arr):
+    for i in range(len(arr) - 1, 0, -1):
+        if arr[i] < arr[i - 1]:
+            return i
+    return -1
+```
+
+This function iterates through the array from the end to the beginning, checking if the current element is less than the previous one. If it finds such an element, it returns its index; otherwise, it returns -1.",9.09e-05,1.672508716583252,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/111,TrustRoute-NoParallel,1,"```python
+def histogram(test):
+    if not test:
+        return {}
+    
+    counts = {}
+    for letter in test.split():
+        counts[letter] = counts.get(letter, 0) + 1
+    
+    max_count = max(counts.values())
+    return {letter: count for letter, count in counts.items() if count == max_count}
+```",7.709999999999999e-05,1.225846529006958,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/117,TrustRoute-NoParallel,1,"```python
+def select_words(s, n):
+    def count_consonants(word):
+        return sum(1 for char in word if char.lower() in 'bcdfghjklmnpqrstvwxyz')
+
+    return [word for word in s.split() if count_consonants(word) == n]
+
+# Example usage:
+print(select_words(""Mary had a little lamb"", 4))  # [""little""]
+print(select_words(""Mary had a little lamb"", 3))  # [""Mary"", ""lamb""]
+print(select_words(""simple white space"", 2))      # []
+print(select_words(""Hello world"", 4))              # [""world""]
+print(select_words(""Uncle sam"", 3))                # [""Uncle""]
+```",0.0001302,2.556730031967163,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/122,TrustRoute-NoParallel,1,"```python
+def add_elements(arr, k):
+    return sum(x for x in arr[:k] if -10 < x < 100)
+```",4.785e-05,0.9579434394836426,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/58,TrustRoute-NoParallel,1,"```python
+def common(l1: list, l2: list):
+    return sorted(set(l1) & set(l2))
+```",4.395e-05,0.8583083152770996,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/27,TrustRoute-NoParallel,1,"```python
+def flip_case(string: str) -> str:
+    return string.swapcase()
+```",2.925e-05,0.8772284984588623,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/149,TrustRoute-NoParallel,1,"```python
+def sorted_list_sum(lst):
+    return sorted([s for s in lst if len(s) % 2 == 0], key=lambda x: (len(x), x))
+
+# Example usage:
+assert sorted_list_sum([""aa"", ""a"", ""aaa""]) == [""aa""]
+assert sorted_list_sum([""ab"", ""a"", ""aaa"", ""cd""]) == [""ab"", ""cd""]
+```",8.85e-05,1.411860704421997,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/118,TrustRoute-NoParallel,1,"```python
+def get_closest_vowel(word):
+    vowels = ""aeiouAEIOU""
+    for i in range(len(word) - 2, 0, -1):
+        if word[i] in vowels and word[i - 1].isalpha() and word[i + 1].isalpha() and word[i - 1] not in vowels and word[i + 1] not in vowels:
+            return word[i]
+    return """"
+```",8.955e-05,1.2942991256713867,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/161,TrustRoute-NoParallel,1,"Here's a concise solution for the problem:
+
+```python
+def solve(s):
+    if any(c.isalpha() for c in s):
+        return ''.join(c.swapcase() if c.isalpha() else c for c in s)
+    return s[::-1]
+```
+
+This function checks if there are any letters in the string. If there are, it swaps the case of each letter while keeping non-letter characters unchanged. If there are no letters, it reverses the string.",8.43e-05,1.291100025177002,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/153,TrustRoute-NoParallel,1,"```python
+def Strongest_Extension(class_name, extensions):
+    def strength(ext):
+        return sum(1 for c in ext if c.isupper()) - sum(1 for c in ext if c.islower())
+    
+    strongest = max(extensions, key=strength)
+    return f""{class_name}.{strongest}""
+```",9.165e-05,0.9834921360015868,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/123,TrustRoute-NoParallel,1,"```python
+def get_odd_collatz(n):
+    collatz_sequence = []
+    while n != 1:
+        collatz_sequence.append(n)
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n = 3 * n + 1
+    collatz_sequence.append(1)
+    return sorted(num for num in collatz_sequence if num % 2 != 0)
+
+# Example usage:
+# print(get_odd_collatz(5))  # Output: [1, 5]
+```",0.0001133999999999,1.7755458354949951,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/44,TrustRoute-NoParallel,1,"```python
+def change_base(x: int, base: int) -> str:
+    if x == 0:
+        return '0'
+    digits = []
+    while x:
+        digits.append(str(x % base))
+        x //= base
+    return ''.join(digits[::-1])
+```",6.03e-05,1.0453534126281738,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/34,TrustRoute-NoParallel,1,"```python
+def unique(l: list):
+    return sorted(set(l))
+```",3.06e-05,0.6734035015106201,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/60,TrustRoute-NoParallel,1,"```python
+def sum_to_n(n: int) -> int:
+    return n * (n + 1) // 2
+```",4.155e-05,0.8976984024047852,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/51,TrustRoute-NoParallel,1,"```python
+def remove_vowels(text):
+    return ''.join(char for char in text if char.lower() not in 'aeiou')
+```",4.469999999999999e-05,0.9170286655426024,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/35,TrustRoute-NoParallel,1,"```python
+def max_element(l: list):
+    return max(l)
+```",3.195e-05,0.7225625514984131,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/23,TrustRoute-NoParallel,1,"```python
+def strlen(string: str) -> int:
+    return len(string)
+```",2.73e-05,0.8088431358337402,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/101,TrustRoute-NoParallel,1,"```python
+def words_string(s):
+    return [word.strip() for word in s.replace(',', ' ').split()]
+
+# Example usage:
+# print(words_string(""Hi, my name is John""))  # [""Hi"", ""my"", ""name"", ""is"", ""John""]
+# print(words_string(""One, two, three, four, five, six""))  # [""One"", ""two"", ""three"", ""four"", ""five"", ""six""]
+```",8.505e-05,1.3906800746917725,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/102,TrustRoute-NoParallel,1,"```python
+def choose_num(x, y):
+    if x > y:
+        return -1
+    for num in range(y, x - 1, -1):
+        if num % 2 == 0:
+            return num
+    return -1
+```",5.76e-05,1.073582410812378,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/147,TrustRoute-NoParallel,1,"Here's a concise solution for the problem:
+
+```python
+def get_max_triples(n):
+    a = [i * i - i + 1 for i in range(1, n + 1)]
+    count = [0, 0, 0]
+    
+    for num in a:
+        count[num % 3] += 1
+    
+    total_triples = 0
+    
+    # Calculate combinations of triples
+    for i in range(3):
+        if count[i] >= 3:
+            total_triples += count[i] * (count[i] - 1) * (count[i] - 2) // 6
+    
+    for i in range(3):
+        for j in range(i + 1, 3):
+            total_triples += count[i] * count[j] * count[3 - (i + j)]
+    
+    return total_triples
+
+# Example usage
+print(get_max_triples(5))  # Output: 1
+```
+
+This code calculates the number of valid triples `(a[i], a[j], a[k])` where the sum is a multiple of 3.",0.0001751999999999,2.2609267234802246,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/21,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def rescale_to_unit(numbers: List[float]) -> List[float]:
+    min_val = min(numbers)
+    max_val = max(numbers)
+    return [(num - min_val) / (max_val - min_val) for num in numbers]
+```",6.465e-05,1.0943591594696045,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/142,TrustRoute-NoParallel,1,"```python
+def sum_squares(lst):
+    total = 0
+    for i, num in enumerate(lst):
+        if i % 3 == 0:
+            total += num ** 2
+        elif i % 4 == 0:
+            total += num ** 3
+        else:
+            total += num
+    return total
+
+# Example usage:
+print(sum_squares([1, 2, 3]))          # Output: 6
+print(sum_squares([]))                  # Output: 0
+print(sum_squares([-1, -5, 2, -1, -5])) # Output: -126
+```",0.0001164,1.504936933517456,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/19,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def sort_numbers(numbers: str) -> str:
+    num_map = {
+        'zero': 0, 'one': 1, 'two': 2, 'three': 3, 
+        'four': 4, 'five': 5, 'six': 6, 'seven': 7, 
+        'eight': 8, 'nine': 9
+    }
+    sorted_numbers = sorted(numbers.split(), key=lambda x: num_map[x])
+    return ' '.join(sorted_numbers)
+```",9.465e-05,1.7623145580291748,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/61,TrustRoute-NoParallel,1,"```python
+def correct_bracketing(brackets: str) -> bool:
+    balance = 0
+    for char in brackets:
+        if char == '(':
+            balance += 1
+        elif char == ')':
+            balance -= 1
+        if balance < 0:
+            return False
+    return balance == 0
+```",6.629999999999999e-05,1.4745686054229736,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/141,TrustRoute-NoParallel,1,"```python
+def file_name_check(file_name):
+    if file_name.count('.') != 1:
+        return 'No'
+    
+    name, ext = file_name.split('.')
+    
+    if not name or not name[0].isalpha():
+        return 'No'
+    
+    if len([c for c in file_name if c.isdigit()]) > 3:
+        return 'No'
+    
+    if ext not in ['txt', 'exe', 'dll']:
+        return 'No'
+    
+    return 'Yes'
+```",0.00010695,1.5269393920898438,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/97,TrustRoute-NoParallel,1,"```python
+def multiply(a, b):
+    return (abs(a) % 10) * (abs(b) % 10)
+```",4.215e-05,0.9762985706329346,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/150,TrustRoute-NoParallel,1,"```python
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def x_or_y(n, x, y):
+    return x if is_prime(n) else y
+```",6.915e-05,1.157564401626587,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/13,TrustRoute-NoParallel,1,"```python
+def greatest_common_divisor(a: int, b: int) -> int:
+    while b:
+        a, b = b, a % b
+    return a
+```",4.395e-05,1.058187484741211,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/9,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def rolling_max(numbers: List[int]) -> List[int]:
+    max_so_far = float('-inf')
+    result = []
+    for num in numbers:
+        max_so_far = max(max_so_far, num)
+        result.append(max_so_far)
+    return result
+```",6.269999999999999e-05,1.1270298957824707,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/136,TrustRoute-NoParallel,1,"```python
+def largest_smallest_integers(lst):
+    largest_negative = None
+    smallest_positive = None
+    
+    for num in lst:
+        if num < 0:
+            if largest_negative is None or num > largest_negative:
+                largest_negative = num
+        elif num > 0:
+            if smallest_positive is None or num < smallest_positive:
+                smallest_positive = num
+                
+    return (largest_negative, smallest_positive)
+```",8.534999999999999e-05,1.449662685394287,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/66,TrustRoute-NoParallel,1,"Here is a concise solution for the `digitSum` function:
+
+```python
+def digitSum(s):
+    return sum(ord(char) for char in s if char.isupper())
+
+# Example usage
+print(digitSum(""""))          # 0
+print(digitSum(""abAB""))     # 131
+print(digitSum(""abcCd""))    # 67
+print(digitSum(""helloE""))   # 69
+print(digitSum(""woArBld""))  # 131
+print(digitSum(""aAaaaXa""))  # 153
+```",9.87e-05,1.4698450565338137,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/59,TrustRoute-NoParallel,1,"```python
+def largest_prime_factor(n: int):
+    factor = 2
+    while factor * factor <= n:
+        if n % factor == 0:
+            n //= factor
+        else:
+            factor += 1
+    return n
+
+# Example usage
+print(largest_prime_factor(13195))  # Output: 29
+print(largest_prime_factor(2048))   # Output: 2
+```",7.35e-05,1.160478115081787,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/10,TrustRoute-NoParallel,1,"```python
+def make_palindrome(string: str) -> str:
+    if not string:
+        return ''
+    
+    for i in range(len(string)):
+        if is_palindrome(string[i:]):
+            return string + string[:i][::-1]
+    
+    return string + string[::-1]
+```",6.764999999999999e-05,1.1546006202697754,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/132,TrustRoute-NoParallel,1,"Here is a concise solution for the `is_nested` function:
+
+```python
+def is_nested(string):
+    balance = 0
+    nested = False
+    
+    for char in string:
+        if char == '[':
+            balance += 1
+            if balance > 1:
+                nested = True
+        elif char == ']':
+            balance -= 1
+        
+        if balance < 0:
+            return False
+    
+    return nested and balance == 0
+
+# Test cases
+print(is_nested('[[]]'))  # True
+print(is_nested('[]]]]]]][[[[[]'))  # False
+print(is_nested('[][]'))  # False
+print(is_nested('[]'))  # False
+print(is_nested('[[][]]'))  # True
+print(is_nested('[[]][['))  # True
+```
+
+This function checks for nested brackets by maintaining a balance counter and a flag to indicate if nesting has occurred.",0.0001446,1.8579745292663572,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/91,TrustRoute-NoParallel,1,"```python
+def is_bored(S):
+    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith('I'))
+```",5.01e-05,0.8104944229125977,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/16,TrustRoute-NoParallel,1,"```python
+def count_distinct_characters(string: str) -> int:
+    return len(set(string.lower()))
+```",3.54e-05,0.708984375,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/79,TrustRoute-NoParallel,1,"```python
+def decimal_to_binary(decimal):
+    return f""db{bin(decimal)[2:]}db""
+```",4.53e-05,0.9468448162078856,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/54,TrustRoute-NoParallel,1,"```python
+def same_chars(s0: str, s1: str) -> bool:
+    return set(s0) == set(s1)
+```",4.934999999999999e-05,0.8371241092681885,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/50,TrustRoute-NoParallel,1,"```python
+def decode_shift(s: str):
+    return """".join([chr(((ord(ch) - 5 - ord(""a"")) % 26) + ord(""a"")) for ch in s])
+```",4.934999999999999e-05,0.8459322452545166,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/67,TrustRoute-NoParallel,1,"```python
+def fruit_distribution(s, n):
+    parts = s.split()
+    apples = int(parts[0])
+    oranges = int(parts[3])
+    mangoes = n - apples - oranges
+    return mangoes
+```",7.035e-05,1.0516786575317385,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/127,TrustRoute-NoParallel,1,"```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def intersection(interval1, interval2):
+    start = max(interval1[0], interval2[0])
+    end = min(interval1[1], interval2[1])
+    
+    if start > end:
+        return ""NO""
+    
+    length = end - start
+    return ""YES"" if is_prime(length) else ""NO""
+
+# Example usage:
+# print(intersection((1, 2), (2, 3)))  # ""NO""
+# print(intersection((-1, 1), (0, 4)))  # ""NO""
+# print(intersection((-3, -1), (-5, 5)))  # ""YES""
+```",0.0001638,2.298870086669922,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/115,TrustRoute-NoParallel,1,"```python
+def max_fill(grid, capacity):
+    total_water = sum(sum(row) for row in grid)
+    return math.ceil(total_water / capacity)
+
+# Example usage:
+print(max_fill([[0,0,1,0], [0,1,0,0], [1,1,1,1]], 1))  # Output: 6
+print(max_fill([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2))  # Output: 5
+print(max_fill([[0,0,0], [0,0,0]], 5))  # Output: 0
+```",0.0001503,1.94724702835083,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/159,TrustRoute-NoParallel,1,"```python
+def eat(number, need, remaining):
+    eat_now = min(need, remaining)
+    total_eaten = number + eat_now
+    remaining_after = remaining - eat_now
+    return [total_eaten, remaining_after]
+```",8.189999999999998e-05,0.966655731201172,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/5,TrustRoute-NoParallel,1,"```python
+from typing import List
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    if not numbers:
+        return []
+    result = []
+    for i in range(len(numbers) - 1):
+        result.append(numbers[i])
+        result.append(delimeter)
+    result.append(numbers[-1])
+    return result
+```",6.96e-05,1.201918125152588,0,0,cand-gpt-4o-mini,stage1_only,
+humaneval,HumanEval/15,TrustRoute-NoParallel,1,"```python
+def string_sequence(n: int) -> str:
+    return ' '.join(map(str, range(n + 1)))
+```",3.705e-05,0.9076402187347412,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/89,TrustRoute-NoParallel,1,"Here is a concise implementation of the `encrypt` function:
+
+```python
+def encrypt(s):
+    return ''.join(chr(((ord(char) - ord('a') + 4) % 26) + ord('a')) if char.islower() else char for char in s)
+
+# Example usage:
+print(encrypt('hi'))          # Output: 'lm'
+print(encrypt('asdfghjkl'))   # Output: 'ewhjklnop'
+print(encrypt('gf'))          # Output: 'kj'
+print(encrypt('et'))          # Output: 'ix'
+```
+
+This function shifts each lowercase letter in the input string by 4 positions in the alphabet, wrapping around if necessary. Non-lowercase characters remain unchanged.",0.0001189499999999,2.259340286254883,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/38,TrustRoute-NoParallel,1,"```python
+def decode_cyclic(s: str):
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    groups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]
+    return """".join(groups)
+```",8.429999999999999e-05,1.1391935348510742,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/143,TrustRoute-NoParallel,1,"```python
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def words_in_sentence(sentence):
+    words = sentence.split()
+    prime_length_words = [word for word in words if is_prime(len(word))]
+    return ' '.join(prime_length_words)
+```",8.91e-05,1.6021342277526855,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/134,TrustRoute-NoParallel,1,"```python
+def check_if_last_char_is_a_letter(txt):
+    if not txt or txt[-1] == ' ':
+        return False
+    words = txt.split()
+    if not words:
+        return False
+    last_word = words[-1]
+    return last_word[-1].isalpha() and len(last_word) == 1
+
+# Examples
+print(check_if_last_char_is_a_letter(""apple pie""))  # ➞ False
+print(check_if_last_char_is_a_letter(""apple pi e""))  # ➞ True
+print(check_if_last_char_is_a_letter(""apple pi e ""))  # ➞ False
+print(check_if_last_char_is_a_letter(""""))  # ➞ False
+```",0.0001187999999999,1.6117162704467771,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/42,TrustRoute-NoParallel,1,"```python
+def incr_list(l: list):
+    return [x + 1 for x in l]
+```",4.02e-05,0.7665886878967285,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/74,TrustRoute-NoParallel,1,"```python
+def total_match(lst1, lst2):
+    total1 = sum(len(s) for s in lst1)
+    total2 = sum(len(s) for s in lst2)
+    
+    if total1 < total2:
+        return lst1
+    return lst2
+
+# Examples
+print(total_match([], []))  # ➞ []
+print(total_match(['hi', 'admin'], ['hI', 'Hi']))  # ➞ ['hI', 'Hi']
+print(total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']))  # ➞ ['hi', 'admin']
+print(total_match(['hi', 'admin'], ['hI', 'hi', 'hi']))  # ➞ ['hI', 'hi', 'hi']
+print(total_match(['4'], ['1', '2', '3', '4', '5']))  # ➞ ['4']
+```",0.0001548,2.177649974822998,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/158,TrustRoute-NoParallel,1,"```python
+def find_max(words):
+    max_word = """"
+    max_unique_count = 0
+    
+    for word in words:
+        unique_count = len(set(word))
+        if (unique_count > max_unique_count) or (unique_count == max_unique_count and word < max_word):
+            max_word = word
+            max_unique_count = unique_count
+            
+    return max_word
+```",7.544999999999999e-05,5.427291631698608,0,0,cand-gpt-4o-mini,stage1_early_stop,

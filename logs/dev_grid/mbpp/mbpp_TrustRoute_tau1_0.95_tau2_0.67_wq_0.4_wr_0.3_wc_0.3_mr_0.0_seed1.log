@@ -1,0 +1,1500 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: mbpp_TrustRoute_8d8d9fc5de
+🚀 Running TrustRoute on mbpp
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/mbpp_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/mbpp/mbpp_TrustRoute_tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 37 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/37] Processing: Mbpp/93[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/93
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to calculate the value of \'a\' to the power \'b\'.\nassert power(3,4) == 81\n"""\n\n\nPlease provide a conc', 'len': 155}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to calculate the value of \'a\' to the power \'b\'.\nassert power(3,4) == 81\n"""\n\n\nPlease provide a conc', 'len': 155}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to calculate the value of \'a\' to the power \'b\'.\nassert power(3,4) == 81\n"""\n\n\nPlease provide a conc', 'len': 155}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 50.6 (test=0.00, agree=1.00, conf=1.00)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0010
+        Time: 9.95s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0010 9.9s
+[2/37] Processing: Mbpp/619
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/619
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.6, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.600
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to move all the numbers to the end of the given string.\nassert move_num(\'I1love143you55three3000tho', 'len': 227}]
+          Test result: exec_pass
+[Stage 1] ✅ High confidence (1.000 >= 0.902), early stop!
+          [USAL] cand-gemini-2.5-flash: 50.6 -> 50.9 (Δ+0.30)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0020
+        Time: 4.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0020 4.1s
+[3/37] Processing: Mbpp/277
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/277
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.9, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.900
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a dictionary and integer n and filters the dictionary to only include entries with va', 'len': 388}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a dictionary and integer n and filters the dictionary to only include entries with va', 'len': 388}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a dictionary and integer n and filters the dictionary to only include entries with va', 'len': 388}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.9 -> 49.5 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.3 (test=0.00, agree=0.17, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.4 -> 49.3 (test=0.00, agree=0.17, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 7.96s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0013 8.0s
+[4/37] Processing: Mbpp/296
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/296
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.0, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count inversions in an array.\nassert get_Inv_Count([1,20,6,4,5]) == 5\n"""\n\n\nPlease provid', 'len': 163}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count inversions in an array.\nassert get_Inv_Count([1,20,6,4,5]) == 5\n"""\n\n\nPlease provid', 'len': 163}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count inversions in an array.\nassert get_Inv_Count([1,20,6,4,5]) == 5\n"""\n\n\nPlease provid', 'len': 163}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.200, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.0 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.0 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.0 -> 47.4 (test=0.00, agree=0.00, conf=0.20)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0046
+        Time: 12.78s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0046 12.8s
+[5/37] Processing: Mbpp/598
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/598
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.5, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=49.5, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.520
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether the given number is armstrong or not.\nassert armstrong_number(153)==True\n"""\n\n\nPle', 'len': 173}]
+          Test result: exec_pass
+[Stage 1] ✅ High confidence (1.000 >= 0.903), early stop!
+          [USAL] cand-gemini-2.5-flash: 49.5 -> 49.8 (Δ+0.30)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.55s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.5s
+[6/37] Processing: Mbpp/439
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/439
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.8, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=49.5, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to join a list of multiple integers into a single integer.\nassert multiple_to_single([11, 33, 50])=', 'len': 190}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to join a list of multiple integers into a single integer.\nassert multiple_to_single([11, 33, 50])=', 'len': 190}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to join a list of multiple integers into a single integer.\nassert multiple_to_single([11, 33, 50])=', 'len': 190}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.8 -> 49.3 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.5 -> 48.1 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.5 -> 49.0 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0023
+        Time: 6.53s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0023 6.5s
+[7/37] Processing: Mbpp/240
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/240
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.3, cost=$0.00037
+  2. cand-gpt-5-mini: rep=49.3, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=49.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.340
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in two lists and replaces the last element of the first list with the elements of the se', 'len': 276}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in two lists and replaces the last element of the first list with the elements of the se', 'len': 276}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in two lists and replaces the last element of the first list with the elements of the se', 'len': 276}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.3 -> 48.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 49.3 -> 48.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.3 -> 49.0 (test=0.00, agree=0.50, conf=1.00)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (1.000)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 12.07s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0025 12.1s
+[8/37] Processing: Mbpp/311
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/311
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.0, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=48.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.040
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set the left most unset bit.\nassert set_left_most_unset_bit(10) == 14\n"""\n\n\nPlease provid', 'len': 163}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set the left most unset bit.\nassert set_left_most_unset_bit(10) == 14\n"""\n\n\nPlease provid', 'len': 163}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set the left most unset bit.\nassert set_left_most_unset_bit(10) == 14\n"""\n\n\nPlease provid', 'len': 163}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.0 -> 47.7 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.0 -> 48.6 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.9 -> 48.4 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0123
+        Time: 41.08s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0123 41.1s
+[9/37] Processing: Mbpp/69
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/69
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-grok-3-mini: rep=48.6, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=48.4, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=48.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-grok-3-mini
+          Reputation: 48.560
+[DEBUG] model=grok-3-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether a list contains the given sublist or not.\nassert is_sublist([2,4,3,5,7],[3,7])==Fa', 'len': 186}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether a list contains the given sublist or not.\nassert is_sublist([2,4,3,5,7],[3,7])==Fa', 'len': 186}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether a list contains the given sublist or not.\nassert is_sublist([2,4,3,5,7],[3,7])==Fa', 'len': 186}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-grok-3-mini: 48.6 -> 47.2 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.4 -> 47.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 48.1 -> 47.7 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-grok-3-mini (0.900)
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0028
+        Time: 13.70s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0028 13.7s
+[10/37] Processing: Mbpp/641
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/641
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-5-mini: rep=48.0, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=47.9, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=47.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-5-mini
+          Reputation: 47.960
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth nonagonal number.\nassert is_nonagonal(10) == 325\n"""\n\n\nPlease provide a concise sol', 'len': 148}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth nonagonal number.\nassert is_nonagonal(10) == 325\n"""\n\n\nPlease provide a concise sol', 'len': 148}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth nonagonal number.\nassert is_nonagonal(10) == 325\n"""\n\n\nPlease provide a concise sol', 'len': 148}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-5-mini: 48.0 -> 48.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 47.9 -> 48.3 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 47.7 -> 48.3 (test=0.00, agree=1.00, conf=1.00)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-5-mini
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0028
+        Time: 12.49s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0028 12.5s
+[11/37] Processing: Mbpp/801
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/801
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-5-mini: rep=48.4, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=48.3, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=48.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-5-mini
+          Reputation: 48.380
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count the number of equal numbers from three given integers.\nassert test_three_equal(1,1,', 'len': 190}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count the number of equal numbers from three given integers.\nassert test_three_equal(1,1,', 'len': 190}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to count the number of equal numbers from three given integers.\nassert test_three_equal(1,1,', 'len': 190}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-5-mini: 48.4 -> 48.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.3 -> 48.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 48.3 -> 48.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-5-mini
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0071
+        Time: 20.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0071 20.8s
+[12/37] Processing: Mbpp/629
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/629
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-5-mini: rep=48.8, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=48.7, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=48.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-5-mini
+          Reputation: 48.800
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find even numbers from a list of numbers.\nassert Split([1,2,3,4,5]) == [2,4]\n"""\n\n\nPlease', 'len': 170}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find even numbers from a list of numbers.\nassert Split([1,2,3,4,5]) == [2,4]\n"""\n\n\nPlease', 'len': 170}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find even numbers from a list of numbers.\nassert Split([1,2,3,4,5]) == [2,4]\n"""\n\n\nPlease', 'len': 170}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-5-mini: 48.8 -> 47.4 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.7 -> 48.3 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 48.7 -> 48.2 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0011
+        Time: 8.37s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0011 8.4s
+[13/37] Processing: Mbpp/20
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/20
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=48.3, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=48.2, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=47.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 48.260
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if the given number is woodball or not.\nassert is_woodall(383) == True\n"""\n\n\nPlease provid', 'len': 163}]
+          Test result: exec_error:AssertionError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if the given number is woodball or not.\nassert is_woodall(383) == True\n"""\n\n\nPlease provid', 'len': 163}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if the given number is woodball or not.\nassert is_woodall(383) == True\n"""\n\n\nPlease provid', 'len': 163}]
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 48.3 -> 47.8 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 48.2 -> 47.0 (test=0.00, agree=0.00, conf=1.00)
+          [USAL] cand-claude-sonnet-4-5: 47.7 -> 47.2 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (1.000)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0069
+        Time: 10.35s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0069 10.3s
+[14/37] Processing: Mbpp/232
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/232
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=47.4, cost=$0.00037
+  3. cand-deepseek-r1: rep=47.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.780
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a list and an integer n and returns a list containing the n largest items from the li', 'len': 272}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a list and an integer n and returns a list containing the n largest items from the li', 'len': 272}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a list and an integer n and returns a list containing the n largest items from the li', 'len': 272}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.200, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.8 -> 47.3 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 47.4 -> 46.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-deepseek-r1: 47.4 -> 44.7 (test=0.00, agree=0.00, conf=0.20)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0033
+        Time: 22.23s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0033 22.2s
+[15/37] Processing: Mbpp/781
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/781
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.3, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.2, cost=$0.00037
+  3. cand-grok-3-mini: rep=47.2, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.300
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether the count of divisors is even. \nassert count_divisors(10)\n"""\n\n\nPlease prov', 'len': 165}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether the count of divisors is even. \nassert count_divisors(10)\n"""\n\n\nPlease prov', 'len': 165}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether the count of divisors is even. \nassert count_divisors(10)\n"""\n\n\nPlease prov', 'len': 165}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.3 -> 47.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.2 -> 47.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 47.2 -> 47.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0034
+        Time: 20.10s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0034 20.1s
+[16/37] Processing: Mbpp/256
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/256
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.7, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.6, cost=$0.00037
+  3. cand-grok-3-mini: rep=47.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.720
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function that takes in a non-negative number and returns the number of prime numbers less than the gi', 'len': 240}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function that takes in a non-negative number and returns the number of prime numbers less than the gi', 'len': 240}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function that takes in a non-negative number and returns the number of prime numbers less than the gi', 'len': 240}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.7 -> 47.2 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.6 -> 47.1 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 47.6 -> 46.2 (test=0.00, agree=0.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0029
+        Time: 11.08s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0029 11.1s
+[17/37] Processing: Mbpp/722
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/722
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.2, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.1, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=47.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.240
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nThe input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weig', 'len': 481}]
+          Test result: exec_error:AssertionError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nThe input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weig', 'len': 481}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nThe input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weig', 'len': 481}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.2 -> 47.2 (test=0.00, agree=0.75, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.1 -> 47.1 (test=0.00, agree=0.75, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 47.0 -> 46.7 (test=0.00, agree=0.50, conf=1.00)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (1.000)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0050
+        Time: 11.26s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0050 11.3s
+[18/37] Processing: Mbpp/785
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/785
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.2, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.1, cost=$0.00037
+  3. cand-gpt-5-mini: rep=46.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.210
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to convert tuple string to integer tuple.\nassert tuple_str_int("(7, 8, 9)") == (7, 8, 9)\n"""\n\n\nPlea', 'len': 172}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to convert tuple string to integer tuple.\nassert tuple_str_int("(7, 8, 9)") == (7, 8, 9)\n"""\n\n\nPlea', 'len': 172}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to convert tuple string to integer tuple.\nassert tuple_str_int("(7, 8, 9)") == (7, 8, 9)\n"""\n\n\nPlea', 'len': 172}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.2 -> 46.7 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.1 -> 46.6 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 46.9 -> 45.6 (test=0.00, agree=0.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0021
+        Time: 11.19s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0021 11.2s
+[19/37] Processing: Mbpp/244
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/244
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=46.7, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=46.7, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=46.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 46.730
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the next perfect square greater than a given number.\nassert next_Perfect_Square(35) ', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.906), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the next perfect square greater than a given number.\nassert next_Perfect_Square(35) ', 'len': 188}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the next perfect square greater than a given number.\nassert next_Perfect_Square(35) ', 'len': 188}]
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 46.7 -> 46.3 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 46.7 -> 45.5 (test=0.00, agree=0.00, conf=1.00)
+          [USAL] cand-claude-sonnet-4-5: 46.6 -> 46.1 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (1.000)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0044
+        Time: 7.82s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0044 7.8s
+[20/37] Processing: Mbpp/285
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/285
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=46.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=46.2, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=46.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 46.250
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that checks whether a string contains the \'a\' character followed by two or three \'b\' characters.\nas', 'len': 223}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.906), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that checks whether a string contains the \'a\' character followed by two or three \'b\' characters.\nas', 'len': 223}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that checks whether a string contains the \'a\' character followed by two or three \'b\' characters.\nas', 'len': 223}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 46.3 -> 46.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 46.2 -> 46.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 46.1 -> 46.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0028
+        Time: 10.32s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0028 10.3s
+[21/37] Processing: Mbpp/301
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/301
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=46.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=46.6, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=46.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 46.670
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the depth of a dictionary.\nassert dict_depth({\'a\':1, \'b\': {\'c\': {\'d\': {}}}})==4\n"""\n\n\nPleas', 'len': 171}]
+          Test result: exec_error:AssertionError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.906), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the depth of a dictionary.\nassert dict_depth({\'a\':1, \'b\': {\'c\': {\'d\': {}}}})==4\n"""\n\n\nPleas', 'len': 171}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the depth of a dictionary.\nassert dict_depth({\'a\':1, \'b\': {\'c\': {\'d\': {}}}})==4\n"""\n\n\nPleas', 'len': 171}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 46.7 -> 47.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 46.6 -> 47.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 46.6 -> 47.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0019
+        Time: 14.19s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0019 14.2s
+[22/37] Processing: Mbpp/741
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/741
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=47.1, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=47.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.090
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether all the characters are same or not.\nassert all_Characters_Same("python") ==', 'len': 189}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether all the characters are same or not.\nassert all_Characters_Same("python") ==', 'len': 189}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to check whether all the characters are same or not.\nassert all_Characters_Same("python") ==', 'len': 189}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.1 -> 47.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 47.1 -> 47.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.0 -> 47.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0021
+        Time: 9.67s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0021 9.7s
+[23/37] Processing: Mbpp/558
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/558
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=47.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=47.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.510
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the sum of the per-digit difference between two integers.\nassert digit_distance_nums', 'len': 193}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the sum of the per-digit difference between two integers.\nassert digit_distance_nums', 'len': 193}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to find the sum of the per-digit difference between two integers.\nassert digit_distance_nums', 'len': 193}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.5 -> 47.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 47.5 -> 47.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.4 -> 47.8 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0031
+        Time: 14.81s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0031 14.8s
+[24/37] Processing: Mbpp/222
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/222
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=47.9, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=47.8, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.930
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if all the elements in tuple have same data type or not.\nassert check_type((5, 6, 7, 3, 5,', 'len': 196}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if all the elements in tuple have same data type or not.\nassert check_type((5, 6, 7, 3, 5,', 'len': 196}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if all the elements in tuple have same data type or not.\nassert check_type((5, 6, 7, 3, 5,', 'len': 196}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.9 -> 48.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 47.9 -> 48.3 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.8 -> 48.2 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0019
+        Time: 8.82s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0019 8.8s
+[25/37] Processing: Mbpp/287
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/287
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=48.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=48.3, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=48.2, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 48.350
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function takes in an integer n and returns the sum of squares of first n even natural numbers.\nassert', 'len': 203}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function takes in an integer n and returns the sum of squares of first n even natural numbers.\nassert', 'len': 203}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function takes in an integer n and returns the sum of squares of first n even natural numbers.\nassert', 'len': 203}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 48.4 -> 48.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.3 -> 48.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 48.2 -> 48.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0025
+        Time: 11.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0025 11.8s
+[26/37] Processing: Mbpp/762
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/762
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=48.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=48.7, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=48.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 48.770
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether the given month number contains 30 days or not. Months are given as number from 1 ', 'len': 230}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.904), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether the given month number contains 30 days or not. Months are given as number from 1 ', 'len': 230}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check whether the given month number contains 30 days or not. Months are given as number from 1 ', 'len': 230}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 48.8 -> 49.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.7 -> 49.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 48.7 -> 49.1 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0017
+        Time: 7.91s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0017 7.9s
+[27/37] Processing: Mbpp/135
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/135
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.2, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.190
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth hexagonal number.\nassert hexagonal_num(10) == 190\n"""\n\n\nPlease provide a concise so', 'len': 149}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth hexagonal number.\nassert hexagonal_num(10) == 190\n"""\n\n\nPlease provide a concise so', 'len': 149}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the nth hexagonal number.\nassert hexagonal_num(10) == 190\n"""\n\n\nPlease provide a concise so', 'len': 149}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.800, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.2 -> 49.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.2 -> 49.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.1 -> 49.3 (test=0.00, agree=1.00, conf=0.80)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0018
+        Time: 6.79s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0018 6.8s
+[28/37] Processing: Mbpp/639
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/639
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.6, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.610
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to sum the length of the names of a given list of names after removing the names that start with a ', 'len': 281}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to sum the length of the names of a given list of names after removing the names that start with a ', 'len': 281}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to sum the length of the names of a given list of names after removing the names that start with a ', 'len': 281}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.6 -> 50.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.6 -> 50.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.3 -> 49.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0023
+        Time: 9.69s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0023 9.7s
+[29/37] Processing: Mbpp/477
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/477
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.0, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.030
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to convert the given string to lower case.\nassert is_lower("InValid") == "invalid"\n"""\n\n\nPle', 'len': 173}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to convert the given string to lower case.\nassert is_lower("InValid") == "invalid"\n"""\n\n\nPle', 'len': 173}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to convert the given string to lower case.\nassert is_lower("InValid") == "invalid"\n"""\n\n\nPle', 'len': 173}]
+          cand-grok-3-mini: confidence=0.800, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.800, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.0 -> 50.2 (test=0.00, agree=1.00, conf=0.80)
+          [USAL] cand-claude-sonnet-4-5: 49.7 -> 50.0 (test=0.00, agree=1.00, conf=0.80)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0009
+        Time: 6.17s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0009 6.2s
+[30/37] Processing: Mbpp/462
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/462
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.2, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.450
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find all possible combinations of the elements of a given list.\nassert combinations_list([\'orang', 'len': 519}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find all possible combinations of the elements of a given list.\nassert combinations_list([\'orang', 'len': 519}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find all possible combinations of the elements of a given list.\nassert combinations_list([\'orang', 'len': 519}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.5 -> 49.1 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.2 -> 49.8 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 50.0 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0033
+        Time: 26.43s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0033 26.4s
+[31/37] Processing: Mbpp/91
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/91
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-grok-3-mini: rep=49.8, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=49.5, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=49.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-grok-3-mini
+          Reputation: 49.760
+[DEBUG] model=grok-3-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if a string is present as a substring in a given list of string values.\nassert find_substr', 'len': 244}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if a string is present as a substring in a given list of string values.\nassert find_substr', 'len': 244}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to check if a string is present as a substring in a given list of string values.\nassert find_substr', 'len': 244}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-grok-3-mini: 49.8 -> 49.0 (test=0.00, agree=0.33, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.5 -> 48.7 (test=0.00, agree=0.33, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 49.1 -> 48.3 (test=0.00, agree=0.33, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-grok-3-mini (0.900)
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0016
+        Time: 7.54s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0016 7.5s
+[32/37] Processing: Mbpp/447
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/447
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-grok-3-mini: rep=49.0, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=48.7, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=48.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-grok-3-mini
+          Reputation: 48.980
+[DEBUG] model=grok-3-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find cubes of individual elements in a list.\nassert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==', 'len': 228}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.800 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find cubes of individual elements in a list.\nassert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==', 'len': 228}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find cubes of individual elements in a list.\nassert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==', 'len': 228}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-grok-3-mini: 49.0 -> 47.4 (test=0.00, agree=0.00, conf=0.80)
+          [USAL] cand-claude-sonnet-4-5: 48.7 -> 47.3 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.3 -> 46.9 (test=0.00, agree=0.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0013
+        Time: 8.40s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0013 8.4s
+[33/37] Processing: Mbpp/235
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/235
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-grok-3-mini: rep=47.4, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.3, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=46.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-grok-3-mini
+          Reputation: 47.420
+[DEBUG] model=grok-3-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set all even bits of a given number.\nassert even_bit_set_number(10) == 10\n"""\n\n\nPlease pr', 'len': 167}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set all even bits of a given number.\nassert even_bit_set_number(10) == 10\n"""\n\n\nPlease pr', 'len': 167}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a python function to set all even bits of a given number.\nassert even_bit_set_number(10) == 10\n"""\n\n\nPlease pr', 'len': 167}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-grok-3-mini: 47.4 -> 47.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.3 -> 47.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 46.9 -> 47.3 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-grok-3-mini
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0085
+        Time: 35.43s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0085 35.4s
+[34/37] Processing: Mbpp/103
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/103
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-grok-3-mini: rep=47.8, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.8, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=47.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-grok-3-mini
+          Reputation: 47.840
+[DEBUG] model=grok-3-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the Eulerian number a(n, m).\nassert eulerian_num(3, 1) == 4\n"""\n\n\nPlease provide a concise ', 'len': 151}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the Eulerian number a(n, m).\nassert eulerian_num(3, 1) == 4\n"""\n\n\nPlease provide a concise ', 'len': 151}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the Eulerian number a(n, m).\nassert eulerian_num(3, 1) == 4\n"""\n\n\nPlease provide a concise ', 'len': 151}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-grok-3-mini: 47.8 -> 46.5 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.8 -> 47.3 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 47.3 -> 46.9 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-grok-3-mini (0.900)
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0055
+        Time: 22.99s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0055 23.0s
+[35/37] Processing: Mbpp/223
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/223
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=47.3, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=46.9, cost=$0.00037
+  3. cand-grok-3-mini: rep=46.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 47.270
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a sorted array, its length (n), and an element and returns whether the element is the', 'len': 355}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a sorted array, its length (n), and an element and returns whether the element is the', 'len': 355}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function that takes in a sorted array, its length (n), and an element and returns whether the element is the', 'len': 355}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 47.3 -> 46.8 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 46.9 -> 46.8 (test=0.00, agree=0.75, conf=0.90)
+          [USAL] cand-grok-3-mini: 46.5 -> 46.4 (test=0.00, agree=0.75, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0042
+        Time: 13.04s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0042 13.0s
+[36/37] Processing: Mbpp/410
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/410
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=46.8, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=46.8, cost=$0.00037
+  3. cand-grok-3-mini: rep=46.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 46.820
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the minimum value in a given heterogeneous list.\nassert min_val([\'Python\', 3, 2, 4, 5, \'ver', 'len': 193}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.906), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the minimum value in a given heterogeneous list.\nassert min_val([\'Python\', 3, 2, 4, 5, \'ver', 'len': 193}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to find the minimum value in a given heterogeneous list.\nassert min_val([\'Python\', 3, 2, 4, 5, \'ver', 'len': 193}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 46.8 -> 47.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 46.8 -> 47.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 46.4 -> 46.9 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0017
+        Time: 9.37s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0017 9.4s
+[37/37] Processing: Mbpp/604
+============================================================
+[TrustRoute-USAL] Starting task: Mbpp/604
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=47.2, cost=$0.00037
+  2. cand-claude-sonnet-4-5: rep=47.2, cost=$0.00037
+  3. cand-grok-3-mini: rep=46.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 47.240
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to reverse words seperated by spaces in a given string.\nassert reverse_words("python program")==("p', 'len': 198}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.900 < 0.905), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to reverse words seperated by spaces in a given string.\nassert reverse_words("python program")==("p', 'len': 198}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '"""\nWrite a function to reverse words seperated by spaces in a given string.\nassert reverse_words("python program")==("p', 'len': 198}]
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 47.2 -> 47.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 47.2 -> 47.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 46.9 -> 47.3 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0018
+        Time: 7.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0018 7.8s
+
+✅ Batch completed.

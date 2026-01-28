@@ -1,0 +1,689 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+🚀 Running TrustRoute on gsm8k
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/gsm8k_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/gsm8k/gsm8k_TrustRoute_tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0.csv
+   Seed: 1
+✅ Loaded 200 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/200] Processing: gsm8k-0[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-0
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every da', 'len': 280}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every da', 'len': 280}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every da', 'len': 280}]
+          cand-gpt-5-mini: confidence=0.400, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.5 (test=0.00, agree=1.00, conf=0.40)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0014
+        Time: 21.52s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0014 21.5s
+[2/200] Processing: gsm8k-1
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-1
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?', 'len': 105}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?', 'len': 105}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?', 'len': 105}]
+          cand-gpt-5-mini: confidence=0.400, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.5 (test=0.00, agree=1.00, conf=0.40)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0008
+        Time: 13.24s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0008 13.2s
+[3/200] Processing: gsm8k-2
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-2
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased ', 'len': 181}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased ', 'len': 181}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased ', 'len': 181}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.4 (test=0.00, agree=0.95, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.3 (test=0.00, agree=0.90, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.2 (test=0.00, agree=0.95, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0035
+        Time: 19.01s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0035 19.0s
+[4/200] Processing: gsm8k-3
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-3
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week', 'len': 121}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week', 'len': 121}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week', 'len': 121}]
+          cand-gpt-5-mini: confidence=0.400, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.5 (test=0.00, agree=1.00, conf=0.40)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0012
+        Time: 17.72s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0012 17.7s
+[5/200] Processing: gsm8k-4
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-4
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables', 'len': 471}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables', 'len': 471}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables', 'len': 471}]
+          cand-gpt-5-mini: confidence=0.400, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.3 (test=0.00, agree=1.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.5 (test=0.00, agree=1.00, conf=0.40)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0029
+        Time: 16.19s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0029 16.2s
+[6/200] Processing: gsm8k-5
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-5
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% ', 'len': 203}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% ', 'len': 203}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kylar went to the store to buy glasses for his new apartment. One glass costs $5, but every second glass costs only 60% ', 'len': 203}]
+          cand-gpt-5-mini: confidence=0.400, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -2.3 (test=0.00, agree=0.00, conf=0.40)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0022
+        Time: 14.56s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0022 14.6s
+[7/200] Processing: gsm8k-6
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-6
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep do Toulo', 'len': 187}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep do Toulo', 'len': 187}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toulouse has twice as many sheep as Charleston. Charleston has 4 times as many sheep as Seattle. How many sheep do Toulo', 'len': 187}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0016
+        Time: 19.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0016 19.8s
+[8/200] Processing: gsm8k-7
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-7
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Wind', 'len': 287}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Wind', 'len': 287}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Wind', 'len': 287}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -2.1 (test=0.00, agree=0.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -1.9 (test=0.00, agree=0.00, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -1.9 (test=0.00, agree=0.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0024
+        Time: 16.95s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0024 16.9s
+[9/200] Processing: gsm8k-8
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-8
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very importan', 'len': 406}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very importan', 'len': 406}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John drives for 3 hours at a speed of 60 mph and then turns around because he realizes he forgot something very importan', 'len': 406}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.500, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -1.2 (test=0.00, agree=0.50, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -2.1 (test=0.00, agree=0.00, conf=0.50)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0040
+        Time: 22.02s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0040 22.0s
+[10/200] Processing: gsm8k-9
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-9
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times ", 'len': 225}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times ", 'len': 225}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Eliza's rate per hour for the first 40 hours she works each week is $10. She also receives an overtime pay of 1.2 times ", 'len': 225}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.4 (test=0.00, agree=0.95, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.3 (test=0.00, agree=0.90, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.2 (test=0.00, agree=0.95, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0020
+        Time: 15.92s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0020 15.9s
+[11/200] Processing: gsm8k-10
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-10
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many a', 'len': 268}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many a', 'len': 268}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A new program had 60 downloads in the first month. The number of downloads in the second month was three times as many a', 'len': 268}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.3 (test=0.00, agree=1.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0026
+        Time: 14.54s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0026 14.5s
+[12/200] Processing: gsm8k-11
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-11
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 doz', 'len': 239}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 doz', 'len': 239}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Toula went to the bakery and bought various types of pastries. She bought 3 dozen donuts which cost $68 per dozen, 2 doz', 'len': 239}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.2 (test=0.00, agree=0.95, conf=0.60)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.3 (test=0.00, agree=0.90, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.2 (test=0.00, agree=0.95, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0014
+        Time: 13.47s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0014 13.5s
+[13/200] Processing: gsm8k-12
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-12
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for', 'len': 256}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for', 'len': 256}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carlos is planting a lemon tree. The tree will cost $90 to plant. Each year it will grow 7 lemons, which he can sell for', 'len': 256}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -2.1 (test=0.00, agree=0.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0039
+        Time: 16.90s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0039 16.9s
+[14/200] Processing: gsm8k-13
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-13
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red hous', 'len': 237}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red hous', 'len': 237}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Melanie is a door-to-door saleswoman. She sold a third of her vacuum cleaners at the green house, 2 more to the red hous', 'len': 237}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.500, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -1.2 (test=0.00, agree=0.50, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -1.0 (test=0.00, agree=0.50, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -2.1 (test=0.00, agree=0.00, conf=0.50)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.600)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0046
+        Time: 19.22s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0046 19.2s
+[15/200] Processing: gsm8k-14
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-14
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and th', 'len': 219}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and th', 'len': 219}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In a dance class of 20 students, 20% enrolled in contemporary dance, 25% of the remaining enrolled in jazz dance, and th', 'len': 219}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.500, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.3 (test=0.00, agree=1.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.3 (test=0.00, agree=1.00, conf=0.50)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0029
+        Time: 19.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0029 19.8s
+[16/200] Processing: gsm8k-15
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-15
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A merchant wants to make a choice of purchase between 2 purchase plans: jewelry worth $5,000 or electronic gadgets worth', 'len': 397}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.500 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A merchant wants to make a choice of purchase between 2 purchase plans: jewelry worth $5,000 or electronic gadgets worth', 'len': 397}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A merchant wants to make a choice of purchase between 2 purchase plans: jewelry worth $5,000 or electronic gadgets worth', 'len': 397}]
+          cand-gpt-5-mini: confidence=0.600, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.600, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 0.0 -> -0.3 (test=0.00, agree=1.00, conf=0.50)
+          [USAL] cand-gpt-5-mini: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+          [USAL] cand-gemini-2.5-flash: 0.0 -> -0.1 (test=0.00, agree=1.00, conf=0.60)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0021
+        Time: 20.83s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0021 20.8s
+[17/200] Processing: gsm8k-16
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-16
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, ', 'len': 222}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.600 < 0.750), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, ', 'len': 222}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Two trains leave San Rafael at the same time. They begin traveling westward, both traveling for 80 miles. The next day, ', 'len': 222}]

@@ -1,0 +1,41 @@
+=
+[DATASET] arc_challenge
+[TIME] 2026-01-24 00:08:35
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_dev_grid.py --dataset arc_challenge --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/arc_challenge_dev10.jsonl --seed 1 --rep_state_scope per_run --max_workers 6 --timeout_sec 9000 --out_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge --log_dir /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge
+Grid: dataset=arc_challenge seed=1 n=24 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge log_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge rep_state_scope=per_run max_workers=6 clean_rep_state=False
+[1/24] Done: tau1_0.75_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[2/24] Done: tau1_0.75_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[3/24] Done: tau1_0.75_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[4/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[5/24] Done: tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[6/24] Done: tau1_0.75_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[7/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[8/24] Done: tau1_0.85_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[9/24] Done: tau1_0.85_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[10/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[11/24] Done: tau1_0.85_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[12/24] Done: tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[13/24] Done: tau1_0.85_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[14/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[15/24] Done: tau1_0.85_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[16/24] Done: tau1_0.85_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[17/24] Done: tau1_0.95_tau2_0.67_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[18/24] Done: tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[19/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[20/24] Done: tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1
+[21/24] Done: tau1_0.95_tau2_1.0_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1
+[22/24] Done: tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+[23/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1
+[24/24] Done: tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1
+All done in 849.1s
+[DONE] arc_challenge
+[CSV_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/arc_challenge
+[CSV_COUNT] 25
+[LOG_DIR] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/arc_challenge
+[SUMMARY] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/arc_challenge_grid_summary.csv
+[BEST_CFG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/arc_challenge_best.json
+[DRIVER_LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/dev_grid/_driver/arc_challenge_20260124_000835.log
+
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_summary/arc_challenge_grid_summary.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/best_cfg/arc_challenge_best.json
+[BEST] arc_challenge: acc=0.4103 cost=0.000021 lat=1.58 t1=0.75 t2=0.67 wq=0.4 wr=0.3 wc=0.3 mr=0.0

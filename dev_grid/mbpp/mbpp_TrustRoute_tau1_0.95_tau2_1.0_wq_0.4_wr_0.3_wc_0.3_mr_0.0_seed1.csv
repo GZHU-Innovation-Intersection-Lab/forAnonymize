@@ -1,0 +1,391 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/93,TrustRoute,1,"```python
+def power(a, b):
+    return a ** b
+
+assert power(3, 4) == 81
+```",0.00144925,12.668259620666504,0,0,cand-gpt-4o-mini,stage2_vote,
+mbpp,Mbpp/619,TrustRoute,1,"def move_num(s):
+    letters, digits = [], []
+    for ch in s:
+        (digits if ch.isdigit() else letters).append(ch)
+    return ''.join(letters + digits)
+
+assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'",0.00460595,17.25258469581604,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/277,TrustRoute,1,"def dict_filter(d, n):
+    return {k: v for k, v in d.items() if v >= n}
+
+assert dict_filter({'Cierra Vega': 175, 'Alden Cantrell': 180, 'Kierra Gentry': 165, 'Pierre Cox': 190}, 170) == {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Pierre Cox': 190}",0.0019424,10.467393636703491,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/296,TrustRoute,1,"Here's a concise Python function to count inversions in an array using a modified merge sort algorithm:
+
+```python
+def merge_and_count(arr, temp_arr, left, mid, right):
+    i = left    # Starting index for left subarray
+    j = mid + 1 # Starting index for right subarray
+    k = left    # Starting index to be sorted
+    inv_count = 0
+
+    while i <= mid and j <= right:
+        if arr[i] <= arr[j]:
+            temp_arr[k] = arr[i]
+            i += 1
+        else:
+            temp_arr[k] = arr[j]
+            inv_count += (mid - i + 1)
+            j += 1
+        k += 1
+
+    while i <= mid:
+        temp_arr[k] = arr[i]
+        i += 1
+        k += 1
+
+    while j <= right:
+        temp_arr[k] = arr[j]
+        j += 1
+        k += 1
+
+    for i in range(left, right + 1):
+        arr[i] = temp_arr[i]
+
+    return inv_count
+
+def merge_sort_and_count(arr, temp_arr, left, right):
+    inv_count = 0
+    if left < right:
+        mid = (left + right) // 2
+        inv_count += merge_sort_and_count(arr, temp_arr, left, mid)
+        inv_count += merge_sort_and_count(arr, temp_arr, mid + 1, right)
+        inv_count += merge_and_count(arr, temp_arr, left, mid, right)
+    return inv_count
+
+def get_Inv_Count(arr):
+    temp_arr = [0] * len(arr)
+    return merge_sort_and_count(arr, temp_arr, 0, len(arr) - 1)
+
+# Test case
+assert get_Inv_Count([1, 20, 6, 4, 5]) == 5
+```
+
+This function efficiently counts the number of inversions in the input array.",0.00401926,35.975029706954956,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/598,TrustRoute,1,"```python
+def armstrong_number(n):
+    digits = str(n)
+    power = len(digits)
+    return sum(int(d) ** power for d in digits) == n
+```
+
+This function:
+1. Converts the number to a string to easily access each digit
+2. Calculates the power (number of digits)
+3. Returns True if the sum of each digit raised to the power equals the original number
+
+The assertion `armstrong_number(153)` returns `True` because 1³ + 5³ + 3³ = 1 + 125 + 27 = 153.",0.004041299999999999,9.651337623596191,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/439,TrustRoute,1,"To solve this problem, we need to join a list of integers into a single integer by concatenating their string representations. Here's the step-by-step approach:
+
+1. **Convert each integer to a string**: Iterate through each integer in the list and convert it to a string.
+2. **Concatenate the strings**: Combine all the strings into a single continuous string.
+3. **Convert back to integer**: Parse the concatenated string back into an integer and return it.
+
+### Solution Code
+```python
+def multiple_to_single(integers):
+    return int(''.join(map(str, integers)))
+```
+
+### Explanation
+- **Conversion to String**: Using `map(str, integers)`, each integer in the list is converted to its string equivalent.
+- **Concatenation**: The `join()` method combines all these strings into one continuous string without any separators.
+- **Integer Conversion**: The concatenated string is converted back to an integer using `int()`.
+
+This approach efficiently handles the conversion and concatenation in minimal steps, ensuring clarity and correctness. For example, `multiple_to_single([11, 33, 50])` becomes `""11"" + ""33"" + ""50"" = ""113350""`, which is then converted to the integer `113350`.",0.00338432,11.637681245803833,0,0,cand-deepseek-r1,stage2_confidence,
+mbpp,Mbpp/240,TrustRoute,1,"```python
+def replace_list(list1, list2):
+    return list1[:-1] + list2
+```",0.0024151,13.857408285140991,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/311,TrustRoute,1,"```python
+def set_left_most_unset_bit(n):
+    if n == 0:
+        return 1
+    bits = n.bit_length()
+    for i in range(bits - 1, -1, -1):
+        if not (n & (1 << i)):
+            return n | (1 << i)
+    return n
+```",0.0165291,45.72096014022827,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/69,TrustRoute,1,"```python
+def is_sublist(main, sub):
+    if len(sub) == 0:
+        return True  # Empty sublist is considered a sublist
+    if len(main) < len(sub):
+        return False
+    for i in range(len(main) - len(sub) + 1):
+        if main[i:i + len(sub)] == sub:
+            return True
+    return False
+```
+assert is_sublist([2,4,3,5,7], [3,7]) == False  # This will pass as expected",0.00286754,22.432464599609375,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/641,TrustRoute,1,"```python
+def is_nonagonal(n):
+    return n * (7 * n - 5) // 2
+```
+
+The nonagonal number formula is: n(7n - 5) / 2
+
+For n=10: 10 * (7*10 - 5) / 2 = 10 * 65 / 2 = 325 ✓",0.002986,11.341758251190186,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/801,TrustRoute,1,"```python
+def test_three_equal(a, b, c):
+    if a == b == c:
+        return 3
+    elif a == b or b == c or a == c:
+        return 2
+    else:
+        return 0
+```",0.0025709500000000002,11.93004322052002,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/629,TrustRoute,1,"```python
+def Split(numbers):
+    return [num for num in numbers if num % 2 == 0]
+```",0.00177605,10.858103513717651,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/20,TrustRoute,1,"```python
+def is_woodall(n):
+    k = 1
+    while True:
+        woodall = k * (2 ** k) - 1
+        if woodall == n:
+            return True
+        if woodall > n:
+            return False
+        k += 1
+```
+
+The function checks if a number is a Woodall number (of the form k × 2^k - 1) by iterating through values of k until finding a match or exceeding the target number.",0.0038196999999999997,16.162129878997803,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/232,TrustRoute,1,"```python
+def larg_nnum(lst, n):
+    return sorted(lst, reverse=True)[:n]
+```",0.00203135,11.728015661239624,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/781,TrustRoute,1,"```python
+def count_divisors(n):
+    count = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            count += 1 if i * i == n else 2
+    return count % 2 == 0
+```
+
+The function counts divisors efficiently by iterating only up to the square root of n. For each divisor found, it counts both the divisor and its pair (unless they're the same, i.e., when n is a perfect square). It returns True if the count is even, False otherwise.",0.0035897499999999996,11.832759618759155,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/256,TrustRoute,1,"```python
+def count_Primes_nums(n):
+    if n <= 2:
+        return 0
+    
+    is_prime = [True] * n
+    is_prime[0] = is_prime[1] = False
+    
+    for i in range(2, int(n**0.5) + 1):
+        if is_prime[i]:
+            for j in range(i*i, n, i):
+                is_prime[j] = False
+    
+    return sum(is_prime)
+```",0.00450795,16.44577646255493,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/722,TrustRoute,1,"```python
+def filter_data(students, min_height, min_weight):
+    return {name: (height, weight) for name, (height, weight) in students.items() if height >= min_height and weight >= min_weight}
+```",0.0023854,14.663222312927246,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/785,TrustRoute,1,"```python
+def tuple_str_int(tuple_str):
+    return tuple(map(int, tuple_str.strip('()').split(', ')))
+```",0.00225245,6.317183256149292,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/244,TrustRoute,1,"```python
+import math
+
+def next_Perfect_Square(n):
+    sqrt_n = math.sqrt(n)
+    k = math.ceil(sqrt_n)
+    if k ** 2 > n:
+        return k ** 2
+    else:
+        return (k + 1) ** 2
+```",0.00476548,27.640315055847168,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/285,TrustRoute,1,"```python
+def text_match_two_three(text):
+    return ""abb"" in text or ""abbb"" in text
+```",0.0030378,12.061277627944946,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/301,TrustRoute,1,"```python
+def dict_depth(d):
+    if not isinstance(d, dict):
+        return 0
+    return 1 + max((dict_depth(value) for value in d.values()), default=0)
+```",0.0027830499999999996,21.960314989089966,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/741,TrustRoute,1,"```python
+def all_Characters_Same(s):
+    if len(s) <= 1:
+        return True
+    first = s[0]
+    return all(char == first for char in s[1:])
+```",0.0022287,10.940398931503296,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/558,TrustRoute,1,"```
+def digit_distance_nums(a, b):
+    str_a = str(a)
+    str_b = str(b)
+    
+    if len(str_a) < len(str_b):
+        str_a = '0' * (len(str_b) - len(str_a)) + str_a
+    elif len(str_b) < len(str_a):
+        str_b = '0' * (len(str_a) - len(str_b)) + str_b
+    
+    sum_diff = 0
+    for i in range(len(str_a)):
+        sum_diff += abs(int(str_a[i]) - int(str_b[i]))
+    
+    return sum_diff
+```",0.00323345,16.72705101966858,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/222,TrustRoute,1,"```python
+def check_type(tup):
+    if not tup:
+        return True
+    first_type = type(tup[0])
+    for item in tup:
+        if type(item) != first_type:
+            return False
+    return True
+```",0.0020970999999999997,9.144871473312378,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/287,TrustRoute,1,"```python
+def square_Sum(n):
+    return 4 * (n * (n + 1) * (2 * n + 1) // 6)
+```",0.0027329999999999998,11.650304555892944,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/762,TrustRoute,1,"```python
+def check_monthnumber_number(month):
+    return month in [4, 6, 9, 11]
+```",0.0017186,8.641615629196167,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/135,TrustRoute,1,"```python
+def hexagonal_num(n):
+    return n * (2 * n - 1)
+```",0.0019358499999999998,8.525803565979004,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/639,TrustRoute,1,"```python
+def sample_nam(names):
+    filtered = [name for name in names if name and not name[0].islower()]
+    return sum(len(name) for name in filtered)
+```",0.00219865,11.738438129425049,0,0,cand-grok-3-mini,stage2_vote,
+mbpp,Mbpp/477,TrustRoute,1,"```python
+def is_lower(s):
+    return s.lower()
+
+assert is_lower(""InValid"") == ""invalid""
+```",0.0009075499999999999,6.6634252071380615,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/462,TrustRoute,1,"```python
+def combinations_list(lst):
+    result = []
+    for i in range(2**len(lst)):
+        combo = []
+        for j in range(len(lst)):
+            if i & (1 << j):
+                combo.append(lst[j])
+        result.append(combo)
+    return result
+```
+
+This function generates all possible combinations (power set) by using bit manipulation. For a list of n elements, there are 2^n possible combinations. Each number from 0 to 2^n-1 represents a unique combination where each bit indicates whether to include the element at that position.",0.0044776500000000006,29.287482261657715,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/91,TrustRoute,1,"```python
+def find_substring(strings, substring):
+    return any(substring in s for s in strings)
+```
+
+This function checks if the given substring exists in any of the strings in the list. It returns `True` if found, `False` otherwise.",0.0016294999999999999,7.9085352420806885,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/447,TrustRoute,1,"```python
+def cube_nums(nums):
+    return [num ** 3 for num in nums]
+```",0.0012954499999999999,7.047207355499268,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/235,TrustRoute,1,"```python
+def even_bit_set_number(n):
+    mask = 0xAAAAAAAA
+    return n | mask
+```
+
+Wait, let me reconsider. The function needs to work for numbers of any size, and we need to determine what ""even bits"" means (0-indexed or 1-indexed) based on the test case.
+
+For n=10 (binary: 1010), if the result is 10, it means even bits (0-indexed: bits 0,2,4,6...) are already set or we're using 1-indexed where bits 1,3,5,7... are ""odd"".
+
+Let me trace through: 10 = 1010 in binary
+- If even bits are positions 0,2,4,6... (0-indexed), setting them: 1010 | 0101... would give 1111 = 15 ❌
+- If even bits are positions 2,4,6,8... (1-indexed), setting them: 1010 | 1010... would give 1010 = 10 ✓
+
+So ""even bits"" means positions 2,4,6,8... (1-indexed), which is bits 1,3,5,7... (0-indexed).
+
+```python
+def even_bit_set_number(n):
+    mask = 0xAAAAAAAA
+    return n | mask
+```
+
+Actually, this mask might be too large. Let me create a mask based on the number's bit length:
+
+```python
+def even_bit_set_number(n):
+    if n == 0:
+        return 0
+    bit_length = n.bit_length()
+    mask = int('10' * ((bit_length + 1) // 2), 2)
+    return n | mask
+```",0.02899565,61.34291672706604,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/103,TrustRoute,1,"```python
+def eulerian_num(n, m):
+    if m >= n or n == 0:
+        return 0
+    if m == 0:
+        return 1
+    
+    dp = [[0] * n for _ in range(n + 1)]
+    
+    for i in range(n + 1):
+        dp[i][0] = 1
+    
+    for i in range(1, n + 1):
+        for j in range(1, i):
+            dp[i][j] = (i - j) * dp[i - 1][j - 1] + (j + 1) * dp[i - 1][j]
+    
+    return dp[n][m]
+```
+
+The function computes Eulerian numbers using dynamic programming with the recurrence relation: A(n,m) = (n-m)·A(n-1,m-1) + (m+1)·A(n-1,m), with base cases A(n,0) = 1 and A(n,m) = 0 for m ≥ n.",0.0065251499999999995,20.401074647903442,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/223,TrustRoute,1,"```python
+def is_majority(arr, n, x):
+    if n == 0:
+        return False
+    
+    # Find first occurrence of x
+    left = 0
+    right = n - 1
+    first_idx = -1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            first_idx = mid
+            right = mid - 1
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    if first_idx == -1:
+        return False
+    
+    # Check if element at first_idx + n//2 is also x
+    return first_idx + n // 2 < n and arr[first_idx + n // 2] == x
+```",0.004118500000000001,12.536418199539185,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/410,TrustRoute,1,"```python
+def min_val(lst):
+    return min(x for x in lst if isinstance(x, (int, float)))
+```
+
+This function filters the list to include only numeric values (int or float) and returns the minimum among them.",0.0038702,8.997444152832031,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/604,TrustRoute,1,"```python
+def reverse_words(s):
+    return ' '.join(s.split()[::-1])
+```
+
+This solution:
+1. Splits the string by spaces into a list of words
+2. Reverses the list using `[::-1]`
+3. Joins the reversed list back into a string with spaces",0.00241534,8.675594329833984,0,0,cand-claude-sonnet-4-5,stage2_vote,

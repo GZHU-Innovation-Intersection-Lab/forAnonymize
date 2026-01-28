@@ -1,0 +1,151 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"def maximum(arr, k):
+    if k == 0:
+        return []
+    return sorted(arr)[-k:]",0.00391295,10.222158670425415,0,0,cand-gpt-5-mini,stage2_verified,
+humaneval,HumanEval/88,TrustRoute,1,"def sort_array(array):
+    if not array:
+        return []
+    return sorted(array, reverse=((array[0] + array[-1]) % 2 == 0))",0.0010520000000000002,6.913653373718262,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return ''.join(strings)",0.0006735,5.324006795883179,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"def prod_signs(arr):
+    if not arr:
+        return None
+    total = 0
+    sign = 1
+    for x in arr:
+        if x == 0:
+            return 0
+        if x < 0:
+            sign = -sign
+        total += abs(x)
+    return sign * total",0.0008420000000000001,7.2755961418151855,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"def triangle_area(a, h):
+    """"""Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """"""
+    return 0.5 * a * h",0.000273,3.4263627529144287,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    num_to_word = ["""", ""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    
+    # Filter integers between 1 and 9 (inclusive)
+    filtered_arr = [n for n in arr if 1 <= n <= 9]
+    
+    # Sort the filtered array
+    filtered_arr.sort()
+    
+    # Reverse the sorted array
+    filtered_arr.reverse()
+    
+    # Replace each digit by its corresponding name
+    return [num_to_word[n] for n in filtered_arr]
+```",0.00457255,20.16115713119507,0,0,cand-gemini-2.5-flash,stage2_verified,
+humaneval,HumanEval/124,TrustRoute,1,"def valid_date(date):
+    if not date:
+        return False
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+    mm, dd, yyyy = parts
+    if not (mm.isdigit() and dd.isdigit() and yyyy.isdigit()):
+        return False
+    m, d = int(mm), int(dd)
+    if not (1 <= m <= 12):
+        return False
+    if d < 1:
+        return False
+    if m == 2:
+        return d <= 29
+    if m in (4, 6, 9, 11):
+        return d <= 30
+    return d <= 31",0.00141325,10.867677211761475,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"def truncate_number(number: float) -> float:
+    """"""Return the decimal part of a positive floating point number.""""""
+    return number - int(number)",0.0007545,9.98708963394165,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"from typing import List
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    if len(numbers) < 2:
+        return False
+    s = sorted(numbers)
+    for a, b in zip(s, s[1:]):
+        if b - a < threshold:
+            return True
+    return False",0.0015505000000000002,12.589568138122559,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"def hex_key(num: str) -> int:
+    """"""Count hexadecimal digits that are prime (2,3,5,7,B,D).""""""
+    primes = set(""2357BD"")
+    return sum(ch in primes for ch in num)",0.00084825,5.953848600387573,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"def pairs_sum_to_zero(l):
+    seen = set()
+    for x in l:
+        if -x in seen:
+            return True
+        seen.add(x)
+    return False",0.00091475,6.961222887039185,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"def is_multiply_prime(a):
+    if a < 2:
+        return False
+    cnt = 0
+    n = a
+    p = 2
+    while p * p <= n:
+        while n % p == 0:
+            cnt += 1
+            n //= p
+            if cnt > 3:
+                return False
+        p = 3 if p == 2 else p + 2
+    if n > 1:
+        cnt += 1
+    return cnt == 3
+
+# examples
+# print(is_multiply_prime(30))  # True
+# print(is_multiply_prime(8))   # True
+# print(is_multiply_prime(16))  # False",0.00189375,12.891200304031372,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"from decimal import Decimal
+
+def closest_integer(value):
+    d = Decimal(value)
+    sign = 1 if d >= 0 else -1
+    ad = d.copy_abs()
+    whole = int(ad)
+    frac = ad - Decimal(whole)
+    return sign * (whole + 1 if frac >= Decimal('0.5') else whole)",0.0018825000000000003,13.526713371276855,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"def is_equal_to_sum_even(n):
+    """"""Return True if n can be written as sum of exactly 4 positive even numbers.""""""
+    return isinstance(n, int) and n >= 8 and n % 2 == 0",0.00053075,5.198557615280151,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"def next_smallest(lst):
+    """"""Return the 2nd smallest distinct integer or None if it doesn't exist.""""""
+    s = sorted(set(lst))
+    return s[1] if len(s) > 1 else None",0.0007945,6.526383399963379,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"def pluck(arr):
+    """"""
+    Returns [smallest_even_value, index] or [] if none.
+    """"""
+    best_val = float('inf')
+    best_idx = -1
+    for i, v in enumerate(arr):
+        if v % 2 == 0 and v < best_val:
+            best_val, best_idx = v, i
+    return [] if best_idx == -1 else [best_val, best_idx]",0.0009335000000000001,8.086068630218506,0,0,cand-gpt-5-mini,stage1_early_stop,

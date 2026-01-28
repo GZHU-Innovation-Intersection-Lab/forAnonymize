@@ -1,0 +1,9 @@
+=
+[DATASET] arc_challenge
+[TIME] 2026-01-25 10:11:40
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (1055/1055): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/arc_challenge/arc_challenge_TrustRoute_best_tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] arc_challenge: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/arc_challenge
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/arc_challenge_test90_summary.csv

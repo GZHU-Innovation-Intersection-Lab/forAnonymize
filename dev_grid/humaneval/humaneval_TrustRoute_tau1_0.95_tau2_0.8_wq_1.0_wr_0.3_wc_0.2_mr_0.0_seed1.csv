@@ -1,0 +1,311 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"```python
+def maximum(arr, k):
+    """"""
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+    """"""
+    
+    # Sort the array in descending order
+    arr.sort(reverse=True)
+    
+    # Take the first k elements, which are the k largest
+    top_k = arr[:k]
+    
+    # Sort these k elements in ascending order as required by the examples
+    top_k.sort()
+    
+    return top_k
+```",0.00445715,12.791168689727783,0,0,cand-gemini-2.5-flash,stage2_verified,
+humaneval,HumanEval/88,TrustRoute,1,"```python
+def sort_array(array):
+    """"""
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """"""
+    if len(array) <= 1:
+        return list(array)
+
+    first_val = array[0]
+    last_val = array[-1]
+    
+    if (first_val + last_val) % 2 == 0:  # Sum is even, sort descending
+        return sorted(array, reverse=True)
+    else:  # Sum is odd, sort ascending
+        return sorted(array)
+```",0.0032356,7.067667245864868,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"```python
+from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return """".join(strings)
+```",0.0004204,1.7443618774414062,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"```python
+def prod_signs(arr):
+    if not arr:
+        return None
+
+    sum_magnitudes = 0
+    product_signs = 1
+
+    for x in arr:
+        sum_magnitudes += abs(x)
+        if x > 0:
+            product_signs *= 1
+        elif x < 0:
+            product_signs *= -1
+        else:
+            product_signs *= 0 # If any zero is present, product_signs becomes 0
+
+    return sum_magnitudes * product_signs
+```",0.0028293000000000003,5.814044713973999,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"```python
+def triangle_area(a, h):
+    """"""Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """"""
+    return 0.5 * a * h
+```",0.0003643,1.643660068511963,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    """"""
+    Given an array of integers, sort the integers that are between 1 and 9 inclusive,
+    reverse the resulting array, and then replace each digit by its corresponding name from
+    ""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine"".
+    """"""
+    digit_names = [""Zero"", ""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    
+    # Filter numbers to include only those between 1 and 9 inclusive.
+    filtered_nums = [n for n in arr if 1 <= n <= 9]
+    
+    # Sort the filtered array in ascending order.
+    filtered_nums.sort()
+    
+    # Reverse the sorted array.
+    filtered_nums.reverse()
+    
+    # Replace each digit with its corresponding name.
+    return [digit_names[n] for n in filtered_nums]
+```",0.004439,9.329848766326904,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/124,TrustRoute,1,"```python
+def valid_date(date):
+    if not date:
+        return False
+
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+
+    if not (len(parts[0]) == 2 and len(parts[1]) == 2 and len(parts[2]) == 4):
+        return False
+
+    try:
+        month = int(parts[0])
+        day = int(parts[1])
+        year = int(parts[2])
+    except ValueError:
+        return False
+
+    if not (1 <= month <= 12):
+        return False
+
+    days_in_month = {
+        1: 31, 3: 31, 5: 31, 7: 31, 8: 31, 10: 31, 12: 31,
+        4: 30, 6: 30, 9: 30, 11: 30,
+        2: 29
+    }
+
+    if not (1 <= day <= days_in_month.get(month, 0)):
+        return False
+
+    return True
+```",0.005926799999999999,12.456422567367554,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"```python
+def truncate_number(number: float) -> float:
+    return number - int(number)
+```",0.0008582,2.818706750869751,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"```python
+from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    n = len(numbers)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if abs(numbers[i] - numbers[j]) < threshold:
+                return True
+    return False
+```",0.001412,3.41774320602417,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"```python
+def hex_key(num):
+    """"""You have been tasked to write a function that receives 
+    a hexadecimal number as a string and counts the number of hexadecimal 
+    digits that are primes (prime number, or a prime, is a natural number 
+    greater than 1 that is not a product of two smaller natural numbers).
+    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...
+    So you have to determine a number of the following digits: 2, 3, 5, 7, 
+    B (=decimal 11), D (=decimal 13).
+    Note: you may assume the input is always correct or empty string, 
+    and symbols A,B,C,D,E,F are always uppercase.
+    Examples:
+    For num = ""AB"" the output should be 1.
+    For num = ""1077E"" the output should be 2.
+    For num = ""ABED1A33"" the output should be 4.
+    For num = ""123456789ABCDEF0"" the output should be 6.
+    For num = ""2020"" the output should be 2.
+    """"""
+    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}
+    count = 0
+    for digit in num:
+        if digit in prime_hex_digits:
+            count += 1
+    return count
+```",0.0027707,5.396223068237305,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"```python
+def pairs_sum_to_zero(l):
+    seen = set()
+    for num in l:
+        if -num in seen:
+            return True
+        seen.add(num)
+    return False
+
+```",0.005790399999999999,13.099485397338867,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"```python
+def is_multiply_prime(a):
+    """"""Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """"""
+    if a < 8:  # Smallest product of 3 primes is 2*2*2 = 8
+        return False
+
+    # Primes needed for a < 100
+    # Largest possible prime factor for a product of three primes:
+    # 2 * 2 * p3 < 100  => p3 < 25.
+    # So, primes up to 23 are sufficient.
+    primes_list = [2, 3, 5, 7, 11, 13, 17, 19, 23]
+
+    for i in range(len(primes_list)):
+        p1 = primes_list[i]
+        if p1 * p1 * p1 > a: # Optimization: if p1^3 is already too large, no combination (p1 <= p2 <= p3) will work.
+            break
+
+        for j in range(i, len(primes_list)): # p2 can be equal to p1
+            p2 = primes_list[j]
+            if p1 * p2 * p2 > a: # Optimization: if p1 * p2^2 is too large, no combination (p1 <= p2 <= p3) will work.
+                break
+
+            for k in range(j, len(primes_list)): # p3 can be equal to p1 or p2
+                p3 = primes_list[k]
+                product = p1 * p2 * p3
+
+                if product == a:
+                    return True
+                if product > a: # Optimization: if product is already too large, increasing p3 will only make it larger.
+                    break
+    
+    return False
+```",0.0113363,22.966581344604492,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"```python
+import math
+
+def closest_integer(value):
+    num = float(value)
+    # This formula implements ""round half away from zero"" for all numbers.
+    # 1. abs(num) + 0.5: shifts positive numbers and absolute values of negative numbers up by 0.5.
+    #    For example, 14.5 becomes 15.0, 14.3 becomes 14.8, -14.5 becomes 15.0, -14.3 becomes 14.8.
+    # 2. math.floor(...): truncates the decimal part, effectively rounding down.
+    #    For example, floor(15.0) is 15.0, floor(14.8) is 14.0. This handles the standard rounding.
+    #    For the .5 case (e.g., 14.5 -> 15.0), floor(15.0) is 15.0, correctly rounding away from zero.
+    # 3. math.copysign(..., num): applies the original sign of 'num' to the result.
+    #    If num was -14.5, abs(num)+0.5 -> 15.0, floor(15.0) -> 15.0.
+    #    copysign(15.0, -14.5) -> -15.0, which is the correct ""away from zero"" rounding for negative numbers.
+    return int(math.copysign(math.floor(abs(num) + 0.5), num))
+
+```",0.0116103,26.33309578895569,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"```python
+def is_equal_to_sum_even(n):
+    """"""Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers
+    Example
+    is_equal_to_sum_even(4) == False
+    is_equal_to_sum_even(6) == False
+    is_equal_to_sum_even(8) == True
+    """"""
+    return n % 2 == 0 and n >= 8
+```",0.0034750000000000002,8.023534059524536,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"```python
+def next_smallest(lst):
+    """"""
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+    """"""
+    if len(lst) < 2:
+        return None
+    
+    unique_elements = sorted(list(set(lst)))
+    
+    if len(unique_elements) < 2:
+        return None
+    else:
+        return unique_elements[1]
+```",0.0021455,4.741520166397095,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"```python
+def pluck(arr):
+    """"""
+    Given an array representing a branch of a tree that has non-negative integer nodes
+    your task is to pluck one of the nodes and return it.
+    The plucked node should be the node with the smallest even value.
+    If multiple nodes with the same smallest even value are found return the node that has smallest index.
+
+    The plucked node should be returned in a list, [ smalest_value, its index ],
+    If there are no even values or the given array is empty, return [].
+    """"""
+    min_even_value = float('inf')
+    min_even_index = -1
+
+    for index, value in enumerate(arr):
+        if value % 2 == 0:  # Check if the value is even
+            if value < min_even_value:
+                min_even_value = value
+                min_even_index = index
+            elif value == min_even_value and index < min_even_index:
+                # If values are equal, choose the one with the smallest index
+                min_even_index = index
+    
+    if min_even_index == -1:  # No even values were found
+        return []
+    else:
+        return [min_even_value, min_even_index]
+
+```",0.0039213,7.794987916946411,0,0,cand-gemini-2.5-flash,stage1_early_stop,

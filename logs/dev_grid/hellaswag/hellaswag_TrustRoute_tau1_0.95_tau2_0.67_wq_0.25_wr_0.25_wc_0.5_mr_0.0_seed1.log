@@ -1,0 +1,2995 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: hellaswag_TrustRoute_f64fe5b0c6
+🚀 Running TrustRoute on hellaswag
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/hellaswag_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/hellaswag/hellaswag_TrustRoute_tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 100 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/100] Processing: hellaswag-6858[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6858
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use hair gloss [title] Choose a clear gloss to add shine. [step] If you want to improve the condition an', 'len': 1251}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use hair gloss [title] Choose a clear gloss to add shine. [step] If you want to improve the condition an', 'len': 1251}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use hair gloss [title] Choose a clear gloss to add shine. [step] If you want to improve the condition an', 'len': 1251}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0037
+        Time: 11.45s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0037 11.5s
+[2/100] Processing: hellaswag-5100
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5100
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.420
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get an a without reading the book [title] If there is a movie adaptation of the book, watch it. [step] I', 'len': 1104}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get an a without reading the book [title] If there is a movie adaptation of the book, watch it. [step] I', 'len': 1104}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get an a without reading the book [title] If there is a movie adaptation of the book, watch it. [step] I', 'len': 1104}]
+          cand-gpt-5-mini: confidence=0.350, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.4 -> 48.1 (test=0.00, agree=0.00, conf=0.35)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0081
+        Time: 17.70s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0081 17.7s
+[3/100] Processing: hellaswag-7347
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7347
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.0, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to personalize slippers [title] Decide on the color and position. [step] If you want to add your name to a ', 'len': 1146}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to personalize slippers [title] Decide on the color and position. [step] If you want to add your name to a ', 'len': 1146}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to personalize slippers [title] Decide on the color and position. [step] If you want to add your name to a ', 'len': 1146}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.350, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.0 -> 48.6 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.0 -> 48.6 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.0 -> 47.6 (test=0.00, agree=0.00, conf=0.35)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0045
+        Time: 46.67s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0045 46.7s
+[4/100] Processing: hellaswag-7665
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7665
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.9, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=49.9, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=48.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.940
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to create an organization chart [title] Look at how your organization makes decisions. [step] Most business', 'len': 1252}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to create an organization chart [title] Look at how your organization makes decisions. [step] Most business', 'len': 1252}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to create an organization chart [title] Look at how your organization makes decisions. [step] Most business', 'len': 1252}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 48.6 -> 49.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0028
+        Time: 8.24s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0028 8.2s
+[5/100] Processing: hellaswag-6073
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6073
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.360
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use a clothes steamer [title] Learn which fabrics can be steamed and which ones cannot. [step] Steamers ', 'len': 989}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use a clothes steamer [title] Learn which fabrics can be steamed and which ones cannot. [step] Steamers ', 'len': 989}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use a clothes steamer [title] Learn which fabrics can be steamed and which ones cannot. [step] Steamers ', 'len': 989}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.0 -> 47.7 (test=0.00, agree=0.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 1/3 agree (33.3%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0063
+        Time: 17.91s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0063 17.9s
+[6/100] Processing: hellaswag-1830
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1830
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.0, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=49.0, cost=$0.00037
+  3. cand-grok-3-mini: rep=48.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 48.980
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person throws a frisbee and the dog runs to get it. The man lays down and put his feet up, and the dog jumps on the fe', 'len': 462}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person throws a frisbee and the dog runs to get it. The man lays down and put his feet up, and the dog jumps on the fe', 'len': 462}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person throws a frisbee and the dog runs to get it. The man lays down and put his feet up, and the dog jumps on the fe', 'len': 462}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.0 -> 49.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.0 -> 49.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.6 -> 49.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0017
+        Time: 16.26s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0017 16.3s
+[7/100] Processing: hellaswag-2797
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2797
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.4, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=49.4, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A game of croquette is in progress. A man has lined up numerous colored balls. he\n\nA. moves the balls around doing trick', 'len': 304}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A game of croquette is in progress. A man has lined up numerous colored balls. he\n\nA. moves the balls around doing trick', 'len': 304}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A game of croquette is in progress. A man has lined up numerous colored balls. he\n\nA. moves the balls around doing trick', 'len': 304}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.4 -> 49.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.4 -> 49.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.0 -> 49.5 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0011
+        Time: 6.99s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0011 7.0s
+[8/100] Processing: hellaswag-4117
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4117
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=49.8, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=49.8, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 49.820
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a daiquiri [title] Make sure to chill your martini glass first. [step] Some people like to fill it ', 'len': 978}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a daiquiri [title] Make sure to chill your martini glass first. [step] Some people like to fill it ', 'len': 978}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a daiquiri [title] Make sure to chill your martini glass first. [step] Some people like to fill it ', 'len': 978}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 49.8 -> 50.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.8 -> 50.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.5 -> 49.9 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0075
+        Time: 25.98s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0075 26.0s
+[9/100] Processing: hellaswag-7575
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7575
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.2, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.2, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.240
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to fix dough that won't rise [title] Turn up the temperature. [step] Yeast loves nothing better than a warm", 'len': 957}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to fix dough that won't rise [title] Turn up the temperature. [step] Yeast loves nothing better than a warm", 'len': 957}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to fix dough that won't rise [title] Turn up the temperature. [step] Yeast loves nothing better than a warm", 'len': 957}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.2 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.2 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.9 -> 50.3 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0137
+        Time: 45.10s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0137 45.1s
+[10/100] Processing: hellaswag-7475
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7475
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.7, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.7, cost=$0.00037
+  3. cand-grok-3-mini: rep=50.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.660
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a sarong [title] Measure your waist. [step] Sarongs are generally just large rectangles of fabric t', 'len': 919}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a sarong [title] Measure your waist. [step] Sarongs are generally just large rectangles of fabric t', 'len': 919}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a sarong [title] Measure your waist. [step] Sarongs are generally just large rectangles of fabric t', 'len': 919}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.3 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0010
+        Time: 10.79s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0010 10.8s
+[11/100] Processing: hellaswag-4517
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4517
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=51.1, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=51.1, cost=$0.00037
+  3. cand-grok-3-mini: rep=50.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 51.080
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to stop being a victim [title] Acknowledge and address your own anger. [step] Many of us unwittingly place ', 'len': 1032}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to stop being a victim [title] Acknowledge and address your own anger. [step] Many of us unwittingly place ', 'len': 1032}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to stop being a victim [title] Acknowledge and address your own anger. [step] Many of us unwittingly place ', 'len': 1032}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 51.1 -> 49.7 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 51.1 -> 50.6 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.7 -> 50.2 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0031
+        Time: 9.46s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0031 9.5s
+[12/100] Processing: hellaswag-6712
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6712
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.2, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=49.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.600
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to make gummy bears [title] Place 1/2 cup of cold water in a saucepan on the stove. [step] Don't start the ", 'len': 994}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to make gummy bears [title] Place 1/2 cup of cold water in a saucepan on the stove. [step] Don't start the ", 'len': 994}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to make gummy bears [title] Place 1/2 cup of cold water in a saucepan on the stove. [step] Don't start the ", 'len': 994}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.6 -> 51.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.2 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 49.7 -> 50.1 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 14.71s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0025 14.7s
+[13/100] Processing: hellaswag-9846
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9846
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.7, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=50.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make lemon and pistachio tart [title] Place flour, sugar, lemon zest, salt, and butter into a food proce', 'len': 717}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make lemon and pistachio tart [title] Place flour, sugar, lemon zest, salt, and butter into a food proce', 'len': 717}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make lemon and pistachio tart [title] Place flour, sugar, lemon zest, salt, and butter into a food proce', 'len': 717}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.0 -> 51.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 50.1 -> 50.5 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 11.24s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0015 11.2s
+[14/100] Processing: hellaswag-650
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-650
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.1, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=50.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.440
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'This woman is showing viewers how to get big bouncy curls using hot rollers. first she\n\nA. takes a test, she shakes them', 'len': 474}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'This woman is showing viewers how to get big bouncy curls using hot rollers. first she\n\nA. takes a test, she shakes them', 'len': 474}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'This woman is showing viewers how to get big bouncy curls using hot rollers. first she\n\nA. takes a test, she shakes them', 'len': 474}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.4 -> 51.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.1 -> 51.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 50.5 -> 51.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 13.94s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0010 13.9s
+[15/100] Processing: hellaswag-544
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-544
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=51.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.860
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A male racer is talking in an interview. Several runners walk by and wave. they\n\nA. run down the track and into the sand', 'len': 301}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A male racer is talking in an interview. Several runners walk by and wave. they\n\nA. run down the track and into the sand', 'len': 301}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A male racer is talking in an interview. Several runners walk by and wave. they\n\nA. run down the track and into the sand', 'len': 301}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.9 -> 51.4 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.5 -> 50.1 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 51.0 -> 50.5 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 12.22s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0016 12.2s
+[16/100] Processing: hellaswag-9349
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9349
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.4, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.5, cost=$0.00037
+  3. cand-grok-3-mini: rep=50.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.380
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to remove your social media from google search results [title] Get the url of the page or website which you', 'len': 1049}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to remove your social media from google search results [title] Get the url of the page or website which you', 'len': 1049}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to remove your social media from google search results [title] Get the url of the page or website which you', 'len': 1049}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.4 -> 50.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 50.5 -> 50.0 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.1 -> 49.6 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0022
+        Time: 13.57s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0022 13.6s
+[17/100] Processing: hellaswag-4775
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4775
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+  3. cand-grok-3-mini: rep=49.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to know why a child (under 2) is crying [title] Listen for a loud cry, almost a wail. [step] This usually m', 'len': 752}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to know why a child (under 2) is crying [title] Listen for a loud cry, almost a wail. [step] This usually m', 'len': 752}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to know why a child (under 2) is crying [title] Listen for a loud cry, almost a wail. [step] This usually m', 'len': 752}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.6 -> 50.1 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0020
+        Time: 13.81s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0020 13.8s
+[18/100] Processing: hellaswag-768
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-768
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+  3. cand-grok-3-mini: rep=50.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.420
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person is seen walking along the snow and pulling a sled behind him. The person cuts a hole in the ice as well as bait', 'len': 498}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person is seen walking along the snow and pulling a sled behind him. The person cuts a hole in the ice as well as bait', 'len': 498}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person is seen walking along the snow and pulling a sled behind him. The person cuts a hole in the ice as well as bait', 'len': 498}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.1 -> 49.6 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0013
+        Time: 8.32s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0013 8.3s
+[19/100] Processing: hellaswag-7799
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7799
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.6, cost=$0.00037
+  3. cand-gpt-4o-mini: rep=49.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.940
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be a dominatrix [title] Never assume consent. [step] Consent must be freely given. A person who is intox', 'len': 910}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be a dominatrix [title] Never assume consent. [step] Consent must be freely given. A person who is intox', 'len': 910}]
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be a dominatrix [title] Never assume consent. [step] Consent must be freely given. A person who is intox', 'len': 910}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.9 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.6 -> 48.2 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 49.0 -> 48.6 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0024
+        Time: 14.07s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0024 14.1s
+[20/100] Processing: hellaswag-3087
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-3087
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.5, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=48.6, cost=$0.00037
+  3. cand-grok-3-mini: rep=48.2, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.460
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A young boy is pushing a lawn mower forward and away from the camera on a very large yard of green grass. The boy turns ', 'len': 634}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A young boy is pushing a lawn mower forward and away from the camera on a very large yard of green grass. The boy turns ', 'len': 634}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A young boy is pushing a lawn mower forward and away from the camera on a very large yard of green grass. The boy turns ', 'len': 634}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.5 -> 49.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 48.6 -> 49.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.2 -> 48.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 12.77s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0015 12.8s
+[21/100] Processing: hellaswag-2829
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2829
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.9, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=49.0, cost=$0.00037
+  3. cand-grok-3-mini: rep=48.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.880
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man is seen holding a sharp knife in his hands while the camera zooms in and the man points to two boxes. He then glid', 'len': 509}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-4o-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man is seen holding a sharp knife in his hands while the camera zooms in and the man points to two boxes. He then glid', 'len': 509}]
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man is seen holding a sharp knife in his hands while the camera zooms in and the man points to two boxes. He then glid', 'len': 509}]
+          cand-gpt-4o-mini: confidence=0.900, tests_ok=False
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.9 -> 49.4 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-4o-mini: 49.0 -> 47.6 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.6 -> 48.1 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gemini-2.5-flash (0.900)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 19.05s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0017 19.1s
+[22/100] Processing: hellaswag-8587
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8587
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=48.1, cost=$0.00037
+  3. cand-gpt-5-mini: rep=48.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.400
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use teak oil on kitchen cabinets [title] Know what ingredients teak oil products contain. [step] First o', 'len': 1165}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use teak oil on kitchen cabinets [title] Know what ingredients teak oil products contain. [step] First o', 'len': 1165}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use teak oil on kitchen cabinets [title] Know what ingredients teak oil products contain. [step] First o', 'len': 1165}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.4 -> 49.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.1 -> 48.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 48.1 -> 48.5 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 11.77s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0025 11.8s
+[23/100] Processing: hellaswag-2558
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2558
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=48.6, cost=$0.00037
+  3. cand-gpt-5-mini: rep=48.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'We see a girl walking slowly with a shuffleboard pole and pushing a puck. the lady\n\nA. makes a hand gesture and the boy ', 'len': 350}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'We see a girl walking slowly with a shuffleboard pole and pushing a puck. the lady\n\nA. makes a hand gesture and the boy ', 'len': 350}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'We see a girl walking slowly with a shuffleboard pole and pushing a puck. the lady\n\nA. makes a hand gesture and the boy ', 'len': 350}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.8 -> 50.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 48.6 -> 49.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 48.5 -> 48.9 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 9.73s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0016 9.7s
+[24/100] Processing: hellaswag-2398
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2398
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=48.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.240
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Man is standing in the middle of a ring jumping the rope. referee\n\nA. is standing in the middle of the man doing the dis', 'len': 329}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Man is standing in the middle of a ring jumping the rope. referee\n\nA. is standing in the middle of the man doing the dis', 'len': 329}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Man is standing in the middle of a ring jumping the rope. referee\n\nA. is standing in the middle of the man doing the dis', 'len': 329}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.2 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.0 -> 49.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 48.9 -> 49.3 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0031
+        Time: 26.62s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0031 26.6s
+[25/100] Processing: hellaswag-2377
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2377
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=49.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.660
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is eating ice cream while she talks. The little girl looked at the window and then continue eating ice c', 'len': 483}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is eating ice cream while she talks. The little girl looked at the window and then continue eating ice c', 'len': 483}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is eating ice cream while she talks. The little girl looked at the window and then continue eating ice c', 'len': 483}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.4 -> 49.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 49.3 -> 49.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0023
+        Time: 18.97s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0023 19.0s
+[26/100] Processing: hellaswag-4318
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4318
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.8, cost=$0.00037
+  3. cand-gpt-5-mini: rep=49.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.080
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to develop in your career [title] Create a career plan. [step] You must have a clear picture of where you p', 'len': 1235}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to develop in your career [title] Create a career plan. [step] You must have a clear picture of where you p', 'len': 1235}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to develop in your career [title] Create a career plan. [step] You must have a clear picture of where you p', 'len': 1235}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.1 -> 51.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.8 -> 50.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 49.7 -> 50.2 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0028
+        Time: 14.18s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0028 14.2s
+[27/100] Processing: hellaswag-6601
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6601
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.2, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.2, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.500
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to put on tights [title] Choose the right size of tights. [step] The most important step in putting on tigh', 'len': 823}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to put on tights [title] Choose the right size of tights. [step] The most important step in putting on tigh', 'len': 823}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to put on tights [title] Choose the right size of tights. [step] The most important step in putting on tigh', 'len': 823}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.5 -> 51.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.2 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.2 -> 50.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0020
+        Time: 18.76s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0020 18.8s
+[28/100] Processing: hellaswag-227
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-227
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.7, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.920
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A graphic shows on the screen for a website about basketball drills. some young men on an indoor basketball court\n\nA. ki', 'len': 418}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A graphic shows on the screen for a website about basketball drills. some young men on an indoor basketball court\n\nA. ki', 'len': 418}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A graphic shows on the screen for a website about basketball drills. some young men on an indoor basketball court\n\nA. ki', 'len': 418}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.9 -> 52.3 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.6 -> 51.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 9.07s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0017 9.1s
+[29/100] Processing: hellaswag-377
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-377
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=52.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.1, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 52.340
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is playing peek a boo with someone and both of their faces have ice cream on them. they\n\nA. spit somethi', 'len': 420}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.900), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is playing peek a boo with someone and both of their faces have ice cream on them. they\n\nA. spit somethi', 'len': 420}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The little girl is playing peek a boo with someone and both of their faces have ice cream on them. they\n\nA. spit somethi', 'len': 420}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 52.3 -> 52.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.1 -> 51.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 51.0 -> 51.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 9.52s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0014 9.5s
+[30/100] Processing: hellaswag-4587
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4587
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=52.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 52.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to dress for spring [title] Aim for bright colors and patterns to give your outfit some style. [step] Light', 'len': 1038}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.900), early stop!
+          [USAL] cand-gemini-2.5-flash: 52.8 -> 53.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 4.38s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0017 4.4s
+[31/100] Processing: hellaswag-8444
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8444
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=53.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 53.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to look beautiful in 10 minutes [title] Fake a shower. [step] If you've only got ten minutes, you don't hav", 'len': 1220}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-gemini-2.5-flash: 53.4 -> 54.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0023
+        Time: 5.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0023 5.9s
+[32/100] Processing: hellaswag-4281
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4281
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=54.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 53.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get to a million gold and mana in castle clash [title] Make sure you have a lot of time on your hands. [', 'len': 890}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-gemini-2.5-flash: 54.0 -> 54.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 10.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 10.5s
+[33/100] Processing: hellaswag-6507
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6507
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=54.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 54.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to eat food on a banana leaf [title] Forego utensils. [step] Use your hand to eat most dishes. Enhance your', 'len': 1011}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 54.6 -> 55.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0051
+        Time: 12.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0051 12.2s
+[34/100] Processing: hellaswag-1452
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1452
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 55.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Young man is playing the harmonica. young man\n\nA. playing the flute is playing classical music with two harmonica player', 'len': 317}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.2 -> 55.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0027
+        Time: 8.86s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0027 8.9s
+[35/100] Processing: hellaswag-7339
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7339
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 55.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to react if your husband calls you fat [title] Take a moment to breathe before responding. [step] When some', 'len': 1156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.897), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.8 -> 56.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0128
+        Time: 29.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0128 29.2s
+[36/100] Processing: hellaswag-1154
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1154
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=56.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 56.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A woman is talking in her kitchen. She is in the process of making a dessert. she\n\nA. mixes all the ingredients and then', 'len': 389}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-gemini-2.5-flash: 56.4 -> 57.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 3.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 3.3s
+[37/100] Processing: hellaswag-6900
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6900
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=57.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 56.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make a veil [title] Select the style of veil you would like to make. [step] When you are choosing a veil', 'len': 883}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-gemini-2.5-flash: 57.0 -> 57.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 10.26s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 10.3s
+[38/100] Processing: hellaswag-3493
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-3493
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=57.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 57.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to use action verbs in public speaking [title] Comb the text of your speech, circling every verb. [title] A', 'len': 1010}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-gemini-2.5-flash: 57.6 -> 58.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 11.80s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 11.8s
+[39/100] Processing: hellaswag-1722
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1722
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=58.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 58.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A woman is standing in front of a truck in a driveway. she\n\nA. is then shown snowboarding down a hill.\nB. picks up sever', 'len': 309}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-gemini-2.5-flash: 58.2 -> 58.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 4.29s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 4.3s
+[40/100] Processing: hellaswag-7835
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7835
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=58.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 58.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to buy lenses for your digital slr [title] Pick a focal length designed for the type of pictures you take. ', 'len': 956}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.894), early stop!
+          [USAL] cand-gemini-2.5-flash: 58.8 -> 59.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 5.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 5.3s
+[41/100] Processing: hellaswag-9322
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9322
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=59.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 59.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to clean a cockatoo cage [title] Put a fresh liner in the cage. [step] Take out the old liner at the bottom', 'len': 929}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.894), early stop!
+          [USAL] cand-gemini-2.5-flash: 59.4 -> 60.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 6.08s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 6.1s
+[42/100] Processing: hellaswag-7773
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7773
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=60.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 59.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get rid of cellulite [title] Drink plenty of water. [step] Hydrating your body keeps your skin cells loo', 'len': 1008}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.893), early stop!
+          [USAL] cand-gemini-2.5-flash: 60.0 -> 60.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0019
+        Time: 6.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0019 6.4s
+[43/100] Processing: hellaswag-286
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-286
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=60.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 60.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Three teens run and a boy throws the basketball to the basket, then the second teen grabs the ball and pass the ball to ', 'len': 546}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-gemini-2.5-flash: 60.6 -> 61.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 13.73s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0025 13.7s
+[44/100] Processing: hellaswag-802
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-802
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=61.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 61.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The man examines the instrument in his hand. The person holds up the violin to his chin and gets ready. the person\n\nA. o', 'len': 307}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-gemini-2.5-flash: 61.2 -> 61.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.59s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.6s
+[45/100] Processing: hellaswag-5955
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5955
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=61.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 61.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get ready to go out [title] Choose your footwear. [step] Pick shoes that match your clothing and are app', 'len': 926}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-gemini-2.5-flash: 61.8 -> 62.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0068
+        Time: 16.13s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0068 16.1s
+[46/100] Processing: hellaswag-5648
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5648
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=62.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 62.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to arrange your bedroom mirrors [title] Place a small mirror on your nightstand or dresser. [step] This all', 'len': 1227}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-gemini-2.5-flash: 62.4 -> 63.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 11.86s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 11.9s
+[47/100] Processing: hellaswag-1001
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1001
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=63.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 62.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man etches a pumpkin with a knife like tool. The man then carves a logo into the pumpkin. we\n\nA. see the parents outsi', 'len': 327}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.890), early stop!
+          [USAL] cand-gemini-2.5-flash: 63.0 -> 63.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 4.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 4.3s
+[48/100] Processing: hellaswag-147
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-147
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=63.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 63.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'People are standing on a hill of snow. People are snowboarding down a hill of snow. people\n\nA. are pouring snowballs int', 'len': 314}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.890), early stop!
+          [USAL] cand-gemini-2.5-flash: 63.6 -> 64.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 3.72s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 3.7s
+[49/100] Processing: hellaswag-324
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-324
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=64.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 64.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '. a woman with her hair up in a towel\n\nA. introduces her video showing how she washes her face.\nB. sits on a behind wood', 'len': 354}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.889), early stop!
+          [USAL] cand-gemini-2.5-flash: 64.2 -> 64.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 8.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 8.9s
+[50/100] Processing: hellaswag-5176
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5176
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=64.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 64.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to do eyeliner stacking [title] Use gel or liquid eyeliners. [step] The thing that makes stacked eyeliner s', 'len': 1008}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-gemini-2.5-flash: 64.8 -> 65.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 13.67s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 13.7s
+[51/100] Processing: hellaswag-9817
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9817
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=65.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 65.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to find a missing pet [title] Search your home. [step] Often times a pet will hide somewhere in the house i', 'len': 1012}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-gemini-2.5-flash: 65.4 -> 66.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0034
+        Time: 11.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0034 11.3s
+[52/100] Processing: hellaswag-1274
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1274
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=66.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 65.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': ". the outside of a japanese trading company store named jorin\n\nA. fair's is shown.\nB. kale is shown.\nC. american company", 'len': 234}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-gemini-2.5-flash: 66.0 -> 66.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.84s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.8s
+[53/100] Processing: hellaswag-8230
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8230
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=66.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 66.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to do hairstyles for curly hair [title] Use a headband. [step] Headbands work wonders with short, medium an', 'len': 1020}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-gemini-2.5-flash: 66.6 -> 67.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 4.77s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 4.8s
+[54/100] Processing: hellaswag-9518
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9518
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=67.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 67.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to make a fur coat stop shedding [title] Keep your fur dry. [step] Don't wear your fur coat if you think it", 'len': 936}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.886), early stop!
+          [USAL] cand-gemini-2.5-flash: 67.2 -> 67.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 4.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 4.4s
+[55/100] Processing: hellaswag-517
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-517
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=67.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 67.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "There's a man doing a tutorial and explaining how to use a portable shower for dogs. he\n\nA. is standing next to a saddle", 'len': 559}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.886), early stop!
+          [USAL] cand-gemini-2.5-flash: 67.8 -> 68.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 4.03s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 4.0s
+[56/100] Processing: hellaswag-6372
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6372
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=68.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 68.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to curl hair with bobby pins [title] Create your curls after applying smoothing products to damp hair. [ste', 'len': 947}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.885), early stop!
+          [USAL] cand-gemini-2.5-flash: 68.4 -> 69.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 5.16s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 5.2s
+[57/100] Processing: hellaswag-7716
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7716
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=69.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 68.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to reduce toddler food throwing messes [title] Put a bib on your child. [step] A bib can prevent you from h', 'len': 940}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-gemini-2.5-flash: 69.0 -> 69.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 4.16s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 4.2s
+[58/100] Processing: hellaswag-3027
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-3027
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=69.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 69.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person is seen sitting on the snow around a hole and loading up a pole. he\n\nA. throws the pole down on to the snow nex', 'len': 359}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-gemini-2.5-flash: 69.6 -> 70.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0019
+        Time: 6.80s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0019 6.8s
+[59/100] Processing: hellaswag-5943
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5943
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=70.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 70.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to throw a hawaiian wedding reception [title] Choose traditional hawaiian attire for the bride and groom. [', 'len': 1048}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-gemini-2.5-flash: 70.2 -> 70.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0039
+        Time: 15.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0039 15.9s
+[60/100] Processing: hellaswag-9380
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9380
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=70.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 70.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make magic mouthwash [title] Talk to your doctor. [step] Radiation and chemotherapy treatments for cance', 'len': 1029}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-gemini-2.5-flash: 70.8 -> 71.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 3.63s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 3.6s
+[61/100] Processing: hellaswag-9302
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9302
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=71.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 71.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make ice balls [title] Buy a package of water balloons. [step] This method is cheap, quick, and easy-per', 'len': 1137}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.882), early stop!
+          [USAL] cand-gemini-2.5-flash: 71.4 -> 72.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 6.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 6.3s
+[62/100] Processing: hellaswag-4156
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4156
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=72.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 71.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to hammer copper [title] Purchase a copper sheet appropriate to the specifications of your job. [substeps] ', 'len': 957}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.882), early stop!
+          [USAL] cand-gemini-2.5-flash: 72.0 -> 72.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 3.06s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 3.1s
+[63/100] Processing: hellaswag-4514
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4514
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=72.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 72.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to deal with hepatitis a [title] Learn the symptoms. [step] Hepatitis a has a number of symptoms that typic', 'len': 1285}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.881), early stop!
+          [USAL] cand-gemini-2.5-flash: 72.6 -> 73.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 4.98s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 5.0s
+[64/100] Processing: hellaswag-8285
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8285
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=73.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 73.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to dress like a guy [title] Find casual pants with a masculine fit. [step] Casual pants that fit well are a', 'len': 1101}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-gemini-2.5-flash: 73.2 -> 73.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 5.46s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 5.5s
+[65/100] Processing: hellaswag-6672
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6672
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=73.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 73.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make vegetable pizza [title] Gather the ingredients. [step] This recipe makes use of store-bought pizza ', 'len': 886}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-gemini-2.5-flash: 73.8 -> 74.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 4.58s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 4.6s
+[66/100] Processing: hellaswag-3424
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-3424
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=74.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 74.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to handle a suicidal teenager [title] Notice any signs of depression. [step] Depression correlates highly w', 'len': 1238}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-gemini-2.5-flash: 74.4 -> 75.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 4.05s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 4.1s
+[67/100] Processing: hellaswag-9281
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9281
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=75.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 74.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to apply individual eyelashes [title] Pick out your individual lashes. [step] Individual lashes can be purc', 'len': 1160}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-gemini-2.5-flash: 75.0 -> 75.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 4.75s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0016 4.7s
+[68/100] Processing: hellaswag-4277
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4277
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=75.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 75.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make slow cooker shredded chicken [title] Place the ingredients in the slow cooker. [step] Add the chick', 'len': 1159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 75.6 -> 76.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0022
+        Time: 5.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0022 5.1s
+[69/100] Processing: hellaswag-1815
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1815
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.160
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A boy catches and tosses the ball behind him which is caught by another boy on his team. the boy\n\nA. grabs grab the ball', 'len': 415}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.2 -> 76.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 3.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 3.2s
+[70/100] Processing: hellaswag-676
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-676
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.760
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'He describes the chords of a song and the proper finger placement to form the chords with a fingering chord diagram on t', 'len': 572}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.877), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.8 -> 77.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 10.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 10.4s
+[71/100] Processing: hellaswag-9691
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9691
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=77.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.360
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to customize your cubicle at work [title] Empty your drawers and cabinets. [step] This first step is essent', 'len': 1093}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.877), early stop!
+          [USAL] cand-gemini-2.5-flash: 77.4 -> 78.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 3.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 3.7s
+[72/100] Processing: hellaswag-9553
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9553
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.960
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be a modern christian girl [title] Pray everyday. [step] Start off with reading a couple of passages in ', 'len': 707}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 78.0 -> 78.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 4.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 5.0s
+[73/100] Processing: hellaswag-1681
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1681
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 78.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "A woman is seated in a beauty chair. a tattooed man with tools\n\nA. is shaving some young girl's legs.\nB. and a tattoo ar", 'len': 312}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.350 < 0.875), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "A woman is seated in a beauty chair. a tattooed man with tools\n\nA. is shaving some young girl's legs.\nB. and a tattoo ar", 'len': 312}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "A woman is seated in a beauty chair. a tattooed man with tools\n\nA. is shaving some young girl's legs.\nB. and a tattoo ar", 'len': 312}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 78.6 -> 76.2 (test=0.00, agree=0.00, conf=0.35)
+          [USAL] cand-grok-3-mini: 51.5 -> 51.0 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 51.4 -> 50.9 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-grok-3-mini (0.900)
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0008
+        Time: 8.92s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0008 8.9s
+[74/100] Processing: hellaswag-9736
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9736
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to have the healthiest, clearest skin [title] First figure out your skin type. [step] Oily? Dry? Sensitive?', 'len': 1105}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.2 -> 76.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 5.32s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 5.3s
+[75/100] Processing: hellaswag-6994
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6994
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to write a book report [title] Follow the requirements of your assignment. [step] Read through the assignme', 'len': 1303}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.877), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.8 -> 77.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 4.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0016 4.2s
+[76/100] Processing: hellaswag-9376
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9376
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=77.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.390
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to become a wedding photographer [title] Purchase quality equipment. [step] Wedding photos are heirlooms th', 'len': 1013}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 77.4 -> 78.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 3.82s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 3.8s
+[77/100] Processing: hellaswag-7393
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7393
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.990
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to etch a circuit board [title] Put on the goggles and gloves (non-optional! [step] ). Always remember safe', 'len': 862}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 78.0 -> 78.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0018
+        Time: 6.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 6.1s
+[78/100] Processing: hellaswag-503
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-503
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 78.590
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A person is seen riding on roller blades looking into a trash can. People look around and watch the man skate. he\n\nA. co', 'len': 396}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-gemini-2.5-flash: 78.6 -> 79.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 6.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0014 6.2s
+[79/100] Processing: hellaswag-1649
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1649
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=79.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 79.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man ina shirt that says beast mode is making a video on what the best free workouts to do without a gym are. He has a ', 'len': 597}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-gemini-2.5-flash: 79.2 -> 79.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 14.62s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 14.6s
+[80/100] Processing: hellaswag-8455
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8455
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=79.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 79.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to discipline toddlers [title] Know when to redirect. [step] Toddlers move very quickly from one feeling to', 'len': 1184}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-gemini-2.5-flash: 79.8 -> 80.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 4.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 4.1s
+[81/100] Processing: hellaswag-9077
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9077
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=80.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 80.390
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be a successful muslim husband [title] Talk with your spouse. [step] Ask about their feelings, and share', 'len': 912}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-gemini-2.5-flash: 80.4 -> 81.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 6.76s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0025 6.8s
+[82/100] Processing: hellaswag-2098
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2098
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=81.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 80.990
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'There are several spectators and judges watching them as they jump over the bar in a large indoor stadium. both the cont', 'len': 474}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.873), early stop!
+          [USAL] cand-gemini-2.5-flash: 81.0 -> 81.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 5.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0017 5.1s
+[83/100] Processing: hellaswag-6944
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6944
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=81.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 81.590
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to live in a haunted house [title] Take a well-built guard dog like german shepherd with you into the house', 'len': 1109}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-gemini-2.5-flash: 81.6 -> 82.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0043
+        Time: 13.00s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0043 13.0s
+[84/100] Processing: hellaswag-1547
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-1547
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=82.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 82.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A large group of people are seen wandering around a city square with a young child in the middle playing an instrument. ', 'len': 505}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-gemini-2.5-flash: 82.2 -> 82.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0021
+        Time: 5.80s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0021 5.8s
+[85/100] Processing: hellaswag-3332
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-3332
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=82.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 82.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to clean a laser printer [title] Turn the printer off and unplug it from its power source at least 1 hour p', 'len': 947}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-gemini-2.5-flash: 82.8 -> 83.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 4.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 4.4s
+[86/100] Processing: hellaswag-9700
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9700
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=83.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 83.390
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get an itemized list of costs from your attorney [title] Ask about itemized bills during your consultati', 'len': 1072}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-gemini-2.5-flash: 83.4 -> 84.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 10.75s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 10.7s
+[87/100] Processing: hellaswag-2869
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2869
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=84.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 83.990
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Several percussionists stand on a field. They march in place on the field. They are drumming in sync. a woman\n\nA. contin', 'len': 308}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-gemini-2.5-flash: 84.0 -> 84.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 3.60s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 3.6s
+[88/100] Processing: hellaswag-8504
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8504
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=84.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 84.590
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to know what it means to love someone [title] Know that you focus on someone else's happiness, not just you", 'len': 1085}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-gemini-2.5-flash: 84.6 -> 85.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 5.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0016 5.3s
+[89/100] Processing: hellaswag-4365
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-4365
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=85.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 85.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to be more like a french woman [title] Stick to the basics. [step] One of the most easily observable aspect', 'len': 1021}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.869), early stop!
+          [USAL] cand-gemini-2.5-flash: 85.2 -> 85.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0044
+        Time: 20.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0044 20.4s
+[90/100] Processing: hellaswag-9964
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9964
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=85.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 85.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to overcome an infatuation [title] Analyze the person's faults. [step] It's difficult to see nothing else a", 'len': 921}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-gemini-2.5-flash: 85.8 -> 86.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 4.84s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 4.8s
+[91/100] Processing: hellaswag-2731
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2731
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=86.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 86.390
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "A man is looking all over for his dog. He said he paid his dog 10 dollars to cut the grass and now he's gone. he\n\nA. sai", 'len': 486}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-gemini-2.5-flash: 86.4 -> 87.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 3.46s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 3.5s
+[92/100] Processing: hellaswag-5996
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-5996
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=87.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 86.990
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get clear skin in a day [title] Use a clay mask. [step] Some believe a clay mask can help penetrate the ', 'len': 1169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-gemini-2.5-flash: 87.0 -> 87.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 5.59s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0016 5.6s
+[93/100] Processing: hellaswag-8414
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8414
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=87.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 87.590
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to get hair dye off your face [title] Buy a toothpaste to remove the hair dye stain. [step] Any non-gel too', 'len': 1097}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-gemini-2.5-flash: 87.6 -> 88.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0036
+        Time: 11.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0036 12.0s
+[94/100] Processing: hellaswag-8110
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8110
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=88.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 88.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to cold brew coffee [title] Buy good quality medium roast coffee beans. [step] The best coffee comes from b', 'len': 1099}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-gemini-2.5-flash: 88.2 -> 88.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0020
+        Time: 13.82s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0020 13.8s
+[95/100] Processing: hellaswag-6104
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6104
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=88.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 88.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to make your own wig out of weave [title] Maintain your hair. [step] Depending on your hair type, you may n', 'len': 1188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-gemini-2.5-flash: 88.8 -> 89.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0022
+        Time: 7.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0022 7.5s
+[96/100] Processing: hellaswag-2734
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-2734
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=89.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 89.390
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'A man with a thick mustache is dressed in winter clothing is sitting on a white bucket turned upside down on a frozen bo', 'len': 752}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.865), early stop!
+          [USAL] cand-gemini-2.5-flash: 89.4 -> 90.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0019
+        Time: 6.48s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0019 6.5s
+[97/100] Processing: hellaswag-7823
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-7823
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=90.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 89.990
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to see yourself as you really are [title] Write out your perceptions. [step] Pick up a pen and paper and wr', 'len': 1141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.865), early stop!
+          [USAL] cand-gemini-2.5-flash: 90.0 -> 90.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0098
+        Time: 23.81s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0098 23.8s
+[98/100] Processing: hellaswag-6673
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-6673
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=90.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 90.590
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to conceal bags under your eyes [title] Choose your concealer. [step] To combat the blue and gray color und', 'len': 1084}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.864), early stop!
+          [USAL] cand-gemini-2.5-flash: 90.6 -> 91.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0053
+        Time: 13.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0053 13.4s
+[99/100] Processing: hellaswag-9884
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-9884
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=91.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 91.190
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "[header] How to prevent young adult adderall abuse [title] Don't share prescription medications and keep them secure. [s", 'len': 1149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-gemini-2.5-flash: 91.2 -> 91.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 4.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 4.1s
+[100/100] Processing: hellaswag-8123
+============================================================
+[TrustRoute-USAL] Starting task: hellaswag-8123
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=91.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 91.790
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '[header] How to clean a ceramic sink [title] Dampen your sink. [step] Before you apply the baking soda, lightly dampen t', 'len': 1052}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-gemini-2.5-flash: 91.8 -> 92.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 5.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 5.1s
+
+✅ Batch completed.

@@ -1,0 +1,175 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"```python
+def maximum(arr, k):
+    return sorted(sorted(arr)[-k:])
+
+# Example usage:
+# print(maximum([-3, -4, 5], 3))  # Output: [-4, -3, 5]
+# print(maximum([4, -4, 4], 2))    # Output: [4, 4]
+# print(maximum([-3, 2, 1, 2, -1, -2, 1], 1))  # Output: [2]
+```",0.0001104,4.442358493804932,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/88,TrustRoute,1,"```python
+def sort_array(array):
+    if not array:
+        return []
+    
+    if (array[0] + array[-1]) % 2 == 0:
+        return sorted(array, reverse=True)
+    else:
+        return sorted(array)
+```",7.154999999999999e-05,1.8708255290985107,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"```python
+from typing import List
+
+def concatenate(strings: List[str]) -> str:
+    return ''.join(strings)
+```",3.285e-05,1.9014441967010498,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"Here's a concise solution for the `prod_signs` function:
+
+```python
+def prod_signs(arr):
+    if not arr:
+        return None
+    
+    product_sign = 1
+    magnitude_sum = 0
+    
+    for num in arr:
+        if num > 0:
+            magnitude_sum += num
+        elif num < 0:
+            magnitude_sum += -num
+            product_sign *= -1
+        else:
+            return 0
+    
+    return product_sign * magnitude_sum
+```
+
+This function calculates the sum of magnitudes and the product of signs, returning the desired result based on the provided examples.",0.00010394999999999999,4.301534175872803,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"```python
+def triangle_area(a, h):
+    return 0.5 * a * h
+```",2.9549999999999993e-05,1.3101015090942383,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    if not arr:
+        return []
+    
+    valid_numbers = [num for num in arr if 1 <= num <= 9]
+    valid_numbers.sort(reverse=True)
+    
+    number_names = [""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    return [number_names[num - 1] for num in valid_numbers]
+```",0.00010604999999999999,3.8283636569976807,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/124,TrustRoute,1,"```python
+def valid_date(date):
+    if not date:
+        return False
+    
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+    
+    month, day, year = parts
+    if not (month.isdigit() and day.isdigit() and year.isdigit()):
+        return False
+    
+    month, day, year = int(month), int(day), int(year)
+    
+    if month < 1 or month > 12:
+        return False
+    
+    if month in {1, 3, 5, 7, 8, 10, 12}:
+        return 1 <= day <= 31
+    elif month in {4, 6, 9, 11}:
+        return 1 <= day <= 30
+    elif month == 2:
+        return 1 <= day <= 29
+    
+    return False
+```",0.0001605,5.11233115196228,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"```python
+def truncate_number(number: float) -> float:
+    return number - int(number)
+
+# Example usage
+print(truncate_number(3.5))  # Output: 0.5
+```",4.785e-05,1.7843754291534424,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"```python
+from typing import List
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if abs(numbers[i] - numbers[j]) < threshold:
+                return True
+    return False
+```",6.884999999999999e-05,4.007740497589111,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"```python
+def hex_key(num):
+    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}
+    return sum(1 for digit in num if digit in prime_hex_digits)
+
+# Example usage:
+print(hex_key(""AB""))        # Output: 1
+print(hex_key(""1077E""))     # Output: 2
+print(hex_key(""ABED1A33""))  # Output: 4
+print(hex_key(""123456789ABCDEF0""))  # Output: 6
+print(hex_key(""2020""))      # Output: 2
+```",0.0001317,5.254690647125244,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"```python
+def pairs_sum_to_zero(l):
+    seen = set()
+    for num in l:
+        if -num in seen:
+            return True
+        seen.add(num)
+    return False
+```",5.819999999999999e-05,2.6921546459198,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_multiply_prime(a):
+    if a >= 100:
+        return False
+    primes = [i for i in range(2, a) if is_prime(i)]
+    for i in range(len(primes)):
+        for j in range(i, len(primes)):
+            for k in range(j, len(primes)):
+                if primes[i] * primes[j] * primes[k] == a:
+                    return True
+    return False
+```",0.00011039999999999999,5.815318584442139,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"```python
+def closest_integer(value):
+    num = float(value)
+    return int(num + 0.5) if num > 0 else int(num - 0.5)
+```",5.625e-05,2.080369472503662,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"```python
+def is_equal_to_sum_even(n):
+    return n >= 8 and n % 2 == 0
+```",3.7199999999999996e-05,1.6344799995422363,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"```python
+def next_smallest(lst):
+    unique_sorted = sorted(set(lst))
+    return unique_sorted[1] if len(unique_sorted) > 1 else None
+```",4.9649999999999994e-05,1.3370985984802246,0,0,cand-gpt-4o-mini,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"```python
+def pluck(arr):
+    smallest_even = float('inf')
+    index = -1
+    
+    for i, value in enumerate(arr):
+        if value % 2 == 0 and value < smallest_even:
+            smallest_even = value
+            index = i
+            
+    return [smallest_even, index] if index != -1 else []
+```",0.00010065,2.9445230960845947,0,0,cand-gpt-4o-mini,stage1_early_stop,

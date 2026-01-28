@@ -1,0 +1,9 @@
+=
+[DATASET] mmlu
+[TIME] 2026-01-25 10:11:41
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (900/900): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/mmlu/mmlu_TrustRoute_best_tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] mmlu: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/mmlu
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/mmlu_test90_summary.csv

@@ -1,0 +1,3357 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: winogrande_TrustRoute_de1ab6612e
+🚀 Running TrustRoute on winogrande
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/winogrande_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande/winogrande_TrustRoute_tau1_0.95_tau2_1.0_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 126 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/126] Processing: winogrande-10[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-10
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0006
+        Time: 5.44s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0006 5.4s
+[2/126] Processing: winogrande-387
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-387
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.420
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0022
+        Time: 12.07s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0022 12.1s
+[3/126] Processing: winogrande-184
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-184
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.0, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0031
+        Time: 11.87s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0031 11.9s
+[4/126] Processing: winogrande-656
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-656
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.4, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.420
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0024
+        Time: 11.29s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0024 11.3s
+[5/126] Processing: winogrande-6
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-6
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.8, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.8, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.840
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.350, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.8 -> 50.4 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.8 -> 50.4 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.8 -> 48.5 (test=0.00, agree=0.00, conf=0.35)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0034
+        Time: 15.14s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0034 15.1s
+[6/126] Processing: winogrande-930
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-930
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=49.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.360
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+          Test result: syntax_error
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0042
+        Time: 18.57s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0042 18.6s
+[7/126] Processing: winogrande-815
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-815
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.8, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.780
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.8 -> 51.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.8 -> 51.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0017
+        Time: 10.26s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0017 10.3s
+[8/126] Processing: winogrande-1087
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1087
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=51.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.2, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.8, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 51.200
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 51.2 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.2 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.8 -> 51.2 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0009
+        Time: 5.97s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0009 6.0s
+[9/126] Processing: winogrande-1054
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1054
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=51.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.6, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.2, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 51.620
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 51.2 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0023
+        Time: 14.89s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0023 14.9s
+[10/126] Processing: winogrande-561
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-561
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=52.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.0, cost=$0.00037
+  3. cand-gpt-5-mini: rep=51.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 52.040
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 52.0 -> 52.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 52.0 -> 52.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0009
+        Time: 8.50s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0009 8.5s
+[11/126] Processing: winogrande-702
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-702
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=52.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 52.460
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.900), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 52.5 -> 52.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 52.5 -> 52.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 52.0 -> 52.5 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-claude-sonnet-4-5
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0009
+        Time: 6.41s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0009 6.4s
+[12/126] Processing: winogrande-471
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-471
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=52.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 52.880
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "At Jan's home, she dusted the dresser more frequently than the fan, because the _ was more difficult to reach.\n\nA. fan\nB", 'len': 172}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.900), early stop!
+          [USAL] cand-claude-sonnet-4-5: 52.9 -> 53.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.56s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[13/126] Processing: winogrande-811
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-811
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=53.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 53.480
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In order to grow his plants naturally, he bought fertilizer and water. The _ was filled with nutrients.\n\nA. fertilizer\nB', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-claude-sonnet-4-5: 53.5 -> 54.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.45s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[14/126] Processing: winogrande-896
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-896
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=54.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 54.080
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The athletes on the team of Christine were less tired than those on the team of Monica because the ones with _ did less ', 'len': 192}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-claude-sonnet-4-5: 54.1 -> 54.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[15/126] Processing: winogrande-204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=54.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 54.680
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a fat stomach.\n\nA. Cynthia\nB. Laura\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.898), early stop!
+          [USAL] cand-claude-sonnet-4-5: 54.7 -> 55.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.56s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[16/126] Processing: winogrande-105
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-105
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=55.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 55.280
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To pay for dinner, he used the credit card rather than cash. The _ was not available.\n\nA. cash\nB. card\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.897), early stop!
+          [USAL] cand-claude-sonnet-4-5: 55.3 -> 55.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[17/126] Processing: winogrande-1039
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1039
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=55.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 55.880
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Felicia wanted to be pampered by Emily, so _ went to the jewelry store and bought an expensive ring.\n\nA. Felicia\nB. Emil', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.897), early stop!
+          [USAL] cand-claude-sonnet-4-5: 55.9 -> 56.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[18/126] Processing: winogrande-239
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-239
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=56.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 56.480
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Mary was more reliable and hardworking than Rachel, but to be fair, _ had a better foundation as a child.\n\nA. Mary\nB. Ra', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-claude-sonnet-4-5: 56.5 -> 57.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.45s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[19/126] Processing: winogrande-193
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-193
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=57.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 57.080
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very cold.\n\nA. Lawrence\nB. Nick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-claude-sonnet-4-5: 57.1 -> 57.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.21s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[20/126] Processing: winogrande-1141
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1141
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=57.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 57.680
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Angela wanted to find a partner, but Victoria wanted to stay single, because _ was lonely.\n\nA. Angela\nB. Victoria\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-claude-sonnet-4-5: 57.7 -> 58.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[21/126] Processing: winogrande-402
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-402
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=58.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.9, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 58.280
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The virus stuck to the clothes better than it stuck to the walls, because the _ had more deterrents on them.\n\nA. walls\nB', 'len': 172}]
+          Test result: exec_pass
+[Stage 1] ⚠️  Low confidence (0.350 < 0.895), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The virus stuck to the clothes better than it stuck to the walls, because the _ had more deterrents on them.\n\nA. walls\nB', 'len': 172}]
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The virus stuck to the clothes better than it stuck to the walls, because the _ had more deterrents on them.\n\nA. walls\nB', 'len': 172}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 58.3 -> 55.9 (test=0.00, agree=0.00, conf=0.35)
+          [USAL] cand-grok-3-mini: 52.9 -> 52.4 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gpt-5-mini: 52.5 -> 52.0 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-grok-3-mini (0.900)
+
+============================================================
+[Result] Agent: cand-grok-3-mini
+        Cost: $0.0012
+        Time: 9.57s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0012 9.6s
+[22/126] Processing: winogrande-827
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-827
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=55.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 55.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Amy tried to spread the cake icing all over the cake but the _ was not enough.\n\nA. icing\nB. cake\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.897), early stop!
+          [USAL] cand-claude-sonnet-4-5: 55.9 -> 56.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.32s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[23/126] Processing: winogrande-302
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-302
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=56.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 56.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ian won a fish from Kenneth at the carnival so _ bagged it up and sent it home.\n\nA. Ian\nB. Kenneth\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-claude-sonnet-4-5: 56.5 -> 57.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.56s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[24/126] Processing: winogrande-319
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-319
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=57.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 57.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Matt wanted to change either the plain bathroom or the colorful bedroom, but the _ was already colorful.\n\nA. bedroom\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-claude-sonnet-4-5: 57.1 -> 57.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.51s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[25/126] Processing: winogrande-56
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-56
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=57.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 57.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe brought the horse out to the country quite a distance and gave him food but the _ was too much.\n\nA. food\nB. distance', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-claude-sonnet-4-5: 57.7 -> 58.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.51s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[26/126] Processing: winogrande-61
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-61
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=58.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 58.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura used too much super glue on Erins hands, so _ needed to get to the doctor to separate their hands.\n\nA. Laura\nB. Er', 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-claude-sonnet-4-5: 58.3 -> 58.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[27/126] Processing: winogrande-529
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-529
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=58.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 58.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The personal trainer gave Laura but not Victoria the more difficult exercise because _ was out of shape.\n\nA. Laura\nB. Vi', 'len': 169}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.894), early stop!
+          [USAL] cand-claude-sonnet-4-5: 58.9 -> 59.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0023
+        Time: 4.76s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0023 4.8s
+[28/126] Processing: winogrande-730
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-730
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=59.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 59.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The brutal boxing match was suitable for Christopher but not Samuel because _ did damage to his opponent.\n\nA. Christophe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.893), early stop!
+          [USAL] cand-claude-sonnet-4-5: 59.5 -> 60.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[29/126] Processing: winogrande-250
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-250
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=60.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 60.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The stain was darker on Jason's shirt than Donald's because _ spilled red wine and not white wine.\n\nA. Jason\nB. Donald\n\n", 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.893), early stop!
+          [USAL] cand-claude-sonnet-4-5: 60.1 -> 60.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 3.36s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 3.4s
+[30/126] Processing: winogrande-953
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-953
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=60.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 60.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha told Lindsey to be careful with the porcelain doll; when she ignored her and dropped the doll, _ was very sorry', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-claude-sonnet-4-5: 60.7 -> 61.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[31/126] Processing: winogrande-1159
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1159
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=61.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 61.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan kept a store of ammo in their house but Brian did not as _ approved of hunting.\n\nA. Logan\nB. Brian\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-claude-sonnet-4-5: 61.3 -> 61.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[32/126] Processing: winogrande-100
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-100
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=61.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 61.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven believes they can buy happiness but Craig thinks otherwise as _ is very realistic.\n\nA. Steven\nB. Craig\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-claude-sonnet-4-5: 61.9 -> 62.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[33/126] Processing: winogrande-1066
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1066
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=62.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 62.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan preferred to snowboard while Kyle wanted to do biathlon so _ went up the hill.\n\nA. Logan\nB. Kyle\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-claude-sonnet-4-5: 62.5 -> 63.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[34/126] Processing: winogrande-446
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-446
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=63.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 63.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Even though Ian had less of a sweet tooth than Robert, _ liked chocolate more.\n\nA. Ian\nB. Robert\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.890), early stop!
+          [USAL] cand-claude-sonnet-4-5: 63.1 -> 63.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[35/126] Processing: winogrande-410
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-410
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=63.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 63.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'When Benjamin put the family into debt, Adam filed for divorce; then the judge gave _ a withering look.\n\nA. Benjamin\nB. ', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.889), early stop!
+          [USAL] cand-claude-sonnet-4-5: 63.7 -> 64.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.66s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.7s
+[36/126] Processing: winogrande-826
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-826
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=64.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 64.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'He was having an asthma attack but forgot his inhaler so someone recommended coffee as the _ was unavailable.\n\nA. inhale', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.889), early stop!
+          [USAL] cand-claude-sonnet-4-5: 64.3 -> 64.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[37/126] Processing: winogrande-1265
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1265
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=64.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 64.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jane received a pet tortoise and an aquarium as a birthday gift, but the _ was too small.\n\nA. aquarium\nB. tortoise\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-claude-sonnet-4-5: 64.9 -> 65.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.75s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.8s
+[38/126] Processing: winogrande-199
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-199
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=65.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 65.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ lent him some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-claude-sonnet-4-5: 65.5 -> 66.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[39/126] Processing: winogrande-203
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-203
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=66.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 66.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a flat stomach.\n\nA. Cynthia\nB. Laura\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-claude-sonnet-4-5: 66.1 -> 66.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[40/126] Processing: winogrande-591
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-591
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=66.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 66.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James took out a seat from his office to create more space. The _ is too big.\n\nA. seat\nB. office\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-claude-sonnet-4-5: 66.7 -> 67.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[41/126] Processing: winogrande-252
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-252
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=67.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 67.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Emily decided to eat a lot more yucca than Carrie did. _ was no longer hungry.\n\nA. Emily\nB. Carrie\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.886), early stop!
+          [USAL] cand-claude-sonnet-4-5: 67.3 -> 67.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.40s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[42/126] Processing: winogrande-941
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-941
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=67.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 67.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kyle makes a lot more money than Nelson can make at his job, as _ is a cashier.\n\nA. Kyle\nB. Nelson\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.885), early stop!
+          [USAL] cand-claude-sonnet-4-5: 67.9 -> 68.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[43/126] Processing: winogrande-844
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-844
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=68.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 68.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The teacher asked for the homework. Elena played games the night before and Tanya did not, so _ got an A.\n\nA. Elena\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.885), early stop!
+          [USAL] cand-claude-sonnet-4-5: 68.5 -> 69.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.51s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[44/126] Processing: winogrande-331
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-331
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=69.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 69.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Angela did a bunch of crunches and sit-ups but Cynthia didn't, consequentially _ had six- pack abs.\n\nA. Angela\nB. Cynthi", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-claude-sonnet-4-5: 69.1 -> 69.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.30s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[45/126] Processing: winogrande-1103
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1103
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=69.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 69.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The apartment Brett rented was owned by Jason, so _ sent the rent for the apartment each month.\n\nA. Brett\nB. Jason\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-claude-sonnet-4-5: 69.7 -> 70.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[46/126] Processing: winogrande-1232
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1232
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=70.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 70.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The living room was cleaner than the kitchen, because we spend more time in the the _ .\n\nA. living room\nB. kitchen\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-claude-sonnet-4-5: 70.3 -> 70.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[47/126] Processing: winogrande-1165
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1165
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=70.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 70.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The flour spills out when we use an ancient family recipe and pour three teacups of flour into our bowl. The _ is too sm', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-claude-sonnet-4-5: 70.9 -> 71.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[48/126] Processing: winogrande-479
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-479
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=71.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 71.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The quality of music produced largely depends on the instrument used. The _ is vital.\n\nA. Music\nB. Instrument\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.882), early stop!
+          [USAL] cand-claude-sonnet-4-5: 71.5 -> 72.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.61s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[49/126] Processing: winogrande-1005
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1005
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=72.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 72.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "James wanted to wear the corsage but it wouldn't fit around his wrist because his _ was too small.\n\nA. wrist\nB. corsage\n", 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.881), early stop!
+          [USAL] cand-claude-sonnet-4-5: 72.1 -> 72.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.98s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 3.0s
+[50/126] Processing: winogrande-729
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-729
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=72.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 72.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jessica found the heavy load at work overwhelming but not Katrina because _ did a poor job at planning their work.\n\nA. J', 'len': 180}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.881), early stop!
+          [USAL] cand-claude-sonnet-4-5: 72.7 -> 73.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.58s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[51/126] Processing: winogrande-357
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-357
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=73.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 73.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter since _ used a soothing skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-claude-sonnet-4-5: 73.3 -> 73.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[52/126] Processing: winogrande-243
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-243
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=73.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 73.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The man paid cash for the phone but purchased the tablet with credit because the _ was pricy.\n\nA. Phone\nB. Tablet\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-claude-sonnet-4-5: 73.9 -> 74.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 1.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[53/126] Processing: winogrande-426
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-426
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=74.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 74.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Kenneth is accused of destroying drywall in Jeffrey's house, _ is leasing out the house.\n\nA. Kenneth\nB. Jeffrey\n\nAnswer ", 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-claude-sonnet-4-5: 74.5 -> 75.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[54/126] Processing: winogrande-198
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-198
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=75.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 75.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ borrowed some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-claude-sonnet-4-5: 75.1 -> 75.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[55/126] Processing: winogrande-679
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-679
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=75.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 75.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Benjamin shaved his beard, but Nick had just grown one, so _ gave them all his old oils.\n\nA. Benjamin\nB. Nick\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-claude-sonnet-4-5: 75.7 -> 76.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.81s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.8s
+[56/126] Processing: winogrande-145
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-145
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=76.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 76.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura brought extensions to Monica at the salon, so that _ could treat their dreads professionally.\n\nA. Laura\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-claude-sonnet-4-5: 76.3 -> 76.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.21s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[57/126] Processing: winogrande-950
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-950
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=76.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 76.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The tree fell down sooner than the sapling because the roots of the _ were stronger.\n\nA. tree\nB. sapling\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.877), early stop!
+          [USAL] cand-claude-sonnet-4-5: 76.9 -> 77.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[58/126] Processing: winogrande-509
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-509
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=77.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 77.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Victoria decided to adopt a Yorkie, but Elena wouldn't even consider it, because _ loved small dogs.\n\nA. Victoria\nB. Ele", 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-claude-sonnet-4-5: 77.5 -> 78.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.29s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[59/126] Processing: winogrande-223
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-223
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=78.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 78.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It seemed more likely that Brett would wear a fedora rather than Justin because _ was known to dress stylishly.\n\nA. Bret', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-claude-sonnet-4-5: 78.1 -> 78.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[60/126] Processing: winogrande-463
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-463
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=78.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 78.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Irena didn't like other people living in something before her so she felt more comfortable buying the house instead of t", 'len': 212}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-claude-sonnet-4-5: 78.7 -> 79.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.31s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[61/126] Processing: winogrande-68
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-68
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=79.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 79.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Laura just loved the taste of green beans but Felicia hated the taste of them. _ didn't have a second serving.\n\nA. Laura", 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-claude-sonnet-4-5: 79.3 -> 79.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[62/126] Processing: winogrande-287
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-287
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=79.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 79.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was a very selfish individual but Kenneth was very generous. _ had a lot of good friends.\n\nA. Craig\nB. Kenneth\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-claude-sonnet-4-5: 79.9 -> 80.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[63/126] Processing: winogrande-64
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-64
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=80.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 80.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John cannot touch the cup as it was just brought out of the refrigerator. He wanted some air to blow around it. The _ is', 'len': 189}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-claude-sonnet-4-5: 80.5 -> 81.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0022
+        Time: 4.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0022 4.2s
+[64/126] Processing: winogrande-339
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-339
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=81.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 81.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick really liked working in Human Resources and William wanted to work at the same company, and _ subsequently accep', 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.873), early stop!
+          [USAL] cand-claude-sonnet-4-5: 81.1 -> 81.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[65/126] Processing: winogrande-864
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-864
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=81.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 81.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "In the hotel laundry room, Felicia burned Mary's shirt while ironing it, so the manager gave _ a refund.\n\nA. Felicia\nB. ", 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-claude-sonnet-4-5: 81.7 -> 82.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.21s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[66/126] Processing: winogrande-928
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-928
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=82.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 82.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Although Amy worked harder and longer than Rebecca, _ was a more wealthy person overall.\n\nA. Amy\nB. Rebecca\n\nAnswer with', 'len': 150}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-claude-sonnet-4-5: 82.3 -> 82.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[67/126] Processing: winogrande-714
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-714
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=82.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 82.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Brian agreed to buy soap for Kenneth while at the store, and _ paid them back the following day for the errand.\n\nA. Bria', 'len': 175}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-claude-sonnet-4-5: 82.9 -> 83.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.17s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[68/126] Processing: winogrande-823
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-823
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=83.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 83.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was worried that Mary might be caught in a scam when they started their new job, but _ decided to trust their fri', 'len': 198}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-claude-sonnet-4-5: 83.5 -> 84.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.38s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[69/126] Processing: winogrande-79
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-79
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=84.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 84.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Aaron didn't know Dennis had a peanut allergy, so when _ made peanut chicken an ambulance was called.\n\nA. Aaron\nB. Denni", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-claude-sonnet-4-5: 84.1 -> 84.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[70/126] Processing: winogrande-920
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-920
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=84.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 84.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The toddler kicked the hard furniture and soft toy, but only the _ caused pain.\n\nA. furniture\nB. toy\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-claude-sonnet-4-5: 84.7 -> 85.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[71/126] Processing: winogrande-70
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-70
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=85.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 85.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Blaze always wore a t-shirt instead of a shirt because he thought that the _ was stuffy and old fashioned.\n\nA. shirt\nB. ', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.869), early stop!
+          [USAL] cand-claude-sonnet-4-5: 85.3 -> 85.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.13s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[72/126] Processing: winogrande-36
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-36
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=85.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 85.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel researched laws and helped to open a preschool for Eric. Because _ is very good with kids.\n\nA. Joel\nB. Eric\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-claude-sonnet-4-5: 85.9 -> 86.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[73/126] Processing: winogrande-582
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-582
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=86.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 86.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Of the two owners, Jessica was far worse than Jennifer, because _ like to treat the dogs.\n\nA. Jessica\nB. Jennifer\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-claude-sonnet-4-5: 86.5 -> 87.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[74/126] Processing: winogrande-436
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-436
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=87.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 87.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was caught napping in class more often than Katrina because _ stayed up all night.\n\nA. Monica\nB. Katrina\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-claude-sonnet-4-5: 87.1 -> 87.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[75/126] Processing: winogrande-192
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-192
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=87.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 87.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very hot.\n\nA. Lawrence\nB. Nick\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-claude-sonnet-4-5: 87.7 -> 88.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[76/126] Processing: winogrande-1149
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1149
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=88.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 88.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The actors practiced the scenes in the parking lot more than the scenes in the morgue, because the _ scenes are full of ', 'len': 197}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-claude-sonnet-4-5: 88.3 -> 88.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[77/126] Processing: winogrande-220
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-220
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=88.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 88.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'You can grow cilantro in a garden or buy it at the store, but the _ variety will taste bland because it will be older.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-claude-sonnet-4-5: 88.9 -> 89.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[78/126] Processing: winogrande-733
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-733
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=89.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 89.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer got about with a seeing-eye dog but Mary did not because _ was blind.\n\nA. Jennifer\nB. Mary\n\nAnswer with the opt', 'len': 142}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.865), early stop!
+          [USAL] cand-claude-sonnet-4-5: 89.5 -> 90.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[79/126] Processing: winogrande-1258
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1258
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=90.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 90.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "She couldn't wear the bra, unlike the shirt, because the _ was the right size.\n\nA. bra\nB. shirt\n\nAnswer with the option ", 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.864), early stop!
+          [USAL] cand-claude-sonnet-4-5: 90.1 -> 90.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.0s
+[80/126] Processing: winogrande-209
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-209
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=90.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 90.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ criticized the original language of the fil', 'len': 187}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.864), early stop!
+          [USAL] cand-claude-sonnet-4-5: 90.7 -> 91.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0026
+        Time: 5.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0026 5.2s
+[81/126] Processing: winogrande-305
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-305
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=91.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 91.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven helped Derrick do research on the paper because _ had access to the internet.\n\nA. Steven\nB. Derrick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-claude-sonnet-4-5: 91.3 -> 91.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 1.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[82/126] Processing: winogrande-1164
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1164
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=91.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 91.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Donald was chosen to be a model while Dennis was passed over, because _ was exceptionally tall.\n\nA. Donald\nB. Dennis\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-claude-sonnet-4-5: 91.9 -> 92.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[83/126] Processing: winogrande-372
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-372
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=92.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 92.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Betty learned to play the cello well but Erin did not because _ was very impatient.\n\nA. Betty\nB. Erin\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.862), early stop!
+          [USAL] cand-claude-sonnet-4-5: 92.5 -> 93.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.16s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[84/126] Processing: winogrande-888
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-888
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=93.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 93.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Justin became very ill with pneumonia, so Matthew made him some soup; then _ finally went home.\n\nA. Justin\nB. Matthew\n\nA', 'len': 160}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.862), early stop!
+          [USAL] cand-claude-sonnet-4-5: 93.1 -> 93.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[85/126] Processing: winogrande-1169
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1169
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=93.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 93.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The cracker that was given to me was worse than the cookie, because the _ was stale.\n\nA. cracker\nB. cookie\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.861), early stop!
+          [USAL] cand-claude-sonnet-4-5: 93.7 -> 94.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.46s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[86/126] Processing: winogrande-593
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-593
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=94.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 94.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It was easier for the diner to follow their budget than the food truck because the _ had more money to spend.\n\nA. diner\n', 'len': 176}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.860), early stop!
+          [USAL] cand-claude-sonnet-4-5: 94.3 -> 94.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.07s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[87/126] Processing: winogrande-316
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-316
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=94.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 94.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "They discussed the company's budget at the business meeting but the _ was boring and the topic of the budget ran long.\n\n", 'len': 183}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.860), early stop!
+          [USAL] cand-claude-sonnet-4-5: 94.9 -> 95.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.55s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[88/126] Processing: winogrande-286
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-286
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=95.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 95.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The ambulance went to the hospital without Nelson inside but with Ryan because _ drove there in a car.\n\nA. Nelson\nB. Rya', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.859), early stop!
+          [USAL] cand-claude-sonnet-4-5: 95.5 -> 96.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[89/126] Processing: winogrande-134
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-134
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=96.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 96.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The house of Aaron took some damage from the storm but not Michael's house, because _ lived farther away.\n\nA. Aaron\nB. M", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.859), early stop!
+          [USAL] cand-claude-sonnet-4-5: 96.1 -> 96.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.70s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.7s
+[90/126] Processing: winogrande-1063
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1063
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=96.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 96.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Learning a new form of karate was difficult for Logan but not William because _ was not athletic.\n\nA. Logan\nB. William\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.858), early stop!
+          [USAL] cand-claude-sonnet-4-5: 96.7 -> 97.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[91/126] Processing: winogrande-264
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-264
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=97.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 97.310
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer returned the pan to Sarah because _ had loaned it to her for the potluck party.\n\nA. Jennifer\nB. Sarah\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.858), early stop!
+          [USAL] cand-claude-sonnet-4-5: 97.3 -> 97.9 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[92/126] Processing: winogrande-768
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-768
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=97.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 97.910
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Pho needs cilantro and beef to be tasty. However, the _ can be too savory.\n\nA. cilantro\nB. beef\n\nAnswer with the option ', 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.857), early stop!
+          [USAL] cand-claude-sonnet-4-5: 97.9 -> 98.5 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[93/126] Processing: winogrande-544
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-544
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=98.5, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 98.510
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Rachel wanted children, but Megan had no interest, so _ looked for someone else to have babies with.\n\nA. Rachel\nB. Megan', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.856), early stop!
+          [USAL] cand-claude-sonnet-4-5: 98.5 -> 99.1 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[94/126] Processing: winogrande-942
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-942
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=99.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 99.110
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The food that Hunter ate was spoiled but not that of Brett because _ left his food outside.\n\nA. Hunter\nB. Brett\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.856), early stop!
+          [USAL] cand-claude-sonnet-4-5: 99.1 -> 99.7 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[95/126] Processing: winogrande-828
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-828
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=99.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 99.710
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Patricia teaches Kindergarten students, Christine teaches High School students therefore _ doesn't read aloud a lot.\n\nA.", 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 99.7 -> 100.3 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.78s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.8s
+[96/126] Processing: winogrande-1195
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1195
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The honey flows out slower from the bottle than the oil. The _ is viscous.\n\nA. honey\nB. oil\n\nAnswer with the option lett', 'len': 134}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[97/126] Processing: winogrande-1114
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1114
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick always wanted to wash when they woke up but Benjamin rarely bothered. _ was a very clean person.\n\nA. Derrick\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[98/126] Processing: winogrande-362
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-362
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ben had to drain both water and oil down the sink, but the _ was too fluid.\n\nA. oil\nB. water\n\nAnswer with the option let', 'len': 135}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[99/126] Processing: winogrande-1098
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1098
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary didn't know what the currency of Mexico was but Lindsey knew _ had never been to Mexico before.\n\nA. Mary\nB. Lindsey", 'len': 163}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0018
+        Time: 3.91s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0018 3.9s
+[100/126] Processing: winogrande-375
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-375
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Erin was eating more than Betty was eating for dinner because _ had skipped lunch.\n\nA. Erin\nB. Betty\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[101/126] Processing: winogrande-76
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-76
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup but  _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAnswe", 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[102/126] Processing: winogrande-77
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-77
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup because _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAn", 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.07s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[103/126] Processing: winogrande-799
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-799
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Tanya looked for an escape route while Elena did not because _ liked to live in the moment.\n\nA. Tanya\nB. Elena\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[104/126] Processing: winogrande-579
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-579
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "I couldn't figure out what my costume would be for Halloween Peter Pan or Snow White. The _ costume I'd have to make mys", 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.19s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[105/126] Processing: winogrande-351
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-351
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Elena brought the horse to the stables owned by Cynthia, so _ could sell the animal.\n\nA. Elena\nB. Cynthia\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[106/126] Processing: winogrande-210
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-210
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ appreciated the original language of the fi', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.29s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[107/126] Processing: winogrande-665
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-665
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica did not need a recipe in order to mix a cake but Angela did because _ was an instinctive baker.\n\nA. Monica\nB. Ang', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[108/126] Processing: winogrande-516
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-516
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha was not interested in hearing about Tanya awesome marriage, because _ was happy all the time.\n\nA. Samantha\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[109/126] Processing: winogrande-858
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-858
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "My home is closer to the store than John's house, because the _ of me is next door.\n\nA. home\nB. house\n\nAnswer with the o", 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[110/126] Processing: winogrande-434
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-434
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'William wanted to go biking but Aaron wanted to stay home, so _ went out by themselves.\n\nA. William\nB. Aaron\n\nAnswer wit', 'len': 151}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.13s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[111/126] Processing: winogrande-901
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-901
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James was able to hide the book inside his jacket because the _ is big.\n\nA. book\nB. jacket\n\nAnswer with the option lette', 'len': 133}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.1s
+[112/126] Processing: winogrande-45
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-45
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Since Craig wears clear contacts and William wears colored ones, it is safe to assume that _ loves the color of their ey', 'len': 187}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[113/126] Processing: winogrande-150
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-150
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Megan took Monica to a wood shack in the mountains, because _ was a kidnapper trying to hide.\n\nA. Megan\nB. Monica\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[114/126] Processing: winogrande-1162
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1162
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig made sure to stretch before working out but Christopher never did, so _ frequently got injuries.\n\nA. Craig\nB. Chri', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[115/126] Processing: winogrande-358
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-358
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter because _ used an irritating skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.26s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[116/126] Processing: winogrande-875
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-875
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was all about self-publishing his first album, but a PRO rep Lawrence advised against it. _ advocated for a very h', 'len': 217}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0015
+        Time: 3.53s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 3.5s
+[117/126] Processing: winogrande-1204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The shoddy bridge held secure for when the cars were getting passengers across the town to their destinations on time. H', 'len': 213}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0020
+        Time: 4.30s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0020 4.3s
+[118/126] Processing: winogrande-147
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-147
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The installation process was simpler for the cable over the internet because the man had already installed the _ previou', 'len': 189}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[119/126] Processing: winogrande-1249
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1249
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To remove the stain he reached for soap first, then got up and got a bowl.  The _ was far away.\n\nA. soap\nB. bowl\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.38s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.4s
+[120/126] Processing: winogrande-1229
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1229
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James always feel weak whenever he walked the length of his street so he decided walking just the length of the lawn. Th', 'len': 194}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[121/126] Processing: winogrande-669
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-669
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carl needed a new top after ripping his epaulette shirt. He wanted a  flannel shirt because the _ is old.\n\nA. epaulette ', 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.34s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+[122/126] Processing: winogrande-792
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-792
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jen made charcoal to use as a mask and as toothpaste, but using the _ made her skin very black.\n\nA. mask\nB. toothpaste\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.64s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[123/126] Processing: winogrande-727
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-727
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Maria told Monica they looked too sick to go to work and asked if they had a fever. _ went to the Doctor.\n\nA. Maria\nB. M', 'len': 168}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.56s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.6s
+[124/126] Processing: winogrande-442
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-442
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The lips on Cynthia were much smaller than Monica because _ got hit with a softball in the mouth.\n\nA. Cynthia\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.49s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.5s
+[125/126] Processing: winogrande-1226
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1226
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Patricia had to pay less tax than Cynthia because _ made more money in the year.\n\nA. Patricia\nB. Cynthia\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.2s
+[126/126] Processing: winogrande-84
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-84
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 100.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The filter in the living room needed to be changed more often than the one in the bedroom because the _ was cleaner.\n\nA.', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-claude-sonnet-4-5: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0004
+        Time: 2.32s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.3s
+
+✅ Batch completed.

@@ -1,0 +1,167 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+winogrande,winogrande-10,TrustRoute,1,A,0.0008967500000000001,5.1453070640563965,0,0,cand-gpt-4o-mini,stage2_vote,
+winogrande,winogrande-387,TrustRoute,1,A,0.00061535,4.697667121887207,0,0,cand-gpt-4o-mini,stage2_confidence,
+winogrande,winogrande-184,TrustRoute,1,A,0.00306286,14.083221197128296,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-656,TrustRoute,1,A,0.00265022,11.274261951446533,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-6,TrustRoute,1,A,0.0034267900000000003,16.58951759338379,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+winogrande,winogrande-930,TrustRoute,1,"Looking at this sentence, I need to determine what is ""short"" (meaning insufficient or not enough).
+
+James wanted to write a list but ended up using ALL the pages in the notepad. This means:
+- The list was so long that it required all available pages
+- The notepad didn't have enough pages for what he wanted to write
+
+The notepad/pages ran out - they were insufficient. The notepad is short (lacking in quantity).
+
+**B**",0.004105,19.99752163887024,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+winogrande,winogrande-815,TrustRoute,1,B,0.0009844,6.617876052856445,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-1087,TrustRoute,1,B,0.0012219,5.8837738037109375,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-1054,TrustRoute,1,A. Monica,0.0046947,18.081308841705322,0,0,cand-gemini-2.5-flash,stage2_confidence,
+winogrande,winogrande-561,TrustRoute,1,B,0.0012856999999999999,11.226351261138916,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-702,TrustRoute,1,A,0.0011886,5.77520751953125,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-471,TrustRoute,1,A,0.0012775,6.441405296325684,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-811,TrustRoute,1,A,0.0008151,5.115737199783325,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-896,TrustRoute,1,A,0.0011476000000000001,5.131411552429199,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-204,TrustRoute,1,B,0.0010806000000000001,6.124846696853638,0,0,cand-gemini-2.5-flash,stage2_vote,
+winogrande,winogrande-105,TrustRoute,1,A,0.000687,2.484565496444702,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1039,TrustRoute,1,B,0.0010154,2.9407145977020264,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-239,TrustRoute,1,"The phrase ""but to be fair"" usually introduces a mitigating factor or an explanation that balances the preceding statement, often by highlighting an advantage the superior party had, or a disadvantage the inferior party faced.
+
+In this sentence: ""Mary was more reliable and hardworking than Rachel, but to be fair, _ had a better foundation as a child.""
+
+1.  If we choose **Mary**: ""Mary was more reliable and hardworking than Rachel, but to be fair, **Mary** had a better foundation as a child.""
+    This means Mary's superior reliability and hard work can be partly attributed to her better upbringing. This provides a ""fair"" context by suggesting that Mary's advantage isn't solely due to her current efforts or inherent character, but also to an external factor from her childhood. It acknowledges an advantage Mary had, thus balancing the comparison and perhaps lessening the implicit judgment on Rachel.
+
+2.  If we choose **Rachel**: ""Mary was more reliable and hardworking than Rachel, but to be fair, **Rachel** had a better foundation as a child.""
+    This would imply that Rachel had a better start in life, yet she is still less reliable and hardworking than Mary. This would make Rachel's performance *less* excusable or *more* surprising, which contradicts the intention of ""to be fair."" ""To be fair"" in this context seeks to offer an explanation that makes the situation *more* understandable or *less* critical of the person who is less performing, or to acknowledge an advantage of the person who is more performing.
+
+Therefore, the statement implies that Mary's positive traits are partly due to an advantage she had.
+
+The final answer is $\boxed{A}$",0.0039529000000000005,10.145387887954712,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-193,TrustRoute,1,B,0.0008489000000000001,2.6484577655792236,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1141,TrustRoute,1,A,0.0011492,3.338554859161377,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-402,TrustRoute,1,A,0.0006907,2.484400510787964,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-827,TrustRoute,1,A,0.0003139,1.6600956916809082,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-302,TrustRoute,1,A,0.00037670000000000005,1.5416440963745117,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-319,TrustRoute,1,A,0.000457,1.808976411819458,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-56,TrustRoute,1,B,0.0009201,2.7717690467834473,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-61,TrustRoute,1,B,0.0006182000000000001,2.360058546066284,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-529,TrustRoute,1,B,0.0006542,2.0891225337982178,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-730,TrustRoute,1,A,0.0005641999999999999,2.322706699371338,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-250,TrustRoute,1,A,0.00033539999999999997,1.6191802024841309,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-953,TrustRoute,1,B,0.000786,2.369917392730713,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1159,TrustRoute,1,A,0.0028867,5.780501842498779,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-100,TrustRoute,1,B,0.0005357999999999999,1.9046685695648193,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1066,TrustRoute,1,B,0.0037689000000000004,10.144439697265625,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-446,TrustRoute,1,A,0.0005411,2.239468812942505,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-410,TrustRoute,1,A,0.0006404,2.564526319503784,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-826,TrustRoute,1,A,0.00032010000000000003,1.6417677402496338,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1265,TrustRoute,1,A,0.000412,1.9461185932159424,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-199,TrustRoute,1,B,0.0010339000000000001,3.0750808715820312,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-203,TrustRoute,1,A,0.0005323,1.9424536228179932,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-591,TrustRoute,1,A,0.0005317,1.931295394897461,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-252,TrustRoute,1,A,0.0001967,1.4491684436798096,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-941,TrustRoute,1,B,0.000277,1.4776597023010254,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-844,TrustRoute,1,B,0.0002707,1.4055085182189941,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-331,TrustRoute,1,A,0.00022129999999999999,1.5006747245788574,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1103,TrustRoute,1,A,0.000272,1.6041455268859863,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1232,TrustRoute,1,B,0.0018019999999999998,4.984569549560547,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1165,TrustRoute,1,B,0.00052,1.9302453994750977,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-479,TrustRoute,1,B,0.0006186000000000001,2.636179208755493,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1005,TrustRoute,1,B,0.0033856999999999997,7.214629650115967,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-729,TrustRoute,1,A,0.00030510000000000004,10.199317455291748,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-357,TrustRoute,1,B,0.0004264,18.580922603607178,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-243,TrustRoute,1,B,0.0003873,15.721528053283691,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-426,TrustRoute,1,B,0.0005767,8.721673488616943,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-198,TrustRoute,1,A,0.0008636000000000001,2.8351662158966064,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-679,TrustRoute,1,A,0.0007422999999999999,10.647510051727295,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-145,TrustRoute,1,B,0.0024795,18.782906770706177,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-950,TrustRoute,1,B,0.0005817,9.888599872589111,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-509,TrustRoute,1,A,0.0004832,24.517969608306885,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-223,TrustRoute,1,A,0.0007356999999999999,16.006789922714233,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-463,TrustRoute,1,B,0.0001653,1.4959022998809814,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-68,TrustRoute,1,B,0.0003066,7.571768045425415,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-287,TrustRoute,1,B,0.000252,1.5096473693847656,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-64,TrustRoute,1,B,0.00044000000000000007,1.8784370422363281,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-339,TrustRoute,1,B,0.0011760000000000002,3.653798818588257,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-864,TrustRoute,1,B,0.0002438,1.4141123294830322,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-928,TrustRoute,1,B,0.0003986,1.8223109245300293,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-714,TrustRoute,1,B,0.0004282,1.770777702331543,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-823,TrustRoute,1,A,0.0015622,4.384373664855957,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-79,TrustRoute,1,A,0.0009801,3.2045845985412598,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-920,TrustRoute,1,A,0.0001986,1.4698960781097412,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-70,TrustRoute,1,A,0.0002866,1.7404277324676514,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-36,TrustRoute,1,B,0.0009895,2.855057716369629,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-582,TrustRoute,1,B,0.0034695000000000004,8.107077360153198,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-436,TrustRoute,1,A,0.0003014,1.5902018547058105,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-192,TrustRoute,1,A,0.0003639,1.8118882179260254,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1149,TrustRoute,1,B,0.0007472,2.6635072231292725,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-220,TrustRoute,1,B,0.0002391,1.6185832023620605,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-733,TrustRoute,1,A,0.0014663999999999999,4.0845115184783936,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1258,TrustRoute,1,B,0.000927,2.608795642852783,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-209,TrustRoute,1,B,0.0011191999999999999,3.1168785095214844,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-305,TrustRoute,1,A,0.0029907999999999996,6.625757455825806,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1164,TrustRoute,1,A,0.0001517,1.3161733150482178,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-372,TrustRoute,1,B,0.00037610000000000003,1.9112553596496582,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-888,TrustRoute,1,B,0.0016095,4.536923885345459,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1169,TrustRoute,1,A,0.0004917,1.919100284576416,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-593,TrustRoute,1,A,0.0003132,1.716097116470337,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-316,TrustRoute,1,A,0.0033109999999999997,8.021308898925781,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-286,TrustRoute,1,A,0.0008995,2.6893186569213867,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-134,TrustRoute,1,B,0.00041289999999999995,1.5396754741668701,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1063,TrustRoute,1,A,0.0007341999999999998,2.097832441329956,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-264,TrustRoute,1,B,0.0002542,1.5118741989135742,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-768,TrustRoute,1,B,0.0005914000000000001,2.1658883094787598,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-544,TrustRoute,1,A,0.0002873,1.602048635482788,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-942,TrustRoute,1,A,0.0003567,1.6065037250518799,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-828,TrustRoute,1,B,0.000637,1.8500261306762695,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1195,TrustRoute,1,A,0.0002936,1.4111485481262207,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1114,TrustRoute,1,A,0.0002926,1.6897389888763428,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-362,TrustRoute,1,"The sentence uses the word ""but,"" which implies a contrast or an unexpected problem.
+""Ben had to drain both water and oil down the sink, but the _ was too fluid.""
+
+1.  **Water:** Water is naturally very fluid. Saying ""the water was too fluid"" when draining it down a sink doesn't typically indicate a problem or an unexpected characteristic, as its fluidity is its normal state.
+2.  **Oil:** Oil can vary in viscosity. Some oils are thick, while others are very thin. If oil was ""too fluid,"" it suggests that it was unexpectedly thin or runny for the situation, possibly causing it to splash, flow too quickly, or be difficult to control. This unexpected level of fluidity would fit the ""but"" clause, indicating a problem or a contrast to what might have been expected for oil.
+
+Therefore, ""oil"" is the more logical choice because its fluidity can be a variable characteristic that could become problematic if it's ""too"" much so.
+
+The final answer is $\boxed{A}$",0.004144200000000001,10.221904754638672,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1098,TrustRoute,1,A,0.0012001,3.1154801845550537,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-375,TrustRoute,1,A,0.0003583,1.6899614334106445,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-76,TrustRoute,1,A,0.0021045,6.039624452590942,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-77,TrustRoute,1,A,0.0005767,2.364161968231201,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-799,TrustRoute,1,B,0.0004945,1.8527638912200928,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-579,TrustRoute,1,A.,0.0028461999999999997,6.477185964584351,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-351,TrustRoute,1,B,0.0018614,4.677282810211182,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-210,TrustRoute,1,A,0.0003342,1.5969665050506592,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-665,TrustRoute,1,A,0.0002476,1.5789964199066162,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-516,TrustRoute,1,"The sentence is: ""Samantha was not interested in hearing about Tanya awesome marriage, because _ was happy all the time.""
+
+We need to determine who ""was happy all the time"" in a way that logically explains Samantha's disinterest in Tanya's marriage.
+
+1.  **If Samantha was happy all the time:** This would mean Samantha was content in her own life, and perhaps didn't feel the need to hear about others' happiness, or found it irrelevant to her own joyful state. This is a plausible explanation.
+
+2.  **If Tanya was happy all the time:** This would imply that Tanya frequently talked about her happiness, likely including details about her ""awesome marriage,"" to the point where Samantha became tired or annoyed by it, leading to disinterest. This is also a very plausible and common reason for someone to be uninterested in another person's constant positive updates.
+
+However, the phrase ""Tanya awesome marriage"" suggests that Tanya is likely the one presenting her marriage in a positive light and potentially discussing it often. If Tanya is ""happy all the time,"" it's highly probable that her ""awesome marriage"" is a frequent topic of her discussions. This constant exposure to Tanya's perpetual happiness and its manifestation (her marriage) would more directly explain Samantha's disinterest in *Tanya's specific marriage*. It implies Samantha is tuning out *Tanya's* positive narrative.
+
+Therefore, ""Tanya"" being happy all the time is a stronger and more direct causal link to Samantha's disinterest in hearing about ""Tanya awesome marriage.""
+
+The final answer is $\boxed{B}$",0.0049917,10.619432926177979,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-858,TrustRoute,1,A,0.0032351,7.465075492858887,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-434,TrustRoute,1,A,0.0003417,1.6148936748504639,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-901,TrustRoute,1,B,0.0004833,1.949019193649292,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-45,TrustRoute,1,A,0.0007260000000000001,2.5053324699401855,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-150,TrustRoute,1,A,0.0016298,4.729966640472412,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1162,TrustRoute,1,B,0.0001792,1.3847002983093262,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-358,TrustRoute,1,A,0.0004586,1.8223237991333008,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-875,TrustRoute,1,B,0.0006031,2.052661418914795,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1204,TrustRoute,1,A,0.0005593999999999999,2.4401681423187256,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-147,TrustRoute,1,A. cable,0.0032623,8.358965396881104,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1249,TrustRoute,1,B,0.000336,1.7931537628173828,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1229,TrustRoute,1,A,0.00020190000000000003,1.395190715789795,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-669,TrustRoute,1,A,0.00046999999999999993,1.80885648727417,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-792,TrustRoute,1,A,0.0006351,2.5239076614379883,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-727,TrustRoute,1,B. Monica,0.005385999999999999,11.786525964736938,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-442,TrustRoute,1,B,0.000607,2.2960569858551025,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-1226,TrustRoute,1,B,0.00037610000000000003,1.7258529663085938,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+winogrande,winogrande-84,TrustRoute,1,B,0.0005535,2.3578155040740967,0,0,cand-gemini-2.5-flash,stage1_early_stop,

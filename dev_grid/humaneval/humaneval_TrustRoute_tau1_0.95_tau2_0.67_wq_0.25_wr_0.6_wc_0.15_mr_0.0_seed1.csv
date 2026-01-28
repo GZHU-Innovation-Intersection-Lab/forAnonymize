@@ -1,0 +1,287 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"```python
+def maximum(arr, k):
+    """"""
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+    """"""
+    arr.sort()
+    return arr[len(arr) - k:]
+```",0.00367695,9.922932147979736,0,0,cand-gemini-2.5-flash,stage2_verified,
+humaneval,HumanEval/88,TrustRoute,1,"```python
+def sort_array(array):
+    """"""
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """"""
+    if not array:
+        return []
+
+    first_val = array[0]
+    last_val = array[-1]
+    
+    if (first_val + last_val) % 2 != 0:  # Sum is odd, sort ascending
+        return sorted(array)
+    else:  # Sum is even, sort descending
+        return sorted(array, reverse=True)
+```",0.0032881,6.169439315795898,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"```python
+from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    return """".join(strings)
+```",0.0003704,1.7360899448394775,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"```python
+def prod_signs(arr):
+    if not arr:
+        return None
+
+    if 0 in arr:
+        return 0
+
+    sum_magnitudes = sum(abs(x) for x in arr)
+
+    negative_count = sum(1 for x in arr if x < 0)
+    product_of_signs = -1 if negative_count % 2 == 1 else 1
+
+    return sum_magnitudes * product_of_signs
+```",0.0048568000000000005,8.64023756980896,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"```python
+def triangle_area(a, h):
+    """"""Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """"""
+    return 0.5 * a * h
+```",0.00032680000000000003,1.5083692073822021,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    names = [""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    
+    filtered_arr = [x for x in arr if 1 <= x <= 9]
+    filtered_arr.sort()
+    filtered_arr.reverse()
+    
+    result = [names[x - 1] for x in filtered_arr]
+    
+    return result
+```",0.0026389999999999994,5.303023338317871,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/124,TrustRoute,1,"```python
+def valid_date(date):
+    """"""You have to write a function which validates a given date string and
+    returns True if the date is valid otherwise False.
+    The date is valid if all of the following rules are satisfied:
+    1. The date string is not empty.
+    2. The number of days is not less than 1 or higher than 31 days for months 1,3,5,7,8,10,12. And the number of days is not less than 1 or higher than 30 days for months 4,6,9,11. And, the number of days is not less than 1 or higher than 29 for the month 2.
+    3. The months should not be less than 1 or higher than 12.
+    4. The date should be in the format: mm-dd-yyyy
+
+    for example: 
+    valid_date('03-11-2000') => True
+
+    valid_date('15-01-2012') => False
+
+    valid_date('04-0-2040') => False
+
+    valid_date('06-04-2020') => True
+
+    valid_date('06/04/2020') => False
+    """"""
+    if not date:
+        return False
+
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+
+    try:
+        month_str, day_str, year_str = parts
+        
+        if not (len(month_str) == 2 and len(day_str) == 2 and len(year_str) == 4):
+            return False
+
+        month = int(month_str)
+        day = int(day_str)
+        year = int(year_str)
+    except ValueError:
+        return False
+
+    if not (1 <= month <= 12):
+        return False
+
+    if month in [1, 3, 5, 7, 8, 10, 12]:
+        if not (1 <= day <= 31):
+            return False
+    elif month in [4, 6, 9, 11]:
+        if not (1 <= day <= 30):
+            return False
+    elif month == 2:
+        if not (1 <= day <= 29): # As per rule, fixed 29 for Feb
+            return False
+    else:
+        # This case should technically be caught by `1 <= month <= 12`, but good for robustness
+        return False
+
+    return True
+```",0.0039943,8.480530738830566,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"```python
+def truncate_number(number: float) -> float:
+    return number - int(number)
+```",0.00022069999999999997,1.3608152866363525,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"```python
+import itertools
+from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if abs(numbers[i] - numbers[j]) < threshold:
+                return True
+    return False
+```",0.001922,3.4728620052337646,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"```python
+def hex_key(num):
+    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}
+    count = 0
+    for char in num:
+        if char in prime_hex_digits:
+            count += 1
+    return count
+```",0.0014932,3.2062978744506836,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"```python
+def pairs_sum_to_zero(l):
+    """"""
+    pairs_sum_to_zero takes a list of integers as an input.
+    it returns True if there are two distinct elements in the list that
+    sum to zero, and False otherwise.
+    >>> pairs_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> pairs_sum_to_zero([1, 3, -2, 1])
+    False
+    >>> pairs_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])
+    True
+    >>> pairs_sum_to_zero([1])
+    False
+    """"""
+    seen = set()
+    for num in l:
+        if -num in seen:
+            return True
+        seen.add(num)
+    return False
+
+```",0.005470399999999999,9.4152250289917,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"```python
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_multiply_prime(a):
+    if a < 8:
+        return False
+
+    prime_factors_count = 0
+    temp_a = a
+    
+    i = 2
+    while i * i <= temp_a:
+        if is_prime(i):
+            while temp_a % i == 0:
+                prime_factors_count += 1
+                temp_a //= i
+        i += 1
+    
+    if temp_a > 1:
+        prime_factors_count += 1
+
+    return prime_factors_count == 3
+```",0.0160263,23.078527688980103,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"```python
+def closest_integer(value):
+    """"""
+    Create a function that takes a value (string) representing a number
+    and returns the closest integer to it. If the number is equidistant
+    from two integers, round it away from zero.
+    """"""
+    num = float(value)
+    if num >= 0:
+        return int(num + 0.5)
+    else:
+        return int(num - 0.5)
+
+```",0.0147678,26.304641723632812,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"```python
+def is_equal_to_sum_even(n):
+    """"""Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers
+    Example
+    is_equal_to_sum_even(4) == False
+    is_equal_to_sum_even(6) == False
+    is_equal_to_sum_even(8) == True
+    """"""
+    return n % 2 == 0 and n >= 8
+```",0.0025025,3.9326255321502686,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"```python
+def next_smallest(lst):
+    """"""
+    Returns the 2nd smallest element of the list.
+    Returns None if there is no such element.
+    """"""
+    unique_sorted_elements = sorted(list(set(lst)))
+    if len(unique_sorted_elements) < 2:
+        return None
+    return unique_sorted_elements[1]
+```",0.002838,6.4476401805877686,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"```python
+import math
+
+def pluck(arr):
+    """"""
+    Given an array representing a branch of a tree that has non-negative integer nodes
+    your task is to pluck one of the nodes and return it.
+    The plucked node should be the node with the smallest even value.
+    If multiple nodes with the same smallest even value are found return the node that has smallest index.
+
+    The plucked node should be returned in a list, [ smalest_value, its index ],
+    If there are no even values or the given array is empty, return [].
+    """"""
+    smallest_even_value = math.inf
+    smallest_even_index = -1
+
+    for i, node_value in enumerate(arr):
+        if node_value % 2 == 0:  # Check if the node is even
+            if node_value < smallest_even_value:
+                smallest_even_value = node_value
+                smallest_even_index = i
+            # If node_value == smallest_even_value, we keep the earlier index,
+            # which is already stored due to iteration order.
+
+    if smallest_even_index == -1:
+        return []
+    else:
+        return [smallest_even_value, smallest_even_index]
+```",0.0039013,6.797606945037842,0,0,cand-gemini-2.5-flash,stage1_early_stop,

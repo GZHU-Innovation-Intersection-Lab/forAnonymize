@@ -1,0 +1,258 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"```python
+def maximum(arr, k):
+    if k == 0:
+        return []
+
+    sorted_arr = sorted(arr)
+    return sorted_arr[-k:]
+
+```",0.00673635,15.170998334884644,0,0,cand-gemini-2.5-flash,stage2_verified,
+humaneval,HumanEval/88,TrustRoute,1,"```python
+def sort_array(array):
+    if len(array) <= 1:
+        return list(array)
+
+    first_last_sum = array[0] + array[-1]
+    
+    if first_last_sum % 2 != 0:  # Odd sum, sort ascending
+        return sorted(array)
+    else:  # Even sum, sort descending
+        return sorted(array, reverse=True)
+```",0.0027531,5.435150623321533,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"```python
+from typing import List
+
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return """".join(strings)
+```",0.0004579,1.80192232131958,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"```python
+def prod_signs(arr):
+    if not arr:
+        return None
+
+    sign_product = 1
+    magnitude_sum = 0
+
+    for num in arr:
+        magnitude_sum += abs(num)
+        if num == 0:
+            sign_product = 0
+            # If a zero is encountered, the product of signs will be zero,
+            # and it will remain zero regardless of subsequent numbers.
+            # We can break early if magnitude_sum is also finalized,
+            # but for correctness, it's better to calculate full magnitude_sum.
+        elif num < 0:
+            sign_product *= -1
+            
+    return magnitude_sum * sign_product
+```",0.0021343,4.90199089050293,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"```python
+def triangle_area(a, h):
+    """"""Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """"""
+    return 0.5 * a * h
+```",0.0003668,1.5221436023712158,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    names = ["""", ""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    
+    filtered_and_sorted = sorted([x for x in arr if 1 <= x <= 9])
+    
+    result = [names[x] for x in filtered_and_sorted[::-1]]
+    
+    return result
+```",0.004559,8.022071361541748,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/124,TrustRoute,1,"```python
+def valid_date(date):
+    """"""You have to write a function which validates a given date string and
+    returns True if the date is valid otherwise False.
+    The date is valid if all of the following rules are satisfied:
+    1. The date string is not empty.
+    2. The number of days is not less than 1 or higher than 31 days for months 1,3,5,7,8,10,12. And the number of days is not less than 1 or higher than 30 days for months 4,6,9,11. And, the number of days is not less than 1 or higher than 29 for the month 2.
+    3. The months should not be less than 1 or higher than 12.
+    4. The date should be in the format: mm-dd-yyyy
+
+    for example: 
+    valid_date('03-11-2000') => True
+
+    valid_date('15-01-2012') => False
+
+    valid_date('04-0-2040') => False
+
+    valid_date('06-04-2020') => True
+
+    valid_date('06/04/2020') => False
+    """"""
+    if not date:
+        return False
+
+    parts = date.split('-')
+    if len(parts) != 3:
+        return False
+
+    try:
+        month_str, day_str, year_str = parts
+        
+        if not (len(month_str) == 2 and len(day_str) == 2 and len(year_str) == 4):
+            return False
+
+        month = int(month_str)
+        day = int(day_str)
+        year = int(year_str) 
+    except ValueError:
+        return False
+
+    if not (1 <= month <= 12):
+        return False
+
+    if month in [1, 3, 5, 7, 8, 10, 12]:
+        if not (1 <= day <= 31):
+            return False
+    elif month in [4, 6, 9, 11]:
+        if not (1 <= day <= 30):
+            return False
+    elif month == 2:
+        if not (1 <= day <= 29): # Rule 2 specifies 29 as max for Feb.
+            return False
+    
+    return True
+```",0.008449300000000002,14.016740560531616,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"```python
+def truncate_number(number: float) -> float:
+    return number - int(number)
+```",0.0010932,2.923987627029419,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"```python
+from typing import List
+
+
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    n = len(numbers)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if abs(numbers[i] - numbers[j]) < threshold:
+                return True
+    return False
+```",0.001162,2.7789058685302734,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"```python
+def hex_key(num):
+    prime_hex_digits = {'2', '3', '5', '7', 'B', 'D'}
+    count = 0
+    for digit in num:
+        if digit in prime_hex_digits:
+            count += 1
+    return count
+```",0.0029457000000000003,5.57088565826416,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"```python
+def pairs_sum_to_zero(l):
+    seen = set()
+    for x in l:
+        if -x in seen:
+            return True
+        seen.add(x)
+    return False
+
+```",0.0041004,8.3292076587677,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"```python
+def is_multiply_prime(a):
+    if a < 2:
+        return False
+
+    factors = []
+    d = 2
+
+    while a > 1:
+        if a % d == 0:
+            factors.append(d)
+            a //= d
+        else:
+            d += 1
+            if d * d > a and a > 1:
+                factors.append(a)
+                a = 1
+                break
+
+    return len(factors) == 3
+```",0.0130363,19.489860773086548,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"```python
+def closest_integer(value):
+    num = float(value)
+    
+    # int() truncates towards zero (e.g., int(15.3) is 15, int(-14.5) is -14)
+    int_part = int(num) 
+    
+    # Calculate the fractional part. 
+    # For positive num, frac_part is positive or zero.
+    # For negative num, frac_part is negative or zero.
+    # E.g., 15.3 - 15 = 0.3; -14.5 - (-14) = -0.5; -14.3 - (-14) = -0.3
+    frac_part = num - int_part
+    
+    # Apply rounding rules:
+    # 1. For positive numbers: if fractional part is 0.5 or greater, round up.
+    # 2. For negative numbers: if fractional part is -0.5 or smaller, round down (away from zero).
+    # 3. Otherwise, truncate (which is what int_part already is).
+    
+    if num >= 0:
+        if frac_part >= 0.5:
+            return int_part + 1
+        else:
+            return int_part
+    else: # num < 0
+        if frac_part <= -0.5:
+            return int_part - 1
+        else:
+            return int_part
+```",0.018155300000000003,38.0932080745697,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"```python
+def is_equal_to_sum_even(n):
+    return n >= 8 and n % 2 == 0
+```",0.0030125,6.238739013671875,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"```python
+def next_smallest(lst):
+    unique_sorted_lst = sorted(list(set(lst)))
+    if len(unique_sorted_lst) < 2:
+        return None
+    return unique_sorted_lst[1]
+```",0.002223,4.694864511489868,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"```python
+def pluck(arr):
+    """"""
+    Given an array representing a branch of a tree that has non-negative integer nodes
+    your task is to pluck one of the nodes and return it.
+    The plucked node should be the node with the smallest even value.
+    If multiple nodes with the same smallest even value are found return the node that has smallest index.
+
+    The plucked node should be returned in a list, [ smalest_value, its index ],
+    If there are no even values or the given array is empty, return [].
+    """"""
+    min_even_val = float('inf')
+    min_even_idx = -1
+
+    for i, x in enumerate(arr):
+        if x % 2 == 0:
+            if x < min_even_val:
+                min_even_val = x
+                min_even_idx = i
+
+    if min_even_idx == -1:
+        return []
+    else:
+        return [min_even_val, min_even_idx]
+
+```",0.0053063,9.367285251617432,0,0,cand-gemini-2.5-flash,stage1_early_stop,

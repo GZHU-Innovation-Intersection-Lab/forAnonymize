@@ -1,0 +1,3165 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: winogrande_TrustRoute_88307aae2d
+🚀 Running TrustRoute on winogrande
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/winogrande_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande/winogrande_TrustRoute_tau1_0.85_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 126 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/126] Processing: winogrande-10[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-10
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.807), early stop!
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.1s
+[2/126] Processing: winogrande-387
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-387
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.807), early stop!
+          [USAL] cand-gpt-4o-mini: 50.6 -> 51.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[3/126] Processing: winogrande-184
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-184
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=51.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 51.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.806), early stop!
+          [USAL] cand-gpt-4o-mini: 51.2 -> 51.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[4/126] Processing: winogrande-656
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-656
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=51.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 51.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.806), early stop!
+          [USAL] cand-gpt-4o-mini: 51.8 -> 52.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[5/126] Processing: winogrande-6
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-6
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=52.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 52.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.805), early stop!
+          [USAL] cand-gpt-4o-mini: 52.4 -> 53.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[6/126] Processing: winogrande-930
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-930
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=53.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 53.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.805), early stop!
+          [USAL] cand-gpt-4o-mini: 53.0 -> 53.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.80s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.8s
+[7/126] Processing: winogrande-815
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-815
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=53.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 53.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.804), early stop!
+          [USAL] cand-gpt-4o-mini: 53.6 -> 54.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[8/126] Processing: winogrande-1087
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1087
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=54.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 54.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.804), early stop!
+          [USAL] cand-gpt-4o-mini: 54.2 -> 54.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[9/126] Processing: winogrande-1054
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1054
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=54.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 54.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.803), early stop!
+          [USAL] cand-gpt-4o-mini: 54.8 -> 55.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.71s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.7s
+[10/126] Processing: winogrande-561
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-561
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=55.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 55.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.803), early stop!
+          [USAL] cand-gpt-4o-mini: 55.4 -> 56.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[11/126] Processing: winogrande-702
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-702
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=56.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 56.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.802), early stop!
+          [USAL] cand-gpt-4o-mini: 56.0 -> 56.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.50s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[12/126] Processing: winogrande-471
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-471
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=56.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 56.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "At Jan's home, she dusted the dresser more frequently than the fan, because the _ was more difficult to reach.\n\nA. fan\nB", 'len': 172}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.802), early stop!
+          [USAL] cand-gpt-4o-mini: 56.6 -> 57.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.98s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[13/126] Processing: winogrande-811
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-811
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=57.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 57.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In order to grow his plants naturally, he bought fertilizer and water. The _ was filled with nutrients.\n\nA. fertilizer\nB', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.801), early stop!
+          [USAL] cand-gpt-4o-mini: 57.2 -> 57.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.55s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.5s
+[14/126] Processing: winogrande-896
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-896
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=57.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 57.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The athletes on the team of Christine were less tired than those on the team of Monica because the ones with _ did less ', 'len': 192}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.801), early stop!
+          [USAL] cand-gpt-4o-mini: 57.8 -> 58.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[15/126] Processing: winogrande-204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=58.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 58.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a fat stomach.\n\nA. Cynthia\nB. Laura\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.800), early stop!
+          [USAL] cand-gpt-4o-mini: 58.4 -> 59.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.48s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[16/126] Processing: winogrande-105
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-105
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=59.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 59.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To pay for dinner, he used the credit card rather than cash. The _ was not available.\n\nA. cash\nB. card\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.800), early stop!
+          [USAL] cand-gpt-4o-mini: 59.0 -> 59.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[17/126] Processing: winogrande-1039
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1039
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=59.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 59.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Felicia wanted to be pampered by Emily, so _ went to the jewelry store and bought an expensive ring.\n\nA. Felicia\nB. Emil', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.799), early stop!
+          [USAL] cand-gpt-4o-mini: 59.6 -> 60.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.69s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.7s
+[18/126] Processing: winogrande-239
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-239
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=60.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 60.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Mary was more reliable and hardworking than Rachel, but to be fair, _ had a better foundation as a child.\n\nA. Mary\nB. Ra', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.799), early stop!
+          [USAL] cand-gpt-4o-mini: 60.2 -> 60.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[19/126] Processing: winogrande-193
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-193
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=60.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 60.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very cold.\n\nA. Lawrence\nB. Nick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.798), early stop!
+          [USAL] cand-gpt-4o-mini: 60.8 -> 61.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[20/126] Processing: winogrande-1141
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1141
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=61.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 61.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Angela wanted to find a partner, but Victoria wanted to stay single, because _ was lonely.\n\nA. Angela\nB. Victoria\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.798), early stop!
+          [USAL] cand-gpt-4o-mini: 61.4 -> 62.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[21/126] Processing: winogrande-402
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-402
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=62.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 62.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The virus stuck to the clothes better than it stuck to the walls, because the _ had more deterrents on them.\n\nA. walls\nB', 'len': 172}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.797), early stop!
+          [USAL] cand-gpt-4o-mini: 62.0 -> 62.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.9s
+[22/126] Processing: winogrande-827
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-827
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=62.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 62.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Amy tried to spread the cake icing all over the cake but the _ was not enough.\n\nA. icing\nB. cake\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.797), early stop!
+          [USAL] cand-gpt-4o-mini: 62.6 -> 63.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[23/126] Processing: winogrande-302
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-302
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=63.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 63.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ian won a fish from Kenneth at the carnival so _ bagged it up and sent it home.\n\nA. Ian\nB. Kenneth\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.796), early stop!
+          [USAL] cand-gpt-4o-mini: 63.2 -> 63.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.55s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[24/126] Processing: winogrande-319
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-319
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=63.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 63.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Matt wanted to change either the plain bathroom or the colorful bedroom, but the _ was already colorful.\n\nA. bedroom\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.796), early stop!
+          [USAL] cand-gpt-4o-mini: 63.8 -> 64.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[25/126] Processing: winogrande-56
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-56
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=64.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 64.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe brought the horse out to the country quite a distance and gave him food but the _ was too much.\n\nA. food\nB. distance', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.795), early stop!
+          [USAL] cand-gpt-4o-mini: 64.4 -> 65.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.50s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[26/126] Processing: winogrande-61
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-61
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=65.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 65.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura used too much super glue on Erins hands, so _ needed to get to the doctor to separate their hands.\n\nA. Laura\nB. Er', 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.795), early stop!
+          [USAL] cand-gpt-4o-mini: 65.0 -> 65.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[27/126] Processing: winogrande-529
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-529
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=65.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 65.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The personal trainer gave Laura but not Victoria the more difficult exercise because _ was out of shape.\n\nA. Laura\nB. Vi', 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.794), early stop!
+          [USAL] cand-gpt-4o-mini: 65.6 -> 66.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[28/126] Processing: winogrande-730
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-730
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=66.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 66.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The brutal boxing match was suitable for Christopher but not Samuel because _ did damage to his opponent.\n\nA. Christophe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.794), early stop!
+          [USAL] cand-gpt-4o-mini: 66.2 -> 66.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[29/126] Processing: winogrande-250
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-250
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=66.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 66.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The stain was darker on Jason's shirt than Donald's because _ spilled red wine and not white wine.\n\nA. Jason\nB. Donald\n\n", 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.793), early stop!
+          [USAL] cand-gpt-4o-mini: 66.8 -> 67.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.05s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.1s
+[30/126] Processing: winogrande-953
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-953
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=67.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 67.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha told Lindsey to be careful with the porcelain doll; when she ignored her and dropped the doll, _ was very sorry', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.793), early stop!
+          [USAL] cand-gpt-4o-mini: 67.4 -> 68.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.9s
+[31/126] Processing: winogrande-1159
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1159
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=68.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 68.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan kept a store of ammo in their house but Brian did not as _ approved of hunting.\n\nA. Logan\nB. Brian\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.792), early stop!
+          [USAL] cand-gpt-4o-mini: 68.0 -> 68.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.91s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[32/126] Processing: winogrande-100
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-100
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=68.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 68.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven believes they can buy happiness but Craig thinks otherwise as _ is very realistic.\n\nA. Steven\nB. Craig\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.792), early stop!
+          [USAL] cand-gpt-4o-mini: 68.6 -> 69.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[33/126] Processing: winogrande-1066
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1066
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=69.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 69.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan preferred to snowboard while Kyle wanted to do biathlon so _ went up the hill.\n\nA. Logan\nB. Kyle\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.791), early stop!
+          [USAL] cand-gpt-4o-mini: 69.2 -> 69.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[34/126] Processing: winogrande-446
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-446
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=69.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 69.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Even though Ian had less of a sweet tooth than Robert, _ liked chocolate more.\n\nA. Ian\nB. Robert\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.791), early stop!
+          [USAL] cand-gpt-4o-mini: 69.8 -> 70.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[35/126] Processing: winogrande-410
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-410
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=70.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 70.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'When Benjamin put the family into debt, Adam filed for divorce; then the judge gave _ a withering look.\n\nA. Benjamin\nB. ', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.790), early stop!
+          [USAL] cand-gpt-4o-mini: 70.4 -> 71.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[36/126] Processing: winogrande-826
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-826
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=71.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 71.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'He was having an asthma attack but forgot his inhaler so someone recommended coffee as the _ was unavailable.\n\nA. inhale', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.790), early stop!
+          [USAL] cand-gpt-4o-mini: 71.0 -> 71.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[37/126] Processing: winogrande-1265
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1265
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=71.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 71.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jane received a pet tortoise and an aquarium as a birthday gift, but the _ was too small.\n\nA. aquarium\nB. tortoise\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.789), early stop!
+          [USAL] cand-gpt-4o-mini: 71.6 -> 72.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.68s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.7s
+[38/126] Processing: winogrande-199
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-199
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=72.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 72.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ lent him some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.789), early stop!
+          [USAL] cand-gpt-4o-mini: 72.2 -> 72.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.13s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.1s
+[39/126] Processing: winogrande-203
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-203
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=72.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 72.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a flat stomach.\n\nA. Cynthia\nB. Laura\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.788), early stop!
+          [USAL] cand-gpt-4o-mini: 72.8 -> 73.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[40/126] Processing: winogrande-591
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-591
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=73.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 73.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James took out a seat from his office to create more space. The _ is too big.\n\nA. seat\nB. office\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.788), early stop!
+          [USAL] cand-gpt-4o-mini: 73.4 -> 74.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[41/126] Processing: winogrande-252
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-252
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=74.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 74.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Emily decided to eat a lot more yucca than Carrie did. _ was no longer hungry.\n\nA. Emily\nB. Carrie\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.787), early stop!
+          [USAL] cand-gpt-4o-mini: 74.0 -> 74.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[42/126] Processing: winogrande-941
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-941
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=74.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 74.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kyle makes a lot more money than Nelson can make at his job, as _ is a cashier.\n\nA. Kyle\nB. Nelson\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.787), early stop!
+          [USAL] cand-gpt-4o-mini: 74.6 -> 75.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.67s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.7s
+[43/126] Processing: winogrande-844
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-844
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=75.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 75.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The teacher asked for the homework. Elena played games the night before and Tanya did not, so _ got an A.\n\nA. Elena\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.786), early stop!
+          [USAL] cand-gpt-4o-mini: 75.2 -> 75.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.60s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.6s
+[44/126] Processing: winogrande-331
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-331
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=75.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 75.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Angela did a bunch of crunches and sit-ups but Cynthia didn't, consequentially _ had six- pack abs.\n\nA. Angela\nB. Cynthi", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.786), early stop!
+          [USAL] cand-gpt-4o-mini: 75.8 -> 76.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[45/126] Processing: winogrande-1103
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1103
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=76.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 76.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The apartment Brett rented was owned by Jason, so _ sent the rent for the apartment each month.\n\nA. Brett\nB. Jason\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.785), early stop!
+          [USAL] cand-gpt-4o-mini: 76.4 -> 77.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.19s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[46/126] Processing: winogrande-1232
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1232
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=77.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 77.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The living room was cleaner than the kitchen, because we spend more time in the the _ .\n\nA. living room\nB. kitchen\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.785), early stop!
+          [USAL] cand-gpt-4o-mini: 77.0 -> 77.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.83s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.8s
+[47/126] Processing: winogrande-1165
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1165
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=77.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 77.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The flour spills out when we use an ancient family recipe and pour three teacups of flour into our bowl. The _ is too sm', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.784), early stop!
+          [USAL] cand-gpt-4o-mini: 77.6 -> 78.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.34s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[48/126] Processing: winogrande-479
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-479
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=78.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 78.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The quality of music produced largely depends on the instrument used. The _ is vital.\n\nA. Music\nB. Instrument\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.784), early stop!
+          [USAL] cand-gpt-4o-mini: 78.2 -> 78.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.88s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.9s
+[49/126] Processing: winogrande-1005
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1005
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=78.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 78.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "James wanted to wear the corsage but it wouldn't fit around his wrist because his _ was too small.\n\nA. wrist\nB. corsage\n", 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.783), early stop!
+          [USAL] cand-gpt-4o-mini: 78.8 -> 79.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[50/126] Processing: winogrande-729
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-729
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=79.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 79.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jessica found the heavy load at work overwhelming but not Katrina because _ did a poor job at planning their work.\n\nA. J', 'len': 180}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.783), early stop!
+          [USAL] cand-gpt-4o-mini: 79.4 -> 80.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[51/126] Processing: winogrande-357
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-357
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=80.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 80.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter since _ used a soothing skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.782), early stop!
+          [USAL] cand-gpt-4o-mini: 80.0 -> 80.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[52/126] Processing: winogrande-243
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-243
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=80.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 80.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The man paid cash for the phone but purchased the tablet with credit because the _ was pricy.\n\nA. Phone\nB. Tablet\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.781), early stop!
+          [USAL] cand-gpt-4o-mini: 80.6 -> 81.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[53/126] Processing: winogrande-426
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-426
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=81.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 81.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Kenneth is accused of destroying drywall in Jeffrey's house, _ is leasing out the house.\n\nA. Kenneth\nB. Jeffrey\n\nAnswer ", 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.781), early stop!
+          [USAL] cand-gpt-4o-mini: 81.2 -> 81.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[54/126] Processing: winogrande-198
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-198
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=81.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 81.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ borrowed some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.780), early stop!
+          [USAL] cand-gpt-4o-mini: 81.8 -> 82.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.0s
+[55/126] Processing: winogrande-679
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-679
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=82.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 82.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Benjamin shaved his beard, but Nick had just grown one, so _ gave them all his old oils.\n\nA. Benjamin\nB. Nick\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.780), early stop!
+          [USAL] cand-gpt-4o-mini: 82.4 -> 83.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[56/126] Processing: winogrande-145
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-145
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=83.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 83.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura brought extensions to Monica at the salon, so that _ could treat their dreads professionally.\n\nA. Laura\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.779), early stop!
+          [USAL] cand-gpt-4o-mini: 83.0 -> 83.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[57/126] Processing: winogrande-950
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-950
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=83.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 83.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The tree fell down sooner than the sapling because the roots of the _ were stronger.\n\nA. tree\nB. sapling\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.779), early stop!
+          [USAL] cand-gpt-4o-mini: 83.6 -> 84.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.34s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[58/126] Processing: winogrande-509
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-509
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=84.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 84.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Victoria decided to adopt a Yorkie, but Elena wouldn't even consider it, because _ loved small dogs.\n\nA. Victoria\nB. Ele", 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.778), early stop!
+          [USAL] cand-gpt-4o-mini: 84.2 -> 84.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[59/126] Processing: winogrande-223
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-223
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=84.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 84.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It seemed more likely that Brett would wear a fedora rather than Justin because _ was known to dress stylishly.\n\nA. Bret', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.778), early stop!
+          [USAL] cand-gpt-4o-mini: 84.8 -> 85.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[60/126] Processing: winogrande-463
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-463
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=85.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 85.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Irena didn't like other people living in something before her so she felt more comfortable buying the house instead of t", 'len': 212}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.777), early stop!
+          [USAL] cand-gpt-4o-mini: 85.4 -> 86.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[61/126] Processing: winogrande-68
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-68
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=86.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 86.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Laura just loved the taste of green beans but Felicia hated the taste of them. _ didn't have a second serving.\n\nA. Laura", 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.777), early stop!
+          [USAL] cand-gpt-4o-mini: 86.0 -> 86.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.86s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[62/126] Processing: winogrande-287
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-287
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=86.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 86.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was a very selfish individual but Kenneth was very generous. _ had a lot of good friends.\n\nA. Craig\nB. Kenneth\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.776), early stop!
+          [USAL] cand-gpt-4o-mini: 86.6 -> 87.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.0s
+[63/126] Processing: winogrande-64
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-64
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=87.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 87.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John cannot touch the cup as it was just brought out of the refrigerator. He wanted some air to blow around it. The _ is', 'len': 189}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.776), early stop!
+          [USAL] cand-gpt-4o-mini: 87.2 -> 87.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[64/126] Processing: winogrande-339
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-339
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=87.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 87.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick really liked working in Human Resources and William wanted to work at the same company, and _ subsequently accep', 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.775), early stop!
+          [USAL] cand-gpt-4o-mini: 87.8 -> 88.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.36s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[65/126] Processing: winogrande-864
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-864
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=88.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 88.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "In the hotel laundry room, Felicia burned Mary's shirt while ironing it, so the manager gave _ a refund.\n\nA. Felicia\nB. ", 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.775), early stop!
+          [USAL] cand-gpt-4o-mini: 88.4 -> 89.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.9s
+[66/126] Processing: winogrande-928
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-928
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=89.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 89.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Although Amy worked harder and longer than Rebecca, _ was a more wealthy person overall.\n\nA. Amy\nB. Rebecca\n\nAnswer with', 'len': 150}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.774), early stop!
+          [USAL] cand-gpt-4o-mini: 89.0 -> 89.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.49s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[67/126] Processing: winogrande-714
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-714
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=89.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 89.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Brian agreed to buy soap for Kenneth while at the store, and _ paid them back the following day for the errand.\n\nA. Bria', 'len': 175}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.774), early stop!
+          [USAL] cand-gpt-4o-mini: 89.6 -> 90.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[68/126] Processing: winogrande-823
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-823
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=90.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 90.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was worried that Mary might be caught in a scam when they started their new job, but _ decided to trust their fri', 'len': 198}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.773), early stop!
+          [USAL] cand-gpt-4o-mini: 90.2 -> 90.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[69/126] Processing: winogrande-79
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-79
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=90.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 90.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Aaron didn't know Dennis had a peanut allergy, so when _ made peanut chicken an ambulance was called.\n\nA. Aaron\nB. Denni", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.773), early stop!
+          [USAL] cand-gpt-4o-mini: 90.8 -> 91.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.30s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[70/126] Processing: winogrande-920
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-920
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=91.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 91.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The toddler kicked the hard furniture and soft toy, but only the _ caused pain.\n\nA. furniture\nB. toy\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.772), early stop!
+          [USAL] cand-gpt-4o-mini: 91.4 -> 92.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[71/126] Processing: winogrande-70
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-70
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=92.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 92.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Blaze always wore a t-shirt instead of a shirt because he thought that the _ was stuffy and old fashioned.\n\nA. shirt\nB. ', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.772), early stop!
+          [USAL] cand-gpt-4o-mini: 92.0 -> 92.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.96s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[72/126] Processing: winogrande-36
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-36
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=92.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 92.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel researched laws and helped to open a preschool for Eric. Because _ is very good with kids.\n\nA. Joel\nB. Eric\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.771), early stop!
+          [USAL] cand-gpt-4o-mini: 92.6 -> 93.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.1s
+[73/126] Processing: winogrande-582
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-582
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=93.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 93.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Of the two owners, Jessica was far worse than Jennifer, because _ like to treat the dogs.\n\nA. Jessica\nB. Jennifer\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.771), early stop!
+          [USAL] cand-gpt-4o-mini: 93.2 -> 93.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[74/126] Processing: winogrande-436
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-436
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=93.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 93.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was caught napping in class more often than Katrina because _ stayed up all night.\n\nA. Monica\nB. Katrina\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.770), early stop!
+          [USAL] cand-gpt-4o-mini: 93.8 -> 94.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[75/126] Processing: winogrande-192
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-192
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=94.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 94.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very hot.\n\nA. Lawrence\nB. Nick\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.770), early stop!
+          [USAL] cand-gpt-4o-mini: 94.4 -> 95.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.84s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.8s
+[76/126] Processing: winogrande-1149
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1149
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=95.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 95.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The actors practiced the scenes in the parking lot more than the scenes in the morgue, because the _ scenes are full of ', 'len': 197}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.769), early stop!
+          [USAL] cand-gpt-4o-mini: 95.0 -> 95.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[77/126] Processing: winogrande-220
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-220
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=95.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 95.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'You can grow cilantro in a garden or buy it at the store, but the _ variety will taste bland because it will be older.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.769), early stop!
+          [USAL] cand-gpt-4o-mini: 95.6 -> 96.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[78/126] Processing: winogrande-733
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-733
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=96.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 96.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer got about with a seeing-eye dog but Mary did not because _ was blind.\n\nA. Jennifer\nB. Mary\n\nAnswer with the opt', 'len': 142}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.768), early stop!
+          [USAL] cand-gpt-4o-mini: 96.2 -> 96.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.61s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.6s
+[79/126] Processing: winogrande-1258
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1258
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=96.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 96.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "She couldn't wear the bra, unlike the shirt, because the _ was the right size.\n\nA. bra\nB. shirt\n\nAnswer with the option ", 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.768), early stop!
+          [USAL] cand-gpt-4o-mini: 96.8 -> 97.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.58s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.6s
+[80/126] Processing: winogrande-209
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-209
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=97.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 97.400
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ criticized the original language of the fil', 'len': 187}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.767), early stop!
+          [USAL] cand-gpt-4o-mini: 97.4 -> 98.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.66s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.7s
+[81/126] Processing: winogrande-305
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-305
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=98.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 98.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven helped Derrick do research on the paper because _ had access to the internet.\n\nA. Steven\nB. Derrick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.767), early stop!
+          [USAL] cand-gpt-4o-mini: 98.0 -> 98.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[82/126] Processing: winogrande-1164
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1164
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=98.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 98.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Donald was chosen to be a model while Dennis was passed over, because _ was exceptionally tall.\n\nA. Donald\nB. Dennis\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.766), early stop!
+          [USAL] cand-gpt-4o-mini: 98.6 -> 99.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[83/126] Processing: winogrande-372
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-372
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=99.2, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 99.200
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Betty learned to play the cello well but Erin did not because _ was very impatient.\n\nA. Betty\nB. Erin\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.766), early stop!
+          [USAL] cand-gpt-4o-mini: 99.2 -> 99.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.9s
+[84/126] Processing: winogrande-888
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-888
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=99.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 99.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Justin became very ill with pneumonia, so Matthew made him some soup; then _ finally went home.\n\nA. Justin\nB. Matthew\n\nA', 'len': 160}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 99.8 -> 100.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[85/126] Processing: winogrande-1169
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1169
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The cracker that was given to me was worse than the cookie, because the _ was stale.\n\nA. cracker\nB. cookie\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[86/126] Processing: winogrande-593
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-593
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It was easier for the diner to follow their budget than the food truck because the _ had more money to spend.\n\nA. diner\n', 'len': 176}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.32s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[87/126] Processing: winogrande-316
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-316
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "They discussed the company's budget at the business meeting but the _ was boring and the topic of the budget ran long.\n\n", 'len': 183}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.85s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.8s
+[88/126] Processing: winogrande-286
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-286
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The ambulance went to the hospital without Nelson inside but with Ryan because _ drove there in a car.\n\nA. Nelson\nB. Rya', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[89/126] Processing: winogrande-134
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-134
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The house of Aaron took some damage from the storm but not Michael's house, because _ lived farther away.\n\nA. Aaron\nB. M", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[90/126] Processing: winogrande-1063
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1063
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Learning a new form of karate was difficult for Logan but not William because _ was not athletic.\n\nA. Logan\nB. William\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.88s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[91/126] Processing: winogrande-264
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-264
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer returned the pan to Sarah because _ had loaned it to her for the potluck party.\n\nA. Jennifer\nB. Sarah\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.00s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[92/126] Processing: winogrande-768
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-768
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Pho needs cilantro and beef to be tasty. However, the _ can be too savory.\n\nA. cilantro\nB. beef\n\nAnswer with the option ', 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[93/126] Processing: winogrande-544
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-544
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Rachel wanted children, but Megan had no interest, so _ looked for someone else to have babies with.\n\nA. Rachel\nB. Megan', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[94/126] Processing: winogrande-942
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-942
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The food that Hunter ate was spoiled but not that of Brett because _ left his food outside.\n\nA. Hunter\nB. Brett\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.96s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[95/126] Processing: winogrande-828
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-828
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Patricia teaches Kindergarten students, Christine teaches High School students therefore _ doesn't read aloud a lot.\n\nA.", 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.70s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.7s
+[96/126] Processing: winogrande-1195
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1195
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The honey flows out slower from the bottle than the oil. The _ is viscous.\n\nA. honey\nB. oil\n\nAnswer with the option lett', 'len': 134}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.3s
+[97/126] Processing: winogrande-1114
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1114
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick always wanted to wash when they woke up but Benjamin rarely bothered. _ was a very clean person.\n\nA. Derrick\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[98/126] Processing: winogrande-362
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-362
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ben had to drain both water and oil down the sink, but the _ was too fluid.\n\nA. oil\nB. water\n\nAnswer with the option let', 'len': 135}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.1s
+[99/126] Processing: winogrande-1098
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1098
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary didn't know what the currency of Mexico was but Lindsey knew _ had never been to Mexico before.\n\nA. Mary\nB. Lindsey", 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[100/126] Processing: winogrande-375
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-375
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Erin was eating more than Betty was eating for dinner because _ had skipped lunch.\n\nA. Erin\nB. Betty\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.98s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[101/126] Processing: winogrande-76
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-76
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup but  _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAnswe", 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.36s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[102/126] Processing: winogrande-77
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-77
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup because _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAn", 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.3s
+[103/126] Processing: winogrande-799
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-799
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Tanya looked for an escape route while Elena did not because _ liked to live in the moment.\n\nA. Tanya\nB. Elena\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.91s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[104/126] Processing: winogrande-579
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-579
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "I couldn't figure out what my costume would be for Halloween Peter Pan or Snow White. The _ costume I'd have to make mys", 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.88s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[105/126] Processing: winogrande-351
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-351
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Elena brought the horse to the stables owned by Cynthia, so _ could sell the animal.\n\nA. Elena\nB. Cynthia\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.0s
+[106/126] Processing: winogrande-210
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-210
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ appreciated the original language of the fi', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[107/126] Processing: winogrande-665
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-665
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica did not need a recipe in order to mix a cake but Angela did because _ was an instinctive baker.\n\nA. Monica\nB. Ang', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.1s
+[108/126] Processing: winogrande-516
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-516
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha was not interested in hearing about Tanya awesome marriage, because _ was happy all the time.\n\nA. Samantha\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[109/126] Processing: winogrande-858
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-858
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "My home is closer to the store than John's house, because the _ of me is next door.\n\nA. home\nB. house\n\nAnswer with the o", 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.99s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[110/126] Processing: winogrande-434
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-434
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'William wanted to go biking but Aaron wanted to stay home, so _ went out by themselves.\n\nA. William\nB. Aaron\n\nAnswer wit', 'len': 151}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.54s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[111/126] Processing: winogrande-901
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-901
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James was able to hide the book inside his jacket because the _ is big.\n\nA. book\nB. jacket\n\nAnswer with the option lette', 'len': 133}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[112/126] Processing: winogrande-45
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-45
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Since Craig wears clear contacts and William wears colored ones, it is safe to assume that _ loves the color of their ey', 'len': 187}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.22s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[113/126] Processing: winogrande-150
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-150
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Megan took Monica to a wood shack in the mountains, because _ was a kidnapper trying to hide.\n\nA. Megan\nB. Monica\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.01s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[114/126] Processing: winogrande-1162
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1162
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig made sure to stretch before working out but Christopher never did, so _ frequently got injuries.\n\nA. Craig\nB. Chri', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[115/126] Processing: winogrande-358
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-358
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter because _ used an irritating skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[116/126] Processing: winogrande-875
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-875
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was all about self-publishing his first album, but a PRO rep Lawrence advised against it. _ advocated for a very h', 'len': 217}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[117/126] Processing: winogrande-1204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The shoddy bridge held secure for when the cars were getting passengers across the town to their destinations on time. H', 'len': 213}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[118/126] Processing: winogrande-147
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-147
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The installation process was simpler for the cable over the internet because the man had already installed the _ previou', 'len': 189}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.38s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.4s
+[119/126] Processing: winogrande-1249
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1249
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To remove the stain he reached for soap first, then got up and got a bowl.  The _ was far away.\n\nA. soap\nB. bowl\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.2s
+[120/126] Processing: winogrande-1229
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1229
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James always feel weak whenever he walked the length of his street so he decided walking just the length of the lawn. Th', 'len': 194}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.00s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.0s
+[121/126] Processing: winogrande-669
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-669
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carl needed a new top after ripping his epaulette shirt. He wanted a  flannel shirt because the _ is old.\n\nA. epaulette ', 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.01s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[122/126] Processing: winogrande-792
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-792
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jen made charcoal to use as a mask and as toothpaste, but using the _ made her skin very black.\n\nA. mask\nB. toothpaste\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.47s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[123/126] Processing: winogrande-727
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-727
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Maria told Monica they looked too sick to go to work and asked if they had a fever. _ went to the Doctor.\n\nA. Maria\nB. M', 'len': 168}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.96s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[124/126] Processing: winogrande-442
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-442
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The lips on Cynthia were much smaller than Monica because _ got hit with a softball in the mouth.\n\nA. Cynthia\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.0s
+[125/126] Processing: winogrande-1226
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1226
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Patricia had to pay less tax than Cynthia because _ made more money in the year.\n\nA. Patricia\nB. Cynthia\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 0.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 0.9s
+[126/126] Processing: winogrande-84
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-84
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=100.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 100.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The filter in the living room needed to be changed more often than the one in the bedroom because the _ was cleaner.\n\nA.', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.765), early stop!
+          [USAL] cand-gpt-4o-mini: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 2.34s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 2.3s
+
+✅ Batch completed.

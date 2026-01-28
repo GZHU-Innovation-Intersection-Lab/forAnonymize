@@ -1,0 +1,382 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/93,TrustRoute,1,"```python
+def power(a, b):
+    return a ** b
+
+assert power(3, 4) == 81
+```",3.1349999999999996e-05,2.862558126449585,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/619,TrustRoute,1,"Here's a concise solution to move all the numbers to the end of the given string:
+
+```python
+def move_num(s):
+    letters = ''.join(filter(str.isalpha, s))
+    numbers = ''.join(filter(str.isdigit, s))
+    return letters + numbers
+
+# Test the function
+assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'
+```",7.184999999999998e-05,3.2210776805877686,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/277,TrustRoute,1,"```python
+def dict_filter(input_dict, n):
+    return {key: value for key, value in input_dict.items() if value >= n}
+
+# Test the function
+assert dict_filter({'Cierra Vega': 175, 'Alden Cantrell': 180, 'Kierra Gentry': 165, 'Pierre Cox': 190}, 170) == {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Pierre Cox': 190}
+```",8.444999999999999e-05,2.6254091262817383,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/296,TrustRoute,1,"Here is a Python function to count inversions in an array using a modified merge sort algorithm:
+
+```python
+def merge_and_count(arr, temp_arr, left, mid, right):
+    i = left    # Starting index for left subarray
+    j = mid + 1 # Starting index for right subarray
+    k = left    # Starting index to be sorted
+    inv_count = 0
+
+    while i <= mid and j <= right:
+        if arr[i] <= arr[j]:
+            temp_arr[k] = arr[i]
+            i += 1
+        else:
+            temp_arr[k] = arr[j]
+            inv_count += (mid - i + 1)
+            j += 1
+        k += 1
+
+    while i <= mid:
+        temp_arr[k] = arr[i]
+        i += 1
+        k += 1
+
+    while j <= right:
+        temp_arr[k] = arr[j]
+        j += 1
+        k += 1
+
+    for i in range(left, right + 1):
+        arr[i] = temp_arr[i]
+        
+    return inv_count
+
+def merge_sort_and_count(arr, temp_arr, left, right):
+    inv_count = 0
+    if left < right:
+        mid = (left + right) // 2
+        inv_count += merge_sort_and_count(arr, temp_arr, left, mid)
+        inv_count += merge_sort_and_count(arr, temp_arr, mid + 1, right)
+        inv_count += merge_and_count(arr, temp_arr, left, mid, right)
+    return inv_count
+
+def get_Inv_Count(arr):
+    temp_arr = [0] * len(arr)
+    return merge_sort_and_count(arr, temp_arr, 0, len(arr) - 1)
+
+# Test the function
+assert get_Inv_Count([1, 20, 6, 4, 5]) == 5
+```",0.00025695,10.8368079662323,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/598,TrustRoute,1,"```python
+def armstrong_number(num):
+    digits = [int(d) for d in str(num)]
+    power = len(digits)
+    return sum(d ** power for d in digits) == num
+
+# Test the function
+assert armstrong_number(153) == True
+```",4.934999999999999e-05,2.2676498889923096,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/439,TrustRoute,1,"```python
+def multiple_to_single(int_list):
+    return int(''.join(map(str, int_list)))
+
+# Test the function
+assert multiple_to_single([11, 33, 50]) == 113350
+```",4.2749999999999996e-05,1.7834079265594482,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/240,TrustRoute,1,"```python
+def replace_list(list1, list2):
+    return list1[:-1] + list2
+
+# Test the function
+assert replace_list([1, 3, 5, 7, 9, 10], [2, 4, 6, 8]) == [1, 3, 5, 7, 9, 2, 4, 6, 8]
+```",7.709999999999999e-05,2.961738109588623,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/311,TrustRoute,1,"Here's a concise Python function to set the leftmost unset bit:
+
+```python
+def set_left_most_unset_bit(n):
+    if n == 0:
+        return 1
+    leftmost_bit = 1 << (n.bit_length())
+    return n | leftmost_bit
+
+# Test the function
+assert set_left_most_unset_bit(10) == 14
+```",6.24e-05,2.5408873558044434,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/69,TrustRoute,1,"```python
+def is_sublist(main_list, sub_list):
+    sub_len = len(sub_list)
+    for i in range(len(main_list) - sub_len + 1):
+        if main_list[i:i + sub_len] == sub_list:
+            return True
+    return False
+
+# Test case
+assert is_sublist([2, 4, 3, 5, 7], [3, 7]) == False
+```",7.125e-05,2.5539424419403076,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/641,TrustRoute,1,"Here is a concise solution to find the nth nonagonal number:
+
+```python
+def is_nonagonal(n):
+    return n * (7 * n - 5) // 2
+
+# Test the function
+assert is_nonagonal(10) == 325
+```
+
+This function calculates the nth nonagonal number using the formula \( P(n) = \frac{n(7n - 5)}{2} \).",6.644999999999999e-05,2.927586317062378,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/801,TrustRoute,1,"```python
+def test_three_equal(a, b, c):
+    return len(set([a, b, c])) == 1 and 3 or (2 if len(set([a, b, c])) == 2 else 0)
+
+# Test case
+assert test_three_equal(1, 1, 1) == 3
+```",5.819999999999999e-05,3.020693302154541,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/629,TrustRoute,1,"```python
+def Split(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+assert Split([1, 2, 3, 4, 5]) == [2, 4]
+```",4.47e-05,2.3013815879821777,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/20,TrustRoute,1,"```python
+def is_woodall(n):
+    k = 1
+    while True:
+        woodall_number = (2 ** k - 1) * 2 ** (k - 1)
+        if woodall_number == n:
+            return True
+        elif woodall_number > n:
+            return False
+        k += 1
+
+assert is_woodall(383) == True
+```",6.525e-05,2.8079676628112793,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/232,TrustRoute,1,"```python
+def larg_nnum(lst, n):
+    return sorted(lst, reverse=True)[:n]
+
+# Test the function
+assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100], 2)) == set([100, 90])
+```",6.81e-05,2.1620233058929443,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/781,TrustRoute,1,"```python
+def count_divisors(n):
+    count = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            count += 1
+            if i != n // i:
+                count += 1
+    return count % 2 == 0
+
+assert count_divisors(10)
+```",6.374999999999999e-05,2.802135467529297,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/256,TrustRoute,1,"```python
+def count_Primes_nums(n):
+    if n < 2:
+        return 0
+    primes = [True] * n
+    primes[0] = primes[1] = False
+    for i in range(2, int(n**0.5) + 1):
+        if primes[i]:
+            for j in range(i*i, n, i):
+                primes[j] = False
+    return sum(primes)
+
+# Test
+assert count_Primes_nums(5) == 2
+```",8.144999999999999e-05,2.9437131881713867,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/722,TrustRoute,1,"```python
+def filter_data(students, min_height, min_weight):
+    return {name: (height, weight) for name, (height, weight) in students.items() if height > min_height and weight > min_weight}
+
+# Test the function
+assert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)}, 6.0, 70) == {'Cierra Vega': (6.2, 70)}
+```",0.0001089,3.5816240310668945,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/785,TrustRoute,1,"```python
+def tuple_str_int(tuple_str):
+    return eval(tuple_str)
+
+assert tuple_str_int(""(7, 8, 9)"") == (7, 8, 9)
+```",3.945e-05,2.305661916732788,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/244,TrustRoute,1,"```python
+import math
+
+def next_Perfect_Square(n):
+    root = math.isqrt(n) + 1
+    return root * root
+
+assert next_Perfect_Square(35) == 36
+```",4.23e-05,1.668868064880371,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/285,TrustRoute,1,"```python
+def text_match_two_three(text):
+    import re
+    return bool(re.search(r'a(b{2,3})', text))
+
+# Test the function
+assert text_match_two_three(""ac"") == False
+```",4.3799999999999994e-05,1.961653470993042,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/301,TrustRoute,1,"```python
+def dict_depth(d):
+    if isinstance(d, dict) and d:
+        return 1 + max(dict_depth(v) for v in d.values())
+    return 0
+
+# Test case
+assert dict_depth({'a': 1, 'b': {'c': {'d': {}}}}) == 4
+```",5.745e-05,2.167809009552002,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/741,TrustRoute,1,"Here is a concise Python function to check whether all characters in a string are the same:
+
+```python
+def all_Characters_Same(s):
+    return len(set(s)) == 1
+
+# Test case
+assert all_Characters_Same(""python"") == False
+```",4.7999999999999994e-05,2.615316867828369,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/558,TrustRoute,1,"Here is a concise Python function to find the sum of the per-digit difference between two integers:
+
+```python
+def digit_distance_nums(num1, num2):
+    return sum(abs(int(d1) - int(d2)) for d1, d2 in zip(str(num1)[::-1], str(num2)[::-1]))
+
+# Test case
+assert digit_distance_nums(1, 2) == 1
+```",6.644999999999999e-05,2.6488404273986816,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/222,TrustRoute,1,"Here is a concise solution to check if all elements in a tuple have the same data type:
+
+```python
+def check_type(tup):
+    return all(isinstance(x, type(tup[0])) for x in tup)
+
+# Test case
+assert check_type((5, 6, 7, 3, 5, 6)) == True
+```",6.18e-05,2.4535417556762695,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/287,TrustRoute,1,"```python
+def square_Sum(n):
+    return sum((2 * i) ** 2 for i in range(1, n + 1))
+
+assert square_Sum(2) == 20
+```",4.17e-05,2.037527561187744,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/762,TrustRoute,1,"```python
+def check_monthnumber_number(month):
+    return month in [4, 6, 9, 11]
+
+# Test case
+assert check_monthnumber_number(6) == True
+```",4.14e-05,1.7459473609924316,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/135,TrustRoute,1,"```python
+def hexagonal_num(n):
+    return n * (2 * n - 1)
+
+assert hexagonal_num(10) == 190
+```",3.345e-05,1.370117425918579,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/639,TrustRoute,1,"```python
+def sample_nam(names):
+    return sum(len(name) for name in names if not name[0].islower())
+
+# Test the function
+assert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith']) == 16
+```",5.865e-05,2.220893144607544,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/477,TrustRoute,1,"```python
+def is_lower(s):
+    return s.lower()
+
+assert is_lower(""InValid"") == ""invalid""
+```",2.895e-05,1.5640077590942383,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/462,TrustRoute,1,"```python
+from itertools import combinations
+
+def combinations_list(elements):
+    result = []
+    for r in range(len(elements) + 1):
+        result.extend(combinations(elements, r))
+    return [list(comb) for comb in result]
+
+assert combinations_list(['orange', 'red', 'green', 'blue']) == [
+    [], 
+    ['orange'], 
+    ['red'], 
+    ['red', 'orange'], 
+    ['green'], 
+    ['green', 'orange'], 
+    ['green', 'red'], 
+    ['green', 'red', 'orange'], 
+    ['blue'], 
+    ['blue', 'orange'], 
+    ['blue', 'red'], 
+    ['blue', 'red', 'orange'], 
+    ['blue', 'green'], 
+    ['blue', 'green', 'orange'], 
+    ['blue', 'green', 'red'], 
+    ['blue', 'green', 'red', 'orange']
+]
+```",0.00014805,3.8107998371124268,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/91,TrustRoute,1,"```python
+def find_substring(string_list, substring):
+    return any(substring in s for s in string_list)
+
+# Test case
+assert find_substring([""red"", ""black"", ""white"", ""green"", ""orange""], ""ack"") == True
+```",5.01e-05,2.6384663581848145,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/447,TrustRoute,1,"```python
+def cube_nums(nums):
+    return [x ** 3 for x in nums]
+
+assert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+```",7.364999999999999e-05,2.4914283752441406,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/235,TrustRoute,1,"```python
+def even_bit_set_number(n):
+    return n | 0xAAAAAAAA
+
+# Test the function
+assert even_bit_set_number(10) == 10
+```",3.645e-05,1.7163758277893066,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/103,TrustRoute,1,"Here's a concise implementation of the function to compute the Eulerian number \( a(n, m) \):
+
+```python
+def eulerian_num(n, m):
+    A = [[0] * (n + 1) for _ in range(n + 1)]
+    A[0][0] = 1
+
+    for i in range(1, n + 1):
+        for j in range(i + 1):
+            if j > 0:
+                A[i][j] += (i - j + 1) * A[i - 1][j - 1]
+            A[i][j] += (j + 1) * A[i - 1][j]
+
+    return A[n][m]
+
+# Test the function
+assert eulerian_num(3, 1) == 4
+```
+
+This code defines the `eulerian_num` function that calculates the Eulerian number using dynamic programming. The assertion checks that the function works correctly for the given input.",0.00013949999999999998,5.2426440715789795,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/223,TrustRoute,1,"```python
+def is_majority(arr, n, element):
+    count = arr.count(element)
+    return count > n // 2
+
+# Test case
+assert is_majority([1, 2, 3, 3, 3, 3, 10], 7, 3) == True
+```",6.36e-05,2.3196544647216797,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/410,TrustRoute,1,"```python
+def min_val(lst):
+    return min(x for x in lst if isinstance(x, (int, float)))
+
+# Test the function
+assert min_val(['Python', 3, 2, 4, 5, 'version']) == 2
+```",4.9649999999999994e-05,1.9919261932373047,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mbpp,Mbpp/604,TrustRoute,1,"Here is a concise solution to reverse words in a given string:
+
+```python
+def reverse_words(s):
+    return ' '.join(s.split()[::-1])
+
+# Test the function
+assert reverse_words(""python program"") == ""program python""
+```",4.425e-05,1.9065918922424316,0,0,cand-gpt-4o-mini,stage1_early_stop,

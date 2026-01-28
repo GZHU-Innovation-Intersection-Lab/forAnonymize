@@ -1,0 +1,278 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+gsm8k,gsm8k-0,TrustRoute,1,"To determine how much Janet makes every day at the farmers' market from selling her duck eggs, we can follow these steps:
+
+1. **Calculate the total number of eggs laid per day**: Janet’s ducks lay 16 eggs per day.
+
+2. **Calculate the number of eggs she uses for breakfast and baking**:
+   - She eats 3 eggs for breakfast.
+   - She uses 4 eggs for baking muffins.
+   - Total eggs used = 3 (breakfast) + 4 (baking) = 7 eggs.
+
+3. **Calculate the number of eggs remaining for sale**:
+   - Eggs remaining = Total eggs laid - Eggs used
+   - Eggs remaining = 16 - 7 = 9 eggs.
+
+4. **Calculate the revenue from selling the remaining eggs**:
+   - Janet sells the remaining 9 eggs at $2 per egg.
+   - Total revenue = Number of eggs sold × Price per egg
+   - Total revenue = 9 eggs × $2/egg = $18.
+
+Therefore, Janet makes **$18** every day at the farmers' market.",0.0014178500000000002,21.51729726791382,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-1,TrustRoute,1,"To find the total number of bolts of fiber needed for the robe, we need to add the amounts of blue and white fiber together.
+
+1. **Blue fiber**: 2 bolts
+2. **White fiber**: Half of the blue fiber, which is \( \frac{2}{2} = 1 \) bolt
+
+Now, we add the two amounts together:
+
+\[
+\text{Total bolts} = \text{Blue fiber} + \text{White fiber} = 2 + 1 = 3
+\]
+
+Therefore, it takes a total of **3 bolts** of fiber to make the robe.",0.00083505,13.238401889801025,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-2,TrustRoute,1,"Original price = $80,000. A 150% increase makes the new value 80,000 × (1 + 1.5) = 80,000 × 2.5 = $200,000.
+
+Total cost = purchase + repairs = 80,000 + 50,000 = $130,000.
+
+Profit = 200,000 − 130,000 = $70,000.",0.00353555,19.00595498085022,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-3,TrustRoute,1,"To find out how many total meters James runs in a week, we can follow these steps:
+
+1. **Calculate the distance he runs in one sprint**: James runs 60 meters per sprint.
+2. **Calculate the total distance he runs in one session**: He runs 3 sprints in one session, so:
+   \[
+   \text{Distance per session} = 3 \text{ sprints} \times 60 \text{ meters/sprint} = 180 \text{ meters}
+   \]
+3. **Calculate the total distance he runs in a week**: He runs 3 sessions a week, so:
+   \[
+   \text{Total distance per week} = 3 \text{ sessions} \times 180 \text{ meters/session} = 540 \text{ meters}
+   \]
+
+Therefore, James runs a total of **540 meters** in a week.",0.0012490499999999998,17.718286752700806,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-4,TrustRoute,1,"To find out how many cups of feed Wendi needs to give her chickens in the final meal of the day, we can follow these steps:
+
+1. **Calculate the total amount of feed needed for the chickens for the day:**
+   Each chicken receives 3 cups of feed per day. Since Wendi has 20 chickens, the total feed needed for the day is:
+   \[
+   \text{Total feed} = \text{Number of chickens} \times \text{Feed per chicken} = 20 \times 3 = 60 \text{ cups}
+   \]
+
+2. **Calculate the total amount of feed given in the morning and afternoon:**
+   In the morning, Wendi gives 15 cups of feed, and in the afternoon, she gives 25 cups of feed. Therefore, the total feed given so far is:
+   \[
+   \text{Total feed given} = \text{Morning feed} + \text{Afternoon feed} = 15 + 25 = 40 \text{ cups}
+   \]
+
+3. **Calculate the amount of feed needed for the final meal:**
+   To find out how much feed is needed for the final meal, we subtract the total feed given from the total feed needed:
+   \[
+   \text{Final meal feed} = \text{Total feed} - \text{Total feed given} = 60 - 40 = 20 \text{ cups}
+   \]
+
+Thus, Wendi needs to give her chickens **20 cups of feed** in the final meal of the day.",0.0028715499999999996,16.193569898605347,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-5,TrustRoute,1,"To calculate the total cost for Kylar to buy 16 glasses, we need to consider the pricing structure:
+
+1. The first glass costs $5.
+2. Every second glass costs 60% of the price of the first glass.
+
+Let's break it down:
+
+- The cost of the first glass is $5.
+- The cost of the second glass is 60% of $5:
+  \[
+  0.6 \times 5 = 3
+  \]
+
+Now, we can see that the pattern continues for every pair of glasses:
+- The cost of the third glass is $5.
+- The cost of the fourth glass is $3.
+
+This pattern repeats for every two glasses. Therefore, for every two glasses, the total cost is:
+\[
+5 + 3 = 8
+\]
+
+Now, since Kylar wants to buy 16 glasses, we can determine how many pairs of glasses he is buying:
+\[
+\text{Number of pairs} = \frac{16}{2} = 8
+\]
+
+Now we can calculate the total cost for 8 pairs:
+\[
+\text{Total cost} = 8 \times 8 = 64
+\]
+
+Thus, Kylar needs to pay a total of **$64** for the 16 glasses.",0.0021611499999999997,14.556682109832764,0,0,cand-gpt-4o-mini,stage2_confidence,
+gsm8k,gsm8k-6,TrustRoute,1,"Let's denote the number of sheep in each city:
+
+- Let \( S \) be the number of sheep in Seattle.
+- Let \( C \) be the number of sheep in Charleston.
+- Let \( T \) be the number of sheep in Toulouse.
+
+From the problem, we know the following:
+
+1. Seattle has 20 sheep: 
+   \[
+   S = 20
+   \]
+
+2. Charleston has 4 times as many sheep as Seattle:
+   \[
+   C = 4 \times S = 4 \times 20 = 80
+   \]
+
+3. Toulouse has twice as many sheep as Charleston:
+   \[
+   T = 2 \times C = 2 \times 80 = 160
+   \]
+
+Now, we can find the total number of sheep in Toulouse, Charleston, and Seattle together:
+\[
+\text{Total} = T + C + S = 160 + 80 + 20
+\]
+
+Calculating the total:
+\[
+\text{Total} = 160 + 80 + 20 = 260
+\]
+
+Therefore, Toulouse, Charleston, and Seattle together have **260 sheep**.",0.0016316500000000001,19.75697112083435,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-7,TrustRoute,1,"Total file = 200 GB. 40% of that is 0.4×200 = 80 GB.  
+At 2 GB/min that initial progress takes 80/2 = 40 minutes.  
+Then Windows restart takes 20 minutes. After that she must re-download the whole 200 GB: 200/2 = 100 minutes.  
+
+Total time = 40 + 20 + 100 = 160 minutes = 2 hours 40 minutes.",0.00239895,16.94990038871765,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-8,TrustRoute,1,"He was 180 miles from home after the first 3 hours (3 × 60).  
+On the return attempt he covers 0 + (30 × 0.5) + (80 × 1.5) = 0 + 15 + 120 = 135 miles toward home.  
+So he is 180 − 135 = 45 miles from home.",0.004036850000000001,22.01540231704712,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-9,TrustRoute,1,"Regular pay: 40 × \$10 = \$400.
+Overtime rate: 1.2 × \$10 = \$12 per hour.
+Overtime pay: 5 × \$12 = \$60.
+Total earnings: \$400 + \$60 = \$460.",0.00196925,15.91995358467102,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-10,TrustRoute,1,"To find the total number of downloads over the three months, we can break it down step by step:
+
+1. **First Month Downloads**: 
+   - The program had 60 downloads.
+
+2. **Second Month Downloads**: 
+   - The number of downloads in the second month was three times the downloads in the first month.
+   - So, second month downloads = \( 3 \times 60 = 180 \).
+
+3. **Third Month Downloads**: 
+   - The number of downloads in the third month was reduced by 30% from the second month.
+   - First, we calculate 30% of the second month downloads: 
+     \[
+     30\% \text{ of } 180 = 0.30 \times 180 = 54
+     \]
+   - Now, we subtract this from the second month downloads to find the third month downloads:
+     \[
+     \text{Third month downloads} = 180 - 54 = 126
+     \]
+
+4. **Total Downloads Over Three Months**: 
+   - Now, we add the downloads from all three months:
+     \[
+     \text{Total downloads} = 60 + 180 + 126
+     \]
+   - Calculating this gives:
+     \[
+     60 + 180 = 240
+     \]
+     \[
+     240 + 126 = 366
+     \]
+
+Thus, the total number of downloads over the three months is **366**.",0.00257865,14.536592483520508,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-11,TrustRoute,1,"To find the total cost of the pastries Toula bought, we can calculate the cost for each type of pastry separately and then sum them up.
+
+1. **Cost of donuts**:
+   - Quantity: 3 dozen
+   - Cost per dozen: $68
+   - Total cost for donuts = 3 dozen × $68/dozen = $204
+
+2. **Cost of mini cupcakes**:
+   - Quantity: 2 dozen
+   - Cost per dozen: $80
+   - Total cost for mini cupcakes = 2 dozen × $80/dozen = $160
+
+3. **Cost of mini cheesecakes**:
+   - Quantity: 6 dozen
+   - Cost per dozen: $55
+   - Total cost for mini cheesecakes = 6 dozen × $55/dozen = $330
+
+Now, we can add the total costs together:
+
+\[
+\text{Total cost} = \text{Cost of donuts} + \text{Cost of mini cupcakes} + \text{Cost of mini cheesecakes}
+\]
+\[
+\text{Total cost} = 204 + 160 + 330 = 694
+\]
+
+Thus, the total cost of all the pastries is **$694**.",0.0013716499999999999,13.466371059417725,0,0,cand-gpt-4o-mini,stage2_confidence,
+gsm8k,gsm8k-12,TrustRoute,1,"Each year revenue = 7 lemons × $1.50 = $10.50.  
+Annual net = $10.50 − $3 = $7.50.
+
+To recover the $90 planting cost: 90 ÷ 7.5 = 12 years. So after 12 years he breaks even, and starting in year 13 he begins to earn positive money.",0.00392235,16.90068483352661,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-13,TrustRoute,1,"Let the starting number be N.
+
+After selling a third at the green house, she has 2N/3 left.  
+After selling 2 at the red house, she has 2N/3 − 2 left.  
+She then sells half of that at the orange house, so the remainder is (2N/3 − 2)/2, which equals 5.
+
+Solve: (2N/3 − 2)/2 = 5  
+2N/3 − 2 = 10  
+2N/3 = 12  
+2N = 36  
+N = 18
+
+She started with 18 vacuum cleaners.",0.00455075,19.217999935150146,0,0,cand-gpt-5-mini,stage2_confidence,
+gsm8k,gsm8k-14,TrustRoute,1,"To find the percentage of students enrolled in hip-hop dance, we can follow these steps:
+
+1. **Calculate the number of students enrolled in contemporary dance:**
+   - 20% of 20 students = \( 0.20 \times 20 = 4 \) students.
+
+2. **Calculate the remaining students after contemporary dance:**
+   - Remaining students = Total students - Students in contemporary dance
+   - Remaining students = \( 20 - 4 = 16 \) students.
+
+3. **Calculate the number of students enrolled in jazz dance:**
+   - 25% of the remaining 16 students = \( 0.25 \times 16 = 4 \) students.
+
+4. **Calculate the remaining students after jazz dance:**
+   - Remaining students = Remaining students - Students in jazz dance
+   - Remaining students = \( 16 - 4 = 12 \) students.
+
+5. **Determine the number of students enrolled in hip-hop dance:**
+   - The remaining students (12) are all enrolled in hip-hop dance.
+
+6. **Calculate the percentage of students enrolled in hip-hop dance:**
+   - Percentage of students in hip-hop = \( \frac{\text{Number of hip-hop students}}{\text{Total students}} \times 100 \)
+   - Percentage of students in hip-hop = \( \frac{12}{20} \times 100 = 60\% \).
+
+Thus, **60% of the entire students are enrolled in hip-hop dance.**",0.00291975,19.755863428115845,0,0,cand-gpt-4o-mini,stage2_vote,
+gsm8k,gsm8k-15,TrustRoute,1,"To determine which purchase plan would yield a higher profit for the merchant at the end of the month, we need to calculate the expected value of each investment based on the projected market increases.
+
+1. **Jewelry Investment:**
+   - Initial value: $5,000
+   - Expected increase: 2.5%
+   - Profit from jewelry = Initial value × Expected increase
+   \[
+   \text{Profit from jewelry} = 5000 \times \frac{2.5}{100} = 5000 \times 0.025 = 125
+   \]
+
+2. **Electronic Gadgets Investment:**
+   - Initial value: $8,000
+   - Expected increase: 1.2%
+   - Profit from electronic gadgets = Initial value × Expected increase
+   \[
+   \text{Profit from electronic gadgets} = 8000 \times \frac{1.2}{100} = 8000 \times 0.012 = 96
+   \]
+
+3. **Comparison of Profits:**
+   - Profit from jewelry: $125
+   - Profit from electronic gadgets: $96
+
+Since the profit from the jewelry investment ($125) is greater than the profit from the electronic gadgets investment ($96), the merchant should choose to invest in jewelry.
+
+**Conclusion:**
+The profit from the jewelry investment would be **$125** at the end of the month, which is the better choice for maximizing profit.",0.00210145,20.83499503135681,0,0,cand-gpt-4o-mini,stage2_vote,

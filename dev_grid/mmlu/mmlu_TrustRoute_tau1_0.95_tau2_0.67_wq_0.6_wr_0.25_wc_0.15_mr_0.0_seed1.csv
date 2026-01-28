@@ -1,0 +1,183 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mmlu,mmlu-8436,TrustRoute,1,C,0.00181495,5.5070555210113525,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-8874,TrustRoute,1,A,0.00142035,5.27955961227417,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-13420,TrustRoute,1,A,0.00058755,4.61829686164856,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-7675,TrustRoute,1,A,0.00080035,4.226210117340088,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-11805,TrustRoute,1,D,0.00243945,7.806630373001099,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-3136,TrustRoute,1,C,0.00158195,5.24753999710083,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-994,TrustRoute,1,C,0.00344125,14.051687717437744,0,0,cand-gpt-4o-mini,stage2_confidence,
+mmlu,mmlu-6016,TrustRoute,1,A,0.00299735,9.768967866897583,0,0,cand-gpt-5-mini,stage2_vote,
+mmlu,mmlu-3305,TrustRoute,1,B,0.0020224500000000003,7.796290397644043,0,0,cand-gpt-5-mini,stage2_vote,
+mmlu,mmlu-419,TrustRoute,1,A,0.00055975,5.727795124053955,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3298,TrustRoute,1,D,0.0009395,6.339370012283325,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2865,TrustRoute,1,B,5.400000000000001e-05,1.8772990703582764,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9306,TrustRoute,1,B,0.00031825000000000006,3.230010509490967,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7379,TrustRoute,1,D,0.000433,4.806649208068848,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1445,TrustRoute,1,C,0.000192,2.924682140350342,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10247,TrustRoute,1,C,0.00096175,8.09882926940918,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7047,TrustRoute,1,D,4.75e-05,2.2753210067749023,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8989,TrustRoute,1,A,0.00083275,6.579622507095337,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-759,TrustRoute,1,B,0.00017549999999999998,2.3667328357696533,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9535,TrustRoute,1,A,0.00017925,2.908104658126831,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10518,TrustRoute,1,D,0.0004335,5.8987956047058105,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7805,TrustRoute,1,C,0.00018649999999999998,2.577643632888794,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8439,TrustRoute,1,A,0.00032275,3.517483949661255,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-571,TrustRoute,1,D,0.00044175000000000003,4.632487773895264,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11520,TrustRoute,1,D,0.005300849999999999,22.20406937599182,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-3581,TrustRoute,1,B,5.500000000000001e-05,2.5367653369903564,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2025,TrustRoute,1,D,0.0014585,10.534472227096558,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2217,TrustRoute,1,A,0.00018975,2.684755563735962,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7258,TrustRoute,1,B,5.400000000000001e-05,1.8563668727874756,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7830,TrustRoute,1,B,0.00017424999999999998,2.3309619426727295,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5855,TrustRoute,1,C,0.00021525,2.7258987426757812,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4409,TrustRoute,1,"The given parametric equations are:
+x = 2(t - sin t)
+y = 2(1 - cos t)
+This is the standard form of a cycloid, x = a(t - sin t) and y = a(1 - cos t), where 'a' is the radius of the rolling circle. In this case, a = 2.
+
+The formula for the arc length L of a parametric curve from t = t1 to t = t2 is:
+L = ∫[t1, t2] sqrt((dx/dt)^2 + (dy/dt)^2) dt
+
+First, we find the derivatives dx/dt and dy/dt:
+dx/dt = d/dt [2(t - sin t)] = 2(1 - cos t)
+dy/dt = d/dt [2(1 - cos t)] = 2(sin t)
+
+Next, we square these derivatives:
+(dx/dt)^2 = [2(1 - cos t)]^2 = 4(1 - cos t)^2 = 4(1 - 2cos t + cos^2 t)
+(dy/dt)^2 = (2 sin t)^2 = 4 sin^2 t
+
+Now, sum the squared derivatives:
+(dx/dt)^2 + (dy/dt)^2 = 4(1 - 2cos t + cos^2 t) + 4 sin^2 t
+= 4 - 8cos t + 4cos^2 t + 4 sin^2 t
+= 4 - 8cos t + 4(cos^2 t + sin^2 t)
+Using the identity cos^2 t + sin^2 t = 1:
+= 4 - 8cos t + 4(1)
+= 8 - 8cos t
+= 8(1 - cos t)
+
+We use the half-angle identity 1 - cos t = 2 sin^2(t/2):
+= 8 * 2 sin^2(t/2)
+= 16 sin^2(t/2)
+
+Now, take the square root:
+sqrt(16 sin^2(t/2)) = |4 sin(t/2)|
+
+For a cycloid, one arch is generated for 0 ≤ t ≤ 2π. In this interval, t/2 is in the range [0, π], where sin(t/2) ≥ 0.
+So, |4 sin(t/2)| = 4 sin(t/2).
+
+Now, we integrate this expression from t = 0 to t = 2π:
+L = ∫[0, 2π] 4 sin(t/2) dt
+
+Let u = t/2. Then du = (1/2) dt, which means dt = 2 du.
+When t = 0, u = 0/2 = 0.
+When t = 2π, u = 2π/2 = π.
+
+Substitute u and du into the integral:
+L = ∫[0, π] 4 sin(u) (2 du)
+L = ∫[0, π] 8 sin(u) du
+
+Now, evaluate the definite integral:
+L = 8 [-cos u] from 0 to π
+L = 8 [(-cos π) - (-cos 0)]
+L = 8 [(-(-1)) - (-1)]
+L = 8 [1 + 1]
+L = 8 [2]
+L = 16
+
+The calculated arc length for the given cycloid from t=0 to t=2π is 16.
+However, 16 is not among the given options (A. π/2, B. π, C. 2 + π, D. 2π).
+
+This indicates a probable inconsistency between the problem statement and the provided options. A common scenario in such cases is a typo in the numerical coefficient of the parametric equations.
+
+If we assume that option D, 2π, is the intended answer, and the question is indeed asking for the arc length of one arch of a cycloid, we can work backward to find what 'a' value would lead to this answer.
+The arc length of one arch of a cycloid is given by the formula L = 8a.
+If L = 2π, then:
+8a = 2π
+a = 2π / 8
+a = π/4
+
+Therefore, if the parametric equations were x = (π/4)(t - sin t) and y = (π/4)(1 - cos t), the arc length would be 2π. This is the most plausible explanation for the mismatch. Given that I must choose from the provided options, and assuming the problem intends to have a correct choice, this implies the '2' in the original problem statement was a misprint for 'π/4'.
+
+The final answer is $\boxed{D}$",0.02598805,53.013651847839355,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-9196,TrustRoute,1,D,0.00095975,7.359092950820923,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5589,TrustRoute,1,B,0.0004485,4.61957573890686,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12259,TrustRoute,1,A,0.0004825,6.333459377288818,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5988,TrustRoute,1,C,0.00068475,5.5574915409088135,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1921,TrustRoute,1,D,0.00018175,2.4523773193359375,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7762,TrustRoute,1,A,0.00043275000000000003,4.7205727100372314,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7599,TrustRoute,1,C,4.6e-05,1.815223217010498,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8088,TrustRoute,1,B,0.00094225,10.070298910140991,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5209,TrustRoute,1,A,5.075e-05,2.0955209732055664,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12763,TrustRoute,1,C,0.00030800000000000006,3.3174753189086914,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12251,TrustRoute,1,B,0.0005795,5.8904736042022705,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7431,TrustRoute,1,A,4.95e-05,1.998488187789917,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7115,TrustRoute,1,C,5.05e-05,2.056347608566284,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5859,TrustRoute,1,B,0.00074275,4.783381938934326,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12138,TrustRoute,1,C,0.00060225,4.571624040603638,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7367,TrustRoute,1,A,0.00017449999999999999,2.457355260848999,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9467,TrustRoute,1,D,0.00057125,4.1230385303497314,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13024,TrustRoute,1,A,4.8e-05,1.607445478439331,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3477,TrustRoute,1,A,4.75e-05,2.272942066192627,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5597,TrustRoute,1,D,0.00018649999999999998,2.348348379135132,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8597,TrustRoute,1,B,0.00031925000000000004,3.0997345447540283,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5018,TrustRoute,1,D,0.00018674999999999999,2.5355470180511475,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5028,TrustRoute,1,D,0.0001785,2.3253982067108154,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8252,TrustRoute,1,D,0.00031450000000000006,4.030280113220215,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11421,TrustRoute,1,"The court should deny the motion.
+
+Here's why:
+
+*   **Directed Verdict Standard:** A motion for a directed verdict asks the court to rule that no reasonable jury could find for the non-moving party. To deny the motion, there must be a genuine issue of material fact that a jury could reasonably resolve in favor of the non-moving party (in this case, the injured worker or Goodboy, depending on who is suing).
+*   **Daylight's Duty and Foreseeability:** Daylight manufactured a product that they later recognized as having ""hazardous malfunctions"" leading to injuries. They created a safety device, but offered it for $5,000, which is a significant sum (25% of the original purchase price of $20,000). A jury could reasonably conclude that Daylight, having identified the danger, should have anticipated that not all customers would be willing or able to pay an additional $5,000 for a safety device for a press they already purchased. If Daylight foresaw this, their duty to provide a safe product or adequately warn/remedy the defect may not have been fully discharged by simply offering the device at a substantial cost.
+*   **Goodboy's Action vs. Daylight's Liability:** While Goodboy's refusal to purchase the device could be seen as contributory negligence or even a form of assumption of risk, it doesn't automatically absolve Daylight of all liability, especially if the product was defective from the outset and Daylight could foresee that its remedy would not be universally adopted. The allocation of fault (comparative negligence) is typically a question for the jury.
+*   **Why other options are less appropriate:**
+    *   **A. Grant Daystar's motion, because Goodboy's refusal to purchase the safety device was an effective assumption of risk.** While assumption of risk is a defense, whether it's ""effective"" enough to completely bar recovery and warrant a directed verdict for the defendant is usually a jury question, especially when the initial product was defective and the ""remedy"" came at a significant cost.
+    *   **B. Deny the motion, because Goodboy's negligence in failing to purchase the safety device was less than Daylight's negligence in manufacturing the unsafe press initially.** This is a comparison of negligence, which is precisely what a jury would do. However, stating that Goodboy's negligence *was less* is a conclusion, not the reason to deny the motion. The reason to deny the motion is that a jury *could* make such a finding (or any finding that still holds Daylight liable).
+    *   **D. Deny the motion, because since the press was inherently dangerous, Daylight was strictly liable.** While the press being ""inherently dangerous"" (i.e., defective) could lead to strict liability, this option doesn't directly address Daylight's argument regarding Goodboy's failure to buy the safety device. Even under strict liability, defenses like comparative fault or assumption of risk can still be raised, making the question of foreseeability (as in C) crucial for denying the directed verdict.
+
+Option C best addresses why a directed verdict would be inappropriate. It identifies a factual question (foreseeability) that a jury could reasonably answer in a way that preserves Daylight's liability, despite Goodboy's inaction.
+
+The final answer is $\boxed{C}$",0.010805099999999998,32.21127653121948,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-6665,TrustRoute,1,D,0.00018125,3.173067569732666,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4596,TrustRoute,1,B,0.0005657500000000001,6.2642858028411865,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1540,TrustRoute,1,B,0.000185,2.6602249145507812,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7068,TrustRoute,1,C,0.00043425,3.841118097305298,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10111,TrustRoute,1,C,4.6e-05,3.885176658630371,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13398,TrustRoute,1,D,0.00074575,6.523918867111206,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11867,TrustRoute,1,A,0.001929,21.155160427093506,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10860,TrustRoute,1,A,0.00544008,37.77544665336609,0,0,cand-grok-3-mini,stage2_confidence,
+mmlu,mmlu-2562,TrustRoute,1,A,0.0001905,2.4803309440612793,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-6829,TrustRoute,1,B,0.000702,5.693843603134155,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11656,TrustRoute,1,A,0.00034675000000000005,3.4588613510131836,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8137,TrustRoute,1,D,4.675e-05,1.7262592315673828,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12415,TrustRoute,1,A,0.00162575,11.639464616775513,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1361,TrustRoute,1,B,0.00030775,2.8304009437561035,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4113,TrustRoute,1,C,0.00019025,2.137248992919922,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8665,TrustRoute,1,D,0.00031800000000000003,3.250094175338745,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2348,TrustRoute,1,B,0.00018524999999999998,2.3452155590057373,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3542,TrustRoute,1,D,0.00812705,20.0790114402771,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-7409,TrustRoute,1,C,4.9250000000000004e-05,3.819748640060425,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13433,TrustRoute,1,B,0.00017749999999999998,2.384390115737915,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13594,TrustRoute,1,C,0.00031825000000000006,3.703017473220825,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11726,TrustRoute,1,D,0.0013985000000000002,12.43435788154602,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2384,TrustRoute,1,A,0.00018425,2.294018507003784,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8760,TrustRoute,1,D,0.0004465,3.765571355819702,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11357,TrustRoute,1,D,0.0007435,6.336140871047974,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10039,TrustRoute,1,C,0.00017749999999999998,2.6838676929473877,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9307,TrustRoute,1,D,0.00019299999999999997,3.0439579486846924,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7841,TrustRoute,1,A,0.00017549999999999998,2.4875271320343018,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4283,TrustRoute,1,A,0.0007015,4.949267625808716,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11204,TrustRoute,1,B,0.00062225,4.5189292430877686,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13384,TrustRoute,1,D,7.3e-05,2.2197983264923096,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4245,TrustRoute,1,B,0.0012072499999999998,8.82547903060913,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9465,TrustRoute,1,D,5.125e-05,1.7309277057647705,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10541,TrustRoute,1,C,0.00044125,5.29392409324646,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5853,TrustRoute,1,B,0.00035700000000000006,3.762014627456665,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1772,TrustRoute,1,B,4.7000000000000004e-05,2.13502836227417,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12867,TrustRoute,1,C,5.625e-05,1.3484044075012207,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5099,TrustRoute,1,D,5.9499999999999996e-05,2.2625231742858887,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5624,TrustRoute,1,C,0.00019875,2.7041454315185547,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1651,TrustRoute,1,C,4.4500000000000004e-05,1.5356090068817139,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4492,TrustRoute,1,D,0.0013372500000000001,11.07628583908081,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2169,TrustRoute,1,A,0.0001805,2.631865978240967,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1306,TrustRoute,1,D,4.975e-05,1.872603416442871,0,0,cand-gpt-5-mini,stage1_early_stop,

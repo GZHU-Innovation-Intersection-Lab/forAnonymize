@@ -1,0 +1,25 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+🚀 Running TrustRoute on gsm8k
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/gsm8k_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/gsm8k/gsm8k_TrustRoute_tau1_0.75_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0.csv
+   Seed: 1
+✅ Loaded 200 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/200] Processing: gsm8k-0[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: gsm8k-0
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=0.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=0.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=0.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 0.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every da', 'len': 280}]

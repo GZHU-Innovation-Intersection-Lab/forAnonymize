@@ -1,0 +1,176 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mmlu,mmlu-8436,TrustRoute,1,C,0.00187945,6.460758924484253,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-8874,TrustRoute,1,A,0.00158085,5.5808632373809814,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-13420,TrustRoute,1,A,0.00066705,4.930185794830322,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-7675,TrustRoute,1,A,0.0005983500000000001,4.009526252746582,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-11805,TrustRoute,1,D,0.0020629500000000005,6.0435967445373535,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-3136,TrustRoute,1,C,0.00168195,5.624452352523804,0,0,cand-gpt-4o-mini,stage2_vote,
+mmlu,mmlu-994,TrustRoute,1,C,0.00340925,8.135447263717651,0,0,cand-gpt-4o-mini,stage2_confidence,
+mmlu,mmlu-6016,TrustRoute,1,A,0.00361385,12.51629638671875,0,0,cand-gpt-5-mini,stage2_vote,
+mmlu,mmlu-3305,TrustRoute,1,B,0.0018624499999999999,6.917564153671265,0,0,cand-gpt-5-mini,stage2_vote,
+mmlu,mmlu-419,TrustRoute,1,B,0.00043175,6.042124271392822,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3298,TrustRoute,1,D,0.0006835000000000001,4.882493495941162,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2865,TrustRoute,1,B,0.00031000000000000005,3.098353385925293,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9306,TrustRoute,1,B,0.00031825000000000006,3.163296699523926,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7379,TrustRoute,1,D,0.0005610000000000001,5.978959321975708,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1445,TrustRoute,1,C,0.000192,3.182964324951172,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10247,TrustRoute,1,C,0.00057775,7.6002891063690186,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7047,TrustRoute,1,D,0.00017549999999999998,2.490971565246582,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8989,TrustRoute,1,A,0.00070475,5.613215923309326,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-759,TrustRoute,1,B,0.00017549999999999998,2.119819164276123,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9535,TrustRoute,1,A,0.00030725,3.1657373905181885,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10518,TrustRoute,1,D,0.0004335,6.435106515884399,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7805,TrustRoute,1,C,5.85e-05,1.9636478424072266,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8439,TrustRoute,1,A,0.00032275,5.418994665145874,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-571,TrustRoute,1,D,0.00044175000000000003,3.504216432571411,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11520,TrustRoute,1,B,0.001893,12.226530075073242,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3581,TrustRoute,1,B,5.500000000000001e-05,1.588132381439209,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2025,TrustRoute,1,"The question describes a type of network where the lowest critical frequency is a zero, and this zero is located at or very near the origin (s=0 in the Laplace domain, or f=0 Hz in the frequency domain).
+
+A zero at s=0 implies that the transfer function of the network becomes zero at DC (zero frequency). This characteristic means the network blocks DC or very low frequencies, acting as a high-pass filter.
+
+Let's analyze the given options:
+
+*   **A. LC circuit:** Ideal LC circuits usually have purely imaginary poles and zeros (resonant frequencies), not typically at the origin, unless configured specifically to block DC (e.g., a series capacitor as part of an LC network).
+*   **B. RC circuit:** A high-pass RC filter (e.g., a capacitor in series with a signal path, and output taken across a shunt resistor) has a transfer function of the form H(s) = sRC / (1 + sRC). This transfer function clearly has a zero at s=0. This makes it a high-pass filter, blocking DC. This perfectly fits the description.
+*   **C. RLC circuit:** An RLC circuit can be configured as a bandpass filter. A bandpass filter, by definition, has zero gain at DC. For example, a series RLC circuit in series with the input would block DC due to the capacitor. So, an RLC circuit can also have a zero at the origin. However, RC circuits are often the most fundamental and commonly cited example for this characteristic.
+*   **D. RL circuit:** A high-pass RL filter (e.g., an inductor in series with a signal path, and output taken across the inductor, with a shunt resistor) has a transfer function of the form H(s) = sL / (R + sL). This also has a zero at s=0, meaning it blocks DC.
+
+Both high-pass RC and high-pass RL circuits exhibit a zero at the origin. However, in many contexts, the RC circuit is presented as the most fundamental and common example of a network that has a zero at the origin (e.g., for AC coupling applications). Given a single-choice answer, the RC circuit is a very strong and widely recognized example.
+
+The final answer is $\boxed{B}$",0.010981050000000001,32.44994235038757,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-2217,TrustRoute,1,A,0.00018975,2.2161481380462646,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7258,TrustRoute,1,B,5.400000000000001e-05,1.4666106700897217,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7830,TrustRoute,1,B,4.625e-05,1.5968894958496094,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5855,TrustRoute,1,C,8.925e-05,1.8367466926574707,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4409,TrustRoute,1,"The curve is given by the parametric equations:
+x(t) = 2(t - sin t)
+y(t) = 2(1 - cos t)
+for 0 ≤ t ≤ 2π.
+
+To find the arc length L, we use the formula:
+L = ∫[a, b] √[ (dx/dt)² + (dy/dt)² ] dt
+
+First, find the derivatives dx/dt and dy/dt:
+dx/dt = d/dt [2(t - sin t)] = 2(1 - cos t)
+dy/dt = d/dt [2(1 - cos t)] = 2(0 - (-sin t)) = 2sin t
+
+Next, calculate the squares of the derivatives:
+(dx/dt)² = [2(1 - cos t)]² = 4(1 - 2cos t + cos² t)
+(dy/dt)² = (2sin t)² = 4sin² t
+
+Now, sum them up:
+(dx/dt)² + (dy/dt)² = 4(1 - 2cos t + cos² t) + 4sin² t
+= 4 - 8cos t + 4cos² t + 4sin² t
+= 4 - 8cos t + 4(cos² t + sin² t)
+Since cos² t + sin² t = 1:
+= 4 - 8cos t + 4(1)
+= 8 - 8cos t
+= 8(1 - cos t)
+
+Now, we use the half-angle identity for sine: 1 - cos t = 2sin²(t/2).
+So, 8(1 - cos t) = 8 * 2sin²(t/2) = 16sin²(t/2).
+
+Now, take the square root:
+√[ (dx/dt)² + (dy/dt)² ] = √[ 16sin²(t/2) ]
+= |4sin(t/2)|
+
+For the given interval 0 ≤ t ≤ 2π, the argument t/2 ranges from 0 to π. In this interval, sin(t/2) is non-negative.
+So, |4sin(t/2)| = 4sin(t/2).
+
+Finally, integrate to find the arc length:
+L = ∫[0, 2π] 4sin(t/2) dt
+
+Let u = t/2, then du = (1/2)dt, so dt = 2du.
+When t = 0, u = 0.
+When t = 2π, u = π.
+
+Substitute these into the integral:
+L = ∫[0, π] 4sin(u) (2du)
+L = ∫[0, π] 8sin(u) du
+
+Evaluate the integral:
+L = 8 [-cos(u)] from 0 to π
+L = 8 [-cos(π) - (-cos(0))]
+L = 8 [-(-1) - (-1)]
+L = 8 [1 + 1]
+L = 8 * 2
+L = 16
+
+The calculated length of the curve is 16. However, 16 is not among the given options (A. π/2, B. π, C. 2 + π, D. 2π).
+This type of curve is a cycloid, and the length of one arch of a cycloid x = R(t - sin t), y = R(1 - cos t) is 8R. In this problem, R=2, so the length is 8 * 2 = 16.
+
+Given that the calculated answer (16) is not an option, there might be a typo in the problem statement or the provided options. If we assume the problem setter intended for the answer to be 2π (option D), the coefficient '2' in the parametric equations should have been π/4.
+If R = π/4, then the length would be 8 * (π/4) = 2π.
+
+Since the instruction is to ""Answer with the option letter only"", and acknowledging the discrepancy, I will select option D as the most plausible intended answer if a typo were present, as 2π is a common 'nice' length value in such problems.
+
+The final answer is $\boxed{D}$",0.019505849999999998,38.6101450920105,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-9196,TrustRoute,1,D,0.00070375,6.428680419921875,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5589,TrustRoute,1,B,0.0004485,3.872101068496704,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12259,TrustRoute,1,A,0.0006105,4.716204881668091,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5988,TrustRoute,1,C,0.00068475,6.211974859237671,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1921,TrustRoute,1,D,5.3750000000000005e-05,1.813866138458252,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7762,TrustRoute,1,A,0.00017675,2.579061985015869,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7599,TrustRoute,1,C,4.6e-05,1.7770185470581055,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8088,TrustRoute,1,B,0.00068625,6.762022495269775,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5209,TrustRoute,1,A,5.075e-05,1.9510393142700195,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12763,TrustRoute,1,C,0.000436,3.924896001815796,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12251,TrustRoute,1,B,0.0004515,3.908538341522217,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7431,TrustRoute,1,A,4.95e-05,1.835616111755371,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7115,TrustRoute,1,C,0.0001785,3.2890594005584717,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5859,TrustRoute,1,B,0.0006147500000000001,4.739561080932617,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12138,TrustRoute,1,C,0.0008582500000000001,7.940616607666016,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7367,TrustRoute,1,A,4.6500000000000005e-05,1.9079129695892334,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9467,TrustRoute,1,D,0.0012112499999999999,8.778953552246094,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13024,TrustRoute,1,A,0.000176,2.571559190750122,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3477,TrustRoute,1,A,4.75e-05,1.592876672744751,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5597,TrustRoute,1,D,0.00018649999999999998,2.438310384750366,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8597,TrustRoute,1,B,0.00044725,3.938462495803833,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5018,TrustRoute,1,D,5.8750000000000005e-05,2.019906997680664,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5028,TrustRoute,1,D,0.0001785,2.486722469329834,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8252,TrustRoute,1,D,0.0004425,3.9901232719421387,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11421,TrustRoute,1,C,0.0013915000000000002,10.738785028457642,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-6665,TrustRoute,1,D,0.00030925000000000006,3.0675885677337646,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4596,TrustRoute,1,B,0.00030975,3.5544464588165283,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1540,TrustRoute,1,B,5.7e-05,1.4803941249847412,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7068,TrustRoute,1,C,0.00030625000000000004,3.6967625617980957,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10111,TrustRoute,1,C,0.000302,2.410494327545166,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13398,TrustRoute,1,D,0.0008737500000000001,15.642193794250488,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11867,TrustRoute,1,D.,0.0125947,27.960796356201172,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-10860,TrustRoute,1,A,0.005290359999999999,29.72016167640686,0,0,cand-grok-3-mini,stage2_confidence,
+mmlu,mmlu-2562,TrustRoute,1,A,0.00031850000000000004,4.086076021194458,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-6829,TrustRoute,1,B,0.001086,8.593647718429565,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11656,TrustRoute,1,A,0.00034675000000000005,3.421001672744751,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8137,TrustRoute,1,D,4.675e-05,1.8026769161224365,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12415,TrustRoute,1,A,0.00072975,6.250033855438232,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1361,TrustRoute,1,B,0.00030775,3.541374444961548,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4113,TrustRoute,1,C,0.00031825000000000006,6.394168853759766,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8665,TrustRoute,1,D,0.00031800000000000003,3.2196221351623535,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2348,TrustRoute,1,B,0.00018524999999999998,3.151322841644287,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-3542,TrustRoute,1,D,0.00317265,24.809540033340454,0,0,cand-gpt-4o-mini,stage2_confidence,
+mmlu,mmlu-7409,TrustRoute,1,C,0.00017725,2.650644302368164,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13433,TrustRoute,1,B,0.00030550000000000005,3.6540491580963135,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13594,TrustRoute,1,D,0.00031825000000000006,4.518380403518677,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11726,TrustRoute,1,A,0.00357135,19.25791311264038,0,0,cand-gpt-4o-mini,stage2_confidence,
+mmlu,mmlu-2384,TrustRoute,1,A,0.00018425,2.249114751815796,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-8760,TrustRoute,1,D,0.00031850000000000004,4.786779880523682,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11357,TrustRoute,1,D,0.00048750000000000003,5.589773416519165,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10039,TrustRoute,1,C,0.00017749999999999998,2.471919536590576,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9307,TrustRoute,1,D,0.00032100000000000005,3.5539848804473877,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-7841,TrustRoute,1,A,0.00017549999999999998,2.530819892883301,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4283,TrustRoute,1,A,0.0008295,7.043799638748169,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-11204,TrustRoute,1,B,0.00075025,6.448818683624268,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-13384,TrustRoute,1,D,7.3e-05,2.477870464324951,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4245,TrustRoute,1,B,0.00133525,10.364354848861694,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-9465,TrustRoute,1,D,5.125e-05,1.8566224575042725,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-10541,TrustRoute,1,C,0.0013372500000000001,13.611215591430664,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5853,TrustRoute,1,B,0.000485,5.018815755844116,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1772,TrustRoute,1,B,4.7000000000000004e-05,2.4097015857696533,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-12867,TrustRoute,1,C,5.625e-05,1.7874562740325928,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5099,TrustRoute,1,D,0.0001875,3.4614884853363037,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-5624,TrustRoute,1,C,0.00019875,3.2006030082702637,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1651,TrustRoute,1,C,4.4500000000000004e-05,2.3418192863464355,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-4492,TrustRoute,1,D,0.00197725,16.620792865753174,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-2169,TrustRoute,1,A,5.25e-05,2.0195374488830566,0,0,cand-gpt-5-mini,stage1_early_stop,
+mmlu,mmlu-1306,TrustRoute,1,D,4.975e-05,2.062044620513916,0,0,cand-gpt-5-mini,stage1_early_stop,

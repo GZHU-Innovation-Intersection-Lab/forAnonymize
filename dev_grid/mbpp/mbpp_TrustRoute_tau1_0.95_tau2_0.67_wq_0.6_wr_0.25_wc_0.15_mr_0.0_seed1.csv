@@ -1,0 +1,427 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/93,TrustRoute,1,"```python
+def power(a, b):
+    return a ** b
+
+assert power(3, 4) == 81
+```",0.0030292500000000003,7.721468687057495,0,0,cand-gpt-4o-mini,stage2_vote,
+mbpp,Mbpp/619,TrustRoute,1,"Here is a concise solution to move all the numbers to the end of the given string:
+
+```python
+def move_num(s):
+    letters = ''.join(filter(str.isalpha, s))
+    numbers = ''.join(filter(str.isdigit, s))
+    return letters + numbers
+
+# Test the function
+assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'
+```",0.0018520499999999998,8.936491012573242,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/277,TrustRoute,1,"```python
+def dict_filter(d, n):
+    return {k: v for k, v in d.items() if v >= n}
+```",0.00256945,8.469829797744751,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/296,TrustRoute,1,"```python
+def get_Inv_Count(arr):
+    count = 0
+    n = len(arr)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                count += 1
+    return count
+```",0.004427830000000001,14.30689024925232,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/598,TrustRoute,1,"```python
+def armstrong_number(num):
+    digits = [int(d) for d in str(num)]
+    power = len(digits)
+    return sum(d ** power for d in digits) == num
+
+assert armstrong_number(153) == True
+```",0.0028423500000000004,9.964608430862427,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/439,TrustRoute,1,"```python
+def multiple_to_single(numbers):
+    return int(''.join(str(num) for num in numbers))
+```",0.002551,14.45751690864563,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/240,TrustRoute,1,"```python
+def replace_list(list1, list2):
+    return list1[:-1] + list2
+```",0.0017851000000000002,10.036692380905151,0,0,cand-gemini-2.5-flash,stage2_vote,
+mbpp,Mbpp/311,TrustRoute,1,"```python
+def set_left_most_unset_bit(n: int) -> int:
+    if n == 0:
+        return 1
+
+    # L is the number of bits required to represent n, or the position of the MSB + 1.
+    # For example, if n=10 (binary 1010), L=4. The MSB is at position 3.
+    L = n.bit_length()
+    
+    # Create a mask with L set bits (e.g., if L=4, mask=0b1111)
+    mask = (1 << L) - 1
+    
+    # Find bits that are 0 in n, within the range [0, L-1].
+    # Python's bitwise NOT (~) for positive n results in -n-1.
+    # Masking it with `mask` effectively gives the bitwise inverse
+    # of n only for the L least significant bits.
+    inverted_within_range = (~n) & mask 
+    
+    if inverted_within_range > 0:
+        # If there are unset bits within the significant range of n,
+        # find the position of the leftmost (most significant) one.
+        # This is equivalent to finding the MSB of `inverted_within_range`.
+        k = inverted_within_range.bit_length() - 1
+        return n | (1 << k)
+    else:
+        # If all bits from 0 to L-1 are set (e.g., n=7, binary 0111),
+        # the leftmost unset bit is at position L (i.e., just beyond the current MSB).
+        return n | (1 << L)
+
+```",0.023294000000000002,61.78883767127991,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/69,TrustRoute,1,"```python
+def is_sublist(main_list, sub_list):
+    sub_len = len(sub_list)
+    for i in range(len(main_list) - sub_len + 1):
+        if main_list[i:i + sub_len] == sub_list:
+            return True
+    return False
+
+# Test case
+assert is_sublist([2, 4, 3, 5, 7], [3, 7]) == False
+```",0.00122785,11.940115213394165,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/641,TrustRoute,1,"```python
+def is_nonagonal(n: int) -> int:
+    """"""
+    Finds the nth nonagonal number.
+    A nonagonal number is a figurate number for a 9-sided polygon.
+
+    The formula for the nth k-gonal number is n * ((k - 2) * n - (k - 4)) / 2.
+    For a nonagonal number, k = 9.
+    Therefore, the formula is n * ((9 - 2) * n - (9 - 4)) / 2
+                     = n * (7 * n - 5) / 2.
+
+    Args:
+        n: The position of the nonagonal number to find (n >= 1).
+
+    Returns:
+        The nth nonagonal number.
+    """"""
+    return n * (7 * n - 5) // 2
+
+```",0.001162,3.1964168548583984,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+mbpp,Mbpp/801,TrustRoute,1,"```python
+def test_three_equal(x, y, z):
+    """"""
+    Counts the number of equal numbers among three given integers.
+
+    - Returns 3 if all three numbers are equal.
+    - Returns 2 if exactly two numbers are equal.
+    - Returns 0 if all three numbers are different.
+    """"""
+    unique_count = len(set([x, y, z]))
+    if unique_count == 1:
+        return 3
+    elif unique_count == 2:
+        return 2
+    else:  # unique_count == 3
+        return 0
+
+```",0.0049966,10.053697109222412,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+mbpp,Mbpp/629,TrustRoute,1,"```python
+def Split(numbers):
+  return [num for num in numbers if num % 2 == 0]
+```",0.0025276200000000004,13.375384330749512,0,0,cand-gemini-2.5-flash,stage2_vote,
+mbpp,Mbpp/20,TrustRoute,1,"A Woodall number is a natural number of the form `n * 2^n - 1` for some integer `n >= 1`.
+
+```python
+def is_woodall(number: int) -> bool:
+    if number <= 0:
+        return False
+
+    n = 1
+    while True:
+        woodall_candidate = n * (2**n) - 1
+        if woodall_candidate == number:
+            return True
+        if woodall_candidate > number:
+            return False
+        n += 1
+```",0.00726353,19.24139904975891,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/232,TrustRoute,1,"```python
+def larg_nnum(lst, n):
+    """"""
+    Returns a list containing the n largest items from the input list.
+    """"""
+    if not lst or n <= 0:
+        return []
+    
+    lst.sort(reverse=True)
+    return lst[:n]
+```",0.0006262,1.8582568168640137,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+mbpp,Mbpp/781,TrustRoute,1,"```python
+def count_divisors(n: int) -> bool:
+    """"""
+    Checks if the count of positive divisors of a given integer n is even.
+
+    A number has an odd number of divisors if and only if it is a perfect square.
+    Therefore, the count of divisors is even if and only if the number is NOT a perfect square.
+
+    Args:
+        n: A positive integer.
+
+    Returns:
+        True if the count of divisors of n is even, False otherwise.
+    """"""
+    if n <= 0:
+        raise ValueError(""Input must be a positive integer."")
+    
+    # Calculate the integer part of the square root
+    sqrt_n = int(n**0.5)
+    
+    # Check if n is a perfect square
+    is_perfect_square = (sqrt_n * sqrt_n == n)
+    
+    # If it's a perfect square, the count of divisors is odd.
+    # If it's not a perfect square, the count of divisors is even.
+    return not is_perfect_square
+
+```",0.0045117,9.398093700408936,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+mbpp,Mbpp/256,TrustRoute,1,"```python
+def count_Primes_nums(n: int) -> int:
+    if n < 2:
+        return 0
+
+    is_prime = [True] * n
+    is_prime[0] = is_prime[1] = False
+
+    for p in range(2, int(n**0.5) + 1):
+        if is_prime[p]:
+            for multiple in range(p * p, n, p):
+                is_prime[multiple] = False
+
+    return sum(is_prime)
+```",0.00595335,17.95824384689331,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/722,TrustRoute,1,"```python
+def filter_data(students_data, min_height, min_weight):
+    """"""
+    Filters students based on their height and weight being above specified minimums.
+
+    Args:
+        students_data (dict): A dictionary with student name as key and (height, weight) as value.
+        min_height (float): The minimum required height.
+        min_weight (float): The minimum required weight.
+
+    Returns:
+        dict: A new dictionary containing students who meet the height and weight criteria.
+    """"""
+    return {
+        name: (h, w)
+        for name, (h, w) in students_data.items()
+        if h >= min_height and w >= min_weight
+    }
+```",0.00411115,12.73484492301941,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/785,TrustRoute,1,"```python
+import ast
+
+def tuple_str_int(tuple_string):
+    """"""
+    Converts a string representation of a tuple of numbers into an actual tuple of integers.
+    Assumes the string contains valid integer-like elements.
+
+    Args:
+        tuple_string (str): The string representation of a tuple, e.g., ""(7, 8, 9)"".
+
+    Returns:
+        tuple: The converted tuple of integers.
+    """"""
+    return tuple(int(x) for x in ast.literal_eval(tuple_string))
+
+```",0.00453253,37.51863193511963,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/244,TrustRoute,1,"import math
+
+def next_Perfect_Square(n):
+    return (math.isqrt(n) + 1) ** 2
+
+assert next_Perfect_Square(35) == 36",0.00232895,26.951276540756226,0,0,cand-gpt-5-mini,stage2_vote,
+mbpp,Mbpp/285,TrustRoute,1,"import re
+
+def text_match_two_three(text):
+    return bool(re.search(r'ab{2,3}', text))
+
+assert text_match_two_three(""ac"") == False",0.0013009499999999997,15.269519329071045,0,0,cand-gpt-5-mini,stage2_vote,
+mbpp,Mbpp/301,TrustRoute,1,"def dict_depth(d):
+    if not isinstance(d, dict):
+        return 0
+    return 1 + max((dict_depth(v) for v in d.values() if isinstance(v, dict)), default=0)
+
+assert dict_depth({'a':1, 'b': {'c': {'d': {}}}}) == 4",0.00214845,26.62307095527649,0,0,cand-gpt-5-mini,stage2_vote,
+mbpp,Mbpp/741,TrustRoute,1,"def all_Characters_Same(s: str) -> bool:
+    """"""Return True if all characters in s are the same (True for empty or single-char).""""""
+    return len(s) <= 1 or len(set(s)) == 1
+
+# example
+assert all_Characters_Same(""python"") == False
+assert all_Characters_Same(""aaa"") == True
+assert all_Characters_Same("""") == True",0.00085575,6.381734609603882,0,0,cand-gpt-5-mini,stage1_early_stop,
+mbpp,Mbpp/558,TrustRoute,1,"def digit_distance_nums(a: int, b: int) -> int:
+    a, b = abs(a), abs(b)
+    s = 0
+    while a or b:
+        s += abs(a % 10 - b % 10)
+        a //= 10; b //= 10
+    return s
+
+assert digit_distance_nums(1, 2) == 1",0.0014909499999999998,16.983237981796265,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/222,TrustRoute,1,"def check_type(tpl):
+    return len({type(x) for x in tpl}) <= 1
+
+assert check_type((5, 6, 7, 3, 5, 6)) == True",0.0008604500000000001,10.804768323898315,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/287,TrustRoute,1,"```python
+def square_Sum(n: int) -> int:
+    """"""
+    Returns the sum of squares of the first n even natural numbers.
+    """"""
+    return 2 * n * (n + 1) * (2 * n + 1) // 3
+```",0.004922950000000001,18.85155153274536,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/762,TrustRoute,1,"def check_monthnumber_number(month):
+    return month in (4, 6, 9, 11)
+
+assert check_monthnumber_number(6) == True",0.00203515,9.272907018661499,0,0,cand-gpt-5-mini,stage2_vote,
+mbpp,Mbpp/135,TrustRoute,1,"def hexagonal_num(n: int) -> int:
+    return n * (2 * n - 1)
+
+assert hexagonal_num(10) == 190",0.00212895,7.486975193023682,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/639,TrustRoute,1,"```python
+def sample_nam(names):
+    return sum(len(name) for name in names if name and name[0].isupper())
+```",0.0036504499999999995,7.4360456466674805,0,0,cand-gemini-2.5-flash,stage2_vote,
+mbpp,Mbpp/477,TrustRoute,1,"```python
+def is_lower(s: str) -> str:
+    """"""
+    Converts the given string to lower case.
+    """"""
+    return s.lower()
+```",0.0002795,1.5896828174591064,0,0,cand-gemini-2.5-flash,stage1_early_stop,
+mbpp,Mbpp/462,TrustRoute,1,"```python
+def combinations_list(list_items):
+    combinations = [[]]
+    for item in list_items:
+        new_combinations = []
+        for current_combination in combinations:
+            new_combinations.append([item] + current_combination)
+        combinations.extend(new_combinations)
+    return combinations
+```",0.009569649999999999,18.145854711532593,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/91,TrustRoute,1,"def find_substring(lst, sub):
+    """"""Return True if sub is a substring of any string in lst.""""""
+    return any(sub in s for s in lst)
+
+assert find_substring([""red"", ""black"", ""white"", ""green"", ""orange""], ""ack"") == True",0.00080225,9.694356679916382,0,0,cand-gpt-5-mini,stage1_early_stop,
+mbpp,Mbpp/447,TrustRoute,1,"def cube_nums(nums):
+    return [x**3 for x in nums]
+
+assert cube_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]",0.00186054,12.204154253005981,0,0,cand-gpt-5-mini,stage2_vote,
+mbpp,Mbpp/235,TrustRoute,1,"The problem statement ""set all even bits of a given number"" typically implies turning the bits at even positions (0, 2, 4, ...) to 1. However, the provided assert `even_bit_set_number(10) == 10` contradicts this standard interpretation.
+
+Let's analyze `n = 10` in binary: `...01010`.
+Bit positions (right to left, starting from 0):
+- Bit 0 (even): 0
+- Bit 1 (odd): 1
+- Bit 2 (even): 0
+- Bit 3 (odd): 1
+
+If ""set all even bits"" meant turning them to 1:
+- Bit 0 would change from 0 to 1.
+- Bit 2 would change from 0 to 1.
+The resulting number would be `...01111` (binary), which is 15. This is not 10.
+
+To obtain `10` from `10` by manipulating even bits, the even bits (0 and 2) must remain 0. This implies the operation is not ""set to 1"" but rather ""set to 0"" (i.e., clear) for even bits, while odd bits remain unchanged.
+
+Therefore, we interpret the function's goal as: ""clear all even-positioned bits of the given number"".
+This can be achieved by performing a bitwise AND operation between the number `n` and a mask that has 1s at all odd bit positions and 0s at all even bit positions.
+
+```python
+def even_bit_set_number(n: int) -> int:
+    mask = 0
+    # Iterate through bit positions up to the most significant bit of n.
+    # n.bit_length() returns the number of bits required to represent n,
+    # excluding the sign and leading zeros. For n=10 (1010_2), it's 4.
+    # The loop will consider positions 0, 1, 2, 3.
+    for i in range(n.bit_length()):
+        # If the current bit position 'i' is odd, set that bit in the mask.
+        # This constructs a mask with 1s at odd positions (e.g., 0...1010_2).
+        if i % 2 != 0:
+            mask |= (1 << i)
+    
+    # Perform a bitwise AND operation. This will keep the bits of 'n' that are at
+    # odd positions (where mask has 1) and will clear (set to 0) the bits of 'n'
+    # that are at even positions (where mask has 0).
+    return n & mask
+
+```",0.027707150000000003,54.58024454116821,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/103,TrustRoute,1,"Here's a concise implementation of a function to compute the Eulerian number \( A(n, m) \):
+
+```python
+def eulerian_num(n, m):
+    A = [[0] * (n + 1) for _ in range(n + 1)]
+    for i in range(n + 1):
+        A[i][0] = 1 if i == 0 else 0
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            A[i][j] = (j + 1) * A[i - 1][j] + (n - j) * A[i - 1][j - 1]
+    return A[n][m]
+
+# Test the function
+assert eulerian_num(3, 1) == 4
+```
+
+This code defines the `eulerian_num` function, which calculates the Eulerian number using dynamic programming. The assertion checks that the function works correctly for the given test case.",0.00652935,20.66316556930542,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/223,TrustRoute,1,"```python
+def is_majority(arr: list[int], n: int, element: int) -> bool:
+    """"""
+    Checks if an element is the majority element in a sorted array.
+
+    Args:
+        arr: The sorted array.
+        n: The length of the array.
+        element: The element to check.
+
+    Returns:
+        True if the element is the majority element, False otherwise.
+    """"""
+    try:
+        # Find the index of the first occurrence of the element.
+        # This takes O(k) time where k is the index of the first occurrence,
+        # or O(n) in the worst case if the element is at the end or not present.
+        # For a majority element, it's typically efficient.
+        first_idx = arr.index(element)
+    except ValueError:
+        # Element is not in the array, so it cannot be the majority element.
+        return False
+
+    # The majority element must occur more than n/2 times.
+    # This means at least floor(n/2) + 1 occurrences.
+    # If the first occurrence is at `first_idx`,
+    # then the (floor(n/2) + 1)-th occurrence would be at `first_idx + n // 2`.
+    check_idx = first_idx + n // 2
+
+    # Check if this calculated index is within array bounds
+    # and if the element at this position is indeed the target element.
+    # If both conditions are met, it means there are at least `n // 2 + 1`
+    # consecutive occurrences of `element` starting from `first_idx`.
+    return check_idx < n and arr[check_idx] == element
+
+```",0.010853600000000001,28.975728511810303,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/410,TrustRoute,1,"```python
+def min_val(lst):
+    return min(x for x in lst if isinstance(x, (int, float)))
+```
+
+This function filters the list to only numeric values (int or float) and returns the minimum among them.",0.0016624500000000002,10.49319076538086,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/604,TrustRoute,1,"```python
+def reverse_words(s):
+    return ' '.join(s.split()[::-1])
+```
+
+This solution:
+1. Splits the string by spaces into a list of words
+2. Reverses the list using `[::-1]`
+3. Joins the reversed list back into a string with spaces",0.00175725,6.922682762145996,0,0,cand-claude-sonnet-4-5,stage2_vote,

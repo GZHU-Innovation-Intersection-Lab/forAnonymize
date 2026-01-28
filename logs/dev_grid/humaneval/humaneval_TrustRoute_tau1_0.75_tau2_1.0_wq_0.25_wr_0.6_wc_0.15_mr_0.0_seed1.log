@@ -1,0 +1,429 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: humaneval_TrustRoute_837b6fcdb3
+🚀 Running TrustRoute on humaneval
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/humaneval_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/humaneval/humaneval_TrustRoute_tau1_0.75_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 16 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/16] Processing: HumanEval/120[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/120
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef maximum(arr, k):\n    """\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of ', 'len': 671}]
+[-4, -3, 5]
+[4, 4]
+[2]
+          Test result: assert_fail
+[Stage 1] ✅ High confidence (0.900 >= 0.712), early stop!
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.0 (Δ+0.00)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 3.83s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 3.8s
+[2/16] Processing: HumanEval/88
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/88
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef sort_array(array):\n    """\n    Given an array of non-negative integers, return a copy of the given array after sort', 'len': 636}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.712), early stop!
+          [USAL] cand-gpt-4o-mini: 50.0 -> 52.0 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 2.96s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 3.0s
+[3/16] Processing: HumanEval/28
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/28
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=52.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 51.950
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'from typing import List\n\n\ndef concatenate(strings: List[str]) -> str:\n    """ Concatenate list of strings into a single ', 'len': 271}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.711), early stop!
+          [USAL] cand-gpt-4o-mini: 52.0 -> 52.0 (Δ+0.00)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.66s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.7s
+[4/16] Processing: HumanEval/128
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/128
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=52.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 51.950
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef prod_signs(arr):\n    """\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of', 'len': 445}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.711), early stop!
+          [USAL] cand-gpt-4o-mini: 52.0 -> 53.9 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 4.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 4.3s
+[5/16] Processing: HumanEval/45
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/45
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=53.9, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 53.900
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef triangle_area(a, h):\n    """Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3', 'len': 196}]
+          Test result: pass
+[Stage 1] ✅ High confidence (0.900 >= 0.710), early stop!
+          [USAL] cand-gpt-4o-mini: 53.9 -> 55.9 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.51s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[6/16] Processing: HumanEval/105
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/105
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=55.9, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 55.850
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef by_length(arr):\n    """\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    r', 'len': 867}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.708), early stop!
+          [USAL] cand-gpt-4o-mini: 55.9 -> 57.8 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 5.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 5.1s
+[7/16] Processing: HumanEval/124
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/124
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=57.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 57.800
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef valid_date(date):\n    """You have to write a function which validates a given date string and\n    returns True if t', 'len': 909}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.707), early stop!
+          [USAL] cand-gpt-4o-mini: 57.8 -> 59.8 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0002
+        Time: 6.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 6.9s
+[8/16] Processing: HumanEval/2
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/2
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=59.8, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 59.750
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef truncate_number(number: float) -> float:\n    """ Given a positive floating point number, it can be decomposed into', 'len': 389}]
+0.5
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.705), early stop!
+          [USAL] cand-gpt-4o-mini: 59.8 -> 61.7 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.60s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.6s
+[9/16] Processing: HumanEval/0
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/0
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=61.7, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 61.700
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    """ Check if in gi', 'len': 406}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.704), early stop!
+          [USAL] cand-gpt-4o-mini: 61.7 -> 61.7 (Δ+0.00)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 3.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 3.3s
+[10/16] Processing: HumanEval/78
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/78
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=61.7, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 61.700
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef hex_key(num):\n    """You have been tasked to write a function that receives \n    a hexadecimal number as a string a', 'len': 985}]
+1
+2
+4
+6
+2
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.704), early stop!
+          [USAL] cand-gpt-4o-mini: 61.7 -> 63.7 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 3.46s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 3.5s
+[11/16] Processing: HumanEval/43
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/43
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=63.7, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 63.650
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef pairs_sum_to_zero(l):\n    """\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if t', 'len': 520}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.702), early stop!
+          [USAL] cand-gpt-4o-mini: 63.7 -> 65.6 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 2.23s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 2.2s
+[12/16] Processing: HumanEval/75
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/75
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=65.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 65.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef is_multiply_prime(a):\n    """Write a function that returns true if the given number is the multiplication of 3 prim', 'len': 327}]
+True
+          Test result: assert_fail
+[Stage 1] ✅ High confidence (0.900 >= 0.701), early stop!
+          [USAL] cand-gpt-4o-mini: 65.6 -> 65.6 (Δ+0.00)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 4.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 4.3s
+[13/16] Processing: HumanEval/99
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/99
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=65.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 65.600
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and ret", 'len': 671}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.701), early stop!
+          [USAL] cand-gpt-4o-mini: 65.6 -> 67.6 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 3.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 3.1s
+[14/16] Processing: HumanEval/138
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/138
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=67.6, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 67.550
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef is_equal_to_sum_even(n):\n    """Evaluate whether the given number n can be written as the sum of exactly 4 positive', 'len': 322}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.699), early stop!
+          [USAL] cand-gpt-4o-mini: 67.6 -> 69.5 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0000
+        Time: 1.50s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0000 1.5s
+[15/16] Processing: HumanEval/90
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/90
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=69.5, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 69.500
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef next_smallest(lst):\n    """\n    You are given a list of integers.\n    Write a function next_smallest() that returns', 'len': 419}]
+2
+2
+None
+None
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.698), early stop!
+          [USAL] cand-gpt-4o-mini: 69.5 -> 71.5 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 4.54s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 4.5s
+[16/16] Processing: HumanEval/68
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/68
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=71.5, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 71.450
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef pluck(arr):\n    """\n    "Given an array representing a branch of a tree that has non-negative integer nodes\n    you', 'len': 1225}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.696), early stop!
+          [USAL] cand-gpt-4o-mini: 71.5 -> 73.4 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0001
+        Time: 2.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0001 2.3s
+
+✅ Batch completed.

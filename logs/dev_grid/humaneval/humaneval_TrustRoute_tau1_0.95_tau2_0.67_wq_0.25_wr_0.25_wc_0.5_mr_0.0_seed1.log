@@ -1,0 +1,433 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: humaneval_TrustRoute_f64fe5b0c6
+🚀 Running TrustRoute on humaneval
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/humaneval_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/humaneval/humaneval_TrustRoute_tau1_0.95_tau2_0.67_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 16 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/16] Processing: HumanEval/120[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/120
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef maximum(arr, k):\n    """\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of ', 'len': 671}]
+[-4, -3, 5]
+[4, 4]
+[2]
+          Test result: assert_fail
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef maximum(arr, k):\n    """\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of ', 'len': 671}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef maximum(arr, k):\n    """\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of ', 'len': 671}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=1.000, tests_ok=True
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 53.0 (test=1.00, agree=1.00, conf=1.00)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              ✅ Selected cand-gemini-2.5-flash (tests passed, conf=1.000)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0067
+        Time: 15.17s
+        Reason: stage2_verified
+============================================================
+
+ ✅ $0.0067 15.2s
+[2/16] Processing: HumanEval/88
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/88
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=53.0, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 53.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef sort_array(array):\n    """\n    Given an array of non-negative integers, return a copy of the given array after sort', 'len': 636}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.900), early stop!
+          [USAL] cand-gemini-2.5-flash: 53.0 -> 55.0 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0028
+        Time: 5.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0028 5.4s
+[3/16] Processing: HumanEval/28
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/28
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.0, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 54.950
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'from typing import List\n\n\ndef concatenate(strings: List[str]) -> str:\n    """ Concatenate list of strings into a single ', 'len': 271}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (1.000 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.0 -> 55.2 (Δ+0.30)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.80s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.8s
+[4/16] Processing: HumanEval/128
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/128
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.2, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 55.250
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef prod_signs(arr):\n    """\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of', 'len': 445}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.2 -> 57.2 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0021
+        Time: 4.90s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0021 4.9s
+[5/16] Processing: HumanEval/45
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/45
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=57.2, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 57.200
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef triangle_area(a, h):\n    """Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3', 'len': 196}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.896), early stop!
+          [USAL] cand-gemini-2.5-flash: 57.2 -> 59.5 (Δ+2.25)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.5s
+[6/16] Processing: HumanEval/105
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/105
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=59.5, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 59.450
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef by_length(arr):\n    """\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    r', 'len': 867}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.894), early stop!
+          [USAL] cand-gemini-2.5-flash: 59.5 -> 61.4 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0046
+        Time: 8.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0046 8.0s
+[7/16] Processing: HumanEval/124
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/124
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=61.4, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 61.400
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef valid_date(date):\n    """You have to write a function which validates a given date string and\n    returns True if t', 'len': 909}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.892), early stop!
+          [USAL] cand-gemini-2.5-flash: 61.4 -> 63.7 (Δ+2.25)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0084
+        Time: 14.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0084 14.0s
+[8/16] Processing: HumanEval/2
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/2
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=63.7, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 63.650
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef truncate_number(number: float) -> float:\n    """ Given a positive floating point number, it can be decomposed into', 'len': 389}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.890), early stop!
+          [USAL] cand-gemini-2.5-flash: 63.7 -> 65.6 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 2.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 2.9s
+[9/16] Processing: HumanEval/0
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/0
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=65.6, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 65.600
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    """ Check if in gi', 'len': 406}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (1.000 >= 0.888), early stop!
+          [USAL] cand-gemini-2.5-flash: 65.6 -> 65.9 (Δ+0.30)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 2.78s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 2.8s
+[10/16] Processing: HumanEval/78
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/78
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=65.9, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 65.900
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef hex_key(num):\n    """You have been tasked to write a function that receives \n    a hexadecimal number as a string a', 'len': 985}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.887), early stop!
+          [USAL] cand-gemini-2.5-flash: 65.9 -> 67.9 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0029
+        Time: 5.57s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0029 5.6s
+[11/16] Processing: HumanEval/43
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/43
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=67.9, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 67.850
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\n\ndef pairs_sum_to_zero(l):\n    """\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if t', 'len': 520}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.886), early stop!
+          [USAL] cand-gemini-2.5-flash: 67.9 -> 69.8 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0041
+        Time: 8.33s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0041 8.3s
+[12/16] Processing: HumanEval/75
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/75
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=69.8, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 69.800
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef is_multiply_prime(a):\n    """Write a function that returns true if the given number is the multiplication of 3 prim', 'len': 327}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.884), early stop!
+          [USAL] cand-gemini-2.5-flash: 69.8 -> 71.8 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0130
+        Time: 19.49s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0130 19.5s
+[13/16] Processing: HumanEval/99
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/99
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=71.8, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 71.750
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and ret", 'len': 671}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.882), early stop!
+          [USAL] cand-gemini-2.5-flash: 71.8 -> 73.7 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0182
+        Time: 38.09s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0182 38.1s
+[14/16] Processing: HumanEval/138
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/138
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=73.7, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 73.700
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef is_equal_to_sum_even(n):\n    """Evaluate whether the given number n can be written as the sum of exactly 4 positive', 'len': 322}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.880), early stop!
+          [USAL] cand-gemini-2.5-flash: 73.7 -> 75.7 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0030
+        Time: 6.24s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0030 6.2s
+[15/16] Processing: HumanEval/90
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/90
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=75.7, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 75.650
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef next_smallest(lst):\n    """\n    You are given a list of integers.\n    Write a function next_smallest() that returns', 'len': 419}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 75.7 -> 77.6 (Δ+1.95)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0022
+        Time: 4.69s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0022 4.7s
+[16/16] Processing: HumanEval/68
+============================================================
+[TrustRoute-USAL] Starting task: HumanEval/68
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=77.6, cost=$0.00037
+  2. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  3. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.600
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': '\ndef pluck(arr):\n    """\n    "Given an array representing a branch of a tree that has non-negative integer nodes\n    you', 'len': 1225}]
+          Test result: pass
+[Stage 1] ✅ High confidence (1.000 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 77.6 -> 79.9 (Δ+2.25)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0053
+        Time: 9.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0053 9.4s
+
+✅ Batch completed.

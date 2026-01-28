@@ -1,0 +1,150 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+humaneval,HumanEval/120,TrustRoute,1,"def maximum(arr, k):
+    """"""
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+    """"""
+    if k == 0:
+        return []
+    return sorted(arr)[-k:]",0.0057779500000000004,13.865939378738403,0,0,cand-gpt-5-mini,stage2_verified,
+humaneval,HumanEval/88,TrustRoute,1,"def sort_array(array):
+    if not array:
+        return []
+    s = array[0] + array[-1]
+    return sorted(array) if s % 2 else sorted(array, reverse=True)",0.000808,8.203684329986572,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/28,TrustRoute,1,"from typing import List
+
+def concatenate(strings: List[str]) -> str:
+    """""" Concatenate list of strings into a single string
+    >>> concatenate([])
+    ''
+    >>> concatenate(['a', 'b', 'c'])
+    'abc'
+    """"""
+    return ''.join(strings)",0.0008015,9.03849983215332,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/128,TrustRoute,1,"```python
+def prod_signs(arr):
+    """"""
+    You are given an array arr of integers and you need to return
+    sum of magnitudes of integers multiplied by product of all signs
+    of each number in the array, represented by 1, -1 or 0.
+    Note: return None for empty arr.
+    """"""
+    if not arr:
+        return None
+    total = sum(abs(x) for x in arr)
+    prod = 1
+    for x in arr:
+        if x == 0:
+            return 0
+        prod *= 1 if x > 0 else -1
+    return prod * total
+```",0.001232,10.482764720916748,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/45,TrustRoute,1,"def triangle_area(a, h):
+    """"""Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """"""
+    return 0.5 * a * h",0.000401,4.57414984703064,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/105,TrustRoute,1,"```python
+def by_length(arr):
+    names = [None, ""One"", ""Two"", ""Three"", ""Four"", ""Five"", ""Six"", ""Seven"", ""Eight"", ""Nine""]
+    return [names[x] for x in sorted((x for x in arr if 1 <= x <= 9), reverse=True)]
+```",0.0008825000000000001,5.993357419967651,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/124,TrustRoute,1,"import re
+
+def valid_date(date):
+    if not date:
+        return False
+    if not re.fullmatch(r""\d{2}-\d{2}-\d{4}"", date):
+        return False
+    mm, dd, yyyy = date.split('-')
+    month = int(mm); day = int(dd)
+    if not (1 <= month <= 12):
+        return False
+    if month == 2:
+        max_day = 29
+    elif month in {4, 6, 9, 11}:
+        max_day = 30
+    else:
+        max_day = 31
+    return 1 <= day <= max_day",0.00152925,11.321921586990356,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/2,TrustRoute,1,"def truncate_number(number: float) -> float:
+    """""" Given a positive floating point number, return its decimal part. """"""
+    return number - int(number)",0.0007585,6.172543525695801,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/0,TrustRoute,1,"def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """""" Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """"""
+    if threshold <= 0 or len(numbers) < 2:
+        return False
+    nums = sorted(numbers)
+    for a, b in zip(nums, nums[1:]):
+        if b - a < threshold:
+            return True
+    return False",0.0010385000000000001,8.03249216079712,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/78,TrustRoute,1,"def hex_key(num):
+    primes = set(""2357BD"")
+    return sum(ch in primes for ch in num)",0.00054225,4.279270172119141,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/43,TrustRoute,1,"def pairs_sum_to_zero(l):
+    """"""
+    pairs_sum_to_zero takes a list of integers as an input.
+    it returns True if there are two distinct elements in the list that
+    sum to zero, and False otherwise.
+    >>> pairs_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> pairs_sum_to_zero([1, 3, -2, 1])
+    False
+    >>> pairs_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])
+    True
+    >>> pairs_sum_to_zero([1])
+    False
+    """"""
+    seen = set()
+    for x in l:
+        if -x in seen:
+            return True
+        seen.add(x)
+    return False",0.00158675,10.594597101211548,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/75,TrustRoute,1,"def is_multiply_prime(a):
+    if not isinstance(a, int) or a < 2:
+        return False
+    n = a
+    count = 0
+    p = 2
+    while p * p <= n:
+        while n % p == 0:
+            n //= p
+            count += 1
+            if count > 3:
+                return False
+        p += 1
+    if n > 1:
+        count += 1
+    return count == 3",0.00141975,9.616981744766235,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/99,TrustRoute,1,"from decimal import Decimal, ROUND_HALF_UP
+
+def closest_integer(value):
+    d = Decimal(value.strip()) if isinstance(value, str) else Decimal(value)
+    return int(d.to_integral_value(rounding=ROUND_HALF_UP))",0.0011885,9.748143196105957,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/138,TrustRoute,1,"def is_equal_to_sum_even(n):
+    """"""Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers""""""
+    if not isinstance(n, int):
+        return False
+    return n >= 8 and n % 2 == 0",0.00067675,6.948337078094482,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/90,TrustRoute,1,"def next_smallest(lst):
+    u = sorted(set(lst))
+    return u[1] if len(u) > 1 else None",0.0006324999999999999,5.75187611579895,0,0,cand-gpt-5-mini,stage1_early_stop,
+humaneval,HumanEval/68,TrustRoute,1,"def pluck(arr):
+    """"""
+    Return [smallest_even_value, index_of_first_occurrence] from arr,
+    or [] if arr is empty or has no even values.
+    """"""
+    evens = [(v, i) for i, v in enumerate(arr) if v % 2 == 0]
+    return [] if not evens else list(min(evens))",0.0016755000000000001,12.38913893699646,0,0,cand-gpt-5-mini,stage1_early_stop,

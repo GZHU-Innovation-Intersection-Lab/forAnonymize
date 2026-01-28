@@ -1,0 +1,91 @@
+EXP_ROOT=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para
+SEEDS=1
+LIMIT=0
+TIMEOUT_SEC=9000
+CLEAN_REP_STATE=0
+DATASETS=arc_challenge hellaswag winogrande mmlu humaneval mbpp gsm8k
+SELECTED_DIR=/data_huawei/jiakun/ISSTA/final_experiments/selected
+START_TS=20260125_101140
+
+=
+[DATASET] arc_challenge
+[TIME] 2026-01-25 10:11:40
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (1055/1055): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/arc_challenge/arc_challenge_TrustRoute_best_tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] arc_challenge: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/arc_challenge
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset arc_challenge --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/arc_challenge_test90_summary.csv
+=
+[DATASET] hellaswag
+[TIME] 2026-01-25 10:11:40
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (900/900): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] hellaswag: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/hellaswag_test90_summary.csv
+=
+[DATASET] winogrande
+[TIME] 2026-01-25 10:11:40
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset winogrande --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (1141/1141): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/winogrande/winogrande_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset winogrande --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] winogrande: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/winogrande
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset winogrande --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/winogrande_test90_summary.csv
+=
+[DATASET] mmlu
+[TIME] 2026-01-25 10:11:41
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (900/900): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/mmlu/mmlu_TrustRoute_best_tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] mmlu: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/mmlu
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset mmlu --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/mmlu_test90_summary.csv
+=
+[DATASET] humaneval
+[TIME] 2026-01-25 10:11:41
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset humaneval --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (148/148): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/humaneval/humaneval_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset humaneval --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] humaneval: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/humaneval
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset humaneval --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/humaneval_test90_summary.csv
+=
+[DATASET] mbpp
+[TIME] 2026-01-25 10:14:02
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset mbpp --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (341/341): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/mbpp/mbpp_TrustRoute_best_tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset mbpp --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] mbpp: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/mbpp
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset mbpp --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/mbpp_test90_summary.csv
+=
+[DATASET] gsm8k
+[TIME] 2026-01-25 10:18:24
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset gsm8k --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[RESUME] incomplete (732/1119), continue: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/gsm8k/gsm8k_TrustRoute_best_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[RUN] gsm8k -> /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/gsm8k/gsm8k_TrustRoute_best_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/test90/gsm8k/gsm8k_TrustRoute_best_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.log
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_exp.py --method TrustRoute --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90/gsm8k_test90.jsonl --seed 1 --tau1 0.75 --tau2 0.67 --max_k 3 --budget_usd 5.0 --eta 0.3 --w_q 0.25 --w_r 0.6 --w_c 0.15 --min_rep 0.0 --out /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/gsm8k/gsm8k_TrustRoute_best_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/gsm8k/gsm8k_TrustRoute_best_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset gsm8k --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[OK] gsm8k seed1 Cascade: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_Cascade_seed1.csv (1119/1119)
+[OK] gsm8k seed1 FrugalGPT: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_FrugalGPT_seed1.csv (1119/1119)
+[OK] gsm8k seed1 MV-3: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_MV-3_seed1.csv (1119/1119)
+[OK] gsm8k seed1 Oracle: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_Oracle_seed1.csv (1119/1119)
+[OK] gsm8k seed1 Random: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_Random_seed1.csv (1119/1119)
+[OK] gsm8k seed1 SA: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_SA_seed1.csv (1119/1119)
+[OK] gsm8k seed1 SC-10: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_SC-10_seed1.csv (1119/1119)
+[OK] gsm8k seed1 SC-3: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_SC-3_seed1.csv (1119/1119)
+[OK] gsm8k seed1 SC-5: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_SC-5_seed1.csv (1119/1119)
+[OK] gsm8k seed1 TrustRoute-NoCostAware: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_TrustRoute-NoCostAware_seed1.csv (1119/1119)
+[OK] gsm8k seed1 TrustRoute-NoCost: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_TrustRoute-NoCost_seed1.csv (1119/1119)
+[OK] gsm8k seed1 TrustRoute-NoParallel: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_TrustRoute-NoParallel_seed1.csv (1119/1119)
+[OK] gsm8k seed1 TrustRoute-NoRep: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_TrustRoute-NoRep_seed1.csv (1119/1119)
+[OK] gsm8k seed1 TrustRoute: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k/gsm8k_TrustRoute_seed1.csv (1119/1119)
+[DONE] gsm8k: outputs=14 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/gsm8k
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset gsm8k --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/gsm8k_test90_summary.csv
+ALL DONE. MASTER_LOG=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/test90/_driver/run_all_test90_20260125_101140.log

@@ -1,0 +1,366 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/93,TrustRoute,1,"```python
+def power(a, b):
+    return a ** b
+
+assert power(3, 4) == 81
+```",0.00151625,10.94389271736145,0,0,cand-gpt-4o-mini,stage2_vote,
+mbpp,Mbpp/619,TrustRoute,1,"Here's a concise solution to move all the numbers to the end of the given string:
+
+```python
+def move_num(s):
+    letters = ''.join(filter(str.isalpha, s))
+    numbers = ''.join(filter(str.isdigit, s))
+    return letters + numbers
+
+# Test the function
+assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'
+```",0.00424195,11.839499711990356,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/277,TrustRoute,1,"```python
+def dict_filter(d, n):
+    return {k: v for k, v in d.items() if v >= n}
+```",0.00259415,8.053849935531616,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/296,TrustRoute,1,"```python
+def get_Inv_Count(arr):
+    count = 0
+    n = len(arr)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if arr[i] > arr[j]:
+                count += 1
+    return count
+```",0.00525861,27.455316305160522,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/598,TrustRoute,1,"```python
+def armstrong_number(n):
+    digits = str(n)
+    power = len(digits)
+    return sum(int(d) ** power for d in digits) == n
+```
+
+This function:
+1. Converts the number to a string to easily access each digit
+2. Calculates the power (number of digits)
+3. Sums each digit raised to that power
+4. Returns True if the sum equals the original number
+
+For example, 153 = 1³ + 5³ + 3³ = 1 + 125 + 27 = 153 ✓",0.0043114699999999995,14.392029523849487,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/439,TrustRoute,1,"```python
+def multiple_to_single(lst):
+    return int(''.join(map(str, lst)))
+```
+
+This function:
+1. Converts each integer to a string using `map(str, lst)`
+2. Joins all strings together with `''.join()`
+3. Converts the result back to an integer with `int()`",0.0020059500000000003,9.350531578063965,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/240,TrustRoute,1,"def replace_list(a, b):
+    return a[:-1] + b
+
+assert replace_list([1, 3, 5, 7, 9, 10], [2, 4, 6, 8]) == [1, 3, 5, 7, 9, 2, 4, 6, 8]",0.0032738,14.344166040420532,0,0,cand-gpt-5-mini,stage2_confidence,
+mbpp,Mbpp/311,TrustRoute,1,"```python
+def set_left_most_unset_bit(n):
+    binary = bin(n)[2:]
+    for i in range(len(binary)):
+        if binary[i] == '0':
+            pos_from_right = len(binary) - 1 - i
+            return n | (1 << pos_from_right)
+    return n | (1 << len(binary))
+```",0.01801804,59.47564744949341,0,0,cand-grok-3-mini,stage2_confidence,
+mbpp,Mbpp/69,TrustRoute,1,"Here is a concise solution to check whether a list contains a given sublist:
+
+```python
+def is_sublist(lst, sublst):
+    sublist_length = len(sublst)
+    for i in range(len(lst) - sublist_length + 1):
+        if lst[i:i + sublist_length] == sublst:
+            return True
+    return False
+
+# Test case
+assert is_sublist([2, 4, 3, 5, 7], [3, 7]) == False
+```",0.00445895,9.796192169189453,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/641,TrustRoute,1,"Here is a concise solution to find the nth nonagonal number:
+
+```python
+def is_nonagonal(n):
+    return n * (7 * n - 5) // 2
+
+# Test the function
+assert is_nonagonal(10) == 325
+```
+
+This function calculates the nth nonagonal number using the formula \( P(n) = \frac{n(7n - 5)}{2} \).",0.00200395,11.099031925201416,0,0,cand-gpt-4o-mini,stage2_vote,
+mbpp,Mbpp/801,TrustRoute,1,"```python
+def test_three_equal(a, b, c):
+    return len(set([a, b, c])) == 1 and 3 or (2 if len(set([a, b, c])) == 2 else 0)
+
+# Test case
+assert test_three_equal(1, 1, 1) == 3
+```",0.0019009,11.581473588943481,0,0,cand-gpt-4o-mini,stage2_vote,
+mbpp,Mbpp/629,TrustRoute,1,"```python
+def Split(numbers):
+    return [num for num in numbers if num % 2 == 0]
+
+assert Split([1, 2, 3, 4, 5]) == [2, 4]
+```",0.0012619999999999999,9.430099725723267,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/20,TrustRoute,1,"```python
+def is_woodall(num: int) -> bool:
+    """"""
+    Checks if the given number is a Woodall number.
+
+    A Woodall number is an integer of the form n * 2^n - 1 for some non-negative integer n.
+    """"""
+    n = 0
+    while True:
+        woodall_candidate = n * (2**n) - 1
+        if woodall_candidate == num:
+            return True
+        if woodall_candidate > num and n > 0: # n=0 gives -1, n=1 gives 1. If num is between -1 and 1 (exclusive), we need to check n=1 first.
+            return False
+        if woodall_candidate > num and n == 0 and num > -1: # Handles cases like num=0, where woodall_candidate is -1, but num is positive.
+            return False
+        n += 1
+
+```",0.00433485,11.839849948883057,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/232,TrustRoute,1,"```python
+def larg_nnum(lst, n):
+    return sorted(lst, reverse=True)[:n]
+```",0.0017753500000000002,11.981256246566772,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/781,TrustRoute,1,"```python
+def count_divisors(n):
+    count = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            count += 1 if i * i == n else 2
+    return count % 2 == 0
+```
+
+The function counts divisors efficiently by iterating only up to the square root of n. For each divisor found, it counts both the divisor and its pair (unless they're the same, i.e., when n is a perfect square). It returns True if the count is even, False otherwise.",0.0034947499999999996,11.271384000778198,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/256,TrustRoute,1,"```python
+def count_Primes_nums(n):
+    if n <= 2:
+        return 0
+    
+    is_prime = [True] * n
+    is_prime[0] = is_prime[1] = False
+    
+    for i in range(2, int(n**0.5) + 1):
+        if is_prime[i]:
+            for j in range(i*i, n, i):
+                is_prime[j] = False
+    
+    return sum(is_prime)
+```",0.00437115,18.241624116897583,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/722,TrustRoute,1,"```python
+def filter_data(students, min_height, min_weight):
+    return {name: (height, weight) for name, (height, weight) in students.items() if height >= min_height and weight >= min_weight}
+```",0.00292415,10.745076179504395,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/785,TrustRoute,1,"```python
+def tuple_str_int(tuple_str):
+    return tuple(map(int, tuple_str.strip('()').split(', ')))
+```",0.00199575,10.914510726928711,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/244,TrustRoute,1,"```python
+def next_Perfect_Square(n):
+    import math
+    root = int(math.sqrt(n))
+    if root * root == n:
+        return (root + 1) ** 2
+    else:
+        return (root + 1) ** 2
+```",0.0028775500000000004,15.662086486816406,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/285,TrustRoute,1,"```python
+def text_match_two_three(text):
+    import re
+    return bool(re.search(r'ab{2,3}', text))
+```
+
+This function uses a regular expression to search for the pattern 'a' followed by exactly 2 or 3 'b' characters. The pattern `ab{2,3}` matches 'abb' or 'abbb'. It returns `True` if the pattern is found, `False` otherwise.",0.0025061000000000003,10.791370630264282,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/301,TrustRoute,1,"```python
+def dict_depth(d):
+    if not isinstance(d, dict) or not d:
+        return 0
+    return 1 + max(dict_depth(v) for v in d.values())
+```",0.0027061999999999998,17.379348278045654,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/741,TrustRoute,1,"```python
+def all_Characters_Same(s: str) -> bool:
+    """"""
+    Checks if all characters in the given string are the same.
+    """"""
+    return len(set(s)) <= 1
+```",0.0032728,9.363792657852173,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/558,TrustRoute,1,"```python
+def digit_distance_nums(a, b):
+    str_a = str(abs(a))
+    str_b = str(abs(b))
+    
+    max_len = max(len(str_a), len(str_b))
+    str_a = str_a.zfill(max_len)
+    str_b = str_b.zfill(max_len)
+    
+    return sum(abs(int(str_a[i]) - int(str_b[i])) for i in range(max_len))
+```",0.00525475,19.24993658065796,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/222,TrustRoute,1,"```python
+def check_type(tup):
+    return len(set(type(x) for x in tup)) <= 1
+
+assert check_type((5, 6, 7, 3, 5, 6)) == True
+assert check_type((1, 2, ""3"")) == False
+assert check_type((1.5, 2.3, 4.5)) == True
+assert check_type(()) == True
+```",0.0024292,10.8582444190979,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/287,TrustRoute,1,"```python
+def square_Sum(n):
+    return sum((2*i)**2 for i in range(1, n+1))
+```
+
+Alternatively, using the mathematical formula:
+
+```python
+def square_Sum(n):
+    return 2*n*(n+1)*(2*n+1)//3
+```
+
+Both solutions correctly compute the sum of squares of the first n even natural numbers:
+- For n=2: 2² + 4² = 4 + 16 = 20 ✓",0.0029259999999999998,34.28652739524841,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/762,TrustRoute,1,"```python
+def check_monthnumber_number(month):
+    return month in [4, 6, 9, 11]
+```
+
+This function checks if the given month number is one of the months that have 30 days (April, June, September, November).",0.0017913999999999999,10.218913078308105,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/135,TrustRoute,1,"```python
+def hexagonal_num(n):
+    return n * (2 * n - 1)
+```
+
+The formula for the nth hexagonal number is n(2n - 1).
+
+For n=10: 10 * (2*10 - 1) = 10 * 19 = 190 ✓",0.00187235,8.845365762710571,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/639,TrustRoute,1,"```python
+def sample_nam(names):
+    return sum(len(name) for name in names if name[0].isupper())
+```
+
+This function filters names that start with an uppercase letter and returns the sum of their lengths. For the given example: Dylan(5) + Diana(5) + Joanne(6) = 16.",0.00211765,10.6028892993927,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/477,TrustRoute,1,"```python
+def is_lower(s):
+    return s.lower()
+
+assert is_lower(""InValid"") == ""invalid""
+```",0.00095955,7.576847076416016,0,0,cand-gpt-4o-mini,stage2_confidence,
+mbpp,Mbpp/462,TrustRoute,1,"```python
+def combinations_list(lst):
+    result = []
+    for i in range(2**len(lst)):
+        combo = []
+        for j in range(len(lst)):
+            if i & (1 << j):
+                combo.append(lst[j])
+        result.append(combo)
+    return result
+```
+
+This function generates all possible combinations (power set) by using bit manipulation. For a list of n elements, there are 2^n possible combinations. Each number from 0 to 2^n-1 represents a unique combination where each bit indicates whether to include the element at that position.",0.00447915,29.527325868606567,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/91,TrustRoute,1,"```python
+def find_substring(list_of_strings, substring):
+    """"""
+    Checks if a string is present as a substring in a given list of string values.
+
+    Args:
+        list_of_strings: A list of strings to search within.
+        substring: The string to search for.
+
+    Returns:
+        True if the substring is found in any of the list_of_strings, False otherwise.
+    """"""
+    for s in list_of_strings:
+        if substring in s:
+            return True
+    return False
+```",0.0019484,5.6283745765686035,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mbpp,Mbpp/447,TrustRoute,1,"```python
+def cube_nums(nums):
+    return [num ** 3 for num in nums]
+```",0.00126585,6.965566396713257,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/235,TrustRoute,1,"```python
+def even_bit_set_number(n):
+    mask = 0xAAAAAAAA
+    return n | mask
+```
+
+Wait, let me reconsider. The function needs to work for numbers of any size and the assertion shows `even_bit_set_number(10) == 10`, which means 10 (binary: 1010) should remain 10. In binary, 10 is `1010` where bits at positions 1 and 3 (0-indexed from right) are set - these are the even positions (0, 2, 4...) if we consider 0-indexed from the right.
+
+Let me verify: 10 = 1010 in binary. If we're setting even bits (positions 0, 2, 4, 6... from right), bit 0 is already 0, bit 2 is already 1. Setting them would give 1010 | 0101... but that would change it.
+
+Actually, looking at the assertion again: 10 stays 10, meaning bits at positions 1 and 3 are already set. So ""even bits"" likely means bits at even positions (0, 2, 4, 6...) counting from position 0 on the right.
+
+10 = 1010₂ - positions 1 and 3 are set. If even positions (0, 2, 4...) should be set, we need a mask like ...0101010. But the result is 10, so this interpretation seems wrong.
+
+Let me reconsider: maybe ""even bits"" means bit positions 2, 4, 6, 8... (counting from 1). Then 10 = 1010₂ has bit 2 and bit 4 set (from right, 1-indexed), which are even positions.
+
+```python
+def even_bit_set_number(n):
+    mask = 0xAAAAAAAA
+    return n | mask
+```",0.008426050000000001,31.55546736717224,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/103,TrustRoute,1,"```python
+def eulerian_num(n, m):
+    if m >= n or n == 0:
+        return 0
+    if m == 0:
+        return 1
+    
+    dp = [[0] * n for _ in range(n + 1)]
+    
+    for i in range(n + 1):
+        dp[i][0] = 1
+    
+    for i in range(1, n + 1):
+        for j in range(1, i):
+            dp[i][j] = (i - j) * dp[i - 1][j - 1] + (j + 1) * dp[i - 1][j]
+    
+    return dp[n][m]
+```
+
+The function computes Eulerian numbers using dynamic programming with the recurrence relation: A(n,m) = (n-m)·A(n-1,m-1) + (m+1)·A(n-1,m), with base cases A(n,0) = 1 and A(n,m) = 0 for m ≥ n.",0.005563,23.404350519180298,0,0,cand-claude-sonnet-4-5,stage2_vote,
+mbpp,Mbpp/223,TrustRoute,1,"```python
+def is_majority(arr, n, x):
+    if n == 0:
+        return False
+    
+    # Find first occurrence of x
+    left = 0
+    right = n - 1
+    first_idx = -1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            first_idx = mid
+            right = mid - 1
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    if first_idx == -1:
+        return False
+    
+    # Check if element at first_idx + n//2 is also x
+    return first_idx + n // 2 < n and arr[first_idx + n // 2] == x
+```",0.0044148,16.109999656677246,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/410,TrustRoute,1,"```python
+def min_val(lst):
+    return min(x for x in lst if isinstance(x, (int, float)))
+```
+
+This function filters the list to include only numeric values (int or float) and returns the minimum among them.",0.00200875,9.589829683303833,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+mbpp,Mbpp/604,TrustRoute,1,"```python
+def reverse_words(s):
+    return ' '.join(s.split()[::-1])
+```
+
+This solution:
+1. Splits the string into words using `split()`
+2. Reverses the list of words using `[::-1]`
+3. Joins them back with spaces using `' '.join()`",0.0018666499999999999,8.218217849731445,0,0,cand-claude-sonnet-4-5,stage2_confidence,

@@ -1,0 +1,9 @@
+=
+[DATASET] hellaswag
+[TIME] 2026-01-25 10:11:40
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[SKIP] already complete (900/900): /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[DONE] hellaswag: outputs=0 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/hellaswag_test90_summary.csv

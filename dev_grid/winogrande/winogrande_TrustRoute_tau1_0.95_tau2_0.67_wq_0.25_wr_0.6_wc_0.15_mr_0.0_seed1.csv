@@ -1,0 +1,180 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+winogrande,winogrande-10,TrustRoute,1,A,0.0005217500000000001,4.3004045486450195,0,0,cand-gpt-4o-mini,stage2_vote,
+winogrande,winogrande-387,TrustRoute,1,A,0.00064985,3.883089065551758,0,0,cand-gpt-4o-mini,stage2_confidence,
+winogrande,winogrande-184,TrustRoute,1,A,0.00248788,10.03293251991272,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-656,TrustRoute,1,A,0.0029625600000000004,12.851075887680054,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-6,TrustRoute,1,A,0.00293905,10.486252784729004,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-930,TrustRoute,1,"Looking at this sentence, I need to determine what is ""short"" (meaning insufficient or not enough).
+
+James wanted to write a list but ended up using ALL the pages in the notepad. This means:
+- He had a lot to write (a long list)
+- The notepad didn't have enough pages for everything he wanted to write
+- The notepad was insufficient/short
+
+The notepad (pages) is what was short/insufficient, not the list.
+
+**B**",0.00495463,17.92559814453125,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+winogrande,winogrande-815,TrustRoute,1,B,0.00113545,7.318791151046753,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-1087,TrustRoute,1,B,0.0007591500000000001,5.880817413330078,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-1054,TrustRoute,1,A,0.0028233499999999996,20.053996562957764,0,0,cand-claude-sonnet-4-5,stage2_confidence,
+winogrande,winogrande-561,TrustRoute,1,B,0.0010437,7.893987417221069,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-702,TrustRoute,1,A,0.0009591000000000002,6.788307428359985,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-471,TrustRoute,1,A,0.0013465,8.342501640319824,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-811,TrustRoute,1,A,0.0008676000000000001,6.661513090133667,0,0,cand-claude-sonnet-4-5,stage2_vote,
+winogrande,winogrande-896,TrustRoute,1,A,0.000417,2.7850887775421143,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-204,TrustRoute,1,B,0.000423,2.1049633026123047,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-105,TrustRoute,1,A,0.00039600000000000003,2.2465622425079346,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1039,TrustRoute,1,B,0.000414,2.3261687755584717,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-239,TrustRoute,1,B,0.000411,2.2037041187286377,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-193,TrustRoute,1,B,0.000399,2.4665496349334717,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1141,TrustRoute,1,A,0.000393,2.281623363494873,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-402,TrustRoute,1,A. walls,0.0014654000000000002,8.482607126235962,0,0,cand-grok-3-mini,stage2_confidence,
+winogrande,winogrande-827,TrustRoute,1,A,0.00039600000000000003,2.703279972076416,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-302,TrustRoute,1,B,0.00039600000000000003,2.228055715560913,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-319,TrustRoute,1,B,0.000402,2.542262554168701,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-56,TrustRoute,1,B,0.000402,2.841059923171997,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-61,TrustRoute,1,B,0.00041999999999999996,2.272615432739258,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-529,TrustRoute,1,"Looking at this sentence, I need to determine who was out of shape based on the logic presented.
+
+The sentence states: ""The personal trainer gave Laura but not Victoria the more difficult exercise because _ was out of shape.""
+
+If someone is out of shape, a personal trainer would typically give them easier exercises, not more difficult ones. However, the sentence says Laura got the MORE difficult exercise.
+
+This means Laura must have been in better shape (not out of shape), so she could handle the harder exercise. Victoria, who didn't get the difficult exercise, would be the one who was out of shape.
+
+**B**",0.002298,4.228038787841797,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-730,TrustRoute,1,A,0.000393,2.7028424739837646,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-250,TrustRoute,1,A,0.00040500000000000003,2.529923677444458,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-953,TrustRoute,1,B,0.000447,2.3726446628570557,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1159,TrustRoute,1,A,0.00039600000000000003,2.3906657695770264,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-100,TrustRoute,1,B,0.000384,2.561225175857544,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1066,TrustRoute,1,A,0.000393,2.6893298625946045,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-446,TrustRoute,1,B,0.000387,2.3890204429626465,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-410,TrustRoute,1,A,0.00040500000000000003,2.890566825866699,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-826,TrustRoute,1,A,0.000411,2.217867136001587,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1265,TrustRoute,1,A,0.000408,2.5315730571746826,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-199,TrustRoute,1,B,0.000399,2.1764822006225586,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-203,TrustRoute,1,A,0.000423,3.6942527294158936,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-591,TrustRoute,1,B,0.000393,2.2045822143554688,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-252,TrustRoute,1,A,0.000408,2.112542152404785,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-941,TrustRoute,1,B,0.000399,2.314412832260132,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-844,TrustRoute,1,B,0.00041999999999999996,2.3808484077453613,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-331,TrustRoute,1,A,0.000432,2.4273688793182373,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1103,TrustRoute,1,A,0.000399,2.5206642150878906,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1232,TrustRoute,1,B,0.000399,2.8303682804107666,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1165,TrustRoute,1,B,0.000432,2.2789785861968994,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-479,TrustRoute,1,B,0.00039,2.2892398834228516,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1005,TrustRoute,1,B,0.000411,2.521146297454834,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-729,TrustRoute,1,A,0.000414,2.6796915531158447,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-357,TrustRoute,1,B,0.00039600000000000003,2.2542381286621094,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-243,TrustRoute,1,B,0.000399,2.504455089569092,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-426,TrustRoute,1,B,0.000399,2.488658905029297,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-198,TrustRoute,1,B,0.000393,2.2969136238098145,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-679,TrustRoute,1,B,0.000402,2.518183708190918,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-145,TrustRoute,1,B,0.000393,2.5558743476867676,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-950,TrustRoute,1,B,0.00039600000000000003,2.1269121170043945,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-509,TrustRoute,1,A,0.00040500000000000003,2.644680976867676,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-223,TrustRoute,1,A,0.000408,2.1305105686187744,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-463,TrustRoute,1,B,0.000429,2.259079933166504,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-68,TrustRoute,1,B,0.000423,2.4245898723602295,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-287,TrustRoute,1,B,0.000399,2.410463809967041,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-64,TrustRoute,1,"Looking at this step by step:
+
+1. The cup was just brought out of the refrigerator, so the cup is cold
+2. John cannot touch the cup (because it's too cold)
+3. He wants air to blow around it (to warm it up)
+4. The blank describes something that is ""very warm""
+
+Since the cup is cold (from the refrigerator), and John wants warm air to blow around it to warm it up, the warm thing must be the air.
+
+**B**",0.002067,3.7045907974243164,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-339,TrustRoute,1,B,0.00041999999999999996,2.250089406967163,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-864,TrustRoute,1,B,0.000429,2.5411136150360107,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-928,TrustRoute,1,B,0.000387,2.5450279712677,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-714,TrustRoute,1,B,0.000411,2.4633748531341553,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-823,TrustRoute,1,A,0.000426,2.2684733867645264,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-79,TrustRoute,1,A,0.000417,2.242785692214966,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-920,TrustRoute,1,A,0.000393,2.2613418102264404,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-70,TrustRoute,1,A,0.000423,2.6299118995666504,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-36,TrustRoute,1,B,0.00040500000000000003,2.339210033416748,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-582,TrustRoute,1,B,0.00039600000000000003,2.1056160926818848,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-436,TrustRoute,1,A,0.000402,2.5173745155334473,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-192,TrustRoute,1,A,0.000399,2.3377761840820312,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1149,TrustRoute,1,B,0.000423,2.6513373851776123,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-220,TrustRoute,1,B,0.000423,2.5813708305358887,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-733,TrustRoute,1,A,0.00039,2.1213443279266357,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1258,TrustRoute,1,B,0.000399,2.192720651626587,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-209,TrustRoute,1,"Looking at this sentence, I need to determine who criticized the original language of the film.
+
+The sentence states that Lawrence liked watching foreign movies with subtitles, UNLIKE Jason. This contrast is explained by the fact that someone criticized the original language.
+
+If someone criticizes the original language of a film, they would NOT like watching foreign movies with subtitles (which preserve the original language). 
+
+Since Lawrence LIKED watching with subtitles (appreciating the original language), and Jason was UNLIKE Lawrence, it means Jason did NOT like this and therefore Jason criticized the original language.
+
+**B**",0.002259,4.422758102416992,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-305,TrustRoute,1,A,0.00039600000000000003,2.2989346981048584,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1164,TrustRoute,1,A,0.00039600000000000003,2.1142446994781494,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-372,TrustRoute,1,B,0.000408,2.2097110748291016,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-888,TrustRoute,1,B,0.000399,2.2078325748443604,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1169,TrustRoute,1,A,0.000402,2.432309865951538,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-593,TrustRoute,1,B,0.000414,2.106722593307495,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-316,TrustRoute,1,B,0.000408,2.464596748352051,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-286,TrustRoute,1,A,0.000399,2.2577381134033203,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-134,TrustRoute,1,B,0.00040500000000000003,2.567495107650757,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1063,TrustRoute,1,A,0.00039600000000000003,2.309622049331665,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-264,TrustRoute,1,B,0.000399,2.1570703983306885,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-768,TrustRoute,1,B,0.000414,2.3224971294403076,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-544,TrustRoute,1,B,0.000411,2.4096059799194336,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-942,TrustRoute,1,A,0.00039600000000000003,2.3649983406066895,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-828,TrustRoute,1,B,0.000402,2.6082682609558105,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1195,TrustRoute,1,A,0.00039,2.5643534660339355,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1114,TrustRoute,1,A,0.000417,3.3214428424835205,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-362,TrustRoute,1,B,0.000393,2.5684165954589844,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1098,TrustRoute,1,"Looking at this sentence, I need to determine who ""had never been to Mexico before.""
+
+The sentence states:
+- Mary didn't know what the currency of Mexico was
+- Lindsey knew [someone] had never been to Mexico before
+
+The logic here is that Mary's lack of knowledge about Mexican currency indicates she had never been there. Lindsey, who did know about the currency, recognized that Mary had never been to Mexico.
+
+**A**",0.001821,3.809020519256592,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-375,TrustRoute,1,A,0.000399,2.1320738792419434,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-76,TrustRoute,1,A,0.000393,1.9951107501983643,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-77,TrustRoute,1,A,0.00039,2.595722198486328,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-799,TrustRoute,1,B,0.00040500000000000003,2.5866787433624268,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-579,TrustRoute,1,A,0.000432,2.1278562545776367,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-351,TrustRoute,1,B,0.000411,2.301975727081299,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-210,TrustRoute,1,A,0.000399,2.2517197132110596,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-665,TrustRoute,1,A,0.000411,2.515742778778076,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-516,TrustRoute,1,B,0.000417,2.169633388519287,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-858,TrustRoute,1,A,0.000399,2.734076976776123,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-434,TrustRoute,1,A,0.00039600000000000003,2.2118568420410156,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-901,TrustRoute,1,B,0.000384,2.0837454795837402,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-45,TrustRoute,1,A,0.000417,2.255640745162964,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-150,TrustRoute,1,A,0.000414,2.2506308555603027,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1162,TrustRoute,1,B,0.000393,2.5476369857788086,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-358,TrustRoute,1,B,0.000393,2.2466251850128174,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-875,TrustRoute,1,"Looking at this sentence, I need to determine who advocated for a ""hands-off approach to publishing.""
+
+- Craig wanted to self-publish (hands-on approach)
+- Lawrence, a PRO rep, advised against self-publishing (suggesting a hands-off approach where professionals handle it)
+
+The answer is **B**.",0.0014579999999999999,3.058931350708008,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1204,TrustRoute,1,"Looking at this sentence, I need to determine who or what ""were cautious.""
+
+The sentence describes a shoddy (poorly made) bridge that held secure while cars transported passengers. Given that the bridge is described as ""shoddy,"" it makes sense that someone would be cautious about using it.
+
+Cars cannot be cautious - they are inanimate objects. Passengers, being people, can feel and act cautiously, especially when crossing a bridge they might perceive as unsafe.
+
+**A**",0.002001,4.204420804977417,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-147,TrustRoute,1,B,0.000402,2.866290330886841,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1249,TrustRoute,1,B,0.000414,2.4960343837738037,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1229,TrustRoute,1,A,0.00041999999999999996,2.2468621730804443,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-669,TrustRoute,1,A,0.000432,2.492948055267334,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-792,TrustRoute,1,A,0.000429,2.3008763790130615,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-727,TrustRoute,1,B,0.000411,2.4746291637420654,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-442,TrustRoute,1,B,0.000414,2.037999391555786,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-1226,TrustRoute,1,B,0.00040500000000000003,2.2446653842926025,0,0,cand-claude-sonnet-4-5,stage1_early_stop,
+winogrande,winogrande-84,TrustRoute,1,B,0.000414,5.082013368606567,0,0,cand-claude-sonnet-4-5,stage1_early_stop,

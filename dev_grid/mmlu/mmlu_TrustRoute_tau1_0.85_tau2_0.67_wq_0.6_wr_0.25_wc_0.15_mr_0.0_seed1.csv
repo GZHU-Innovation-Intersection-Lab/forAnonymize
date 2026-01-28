@@ -1,0 +1,272 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mmlu,mmlu-8436,TrustRoute,1,C,2.31e-05,1.595090627670288,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8874,TrustRoute,1,A,2.7299999999999996e-05,2.0318212509155273,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13420,TrustRoute,1,A,1.8449999999999998e-05,0.8860747814178467,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7675,TrustRoute,1,A,1.695e-05,0.9547703266143799,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11805,TrustRoute,1,D,2.97e-05,2.3276615142822266,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3136,TrustRoute,1,C,3.06e-05,0.9792251586914062,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-994,TrustRoute,1,C,1.995e-05,1.481698751449585,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-6016,TrustRoute,1,A,8.31e-05,0.8736660480499268,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3305,TrustRoute,1,B,5.01e-05,0.9599616527557373,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-419,TrustRoute,1,B,1.74e-05,1.1180531978607178,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3298,TrustRoute,1,A,9.164999999999999e-05,1.0164821147918701,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2865,TrustRoute,1,B,2.1150000000000002e-05,1.6265509128570557,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-9306,TrustRoute,1,B,2.61e-05,1.1054558753967285,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7379,TrustRoute,1,D,1.815e-05,1.5395090579986572,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1445,TrustRoute,1,C,2.7149999999999996e-05,1.3329031467437744,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10247,TrustRoute,1,C,2.8199999999999998e-05,0.9274814128875732,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7047,TrustRoute,1,D,1.725e-05,1.4482791423797607,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8989,TrustRoute,1,A,2.7599999999999997e-05,0.9417355060577393,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-759,TrustRoute,1,B,1.725e-05,1.1151180267333984,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-9535,TrustRoute,1,A,1.95e-05,1.4260518550872803,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10518,TrustRoute,1,D,1.8449999999999998e-05,1.123114824295044,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7805,TrustRoute,1,C,2.385e-05,1.4547662734985352,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8439,TrustRoute,1,A,2.88e-05,0.8105735778808594,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-571,TrustRoute,1,D,2.34e-05,1.691321611404419,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11520,TrustRoute,1,B,4.935e-05,1.4128494262695312,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3581,TrustRoute,1,B,2.1749999999999997e-05,1.4150762557983398,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2025,TrustRoute,1,C,1.905e-05,1.009106159210205,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2217,TrustRoute,1,B,2.58e-05,1.3705637454986572,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7258,TrustRoute,1,B,2.1150000000000002e-05,0.9414005279541016,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7830,TrustRoute,1,B,1.6499999999999998e-05,1.316643238067627,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5855,TrustRoute,1,C,4.11e-05,1.4147021770477295,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4409,TrustRoute,1,"The parametric equations are given as:
+x = 2(t - sin t)
+y = 2(1 - cos t)
+The interval for t is [0, 2π].
+
+To find the length of the curve, we use the arc length formula for parametric equations:
+L = ∫[a,b] sqrt((dx/dt)^2 + (dy/dt)^2) dt
+
+First, we find the derivatives dx/dt and dy/dt:
+dx/dt = d/dt [2(t - sin t)] = 2(1 - cos t)
+dy/dt = d/dt [2(1 - cos t)] = 2(sin t)
+
+Next, we square these derivatives:
+(dx/dt)^2 = [2(1 - cos t)]^2 = 4(1 - 2cos t + cos^2 t)
+(dy/dt)^2 = (2sin t)^2 = 4sin^2 t
+
+Now, sum them up:
+(dx/dt)^2 + (dy/dt)^2 = 4(1 - 2cos t + cos^2 t) + 4sin^2 t
+= 4 - 8cos t + 4cos^2 t + 4sin^2 t
+= 4 - 8cos t + 4(cos^2 t + sin^2 t)
+Using the identity cos^2 t + sin^2 t = 1:
+= 4 - 8cos t + 4(1)
+= 8 - 8cos t
+= 8(1 - cos t)
+
+Now, substitute this into the arc length formula:
+L = ∫[0, 2π] sqrt(8(1 - cos t)) dt
+L = ∫[0, 2π] sqrt(8) * sqrt(1 - cos t) dt
+L = 2 * sqrt(2) * ∫[0, 2π] sqrt(1 - cos t) dt
+
+We use the half-angle identity: 1 - cos t = 2sin^2(t/2).
+L = 2 * sqrt(2) * ∫[0, 2π] sqrt(2sin^2(t/2)) dt
+L = 2 * sqrt(2) * ∫[0, 2π] sqrt(2) * sqrt(sin^2(t/2)) dt
+L = 2 * sqrt(2) * sqrt(2) * ∫[0, 2π] |sin(t/2)| dt
+L = 4 * ∫[0, 2π] |sin(t/2)| dt
+
+For t in the interval [0, 2π], t/2 is in [0, π]. In this interval, sin(t/2) is non-negative, so |sin(t/2)| = sin(t/2).
+L = 4 * ∫[0, 2π] sin(t/2) dt
+
+Now, perform the integration:
+∫ sin(t/2) dt = -2cos(t/2)
+L = 4 * [-2cos(t/2)] from 0 to 2π
+L = 4 * [-2cos(2π/2) - (-2cos(0/2))]
+L = 4 * [-2cos(π) - (-2cos(0))]
+L = 4 * [-2(-1) - (-2(1))]
+L = 4 * [2 - (-2)]
+L = 4 * [2 + 2]
+L = 4 * 4
+L = 16
+
+The calculated length of the curve is 16.
+However, the given options are:
+A. π/2
+B. π
+C. 2 + π
+D. 2π
+
+None of the options match the calculated value of 16.
+This type of curve is a cycloid, and the length of one arch of a cycloid given by x = a(t - sin t) and y = a(1 - cos t) is known to be 8a.
+In this problem, a = 2. So, the length should be 8 * 2 = 16.
+
+Since the calculated answer (16) is not among the options, there might be a typo in the problem statement or the options provided. If we assume that the coefficient 'a' was intended to be a different value to match one of the options, we can check which 'a' would yield an option.
+For option D (2π):
+8a = 2π
+a = 2π / 8
+a = π/4
+If the equations were x = (π/4)(t - sin t) and y = (π/4)(1 - cos t), then the length would be 2π.
+
+Given the constraint to answer with an option letter only, and the strong possibility of a typo in the original problem to align with one of the options, we select option D based on the assumption that 'a' was intended to be π/4 instead of 2.
+
+The final answer is $\boxed{D}$",0.01997065,41.629218101501465,0,0,cand-gemini-2.5-flash,stage2_confidence,
+mmlu,mmlu-9196,TrustRoute,1,D,2.6999999999999996e-05,1.7474324703216553,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5589,TrustRoute,1,D,2.7449999999999996e-05,1.2277286052703857,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12259,TrustRoute,1,A,4.785e-05,0.8912103176116943,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5988,TrustRoute,1,C,9.24e-05,0.8343615531921387,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1921,TrustRoute,1,D,2.1000000000000002e-05,2.402771234512329,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7762,TrustRoute,1,A,1.8e-05,1.722405195236206,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7599,TrustRoute,1,C,1.6349999999999998e-05,0.9349870681762695,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8088,TrustRoute,1,B,1.6499999999999998e-05,1.3390793800354004,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5209,TrustRoute,1,A,1.92e-05,1.8130285739898682,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12763,TrustRoute,1,B,1.995e-05,1.360903263092041,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12251,TrustRoute,1,B,2.925e-05,1.2952213287353516,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7431,TrustRoute,1,A,1.8449999999999998e-05,1.2762987613677979,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7115,TrustRoute,1,C,1.905e-05,1.082801103591919,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5859,TrustRoute,1,B,5.04e-05,1.059868335723877,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12138,TrustRoute,1,C,4.289999999999999e-05,1.496304988861084,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7367,TrustRoute,1,A,1.6649999999999998e-05,1.2542181015014648,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-9467,TrustRoute,1,B,2.4299999999999998e-05,1.7701740264892578,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13024,TrustRoute,1,A,1.755e-05,1.9396212100982666,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3477,TrustRoute,1,A,1.725e-05,1.3533780574798584,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5597,TrustRoute,1,D,2.385e-05,1.126403570175171,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8597,TrustRoute,1,B,2.67e-05,0.7976899147033691,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5018,TrustRoute,1,D,2.4e-05,1.3562901020050049,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5028,TrustRoute,1,D,1.905e-05,1.2077088356018066,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8252,TrustRoute,1,D,2.385e-05,1.2039117813110352,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11421,TrustRoute,1,D,5.565e-05,0.8393752574920654,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-6665,TrustRoute,1,D,2.0700000000000002e-05,0.9290175437927246,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4596,TrustRoute,1,B,2.1000000000000002e-05,0.9800548553466797,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1540,TrustRoute,1,B,2.295e-05,0.8720121383666992,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7068,TrustRoute,1,C,1.89e-05,1.2764108180999756,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10111,TrustRoute,1,C,1.6349999999999998e-05,1.7131812572479248,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13398,TrustRoute,1,A,5.2199999999999995e-05,1.406038522720337,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11867,TrustRoute,1,A,7.094999999999999e-05,0.9502158164978027,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10860,TrustRoute,1,C,3.945e-05,1.3781933784484863,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2562,TrustRoute,1,A,2.625e-05,1.3123817443847656,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-6829,TrustRoute,1,B,2.595e-05,2.154205560684204,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11656,TrustRoute,1,A,4.319999999999999e-05,0.9073271751403809,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8137,TrustRoute,1,D,1.68e-05,1.1132454872131348,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12415,TrustRoute,1,A,4.26e-05,1.2104110717773438,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1361,TrustRoute,1,B,1.98e-05,1.4160468578338623,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4113,TrustRoute,1,C,2.61e-05,1.266347885131836,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8665,TrustRoute,1,D,2.595e-05,0.8601229190826416,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2348,TrustRoute,1,B,2.31e-05,1.3517706394195557,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-3542,TrustRoute,1,D,3.06e-05,0.9382233619689941,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7409,TrustRoute,1,C,1.8299999999999998e-05,1.3375439643859863,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13433,TrustRoute,1,B,1.8449999999999998e-05,1.5445497035980225,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13594,TrustRoute,1,C,2.61e-05,1.4365293979644775,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11726,TrustRoute,1,C,5.985e-05,0.8754334449768066,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2384,TrustRoute,1,A,2.2499999999999998e-05,0.9552938938140869,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-8760,TrustRoute,1,D,2.625e-05,1.0977787971496582,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11357,TrustRoute,1,D,5.085e-05,1.0109755992889404,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10039,TrustRoute,1,C,1.8449999999999998e-05,2.009861469268799,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-9307,TrustRoute,1,D,2.7749999999999997e-05,1.4066574573516846,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-7841,TrustRoute,1,A,1.725e-05,0.9644818305969238,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4283,TrustRoute,1,"To find the area of the polygon formed by the intercepts of the graph of \( y = f(x) \), we first need to determine the \( x \)- and \( y \)-intercepts of the function \( f(x) = \frac{(x-2)^2 - 9}{3} \).
+
+**Step 1: Find the \( y \)-intercept.**
+
+The \( y \)-intercept occurs when \( x = 0 \):
+\[
+f(0) = \frac{(0-2)^2 - 9}{3} = \frac{4 - 9}{3} = \frac{-5}{3}.
+\]
+Thus, the \( y \)-intercept is \( (0, -\frac{5}{3}) \).
+
+**Step 2: Find the \( x \)-intercepts.**
+
+The \( x \)-intercepts occur when \( f(x) = 0 \):
+\[
+\frac{(x-2)^2 - 9}{3} = 0.
+\]
+Multiplying both sides by 3 gives:
+\[
+(x-2)^2 - 9 = 0.
+\]
+This simplifies to:
+\[
+(x-2)^2 = 9.
+\]
+Taking the square root of both sides, we have:
+\[
+x - 2 = 3 \quad \text{or} \quad x - 2 = -3.
+\]
+Thus:
+\[
+x = 5 \quad \text{or} \quad x = -1.
+\]
+The \( x \)-intercepts are \( (5, 0) \) and \( (-1, 0) \).
+
+**Step 3: Determine the vertices of the polygon.**
+
+The vertices of the polygon formed by the intercepts are:
+- \( (0, -\frac{5}{3}) \) (the \( y \)-intercept)
+- \( (5, 0) \) (the right \( x \)-intercept)
+- \( (-1, 0) \) (the left \( x \)-intercept)
+
+**Step 4: Calculate the area of the triangle formed by these points.**
+
+The area \( A \) of a triangle given vertices at \( (x_1, y_1) \), \( (x_2, y_2) \), and \( (x_3, y_3) \) can be calculated using the formula:
+\[
+A = \frac{1}{2} \left| x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) \right|.
+\]
+Substituting in our points:
+- \( (0, -\frac{5}{3}) \) corresponds to \( (x_1, y_1) \)
+- \( (5, 0) \) corresponds to \( (x_2, y_2) \)
+- \( (-1, 0) \) corresponds to \( (x_3, y_3) \)
+
+Thus, we have:
+\[
+A = \frac{1}{2} \left| 0(0 - 0) + 5(0 + \frac{5}{3}) + (-1)(-\frac{5}{3} - 0) \right|.
+\]
+This simplifies to:
+\[
+A = \frac{1}{2} \left| 0 + \frac{25}{3} + \frac{5}{3} \right| = \frac{1}{2} \left| \frac{30}{3} \right| = \frac{1}{2} \cdot 10 = 5.
+\]
+
+Thus, the area of the polygon is \( \boxed{A} \).",0.00050925,17.877225160598755,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-11204,TrustRoute,1,B,5.489999999999999e-05,1.4399638175964355,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-13384,TrustRoute,1,D,3.255e-05,0.9026021957397461,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4245,TrustRoute,1,"To find \( p + q \) such that the polynomial \( (x^2 + 5x + 6)^2 + (px + q)(x^3 + 7x^2 + 3x) \) has degree 2, we first analyze each part of the expression.
+
+1. **Degree of \( (x^2 + 5x + 6)^2 \)**:
+   The polynomial \( x^2 + 5x + 6 \) is a quadratic polynomial (degree 2). When we square it, the degree becomes:
+   \[
+   \text{Degree}((x^2 + 5x + 6)^2) = 2 \times 2 = 4.
+   \]
+
+2. **Degree of \( (px + q)(x^3 + 7x^2 + 3x) \)**:
+   The polynomial \( x^3 + 7x^2 + 3x \) is a cubic polynomial (degree 3). The degree of the product \( (px + q)(x^3 + 7x^2 + 3x) \) is determined by the highest degree term:
+   \[
+   \text{Degree}((px + q)(x^3 + 7x^2 + 3x)) = 1 + 3 = 4.
+   \]
+
+3. **Combining the degrees**:
+   The overall polynomial \( (x^2 + 5x + 6)^2 + (px + q)(x^3 + 7x^2 + 3x) \) will have a degree of 4 unless the leading coefficients of both parts cancel each other out.
+
+   To ensure that the degree of the entire expression is 2, we need the leading term of \( (px + q)(x^3 + 7x^2 + 3x) \) to cancel the leading term of \( (x^2 + 5x + 6)^2 \).
+
+4. **Finding the leading coefficient**:
+   The leading term of \( (x^2 + 5x + 6)^2 \) is \( x^4 \). The leading term of \( (px + q)(x^3 + 7x^2 + 3x) \) is \( px \cdot x^3 = px^4 \).
+
+   For the leading terms to cancel, we need:
+   \[
+   px^4 - x^4 = 0 \implies p = 1.
+   \]
+
+5. **Finding \( q \)**:
+   Now, we need to ensure that the resulting polynomial has a degree of 2. The next highest degree term from \( (px + q)(x^3 + 7x^2 + 3x) \) is \( q \cdot x^3 \). For the degree to be 2, we need this term to also cancel out:
+   \[
+   q \cdot x^3 \text{ must be canceled.}
+   \]
+   This means \( q \) must be 0.
+
+6. **Calculating \( p + q \)**:
+   Now we have \( p = 1 \) and \( q = 0 \):
+   \[
+   p + q = 1 + 0 = 1.
+   \]
+
+Thus, the answer is \( \boxed{D} \).",0.0004496999999999999,14.387951374053955,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-9465,TrustRoute,1,D,1.95e-05,1.3313548564910889,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-10541,TrustRoute,1,A,2.31e-05,0.9226596355438232,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5853,TrustRoute,1,B,4.935e-05,1.3594534397125244,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1772,TrustRoute,1,B,1.695e-05,2.160871744155884,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-12867,TrustRoute,1,C,2.2499999999999998e-05,0.8540031909942627,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5099,TrustRoute,1,D,2.4449999999999998e-05,0.9314017295837402,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-5624,TrustRoute,1,C,3.12e-05,0.840533971786499,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1651,TrustRoute,1,C,1.545e-05,0.9239850044250488,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-4492,TrustRoute,1,B,2.31e-05,1.02840256690979,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-2169,TrustRoute,1,C,2.025e-05,1.3117711544036865,0,0,cand-gpt-4o-mini,stage1_early_stop,
+mmlu,mmlu-1306,TrustRoute,1,D,1.8599999999999998e-05,1.2670965194702148,0,0,cand-gpt-4o-mini,stage1_early_stop,

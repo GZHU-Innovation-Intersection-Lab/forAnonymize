@@ -1,0 +1,3357 @@
+[TrustRoute] ℹ️  No existing reputation state to reset
+[RepState] Using ISSTA_REP_TAG from env: winogrande_TrustRoute_2ebe447747
+🚀 Running TrustRoute on winogrande
+   Input: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev10/winogrande_dev10.jsonl
+   Output: /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/dev_grid/winogrande/winogrande_TrustRoute_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv
+   Seed: 1
+✅ Loaded 126 raw tasks
+
+================================================================================
+🏁 Starting execution loop...
+================================================================================
+
+[1/126] Processing: winogrande-10[ours_lite_v2] LOADED FIX_VERSION=2025-12-16-CONFIDENCE_HOTFIX
+
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-10
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.0, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.0, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.000
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.\n\nA. bakery\nB. b', 'len': 166}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.0 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-4o-mini
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0005
+        Time: 3.94s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0005 3.9s
+[2/126] Processing: winogrande-387
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-387
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-4o-mini: rep=50.4, cost=$0.00037
+  2. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+  3. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-4o-mini
+          Reputation: 50.420
+[DEBUG] model=gpt-4o-mini temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After I soaked the roller in the paint container, the _ had less paint on it.\n\nA. roller\nB. container\n\nAnswer with the o', 'len': 144}]
+          cand-gpt-5-mini: confidence=0.900, tests_ok=False
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-4o-mini: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gpt-5-mini: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-4o-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-4o-mini
+        Cost: $0.0007
+        Time: 5.94s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0007 5.9s
+[3/126] Processing: winogrande-184
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-184
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-claude-sonnet-4-5: rep=50.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.0, cost=$0.00037
+  3. cand-deepseek-r1: rep=50.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-claude-sonnet-4-5
+          Reputation: 50.000
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+[DEBUG] model=deepseek-r1 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.\n\nA. warts\nB. limbs\n\nAnsw", 'len': 157}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-deepseek-r1: confidence=0.350, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-claude-sonnet-4-5: 50.0 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.0 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-deepseek-r1: 50.0 -> 47.6 (test=0.00, agree=0.00, conf=0.35)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-claude-sonnet-4-5 (0.900)
+
+============================================================
+[Result] Agent: cand-claude-sonnet-4-5
+        Cost: $0.0032
+        Time: 14.62s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0032 14.6s
+[4/126] Processing: winogrande-656
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-656
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-5-mini: rep=49.9, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=49.9, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-5-mini
+          Reputation: 49.940
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel plans to go to Latin America next year where Dennis is currently living, _ has never been to Latin America.\n\nA. Joe', 'len': 174}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-5-mini: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.5 -> 49.9 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gpt-5-mini
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0014
+        Time: 7.87s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0014 7.9s
+[5/126] Processing: winogrande-6
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-6
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gpt-5-mini: rep=50.4, cost=$0.00037
+  2. cand-gemini-2.5-flash: rep=50.4, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gpt-5-mini
+          Reputation: 50.360
+[DEBUG] model=gpt-5-mini temp=<omitted> max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=gemini-2.5-flash temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.\n\nA.', 'len': 177}]
+          cand-gemini-2.5-flash: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gpt-5-mini: 50.4 -> 49.0 (test=0.00, agree=0.00, conf=0.90)
+          [USAL] cand-gemini-2.5-flash: 50.4 -> 49.9 (test=0.00, agree=0.50, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.9 -> 49.5 (test=0.00, agree=0.50, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 2/3 agree (66.7%)
+              ⚠️  Fallback to highest confidence: cand-gpt-5-mini (0.900)
+
+============================================================
+[Result] Agent: cand-gpt-5-mini
+        Cost: $0.0059
+        Time: 21.50s
+        Reason: stage2_confidence
+============================================================
+
+ ✅ $0.0059 21.5s
+[6/126] Processing: winogrande-930
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-930
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=49.9, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.5, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 49.880
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.903), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James wanted to write a list of what he can do for Christmas and he ended up using all the pages in the notepad. The _ i', 'len': 188}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 49.9 -> 50.3 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.5 -> 49.9 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.5 -> 49.9 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0014
+        Time: 12.38s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0014 12.4s
+[7/126] Processing: winogrande-815
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-815
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.3, cost=$0.00037
+  2. cand-grok-3-mini: rep=49.9, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=49.9, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.300
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'After a nasty breakup, Kayla needed a restraining order from Samantha because _ was scary to them.\n\nA. Kayla\nB. Samantha', 'len': 163}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.3 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 49.9 -> 50.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 49.9 -> 50.3 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 6.32s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0013 6.3s
+[8/126] Processing: winogrande-1087
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1087
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=50.7, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.4, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=50.3, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 50.720
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.902), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Lawrence had lost a lot of weight on their diet but Hunter wasn't nearly as succesful. _ was now heavy.\n\nA. Lawrence\nB. ", 'len': 169}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.4 -> 50.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 50.3 -> 50.7 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 6.42s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0013 6.4s
+[9/126] Processing: winogrande-1054
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1054
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.1, cost=$0.00037
+  2. cand-grok-3-mini: rep=50.8, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=50.7, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.140
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'On the playground at school during recess, Monica called Emily a chicken because _ was capable of climbing the ladder.\n\n', 'len': 181}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.1 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 50.8 -> 51.2 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 50.7 -> 51.1 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0048
+        Time: 15.57s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0048 15.6s
+[10/126] Processing: winogrande-561
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-561
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=51.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.2, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=51.1, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.560
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The pine trees were still green in December, but the oak trees were not, because the _ keep their leaves in fall.\n\nA. oa', 'len': 184}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.2 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 51.1 -> 51.6 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 10.80s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0013 10.8s
+[11/126] Processing: winogrande-702
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-702
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=52.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=51.6, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=51.6, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 51.980
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.901), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The student liked writing their signature with a pen instead of a pencil, because the _ showed up darker.\n\nA. pen\nB. pen', 'len': 166}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 52.0 -> 52.4 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 51.6 -> 52.0 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 5.96s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0010 6.0s
+[12/126] Processing: winogrande-471
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-471
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=52.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.0, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.0, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 52.400
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "At Jan's home, she dusted the dresser more frequently than the fan, because the _ was more difficult to reach.\n\nA. fan\nB", 'len': 172}]
+          Test result: exec_error:NameError
+[Stage 1] ⚠️  Low confidence (0.900 < 0.900), need more agents
+
+[Stage 2] Calling 2 additional agents...
+[DEBUG] model=grok-3-mini temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "At Jan's home, she dusted the dresser more frequently than the fan, because the _ was more difficult to reach.\n\nA. fan\nB", 'len': 172}]
+[DEBUG] model=claude-sonnet-4-5-20250929 temp=0.7 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "At Jan's home, she dusted the dresser more frequently than the fan, because the _ was more difficult to reach.\n\nA. fan\nB", 'len': 172}]
+          cand-grok-3-mini: confidence=0.900, tests_ok=False
+          cand-claude-sonnet-4-5: confidence=0.900, tests_ok=False
+
+[USAL] Updating reputation for 3 agents...
+          [USAL] cand-gemini-2.5-flash: 52.4 -> 52.8 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-grok-3-mini: 52.0 -> 52.5 (test=0.00, agree=1.00, conf=0.90)
+          [USAL] cand-claude-sonnet-4-5: 52.0 -> 52.4 (test=0.00, agree=1.00, conf=0.90)
+
+[Final Selection] Choosing best answer from 3 candidates...
+              🗳️  Voting: 3/3 agree (100.0%)
+              ✅ Selected by majority vote: cand-gemini-2.5-flash
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 5.62s
+        Reason: stage2_vote
+============================================================
+
+ ✅ $0.0009 5.6s
+[13/126] Processing: winogrande-811
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-811
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=52.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 52.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'In order to grow his plants naturally, he bought fertilizer and water. The _ was filled with nutrients.\n\nA. fertilizer\nB', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.900), early stop!
+          [USAL] cand-gemini-2.5-flash: 52.8 -> 53.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.82s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.8s
+[14/126] Processing: winogrande-896
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-896
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=53.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 53.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The athletes on the team of Christine were less tired than those on the team of Monica because the ones with _ did less ', 'len': 192}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-gemini-2.5-flash: 53.4 -> 54.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.4s
+[15/126] Processing: winogrande-204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=54.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 54.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a fat stomach.\n\nA. Cynthia\nB. Laura\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.899), early stop!
+          [USAL] cand-gemini-2.5-flash: 54.0 -> 54.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.67s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.7s
+[16/126] Processing: winogrande-105
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-105
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=54.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 54.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To pay for dinner, he used the credit card rather than cash. The _ was not available.\n\nA. cash\nB. card\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 54.6 -> 55.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.1s
+[17/126] Processing: winogrande-1039
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1039
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 55.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Felicia wanted to be pampered by Emily, so _ went to the jewelry store and bought an expensive ring.\n\nA. Felicia\nB. Emil', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.898), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.2 -> 55.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 3.78s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 3.8s
+[18/126] Processing: winogrande-239
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-239
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=55.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 55.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Mary was more reliable and hardworking than Rachel, but to be fair, _ had a better foundation as a child.\n\nA. Mary\nB. Ra', 'len': 167}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.897), early stop!
+          [USAL] cand-gemini-2.5-flash: 55.8 -> 56.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0040
+        Time: 11.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0040 11.3s
+[19/126] Processing: winogrande-193
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-193
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=56.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 56.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very cold.\n\nA. Lawrence\nB. Nick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-gemini-2.5-flash: 56.4 -> 57.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.5s
+[20/126] Processing: winogrande-1141
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1141
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=57.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 57.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Angela wanted to find a partner, but Victoria wanted to stay single, because _ was lonely.\n\nA. Angela\nB. Victoria\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.896), early stop!
+          [USAL] cand-gemini-2.5-flash: 57.0 -> 57.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 2.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 2.6s
+[21/126] Processing: winogrande-402
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-402
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=57.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 57.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The virus stuck to the clothes better than it stuck to the walls, because the _ had more deterrents on them.\n\nA. walls\nB', 'len': 172}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-gemini-2.5-flash: 57.6 -> 58.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.15s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.2s
+[22/126] Processing: winogrande-827
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-827
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=58.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 58.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Amy tried to spread the cake icing all over the cake but the _ was not enough.\n\nA. icing\nB. cake\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.895), early stop!
+          [USAL] cand-gemini-2.5-flash: 58.2 -> 58.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 2.02s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.0s
+[23/126] Processing: winogrande-302
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-302
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=58.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 58.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ian won a fish from Kenneth at the carnival so _ bagged it up and sent it home.\n\nA. Ian\nB. Kenneth\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.894), early stop!
+          [USAL] cand-gemini-2.5-flash: 58.8 -> 59.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.85s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[24/126] Processing: winogrande-319
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-319
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=59.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 59.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Matt wanted to change either the plain bathroom or the colorful bedroom, but the _ was already colorful.\n\nA. bedroom\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.894), early stop!
+          [USAL] cand-gemini-2.5-flash: 59.4 -> 60.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.82s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.8s
+[25/126] Processing: winogrande-56
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-56
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=60.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 60.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joe brought the horse out to the country quite a distance and gave him food but the _ was too much.\n\nA. food\nB. distance', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.893), early stop!
+          [USAL] cand-gemini-2.5-flash: 60.0 -> 60.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.61s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.6s
+[26/126] Processing: winogrande-61
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-61
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=60.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 60.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura used too much super glue on Erins hands, so _ needed to get to the doctor to separate their hands.\n\nA. Laura\nB. Er', 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-gemini-2.5-flash: 60.6 -> 61.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0027
+        Time: 7.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0027 7.4s
+[27/126] Processing: winogrande-529
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-529
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=61.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 61.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The personal trainer gave Laura but not Victoria the more difficult exercise because _ was out of shape.\n\nA. Laura\nB. Vi', 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.892), early stop!
+          [USAL] cand-gemini-2.5-flash: 61.2 -> 61.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 4.84s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0017 4.8s
+[28/126] Processing: winogrande-730
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-730
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=61.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 61.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The brutal boxing match was suitable for Christopher but not Samuel because _ did damage to his opponent.\n\nA. Christophe', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-gemini-2.5-flash: 61.8 -> 62.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.4s
+[29/126] Processing: winogrande-250
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-250
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=62.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 62.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The stain was darker on Jason's shirt than Donald's because _ spilled red wine and not white wine.\n\nA. Jason\nB. Donald\n\n", 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.891), early stop!
+          [USAL] cand-gemini-2.5-flash: 62.4 -> 63.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.10s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.1s
+[30/126] Processing: winogrande-953
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-953
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=63.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 63.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha told Lindsey to be careful with the porcelain doll; when she ignored her and dropped the doll, _ was very sorry', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.890), early stop!
+          [USAL] cand-gemini-2.5-flash: 63.0 -> 63.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.4s
+[31/126] Processing: winogrande-1159
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1159
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=63.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 63.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan kept a store of ammo in their house but Brian did not as _ approved of hunting.\n\nA. Logan\nB. Brian\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.890), early stop!
+          [USAL] cand-gemini-2.5-flash: 63.6 -> 64.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0015
+        Time: 4.41s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0015 4.4s
+[32/126] Processing: winogrande-100
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-100
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=64.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 64.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven believes they can buy happiness but Craig thinks otherwise as _ is very realistic.\n\nA. Steven\nB. Craig\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.889), early stop!
+          [USAL] cand-gemini-2.5-flash: 64.2 -> 64.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.5s
+[33/126] Processing: winogrande-1066
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1066
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=64.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 64.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Logan preferred to snowboard while Kyle wanted to do biathlon so _ went up the hill.\n\nA. Logan\nB. Kyle\n\nAnswer with the ', 'len': 145}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-gemini-2.5-flash: 64.8 -> 65.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.30s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.3s
+[34/126] Processing: winogrande-446
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-446
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=65.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 65.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Even though Ian had less of a sweet tooth than Robert, _ liked chocolate more.\n\nA. Ian\nB. Robert\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.888), early stop!
+          [USAL] cand-gemini-2.5-flash: 65.4 -> 66.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 2.69s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 2.7s
+[35/126] Processing: winogrande-410
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-410
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=66.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 66.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'When Benjamin put the family into debt, Adam filed for divorce; then the judge gave _ a withering look.\n\nA. Benjamin\nB. ', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-gemini-2.5-flash: 66.0 -> 66.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.39s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.4s
+[36/126] Processing: winogrande-826
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-826
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=66.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 66.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'He was having an asthma attack but forgot his inhaler so someone recommended coffee as the _ was unavailable.\n\nA. inhale', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.887), early stop!
+          [USAL] cand-gemini-2.5-flash: 66.6 -> 67.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.46s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.5s
+[37/126] Processing: winogrande-1265
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1265
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=67.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 67.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jane received a pet tortoise and an aquarium as a birthday gift, but the _ was too small.\n\nA. aquarium\nB. tortoise\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.886), early stop!
+          [USAL] cand-gemini-2.5-flash: 67.2 -> 67.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 2.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 2.9s
+[38/126] Processing: winogrande-199
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-199
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=67.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 67.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ lent him some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.886), early stop!
+          [USAL] cand-gemini-2.5-flash: 67.8 -> 68.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.82s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.8s
+[39/126] Processing: winogrande-203
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-203
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=68.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 68.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Whilst on the beach Cynthia loved to wear a bikini but Laura did not because _ had a flat stomach.\n\nA. Cynthia\nB. Laura\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.885), early stop!
+          [USAL] cand-gemini-2.5-flash: 68.4 -> 69.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.07s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.1s
+[40/126] Processing: winogrande-591
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-591
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=69.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 69.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James took out a seat from his office to create more space. The _ is too big.\n\nA. seat\nB. office\n\nAnswer with the option', 'len': 139}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-gemini-2.5-flash: 69.0 -> 69.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[41/126] Processing: winogrande-252
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-252
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=69.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 69.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Emily decided to eat a lot more yucca than Carrie did. _ was no longer hungry.\n\nA. Emily\nB. Carrie\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.884), early stop!
+          [USAL] cand-gemini-2.5-flash: 69.6 -> 70.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 7.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 7.2s
+[42/126] Processing: winogrande-941
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-941
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=70.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 70.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Kyle makes a lot more money than Nelson can make at his job, as _ is a cashier.\n\nA. Kyle\nB. Nelson\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-gemini-2.5-flash: 70.2 -> 70.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 8.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 8.3s
+[43/126] Processing: winogrande-844
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-844
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=70.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 70.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The teacher asked for the homework. Elena played games the night before and Tanya did not, so _ got an A.\n\nA. Elena\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.883), early stop!
+          [USAL] cand-gemini-2.5-flash: 70.8 -> 71.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 43.48s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 43.5s
+[44/126] Processing: winogrande-331
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-331
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=71.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 71.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Angela did a bunch of crunches and sit-ups but Cynthia didn't, consequentially _ had six- pack abs.\n\nA. Angela\nB. Cynthi", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.882), early stop!
+          [USAL] cand-gemini-2.5-flash: 71.4 -> 72.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 15.49s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 15.5s
+[45/126] Processing: winogrande-1103
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1103
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=72.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 72.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The apartment Brett rented was owned by Jason, so _ sent the rent for the apartment each month.\n\nA. Brett\nB. Jason\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.882), early stop!
+          [USAL] cand-gemini-2.5-flash: 72.0 -> 72.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 16.31s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 16.3s
+[46/126] Processing: winogrande-1232
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1232
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=72.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 72.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The living room was cleaner than the kitchen, because we spend more time in the the _ .\n\nA. living room\nB. kitchen\n\nAnsw', 'len': 157}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.881), early stop!
+          [USAL] cand-gemini-2.5-flash: 72.6 -> 73.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0016
+        Time: 16.32s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0016 16.3s
+[47/126] Processing: winogrande-1165
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1165
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=73.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 73.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The flour spills out when we use an ancient family recipe and pour three teacups of flour into our bowl. The _ is too sm', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-gemini-2.5-flash: 73.2 -> 73.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 32.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 32.3s
+[48/126] Processing: winogrande-479
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-479
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=73.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 73.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The quality of music produced largely depends on the instrument used. The _ is vital.\n\nA. Music\nB. Instrument\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.880), early stop!
+          [USAL] cand-gemini-2.5-flash: 73.8 -> 74.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 9.48s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 9.5s
+[49/126] Processing: winogrande-1005
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1005
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=74.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 74.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "James wanted to wear the corsage but it wouldn't fit around his wrist because his _ was too small.\n\nA. wrist\nB. corsage\n", 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-gemini-2.5-flash: 74.4 -> 75.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 2.98s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 3.0s
+[50/126] Processing: winogrande-729
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-729
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=75.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 75.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jessica found the heavy load at work overwhelming but not Katrina because _ did a poor job at planning their work.\n\nA. J', 'len': 180}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.879), early stop!
+          [USAL] cand-gemini-2.5-flash: 75.0 -> 75.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.14s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.1s
+[51/126] Processing: winogrande-357
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-357
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=75.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 75.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter since _ used a soothing skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 75.6 -> 76.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.93s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[52/126] Processing: winogrande-243
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-243
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The man paid cash for the phone but purchased the tablet with credit because the _ was pricy.\n\nA. Phone\nB. Tablet\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.878), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.2 -> 76.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.40s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.4s
+[53/126] Processing: winogrande-426
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-426
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=76.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 76.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Kenneth is accused of destroying drywall in Jeffrey's house, _ is leasing out the house.\n\nA. Kenneth\nB. Jeffrey\n\nAnswer ", 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.877), early stop!
+          [USAL] cand-gemini-2.5-flash: 76.8 -> 77.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.5s
+[54/126] Processing: winogrande-198
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-198
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=77.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 77.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig gifted Eric a new picnic table, because _ borrowed some money a while ago.\n\nA. Craig\nB. Eric\n\nAnswer with the opti', 'len': 141}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 77.4 -> 78.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.3s
+[55/126] Processing: winogrande-679
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-679
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 78.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Benjamin shaved his beard, but Nick had just grown one, so _ gave them all his old oils.\n\nA. Benjamin\nB. Nick\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.876), early stop!
+          [USAL] cand-gemini-2.5-flash: 78.0 -> 78.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 3.07s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 3.1s
+[56/126] Processing: winogrande-145
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-145
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=78.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 78.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Laura brought extensions to Monica at the salon, so that _ could treat their dreads professionally.\n\nA. Laura\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-gemini-2.5-flash: 78.6 -> 79.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.60s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.6s
+[57/126] Processing: winogrande-950
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-950
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=79.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 79.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The tree fell down sooner than the sapling because the roots of the _ were stronger.\n\nA. tree\nB. sapling\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.875), early stop!
+          [USAL] cand-gemini-2.5-flash: 79.2 -> 79.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.6s
+[58/126] Processing: winogrande-509
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-509
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=79.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 79.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Victoria decided to adopt a Yorkie, but Elena wouldn't even consider it, because _ loved small dogs.\n\nA. Victoria\nB. Ele", 'len': 165}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-gemini-2.5-flash: 79.8 -> 80.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 4.09s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0017 4.1s
+[59/126] Processing: winogrande-223
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-223
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=80.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 80.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It seemed more likely that Brett would wear a fedora rather than Justin because _ was known to dress stylishly.\n\nA. Bret', 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.874), early stop!
+          [USAL] cand-gemini-2.5-flash: 80.4 -> 81.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[60/126] Processing: winogrande-463
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-463
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=81.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 81.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Irena didn't like other people living in something before her so she felt more comfortable buying the house instead of t", 'len': 212}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.873), early stop!
+          [USAL] cand-gemini-2.5-flash: 81.0 -> 81.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.20s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.2s
+[61/126] Processing: winogrande-68
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-68
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=81.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 81.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Laura just loved the taste of green beans but Felicia hated the taste of them. _ didn't have a second serving.\n\nA. Laura", 'len': 174}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-gemini-2.5-flash: 81.6 -> 82.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 1.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 1.9s
+[62/126] Processing: winogrande-287
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-287
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=82.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 82.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was a very selfish individual but Kenneth was very generous. _ had a lot of good friends.\n\nA. Craig\nB. Kenneth\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.872), early stop!
+          [USAL] cand-gemini-2.5-flash: 82.2 -> 82.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.86s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[63/126] Processing: winogrande-64
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-64
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=82.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 82.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'John cannot touch the cup as it was just brought out of the refrigerator. He wanted some air to blow around it. The _ is', 'len': 189}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-gemini-2.5-flash: 82.8 -> 83.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.89s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[64/126] Processing: winogrande-339
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-339
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=83.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 83.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick really liked working in Human Resources and William wanted to work at the same company, and _ subsequently accep', 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.871), early stop!
+          [USAL] cand-gemini-2.5-flash: 83.4 -> 84.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.81s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.8s
+[65/126] Processing: winogrande-864
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-864
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=84.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 84.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "In the hotel laundry room, Felicia burned Mary's shirt while ironing it, so the manager gave _ a refund.\n\nA. Felicia\nB. ", 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-gemini-2.5-flash: 84.0 -> 84.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 1.95s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 1.9s
+[66/126] Processing: winogrande-928
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-928
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=84.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 84.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Although Amy worked harder and longer than Rebecca, _ was a more wealthy person overall.\n\nA. Amy\nB. Rebecca\n\nAnswer with', 'len': 150}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.870), early stop!
+          [USAL] cand-gemini-2.5-flash: 84.6 -> 85.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.73s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.7s
+[67/126] Processing: winogrande-714
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-714
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=85.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 85.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Brian agreed to buy soap for Kenneth while at the store, and _ paid them back the following day for the errand.\n\nA. Bria', 'len': 175}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.869), early stop!
+          [USAL] cand-gemini-2.5-flash: 85.2 -> 85.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.97s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.0s
+[68/126] Processing: winogrande-823
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-823
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=85.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 85.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was worried that Mary might be caught in a scam when they started their new job, but _ decided to trust their fri', 'len': 198}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-gemini-2.5-flash: 85.8 -> 86.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0025
+        Time: 5.77s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0025 5.8s
+[69/126] Processing: winogrande-79
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-79
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=86.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 86.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Aaron didn't know Dennis had a peanut allergy, so when _ made peanut chicken an ambulance was called.\n\nA. Aaron\nB. Denni", 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.868), early stop!
+          [USAL] cand-gemini-2.5-flash: 86.4 -> 87.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[70/126] Processing: winogrande-920
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-920
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=87.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 87.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The toddler kicked the hard furniture and soft toy, but only the _ caused pain.\n\nA. furniture\nB. toy\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-gemini-2.5-flash: 87.0 -> 87.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 1.34s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 1.3s
+[71/126] Processing: winogrande-70
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-70
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=87.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 87.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Blaze always wore a t-shirt instead of a shirt because he thought that the _ was stuffy and old fashioned.\n\nA. shirt\nB. ', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.867), early stop!
+          [USAL] cand-gemini-2.5-flash: 87.6 -> 88.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.0s
+[72/126] Processing: winogrande-36
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-36
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=88.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 88.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Joel researched laws and helped to open a preschool for Eric. Because _ is very good with kids.\n\nA. Joel\nB. Eric\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-gemini-2.5-flash: 88.2 -> 88.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 3.78s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 3.8s
+[73/126] Processing: winogrande-582
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-582
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=88.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 88.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Of the two owners, Jessica was far worse than Jennifer, because _ like to treat the dogs.\n\nA. Jessica\nB. Jennifer\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.866), early stop!
+          [USAL] cand-gemini-2.5-flash: 88.8 -> 89.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 3.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 3.4s
+[74/126] Processing: winogrande-436
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-436
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=89.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 89.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica was caught napping in class more often than Katrina because _ stayed up all night.\n\nA. Monica\nB. Katrina\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.865), early stop!
+          [USAL] cand-gemini-2.5-flash: 89.4 -> 90.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.79s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.8s
+[75/126] Processing: winogrande-192
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-192
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=90.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 90.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The maid took away a cozy blanket from Lawrence but not Nick because _ was very hot.\n\nA. Lawrence\nB. Nick\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.864), early stop!
+          [USAL] cand-gemini-2.5-flash: 90.0 -> 90.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.73s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.7s
+[76/126] Processing: winogrande-1149
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1149
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=90.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 90.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The actors practiced the scenes in the parking lot more than the scenes in the morgue, because the _ scenes are full of ', 'len': 197}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.864), early stop!
+          [USAL] cand-gemini-2.5-flash: 90.6 -> 91.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 2.00s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.0s
+[77/126] Processing: winogrande-220
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-220
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=91.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 91.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'You can grow cilantro in a garden or buy it at the store, but the _ variety will taste bland because it will be older.\n\n', 'len': 181}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-gemini-2.5-flash: 91.2 -> 91.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 2.00s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 2.0s
+[78/126] Processing: winogrande-733
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-733
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=91.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 91.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer got about with a seeing-eye dog but Mary did not because _ was blind.\n\nA. Jennifer\nB. Mary\n\nAnswer with the opt', 'len': 142}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.863), early stop!
+          [USAL] cand-gemini-2.5-flash: 91.8 -> 92.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 2.37s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 2.4s
+[79/126] Processing: winogrande-1258
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1258
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=92.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 92.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "She couldn't wear the bra, unlike the shirt, because the _ was the right size.\n\nA. bra\nB. shirt\n\nAnswer with the option ", 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.862), early stop!
+          [USAL] cand-gemini-2.5-flash: 92.4 -> 93.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 2.38s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 2.4s
+[80/126] Processing: winogrande-209
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-209
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=93.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 93.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ criticized the original language of the fil', 'len': 187}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.862), early stop!
+          [USAL] cand-gemini-2.5-flash: 93.0 -> 93.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 3.17s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 3.2s
+[81/126] Processing: winogrande-305
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-305
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=93.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 93.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Steven helped Derrick do research on the paper because _ had access to the internet.\n\nA. Steven\nB. Derrick\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.861), early stop!
+          [USAL] cand-gemini-2.5-flash: 93.6 -> 94.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.75s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.7s
+[82/126] Processing: winogrande-1164
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1164
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=94.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 94.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Donald was chosen to be a model while Dennis was passed over, because _ was exceptionally tall.\n\nA. Donald\nB. Dennis\n\nAn', 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.860), early stop!
+          [USAL] cand-gemini-2.5-flash: 94.2 -> 94.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 1.40s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 1.4s
+[83/126] Processing: winogrande-372
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-372
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=94.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 94.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Betty learned to play the cello well but Erin did not because _ was very impatient.\n\nA. Betty\nB. Erin\n\nAnswer with the o', 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.860), early stop!
+          [USAL] cand-gemini-2.5-flash: 94.8 -> 95.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.04s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.0s
+[84/126] Processing: winogrande-888
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-888
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=95.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 95.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Justin became very ill with pneumonia, so Matthew made him some soup; then _ finally went home.\n\nA. Justin\nB. Matthew\n\nA', 'len': 160}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.859), early stop!
+          [USAL] cand-gemini-2.5-flash: 95.4 -> 96.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 3.61s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 3.6s
+[85/126] Processing: winogrande-1169
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1169
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=96.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 96.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The cracker that was given to me was worse than the cookie, because the _ was stale.\n\nA. cracker\nB. cookie\n\nAnswer with ', 'len': 149}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.859), early stop!
+          [USAL] cand-gemini-2.5-flash: 96.0 -> 96.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 1.54s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 1.5s
+[86/126] Processing: winogrande-593
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-593
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=96.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 96.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'It was easier for the diner to follow their budget than the food truck because the _ had more money to spend.\n\nA. diner\n', 'len': 176}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.858), early stop!
+          [USAL] cand-gemini-2.5-flash: 96.6 -> 97.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.21s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.2s
+[87/126] Processing: winogrande-316
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-316
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=97.2, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 97.220
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "They discussed the company's budget at the business meeting but the _ was boring and the topic of the budget ran long.\n\n", 'len': 183}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.858), early stop!
+          [USAL] cand-gemini-2.5-flash: 97.2 -> 97.8 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0017
+        Time: 4.16s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0017 4.2s
+[88/126] Processing: winogrande-286
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-286
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=97.8, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 97.820
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The ambulance went to the hospital without Nelson inside but with Ryan because _ drove there in a car.\n\nA. Nelson\nB. Rya', 'len': 164}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.857), early stop!
+          [USAL] cand-gemini-2.5-flash: 97.8 -> 98.4 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.6s
+[89/126] Processing: winogrande-134
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-134
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=98.4, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 98.420
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "The house of Aaron took some damage from the storm but not Michael's house, because _ lived farther away.\n\nA. Aaron\nB. M", 'len': 169}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.857), early stop!
+          [USAL] cand-gemini-2.5-flash: 98.4 -> 99.0 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.2s
+[90/126] Processing: winogrande-1063
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1063
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=99.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 99.020
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Learning a new form of karate was difficult for Logan but not William because _ was not athletic.\n\nA. Logan\nB. William\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.856), early stop!
+          [USAL] cand-gemini-2.5-flash: 99.0 -> 99.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.27s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.3s
+[91/126] Processing: winogrande-264
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-264
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=99.6, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 99.620
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jennifer returned the pan to Sarah because _ had loaned it to her for the potluck party.\n\nA. Jennifer\nB. Sarah\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 99.6 -> 100.2 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.43s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.4s
+[92/126] Processing: winogrande-768
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-768
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Pho needs cilantro and beef to be tasty. However, the _ can be too savory.\n\nA. cilantro\nB. beef\n\nAnswer with the option ', 'len': 138}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.86s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[93/126] Processing: winogrande-544
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-544
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Rachel wanted children, but Megan had no interest, so _ looked for someone else to have babies with.\n\nA. Rachel\nB. Megan', 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.05s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.1s
+[94/126] Processing: winogrande-942
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-942
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The food that Hunter ate was spoiled but not that of Brett because _ left his food outside.\n\nA. Hunter\nB. Brett\n\nAnswer ', 'len': 154}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.2s
+[95/126] Processing: winogrande-828
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-828
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Patricia teaches Kindergarten students, Christine teaches High School students therefore _ doesn't read aloud a lot.\n\nA.", 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 3.18s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 3.2s
+[96/126] Processing: winogrande-1195
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1195
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The honey flows out slower from the bottle than the oil. The _ is viscous.\n\nA. honey\nB. oil\n\nAnswer with the option lett', 'len': 134}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.67s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.7s
+[97/126] Processing: winogrande-1114
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1114
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Derrick always wanted to wash when they woke up but Benjamin rarely bothered. _ was a very clean person.\n\nA. Derrick\nB. ', 'len': 171}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 1.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 1.9s
+[98/126] Processing: winogrande-362
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-362
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Ben had to drain both water and oil down the sink, but the _ was too fluid.\n\nA. oil\nB. water\n\nAnswer with the option let', 'len': 135}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0035
+        Time: 7.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0035 7.1s
+[99/126] Processing: winogrande-1098
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1098
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary didn't know what the currency of Mexico was but Lindsey knew _ had never been to Mexico before.\n\nA. Mary\nB. Lindsey", 'len': 163}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 2.79s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 2.8s
+[100/126] Processing: winogrande-375
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-375
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Erin was eating more than Betty was eating for dinner because _ had skipped lunch.\n\nA. Erin\nB. Betty\n\nAnswer with the op', 'len': 143}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.87s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[101/126] Processing: winogrande-76
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-76
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup but  _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAnswe", 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0013
+        Time: 4.12s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0013 4.1s
+[102/126] Processing: winogrande-77
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-77
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "Mary was helping Patricia's daughter put on makeup because _ watches a lot of makeup tutorials.\n\nA. Mary\nB. Patricia\n\nAn", 'len': 159}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 2.11s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.1s
+[103/126] Processing: winogrande-799
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-799
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Tanya looked for an escape route while Elena did not because _ liked to live in the moment.\n\nA. Tanya\nB. Elena\n\nAnswer w', 'len': 153}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.96s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 2.0s
+[104/126] Processing: winogrande-579
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-579
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "I couldn't figure out what my costume would be for Halloween Peter Pan or Snow White. The _ costume I'd have to make mys", 'len': 201}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0002
+        Time: 1.29s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0002 1.3s
+[105/126] Processing: winogrande-351
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-351
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Elena brought the horse to the stables owned by Cynthia, so _ could sell the animal.\n\nA. Elena\nB. Cynthia\n\nAnswer with t', 'len': 148}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0009
+        Time: 2.72s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0009 2.7s
+[106/126] Processing: winogrande-210
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-210
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Lawrence liked watching foreign movies with subtitles unlike Jason because _ appreciated the original language of the fi', 'len': 188}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.92s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[107/126] Processing: winogrande-665
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-665
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Monica did not need a recipe in order to mix a cake but Angela did because _ was an instinctive baker.\n\nA. Monica\nB. Ang', 'len': 166}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.28s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.3s
+[108/126] Processing: winogrande-516
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-516
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Samantha was not interested in hearing about Tanya awesome marriage, because _ was happy all the time.\n\nA. Samantha\nB. T', 'len': 167}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 2.85s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 2.8s
+[109/126] Processing: winogrande-858
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-858
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': "My home is closer to the store than John's house, because the _ of me is next door.\n\nA. home\nB. house\n\nAnswer with the o", 'len': 144}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0060
+        Time: 14.25s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0060 14.2s
+[110/126] Processing: winogrande-434
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-434
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'William wanted to go biking but Aaron wanted to stay home, so _ went out by themselves.\n\nA. William\nB. Aaron\n\nAnswer wit', 'len': 151}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.4s
+[111/126] Processing: winogrande-901
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-901
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James was able to hide the book inside his jacket because the _ is big.\n\nA. book\nB. jacket\n\nAnswer with the option lette', 'len': 133}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0005
+        Time: 1.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0005 1.9s
+[112/126] Processing: winogrande-45
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-45
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Since Craig wears clear contacts and William wears colored ones, it is safe to assume that _ loves the color of their ey', 'len': 187}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0010
+        Time: 2.73s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0010 2.7s
+[113/126] Processing: winogrande-150
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-150
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Megan took Monica to a wood shack in the mountains, because _ was a kidnapper trying to hide.\n\nA. Megan\nB. Monica\n\nAnswe', 'len': 156}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0019
+        Time: 5.17s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0019 5.2s
+[114/126] Processing: winogrande-1162
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1162
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig made sure to stretch before working out but Christopher never did, so _ frequently got injuries.\n\nA. Craig\nB. Chri', 'len': 170}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.79s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.8s
+[115/126] Processing: winogrande-358
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-358
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig had problems with dry skin but not Hunter because _ used an irritating skin lotion.\n\nA. Craig\nB. Hunter\n\nAnswer wi', 'len': 152}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.94s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.9s
+[116/126] Processing: winogrande-875
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-875
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Craig was all about self-publishing his first album, but a PRO rep Lawrence advised against it. _ advocated for a very h', 'len': 217}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 1.83s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 1.8s
+[117/126] Processing: winogrande-1204
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1204
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The shoddy bridge held secure for when the cars were getting passengers across the town to their destinations on time. H', 'len': 213}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.56s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.6s
+[118/126] Processing: winogrande-147
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-147
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The installation process was simpler for the cable over the internet because the man had already installed the _ previou', 'len': 189}]
+          Test result: syntax_error
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0053
+        Time: 13.42s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0053 13.4s
+[119/126] Processing: winogrande-1249
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1249
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'To remove the stain he reached for soap first, then got up and got a bowl.  The _ was far away.\n\nA. soap\nB. bowl\n\nAnswer', 'len': 155}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0003
+        Time: 1.62s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0003 1.6s
+[120/126] Processing: winogrande-1229
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1229
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'James always feel weak whenever he walked the length of his street so he decided walking just the length of the lawn. Th', 'len': 194}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0004
+        Time: 1.75s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0004 1.7s
+[121/126] Processing: winogrande-669
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-669
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Carl needed a new top after ripping his epaulette shirt. He wanted a  flannel shirt because the _ is old.\n\nA. epaulette ', 'len': 185}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0011
+        Time: 3.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0011 3.4s
+[122/126] Processing: winogrande-792
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-792
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Jen made charcoal to use as a mask and as toothpaste, but using the _ made her skin very black.\n\nA. mask\nB. toothpaste\n\n', 'len': 161}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.44s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.4s
+[123/126] Processing: winogrande-727
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-727
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Maria told Monica they looked too sick to go to work and asked if they had a fever. _ went to the Doctor.\n\nA. Maria\nB. M', 'len': 168}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0007
+        Time: 2.35s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0007 2.4s
+[124/126] Processing: winogrande-442
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-442
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The lips on Cynthia were much smaller than Monica because _ got hit with a softball in the mouth.\n\nA. Cynthia\nB. Monica\n', 'len': 162}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0012
+        Time: 3.52s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0012 3.5s
+[125/126] Processing: winogrande-1226
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-1226
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'Patricia had to pay less tax than Cynthia because _ made more money in the year.\n\nA. Patricia\nB. Cynthia\n\nAnswer with th', 'len': 147}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0006
+        Time: 2.13s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0006 2.1s
+[126/126] Processing: winogrande-84
+============================================================
+[TrustRoute-USAL] Starting task: winogrande-84
+============================================================
+[Agent Ranking] Top 3:
+  1. cand-gemini-2.5-flash: rep=100.0, cost=$0.00037
+  2. cand-grok-3-mini: rep=52.5, cost=$0.00037
+  3. cand-claude-sonnet-4-5: rep=52.4, cost=$0.00037
+
+[Stage 1] Using top agent: cand-gemini-2.5-flash
+          Reputation: 100.000
+[DEBUG] model=gemini-2.5-flash temp=0.2 max_tokens=1024 msgs=2
+[DEBUG] messages_preview_first2=[{'role': 'system', 'content_head': 'You are a helpful AI assistant that adapts to different problem types.\nFor code generation tasks, write clean, executabl', 'len': 254}, {'role': 'user', 'content_head': 'The filter in the living room needed to be changed more often than the one in the bedroom because the _ was cleaner.\n\nA.', 'len': 186}]
+          Test result: exec_error:NameError
+[Stage 1] ✅ High confidence (0.900 >= 0.855), early stop!
+          [USAL] cand-gemini-2.5-flash: 100.0 -> 100.6 (Δ+0.60)
+
+============================================================
+[Result] Agent: cand-gemini-2.5-flash
+        Cost: $0.0008
+        Time: 2.65s
+        Reason: stage1_early_stop
+============================================================
+
+ ✅ $0.0008 2.7s
+
+✅ Batch completed.

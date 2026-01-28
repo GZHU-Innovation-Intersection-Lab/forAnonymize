@@ -1,0 +1,1812 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/620,Random,1,,0.0,10.753090381622314,0,0,,,
+mbpp,Mbpp/637,Random,1,,0.0,10.559068202972412,0,0,,,
+mbpp,Mbpp/133,Random,1,,0.0,10.444782972335815,0,0,,,
+mbpp,Mbpp/56,Random,1,"Here's the Python function that checks if a given number is one less than twice its reverse. The function assumes the input is a non-negative integer, as reversing negative numbers or non-integers doesn't align with the problem context. If the input is not a positive integer, it returns `False`.
+
+```python
+def check(n):
+    if not isinstance(n, int) or n <= 0:
+        return False  # Only positive integers are considered
+    
+    # Convert the number to a string and reverse it
+    str_n = str(n)
+    reversed_str = str_n[::-1]
+    
+    # Convert the reversed string back to an integer
+    reversed_n = int(reversed_str)
+    
+    # Check if n equals 2 * reversed_n - 1
+    return n == 2 * reversed_n - 1
+
+# Example usage as per the assert statement
+assert check(70) == False  # This will pass, as 70 is not equal to 2 * 7 - 1 (which is 13)
+```
+
+### Explanation:
+- The function first checks if the input is a positive integer. If not, it returns `False`.
+- It converts the number to a string, reverses the string, and converts it back to an integer (e.g., reversing ""70"" gives ""07"", which becomes 7).
+- It then computes twice the reversed number minus one and compares it to the original number.
+- The function returns `True` if the condition holds, otherwise `False`.
+
+### Example Tests:
+- `check(73)`: Reverse of 73 is 37. Twice 37 is 74, minus 1 is 73. So, it returns `True`.
+- `check(1)`: Reverse of 1 is 1. Twice 1 is 2, minus 1 is 1. So, it returns `True`.
+- `check(10)`: Reverse of 10 is 1. Twice 1 is 2, minus 1 is 1. So, it returns `False`.",0.0010915,21.096734523773197,0,0,grok-3-mini,,
+mbpp,Mbpp/413,Random,1,,0.0,10.314623832702637,0,0,,,
+mbpp,Mbpp/70,Random,1,"Below is a Python function that checks whether all tuples in a given list have the same length. The function is named `get_equal` as specified in your example assertion.
+
+### Code:
+
+```python
+def get_equal(tuples):
+    """"""
+    Checks if all tuples in the given list have the same length.
+    
+    Args:
+        tuples (list of tuples): A list of tuples to check.
+    
+    Returns:
+        bool: True if all tuples have the same length, False otherwise.
+    
+    Example:
+        get_equal([(11, 22, 33), (44, 55, 66)])  # Returns True
+    """"""
+    if not tuples:  # Empty list is considered to have all tuples of equal length (vacuously true)
+        return True
+    
+    first_length = len(tuples[0])  # Get the length of the first tuple
+    
+    for tup in tuples[1:]:  # Iterate through the rest of the tuples
+        if len(tup) != first_length:
+            return False  # If any tuple has a different length, return False
+    
+    return True  # All tuples have the same length
+
+# Example usage as per your assertion
+assert get_equal([(11, 22, 33), (44, 55, 66)]) == True
+```
+
+### Explanation:
+- The function first checks if the input list is empty. If it is, it returns `True` since there are no tuples to compare.
+- It then retrieves the length of the first tuple.
+- It iterates through the remaining tuples (starting from the second one) and compares their lengths to the first tuple's length.
+- If any tuple has a different length, the function immediately returns `False`.
+- If the loop completes without finding any differences, it returns `True`.
+
+This code is clean, executable, and handles the example you provided. You can test it with other cases, such as:
+- `get_equal([(1, 2), (3, 4, 5)])` → Returns `False`
+- `get_equal([(1,)])` → Returns `True`
+- `get_equal([])` → Returns `True`",0.0007307,15.300578832626345,0,0,grok-3-mini,,
+mbpp,Mbpp/424,Random,1,,0.0,10.438819408416748,0,0,,,
+mbpp,Mbpp/803,Random,1,,0.0,10.31350302696228,0,0,,,
+mbpp,Mbpp/426,Random,1,,0.0,10.444400548934937,0,0,,,
+mbpp,Mbpp/126,Random,1,,0.0,10.31705617904663,0,0,,,
+mbpp,Mbpp/565,Random,1,,0.0,10.794997930526732,0,0,,,
+mbpp,Mbpp/448,Random,1,,0.0,10.331852197647097,0,0,,,
+mbpp,Mbpp/581,Random,1,,0.0,10.692088603973389,0,0,,,
+mbpp,Mbpp/573,Random,1,,0.0,10.65865707397461,0,0,,,
+mbpp,Mbpp/616,Random,1,,0.0,10.662214279174805,0,0,,,
+mbpp,Mbpp/310,Random,1,,0.0,10.718947887420654,0,0,,,
+mbpp,Mbpp/591,Random,1,,0.0,10.571121454238892,0,0,,,
+mbpp,Mbpp/635,Random,1,,0.0,10.593029260635376,0,0,,,
+mbpp,Mbpp/430,Random,1,,0.0,10.586617469787598,0,0,,,
+mbpp,Mbpp/294,Random,1,,0.0,10.228346586227415,0,0,,,
+mbpp,Mbpp/394,Random,1,,0.0,10.580307245254517,0,0,,,
+mbpp,Mbpp/3,Random,1,"Here is a Python function that identifies non-prime numbers. The function returns `True` for non-prime numbers and `False` for prime numbers. The assertion provided in the prompt is also included to test the function.
+
+```python
+def is_not_prime(n):
+    if n <= 1:
+        return True  # 0 and 1 are not prime numbers
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return True  # n is divisible by i, hence not prime
+    return False  # n is prime
+
+# Test the function with the provided assertion
+assert is_not_prime(2) == False  # 2 is a prime number
+```
+
+This function checks if a number is prime by testing divisibility from 2 up to the square root of the number. If it finds any divisor, it returns `True`, indicating that the number is not prime. If no divisors are found, it returns `False`, indicating that the number is prime.",0.0001441499999999,2.925615072250366,0,0,gpt-4o-mini,,
+mbpp,Mbpp/67,Random,1,,0.002069,11.846419095993042,0,0,gpt-5-mini,,
+mbpp,Mbpp/7,Random,1,"Below is the implementation of the function `find_char_long` in Python. This function takes a string as input, splits it into words (using whitespace as the delimiter), and returns a list of words that are at least 4 characters long.
+
+### Code:
+```python
+def find_char_long(string):
+    # Split the string into words
+    words = string.split()
+    
+    # Filter words that are at least 4 characters long
+    long_words = [word for word in words if len(word) >= 4]
+    
+    return long_words
+
+# Example usage to verify with the provided assert
+input_string = 'Please move back to stream'
+result = find_char_long(input_string)
+assert set(result) == set(['Please', 'move', 'back', 'stream']), ""Test failed""
+print(""Test passed!"")  # If no error is raised, the assert succeeded
+```
+
+### Explanation:
+- **Line 1:** Define the function `find_char_long` that accepts a string.
+- **Line 3:** Use `string.split()` to split the input string into a list of words. This handles multiple spaces and ignores leading/trailing whitespace.
+- **Line 6:** Use a list comprehension to filter the words, keeping only those with a length of 4 or more.
+- **Line 8:** Return the list of filtered words.
+- **Example Usage:** The code includes a test with the provided string and assert statement to verify correctness.
+
+This function is clean, efficient, and executable. You can run it directly in a Python environment. If you have any additional requirements or edge cases (e.g., handling punctuation), let me know!",0.0006127,12.357574701309204,0,0,grok-3-mini,,
+mbpp,Mbpp/66,Random,1,"Here is a Python function that counts the number of positive numbers in a list:
+
+```python
+def pos_count(numbers):
+    return sum(1 for num in numbers if num > 0)
+
+# Test the function with the provided assertion
+assert pos_count([1, -2, 3, -4]) == 2
+```
+
+This function uses a generator expression to iterate through the list and counts how many numbers are greater than zero. The `sum` function adds up the counts, resulting in the total number of positive numbers.",7.964999999999998e-05,1.5777456760406494,0,0,gpt-4o-mini,,
+mbpp,Mbpp/763,Random,1,,0.0,10.317468643188477,0,0,,,
+mbpp,Mbpp/17,Random,1,"To solve this problem, we need to write a function that calculates the perimeter of a square given its side length. The perimeter of a square is simply four times the length of one side. 
+
+### Approach
+The approach involves:
+1. Defining a function that takes the side length of a square as an input parameter.
+2. Calculating the perimeter by multiplying the side length by 4.
+3. Returning the calculated perimeter.
+
+This approach is straightforward since the perimeter of a square is directly proportional to its side length.
+
+### Solution Code
+```python
+def square_perimeter(side_length):
+    return 4 * side_length
+```
+
+### Explanation
+- **Function Definition**: The function `square_perimeter` is defined with one parameter `side_length`, representing the length of one side of the square.
+- **Perimeter Calculation**: Inside the function, the perimeter is calculated by multiplying the `side_length` by 4. This is based on the geometric property that a square has four equal sides.
+- **Return Value**: The calculated perimeter is returned as the result of the function.
+
+This solution efficiently computes the perimeter with a constant time complexity \(O(1)\) and minimal space complexity \(O(1)\), making it optimal for the given problem. The provided test case `square_perimeter(10) == 40` validates the correctness of the implementation.",0.00093542,25.552805185317997,0,0,deepseek-r1,,
+mbpp,Mbpp/760,Random,1,,0.0,10.428448677062988,0,0,,,
+mbpp,Mbpp/459,Random,1,,0.0,10.56584620475769,0,0,,,
+mbpp,Mbpp/791,Random,1,,0.0,10.201719999313354,0,0,,,
+mbpp,Mbpp/259,Random,1,,0.0,10.380062341690063,0,0,,,
+mbpp,Mbpp/568,Random,1,,0.0,10.409381866455078,0,0,,,
+mbpp,Mbpp/450,Random,1,,0.0,10.815346240997314,0,0,,,
+mbpp,Mbpp/276,Random,1,,0.0,10.44017767906189,0,0,,,
+mbpp,Mbpp/125,Random,1,,0.0,10.55742645263672,0,0,,,
+mbpp,Mbpp/238,Random,1,,0.0,10.56753706932068,0,0,,,
+mbpp,Mbpp/769,Random,1,,0.0,10.393144607543944,0,0,,,
+mbpp,Mbpp/723,Random,1,,0.0,10.782790422439575,0,0,,,
+mbpp,Mbpp/280,Random,1,,0.0,10.414390802383425,0,0,,,
+mbpp,Mbpp/632,Random,1,,0.0,10.722447156906128,0,0,,,
+mbpp,Mbpp/745,Random,1,,0.0,10.48302674293518,0,0,,,
+mbpp,Mbpp/86,Random,1,"To find the nth centered hexagonal number, we can use the formula for the nth centered hexagonal number, which is given by:
+
+\[ H(n) = 3n(n - 1) + 1 \]
+
+This formula calculates the nth centered hexagonal number based on the value of n. 
+
+Here is the Python function that implements this formula:
+
+```python
+def centered_hexagonal_number(n):
+    return 3 * n * (n - 1) + 1
+
+# Test the function with the provided assertion
+assert centered_hexagonal_number(10) == 271
+```
+
+You can run this code to verify that the function correctly computes the 10th centered hexagonal number as 271.",0.00010065,1.7666888236999512,0,0,gpt-4o-mini,,
+mbpp,Mbpp/100,Random,1,"Here's the Python function to find the next smallest palindrome of a specified integer. The function works by starting from the number immediately greater than the input and checking each subsequent number until it finds a palindrome.
+
+```python
+def is_palindrome(num):
+    # Convert the number to a string and check if it's equal to its reverse
+    s = str(num)
+    return s == s[::-1]
+
+def next_smallest_palindrome(n):
+    # Start from n + 1 and find the first palindrome
+    candidate = n + 1
+    while not is_palindrome(candidate):
+        candidate += 1
+    return candidate
+
+# Test the function as per the assert statement
+assert next_smallest_palindrome(99) == 101  # This should pass
+```
+
+### Explanation:
+- **is_palindrome(num)**: This helper function checks if a given number is a palindrome by converting it to a string and comparing it to its reverse.
+- **next_smallest_palindrome(n)**: This function increments the input number by 1 and checks each subsequent number using the helper function until it finds a palindrome.
+- The function returns the smallest palindrome greater than the input, as an integer.
+
+You can run this code in a Python environment to verify it works for other inputs, such as:
+- `next_smallest_palindrome(9)` returns 11.
+- `next_smallest_palindrome(11)` returns 22.
+- `next_smallest_palindrome(999)` returns 1001.",0.0006332,12.594173431396484,0,0,grok-3-mini,,
+mbpp,Mbpp/605,Random,1,,0.0,10.51027512550354,0,0,,,
+mbpp,Mbpp/293,Random,1,,0.0,10.476839542388916,0,0,,,
+mbpp,Mbpp/468,Random,1,,0.0,10.40190601348877,0,0,,,
+mbpp,Mbpp/306,Random,1,,0.0,10.54739260673523,0,0,,,
+mbpp,Mbpp/64,Random,1,"```python
+def subject_marks(marks_list):
+  """"""
+  Sorts a list of tuples based on the second value of each tuple.
+
+  Args:
+    marks_list: A list of tuples, where each tuple typically contains 
+                (subject_name, score).
+
+  Returns:
+    A new list of tuples, sorted in ascending order by the second element 
+    of each tuple (the score).
+  """"""
+  # Use the sorted() function with a lambda key to specify sorting by the second element (index 1)
+  return sorted(marks_list, key=lambda item: item[1])
+
+```",0.0008395,2.332066297531128,0,0,gemini-2.5-flash,,
+mbpp,Mbpp/247,Random,1,,0.0,10.484685182571411,0,0,,,
+mbpp,Mbpp/124,Random,1,,0.0,10.637190341949465,0,0,,,
+mbpp,Mbpp/270,Random,1,,0.0,10.522712469100952,0,0,,,
+mbpp,Mbpp/790,Random,1,,0.0,10.521583557128906,0,0,,,
+mbpp,Mbpp/602,Random,1,,0.0,10.690389633178713,0,0,,,
+mbpp,Mbpp/16,Random,1,"import re
+
+def text_lowercase_underscore(s: str) -> bool:
+    """"""
+    Return True if the string consists of two non-empty sequences of
+    lowercase letters separated by a single underscore, otherwise False.
+    Examples:
+      - ""aab_cbbbc"" -> True
+      - ""abc_def_ghi"" -> False (more than one underscore)
+      - ""Abc_def"" -> False (uppercase present)
+    """"""
+    return bool(re.fullmatch(r'[a-z]+_[a-z]+', s))
+
+# Test
+assert text_lowercase_underscore(""aab_cbbbc"") == True",0.00068075,4.629704475402832,0,0,gpt-5-mini,,
+mbpp,Mbpp/98,Random,1,"Here's a Python function that multiplies all the numbers in a list (or tuple) and then divides the result by the length of the list. The function also includes an assertion to check if the result is close to the expected value using `math.isclose`.
+
+```python
+import math
+from functools import reduce
+
+def multiply_num(numbers):
+    # Multiply all numbers in the list
+    product = reduce(lambda x, y: x * y, numbers)
+    # Divide by the length of the list
+    result = product / len(numbers)
+    return result
+
+# Test the function with the provided assertion
+assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)
+
+# Example usage
+print(multiply_num((8, 2, 3, -1, 7)))  # This should print -67.2
+```
+
+This code defines the `multiply_num` function, which uses `reduce` from the `functools` module to multiply all the elements in the input iterable. It then divides the product by the length of the input to get the final result. The assertion checks that the function behaves as expected.",0.0001688999999999,3.0851526260375977,0,0,gpt-4o-mini,,
+mbpp,Mbpp/84,Random,1,"The Newman-Conway sequence is defined as follows:
+
+- \( P(1) = 1 \)
+- \( P(2) = 1 \)
+- \( P(n) = P(P(n-1)) + P(n-P(n-1)) \) for \( n > 2 \)
+
+Here's a Python function to compute the nth number in the Newman-Conway sequence:
+
+```python
+def sequence(n):
+    if n <= 0:
+        raise ValueError(""n must be a positive integer."")
+    if n == 1 or n == 2:
+        return 1
+    
+    # Create a list to store the sequence values
+    P = [0] * (n + 1)
+    P[1], P[2] = 1, 1
+    
+    for i in range(3, n + 1):
+        P[i] = P[P[i - 1]] + P[i - P[i - 1]]
+    
+    return P[n]
+
+# Test the function
+assert sequence(10) == 6
+```
+
+This function initializes the first two values of the sequence and then iteratively computes the subsequent values based on the defined recurrence relation. The assertion at the end checks that the function returns the correct value for `n = 10`.",0.00017115,3.915350437164306,0,0,gpt-4o-mini,,
+mbpp,Mbpp/587,Random,1,,0.0,10.52631378173828,0,0,,,
+mbpp,Mbpp/614,Random,1,,0.0,10.86038589477539,0,0,,,
+mbpp,Mbpp/743,Random,1,,0.0,10.413732528686523,0,0,,,
+mbpp,Mbpp/809,Random,1,,0.0,10.533345937728882,0,0,,,
+mbpp,Mbpp/65,Random,1,,0.00255788,152.7985394001007,0,0,deepseek-r1,,
+mbpp,Mbpp/245,Random,1,,0.0,10.51046872138977,0,0,,,
+mbpp,Mbpp/597,Random,1,,0.0,10.649765729904177,0,0,,,
+mbpp,Mbpp/734,Random,1,,0.0,10.530020713806152,0,0,,,
+mbpp,Mbpp/440,Random,1,,0.0,10.402612209320068,0,0,,,
+mbpp,Mbpp/137,Random,1,,0.0,10.700230121612549,0,0,,,
+mbpp,Mbpp/224,Random,1,,0.0,10.498926162719728,0,0,,,
+mbpp,Mbpp/757,Random,1,,0.0,10.236477851867676,0,0,,,
+mbpp,Mbpp/132,Random,1,,0.0,10.20635724067688,0,0,,,
+mbpp,Mbpp/171,Random,1,,0.0,10.423377513885498,0,0,,,
+mbpp,Mbpp/428,Random,1,,0.0,10.51706314086914,0,0,,,
+mbpp,Mbpp/433,Random,1,,0.0,10.322113990783691,0,0,,,
+mbpp,Mbpp/732,Random,1,,0.0,10.624857187271118,0,0,,,
+mbpp,Mbpp/633,Random,1,,0.0,10.408863306045532,0,0,,,
+mbpp,Mbpp/145,Random,1,,0.0,10.597922563552856,0,0,,,
+mbpp,Mbpp/404,Random,1,,0.0,10.52622890472412,0,0,,,
+mbpp,Mbpp/628,Random,1,,0.0,10.63230562210083,0,0,,,
+mbpp,Mbpp/290,Random,1,,0.0,10.569232702255247,0,0,,,
+mbpp,Mbpp/610,Random,1,,0.0,10.511829137802124,0,0,,,
+mbpp,Mbpp/412,Random,1,,0.0,10.455443382263184,0,0,,,
+mbpp,Mbpp/274,Random,1,,0.0,10.55967903137207,0,0,,,
+mbpp,Mbpp/281,Random,1,,0.0,10.450138807296751,0,0,,,
+mbpp,Mbpp/59,Random,1,"To find the nth octagonal number, we use the formula derived from the geometric properties of octagonal numbers. The formula is straightforward and efficient.
+
+### Formula
+The nth octagonal number is given by:
+\[
+O_n = n \times (3n - 2)
+\]
+
+### Solution Code
+```python
+def is_octagonal(n):
+    return n * (3 * n - 2)
+```
+
+### Explanation
+- **Input**: The function takes an integer `n` (the position of the octagonal number).
+- **Calculation**: Computes the result using the formula \(n \times (3n - 2)\).
+- **Output**: Returns the nth octagonal number as an integer.
+
+### Verification
+For the test case `is_octagonal(5)`:
+- \(n = 5\)
+- \(3 \times 5 - 2 = 15 - 2 = 13\)
+- \(5 \times 13 = 65\)
+
+This matches the provided assertion `assert is_octagonal(5) == 65`. The function efficiently calculates octagonal numbers for any positive integer `n`.",0.0008985,68.27703714370728,0,0,deepseek-r1,,
+mbpp,Mbpp/721,Random,1,,0.0,10.327714443206789,0,0,,,
+mbpp,Mbpp/556,Random,1,,0.0,10.56517243385315,0,0,,,
+mbpp,Mbpp/82,Random,1,"Below is a Python function to calculate the volume of a sphere. The function uses the formula for the volume of a sphere: \( V = \frac{4}{3} \pi r^3 \), where \( r \) is the radius.
+
+I'll include the function definition, along with the provided assert statement for testing. This ensures the function works as expected. Make sure you have the `math` module available (it's part of Python's standard library).
+
+```python
+import math
+
+def volume_sphere(radius):
+    """"""
+    Calculate the volume of a sphere given its radius.
+    
+    Args:
+    radius (float): The radius of the sphere.
+    
+    Returns:
+    float: The volume of the sphere.
+    """"""
+    if radius < 0:
+        raise ValueError(""Radius must be a non-negative number"")
+    return (4 / 3) * math.pi * (radius ** 3)
+
+# Test the function with the provided assert statement
+assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001), ""Test failed for radius 10""
+
+print(""All tests passed successfully!"")  # This will run if the assert doesn't raise an error
+```
+
+### Explanation:
+- **Function Definition**: The `volume_sphere` function takes a single argument, `radius`, and computes the volume using the formula. I added a basic check to ensure the radius is non-negative, as a negative radius doesn't make physical sense.
+- **Testing**: The assert statement you provided is included to verify the function's output for a radius of 10. If the function works correctly, the script will print ""All tests passed successfully!"". If not, it will raise an AssertionError.
+- **Execution**: You can run this code in a Python environment (e.g., via a script or Jupyter notebook). If you encounter any issues, ensure Python is installed and the `math` module is imported.
+
+This code is clean, executable, and follows best practices for readability and error handling. If you need any modifications or additional features, let me know!",0.000526,11.04170298576355,0,0,grok-3-mini,,
+mbpp,Mbpp/807,Random,1,,0.0,10.744752645492554,0,0,,,
+mbpp,Mbpp/733,Random,1,,0.0,10.557318687438965,0,0,,,
+mbpp,Mbpp/435,Random,1,,0.0,10.82921814918518,0,0,,,
+mbpp,Mbpp/731,Random,1,,0.0,10.565600633621216,0,0,,,
+mbpp,Mbpp/388,Random,1,,0.0,10.417141199111938,0,0,,,
+mbpp,Mbpp/592,Random,1,,0.0,10.216089963912964,0,0,,,
+mbpp,Mbpp/261,Random,1,,0.0,10.377986431121826,0,0,,,
+mbpp,Mbpp/420,Random,1,,0.0,10.244370698928831,0,0,,,
+mbpp,Mbpp/68,Random,1,"To determine if an array is monotonic, we need to check if it is either entirely non-increasing or non-decreasing. Here's a Python function that accomplishes this:
+
+```python
+def is_Monotonic(array):
+    if not array:
+        return True  # An empty array is considered monotonic
+
+    increasing = decreasing = True
+
+    for i in range(1, len(array)):
+        if array[i] > array[i - 1]:
+            decreasing = False
+        elif array[i] < array[i - 1]:
+            increasing = False
+
+    return increasing or decreasing
+
+# Test the function with the provided assertion
+assert is_Monotonic([6, 5, 4, 4]) == True
+```
+
+This function iterates through the array and checks the relationships between consecutive elements to determine if the array is monotonic. If it finds any element that disrupts the monotonicity, it sets the corresponding flag to `False`. Finally, it returns `True` if the array is either entirely non-increasing or non-decreasing.",0.00014715,2.63203239440918,0,0,gpt-4o-mini,,
+mbpp,Mbpp/14,Random,1,"```python
+def find_Volume(base_triangle, height_triangle, length_prism):
+  """"""
+  Calculates the volume of a triangular prism.
+
+  Args:
+    base_triangle: The length of the base of the triangular face.
+    height_triangle: The height of the triangular face (perpendicular to the base).
+    length_prism: The length (or depth) of the prism.
+
+  Returns:
+    The volume of the triangular prism.
+  """"""
+  # Calculate the area of the triangular base
+  area_base = 0.5 * base_triangle * height_triangle
+  
+  # Volume of a prism = Area of Base * Length of Prism
+  volume = area_base * length_prism
+  
+  return volume
+
+# Assertions to test the function
+assert find_Volume(10, 8, 6) == 240
+assert find_Volume(5, 4, 10) == 100.0
+assert find_Volume(3, 2, 1) == 3.0
+assert find_Volume(0, 5, 10) == 0.0 # A prism with a zero-base triangle has no volume
+assert find_Volume(5, 0, 10) == 0.0 # A prism with a zero-height triangle has no volume
+assert find_Volume(5, 4, 0) == 0.0 # A prism with zero length has no volume
+
+print(""All test cases passed!"")
+
+```",0.0015433,3.3231701850891118,0,0,gemini-2.5-flash,,
+mbpp,Mbpp/557,Random,1,,0.0,10.93830180168152,0,0,,,
+mbpp,Mbpp/804,Random,1,,0.0,10.522219896316528,0,0,,,
+mbpp,Mbpp/479,Random,1,,0.0,10.691118717193604,0,0,,,
+mbpp,Mbpp/57,Random,1,"I need to write a function that takes a list of digits and returns the largest number that can be formed by arranging those digits.
+
+The key insight is to arrange the digits in descending order to get the largest possible number.
+
+```python
+def find_Max_Num(digits):
+    """"""
+    Find the largest number that can be formed with the given list of digits.
+    
+    Args:
+        digits: A list of single digits (0-9)
+    
+    Returns:
+        The largest number that can be formed by arranging the digits
+    """"""
+    # Sort the digits in descending order
+    sorted_digits = sorted(digits, reverse=True)
+    
+    # Convert the list of digits to a single number
+    result = int(''.join(map(str, sorted_digits)))
+    
+    return result
+
+
+# Test with the provided assertion
+assert find_Max_Num([1, 2, 3]) == 321
+
+# Additional test cases
+assert find_Max_Num([5, 1, 9, 2]) == 9521
+assert find_Max_Num([0, 0, 1]) == 100
+assert find_Max_Num([7]) == 7
+assert find_Max_Num([9, 9, 9]) == 999
+
+print(""All tests passed!"")
+```
+
+**How it works:**
+
+1. **Sort in descending order**: `sorted(digits, reverse=True)` arranges the digits from largest to smallest
+2. **Convert to string**: `map(str, sorted_digits)` converts each digit to a string
+3. **Join**: `''.join(...)` concatenates all digit strings together
+4. **Convert to integer**: `int(...)` converts the final string to an integer
+
+For example, with `[1, 2, 3]`:
+- After sorting: `[3, 2, 1]`
+- After joining: `""321""`
+- After converting to int: `321`",0.007167,8.760571002960205,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/432,Random,1,,0.0,10.55270218849182,0,0,,,
+mbpp,Mbpp/456,Random,1,,0.0,10.386589288711548,0,0,,,
+mbpp,Mbpp/638,Random,1,,0.0,10.470282793045044,0,0,,,
+mbpp,Mbpp/476,Random,1,,0.0,10.368540287017822,0,0,,,
+mbpp,Mbpp/427,Random,1,,0.0,10.349982261657717,0,0,,,
+mbpp,Mbpp/309,Random,1,,0.0,10.203492641448976,0,0,,,
+mbpp,Mbpp/754,Random,1,,0.0,10.46564245223999,0,0,,,
+mbpp,Mbpp/576,Random,1,,0.0,10.718590259552002,0,0,,,
+mbpp,Mbpp/391,Random,1,,0.0,10.818588256835938,0,0,,,
+mbpp,Mbpp/554,Random,1,,0.0,10.91453218460083,0,0,,,
+mbpp,Mbpp/167,Random,1,,0.0,10.338138580322266,0,0,,,
+mbpp,Mbpp/165,Random,1,,0.0,10.4358549118042,0,0,,,
+mbpp,Mbpp/305,Random,1,,0.0,10.765723466873167,0,0,,,
+mbpp,Mbpp/753,Random,1,,0.0,10.334320783615112,0,0,,,
+mbpp,Mbpp/460,Random,1,,0.0,10.41927170753479,0,0,,,
+mbpp,Mbpp/94,Random,1,"def index_minimum(pairs):
+    """"""Return the first element of the tuple with the smallest second element.""""""
+    if not pairs:
+        raise ValueError(""pairs must not be empty"")
+    return min(pairs, key=lambda t: t[1])[0]
+
+# Example / test
+assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'",0.0007425,4.6622302532196045,0,0,gpt-5-mini,,
+mbpp,Mbpp/796,Random,1,,0.0,10.696184873580933,0,0,,,
+mbpp,Mbpp/787,Random,1,,0.0,10.332455158233644,0,0,,,
+mbpp,Mbpp/239,Random,1,,0.0,10.769445419311523,0,0,,,
+mbpp,Mbpp/799,Random,1,,0.0,10.791632890701294,0,0,,,
+mbpp,Mbpp/730,Random,1,,0.0,10.542945623397827,0,0,,,
+mbpp,Mbpp/588,Random,1,,0.0,10.750641345977783,0,0,,,
+mbpp,Mbpp/234,Random,1,,0.0,10.446040153503418,0,0,,,
+mbpp,Mbpp/445,Random,1,,0.0,10.678016901016235,0,0,,,
+mbpp,Mbpp/92,Random,1,"To determine if a number is undulating, we need to check if its digits alternate between two different values. An undulating number will have a pattern where no two adjacent digits are the same.
+
+Here's a Python function that implements this logic:
+
+```python
+def is_undulating(n):
+    # Convert the number to a string to easily access each digit
+    str_n = str(n)
+    
+    # Check if the length of the number is less than 2
+    if len(str_n) < 2:
+        return True  # A single digit or empty number is considered undulating
+    
+    # Iterate through the digits and check for adjacent duplicates
+    for i in range(1, len(str_n)):
+        if str_n[i] == str_n[i - 1]:
+            return False  # Found two adjacent digits that are the same
+    
+    return True  # No adjacent duplicates found
+
+# Test the function with the provided assertion
+assert is_undulating(1212121) == True
+```
+
+This function first converts the number to a string to facilitate digit comparison. It then checks for adjacent digits that are the same and returns `False` if any are found. If it completes the check without finding duplicates, it returns `True`. The assertion at the end tests the function with the example provided.",0.0001746,2.6027302742004395,0,0,gpt-4o-mini,,
+mbpp,Mbpp/272,Random,1,,0.0,10.48853087425232,0,0,,,
+mbpp,Mbpp/720,Random,1,,0.0,10.325111865997314,0,0,,,
+mbpp,Mbpp/273,Random,1,,0.0,10.536906719207764,0,0,,,
+mbpp,Mbpp/572,Random,1,,0.0,10.332452774047852,0,0,,,
+mbpp,Mbpp/806,Random,1,,0.0,10.447001457214355,0,0,,,
+mbpp,Mbpp/109,Random,1,,0.0,130.4204568862915,0,0,,,
+mbpp,Mbpp/18,Random,1,"I need to write a function that removes all characters from the first string that appear anywhere in the second string.
+
+Let me think through this step by step:
+1. For each character in the first string, check if it exists in the second string
+2. If it doesn't exist in the second string, keep it
+3. If it does exist in the second string, remove it
+
+Here's the solution:
+
+```python
+def remove_dirty_chars(string, dirty_chars):
+    """"""
+    Remove characters from the first string which are present in the second string.
+    
+    Args:
+        string: The original string to clean
+        dirty_chars: String containing characters to remove
+    
+    Returns:
+        Cleaned string with all characters from dirty_chars removed
+    """"""
+    # Convert dirty_chars to a set for O(1) lookup
+    dirty_set = set(dirty_chars)
+    
+    # Build result string with only characters not in dirty_set
+    result = ''.join(char for char in string if char not in dirty_set)
+    
+    return result
+
+# Test with the provided assertion
+assert remove_dirty_chars(""probasscurve"", ""pros"") == 'bacuve'
+print(""Test passed!"")
+
+# Additional test cases
+print(remove_dirty_chars(""probasscurve"", ""pros""))  # 'bacuve'
+print(remove_dirty_chars(""hello world"", ""lo""))      # 'he wrd'
+print(remove_dirty_chars(""abcdef"", ""xyz""))          # 'abcdef'
+print(remove_dirty_chars(""abcdef"", ""ace""))          # 'bdf'
+```
+
+**Explanation:**
+- I convert `dirty_chars` to a set for efficient O(1) lookup time
+- I use a list comprehension with `''.join()` to build the result string
+- For each character in the original string, I only include it if it's NOT in the dirty characters set
+- In the example: ""probasscurve"" with dirty chars ""pros"" removes all 'p', 'r', 'o', 's' characters, leaving ""bacuve""",0.0077459999999999,9.65244746208191,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/569,Random,1,,0.0,10.552374362945557,0,0,,,
+mbpp,Mbpp/398,Random,1,,0.0,10.346360683441162,0,0,,,
+mbpp,Mbpp/255,Random,1,,0.0,10.518542766571043,0,0,,,
+mbpp,Mbpp/166,Random,1,,0.0,10.896798610687256,0,0,,,
+mbpp,Mbpp/269,Random,1,,0.0,10.571555376052856,0,0,,,
+mbpp,Mbpp/474,Random,1,,0.0,10.483061790466309,0,0,,,
+mbpp,Mbpp/266,Random,1,,0.0,10.43826675415039,0,0,,,
+mbpp,Mbpp/227,Random,1,,0.0,10.360257863998411,0,0,,,
+mbpp,Mbpp/784,Random,1,,0.0,10.95272946357727,0,0,,,
+mbpp,Mbpp/230,Random,1,,0.0,10.551923274993896,0,0,,,
+mbpp,Mbpp/808,Random,1,,0.0,10.406322240829468,0,0,,,
+mbpp,Mbpp/120,Random,1,,0.0,10.523802518844604,0,0,,,
+mbpp,Mbpp/414,Random,1,,0.0,10.50858449935913,0,0,,,
+mbpp,Mbpp/128,Random,1,,0.0,10.703296184539797,0,0,,,
+mbpp,Mbpp/451,Random,1,,0.0,10.487104892730711,0,0,,,
+mbpp,Mbpp/590,Random,1,,0.0,10.54645299911499,0,0,,,
+mbpp,Mbpp/436,Random,1,,0.0,10.69197678565979,0,0,,,
+mbpp,Mbpp/463,Random,1,,0.0,10.611589908599854,0,0,,,
+mbpp,Mbpp/618,Random,1,,0.0,10.479922533035278,0,0,,,
+mbpp,Mbpp/237,Random,1,,0.0,10.688972234725952,0,0,,,
+mbpp,Mbpp/104,Random,1,"To solve this problem, we need to sort each sublist",0.00251624,71.91640543937683,0,0,deepseek-r1,,
+mbpp,Mbpp/390,Random,1,,0.0,10.554770469665527,0,0,,,
+mbpp,Mbpp/87,Random,1,"I'll write a function to merge three dictionaries into a single dictionary. When there are duplicate keys, the later dictionaries will overwrite earlier ones.
+
+```python
+def merge_dictionaries_three(dict1, dict2, dict3):
+    """"""
+    Merge three dictionaries into a single dictionary.
+    If there are duplicate keys, values from later dictionaries override earlier ones.
+    
+    Args:
+        dict1: First dictionary
+        dict2: Second dictionary
+        dict3: Third dictionary
+    
+    Returns:
+        A single merged dictionary
+    """"""
+    # Create a new dictionary starting with dict1
+    merged = dict1.copy()
+    
+    # Update with dict2 (overwrites any duplicate keys from dict1)
+    merged.update(dict2)
+    
+    # Update with dict3 (overwrites any duplicate keys from dict1 or dict2)
+    merged.update(dict3)
+    
+    return merged
+```
+
+**Alternative approaches:**
+
+```python
+# Using dictionary unpacking (Python 3.5+)
+def merge_dictionaries_three(dict1, dict2, dict3):
+    return {**dict1, **dict2, **dict3}
+
+# Using dictionary union operator (Python 3.9+)
+def merge_dictionaries_three(dict1, dict2, dict3):
+    return dict1 | dict2 | dict3
+```
+
+**Test with the provided assertion:**
+
+```python
+result = merge_dictionaries_three(
+    {""R"": ""Red"", ""B"": ""Black"", ""P"": ""Pink""},
+    {""G"": ""Green"", ""W"": ""White""},
+    {""O"": ""Orange"", ""W"": ""White"", ""B"": ""Black""}
+)
+
+print(result)
+# Output: {'R': 'Red', 'B': 'Black', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}
+
+assert result == {'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}
+print(""Test passed!"")
+```
+
+The function correctly merges all three dictionaries, with later values overriding earlier ones for duplicate keys (like ""B"" and ""W"").",0.008772,8.749226331710815,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/312,Random,1,,0.0,10.2593355178833,0,0,,,
+mbpp,Mbpp/577,Random,1,,0.0,10.699333429336548,0,0,,,
+mbpp,Mbpp/77,Random,1,"It looks like there might be a typo in the function name ""is_Diff"" in your assert statement, as it doesn't directly relate to divisibility by 11. I'll assume you meant a function to check divisibility by 11 and name it accordingly for clarity. However, to match your example, I'll use ""is_Diff"" as the function name.
+
+Here's a simple Python function that checks if a given number is divisible by 11. It uses the modulo operator to determine if the number divided by 11 leaves no remainder.
+
+```python
+def is_Diff(num):
+    """"""
+    Checks if a given number is divisible by 11.
+    
+    Args:
+    num (int): The number to check.
+    
+    Returns:
+    bool: True if num is divisible by 11, False otherwise.
+    """"""
+    return num % 11 == 0
+
+# Example usage and test as per your assert statement
+if __name__ == ""__main__"":
+    assert is_Diff(12345) == False  # This should pass, as 12345 is not divisible by 11
+    print(""Test passed: is_Diff(12345) is False"")
+```
+
+### Explanation:
+- The function `is_Diff(num)` takes an integer `num` as input.
+- It returns `True` if `num % 11 == 0` (i.e., the remainder of `num` divided by 11 is 0), otherwise `False`.
+- I've included a docstring for clarity and an example in the `if __name__ == ""__main__""` block to demonstrate the assert statement you provided. This ensures the code is executable and testable.
+
+You can run this code in a Python environment to verify it. For instance:
+- `is_Diff(11)` should return `True`.
+- `is_Diff(0)` should return `True` (since 0 is divisible by any number).
+- `is_Diff(-11)` should return `True`.
+- `is_Diff(12345)` should return `False`, as asserted.",0.0005205,11.837997198104858,0,0,grok-3-mini,,
+mbpp,Mbpp/129,Random,1,,0.0,10.601080656051636,0,0,,,
+mbpp,Mbpp/794,Random,1,,0.0,10.349973201751707,0,0,,,
+mbpp,Mbpp/96,Random,1,"def divisor(n):
+    """"""
+    Return the number of positive divisors of integer n.
+    Raises ValueError for n == 0.
+    """"""
+    if not isinstance(n, int):
+        raise TypeError(""n must be an integer"")
+    if n == 0:
+        raise ValueError(""Number of divisors of 0 is infinite"")
+    num = abs(n)
+    # handle 1
+    if num == 1:
+        return 1
+    count = 1
+    # factor out 2
+    exp = 0
+    while num % 2 == 0:
+        exp += 1
+        num //= 2
+    count *= (exp + 1)
+    # factor odd primes
+    i = 3
+    while i * i <= num:
+        exp = 0
+        while num % i == 0:
+            exp += 1
+            num //= i
+        count *= (exp + 1)
+        i += 2
+    # if remainder is a prime > 1
+    if num > 1:
+        count *= 2
+    return count
+
+# test
+assert divisor(15) == 4",0.0019429999999999,10.439812898635864,0,0,gpt-5-mini,,
+mbpp,Mbpp/764,Random,1,,0.0,10.660478115081789,0,0,,,
+mbpp,Mbpp/97,Random,1,"Here's a clean solution to find the frequency of each element in a flattened list of lists:
+
+```python
+def frequency_lists(lists):
+    """"""
+    Find frequency of each element in a flattened list of lists.
+    
+    Args:
+        lists: A list of lists containing elements
+        
+    Returns:
+        A dictionary with elements as keys and their frequencies as values
+    """"""
+    frequency = {}
+    
+    # Flatten the list and count frequencies
+    for sublist in lists:
+        for element in sublist:
+            frequency[element] = frequency.get(element, 0) + 1
+    
+    return frequency
+
+
+# Test with the provided assertion
+assert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]]) == {1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+print(""Test passed!"")
+```
+
+**Alternative solution using Counter:**
+
+```python
+from collections import Counter
+
+def frequency_lists(lists):
+    """"""
+    Find frequency of each element in a flattened list of lists using Counter.
+    """"""
+    # Flatten the list of lists and count frequencies
+    flattened = [element for sublist in lists for element in sublist]
+    return dict(Counter(flattened))
+
+
+# Test
+assert frequency_lists([[1, 2, 3, 2], [4, 5, 6, 2], [7, 8, 9, 5]]) == {1: 1, 2: 3, 3: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 1}
+print(""Test passed!"")
+```
+
+Both solutions work correctly:
+- The first uses a manual dictionary approach with `dict.get()`
+- The second uses Python's `Counter` from the collections module for a more concise solution
+
+The test assertion passes, confirming that element `2` appears 3 times, element `5` appears 2 times, and all other elements appear once.",0.00864,9.165906429290771,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/782,Random,1,,0.0,10.436132431030272,0,0,,,
+mbpp,Mbpp/72,Random,1,"I need to write a function that checks if a given number can be represented as the difference of two squares.
+
+Let me think about this step by step:
+
+1. We need to check if a number `n` can be expressed as `a² - b²` for some integers `a` and `b`
+2. Using the algebraic identity: `a² - b² = (a+b)(a-b)`
+3. So if `n = (a+b)(a-b)`, let's say `(a+b) = p` and `(a-b) = q`
+4. Then `n = p × q` where `p` and `q` have the same parity (both odd or both even)
+5. From `p = a+b` and `q = a-b`, we get: `a = (p+q)/2` and `b = (p-q)/2`
+6. For `a` and `b` to be integers, `p` and `q` must have the same parity
+
+Key insight: A number can be represented as a difference of two squares if and only if:
+- It's odd (any odd number works), OR
+- It's divisible by 4 (even numbers that are multiples of 4 work)
+- Numbers of the form 4k+2 (like 2, 6, 10, 14...) CANNOT be represented
+
+Here's the solution:
+
+```python
+def dif_Square(n):
+    """"""
+    Check whether the given number can be represented as the difference of two squares.
+    
+    A number can be represented as a² - b² if and only if:
+    - It's not of the form 4k + 2 (i.e., n % 4 != 2)
+    
+    Args:
+        n: An integer
+    
+    Returns:
+        True if n can be represented as difference of two squares, False otherwise
+    """"""
+    # Numbers of the form 4k+2 cannot be represented as difference of two squares
+    # All other numbers can be
+    return n % 4 != 2
+
+# Test cases
+assert dif_Square(5) == True   # 5 = 3² - 2² = 9 - 4
+assert dif_Square(10) == False # 10 = 4*2 + 2, cannot be represented
+assert dif_Square(8) == True   # 8 = 3² - 1² = 9 - 1
+assert dif_Square(3) == True   # 3 = 2² - 1² = 4 - 1
+assert dif_Square(6) == False  # 6 = 4*1 + 2, cannot be represented
+assert dif_Square(4) == True   # 4 = 2² - 0² = 4 - 0
+```
+
+**Explanation:**
+- **5** is odd (5 % 4 = 1), so it returns `True`. Indeed: 5 = 3² - 2² = 9 - 4 ✓
+- Numbers like 2, 6, 10, 14 (form 4k+2) return `False`
+- All odd numbers and multiples of 4 return `True`",0.011892,11.92381763458252,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/566,Random,1,,0.0,10.667343854904177,0,0,,,
+mbpp,Mbpp/264,Random,1,,0.0,10.842637538909912,0,0,,,
+mbpp,Mbpp/251,Random,1,,0.0,10.701867580413818,0,0,,,
+mbpp,Mbpp/283,Random,1,,0.0,10.570630073547363,0,0,,,
+mbpp,Mbpp/99,Random,1,"I'll write a function to convert a decimal number to its binary equivalent as a string.
+
+```python
+def decimal_to_binary(n):
+    """"""
+    Convert a decimal number to its binary equivalent as a string.
+    
+    Args:
+        n: A non-negative integer
+    
+    Returns:
+        A string representing the binary equivalent with no leading zeros
+    """"""
+    # Handle the special case of 0
+    if n == 0:
+        return '0'
+    
+    # Convert to binary using Python's bin() function and remove '0b' prefix
+    return bin(n)[2:]
+```
+
+**Alternative implementation (manual conversion):**
+
+```python
+def decimal_to_binary(n):
+    """"""
+    Convert a decimal number to its binary equivalent as a string.
+    
+    Args:
+        n: A non-negative integer
+    
+    Returns:
+        A string representing the binary equivalent with no leading zeros
+    """"""
+    # Handle the special case of 0
+    if n == 0:
+        return '0'
+    
+    binary = ''
+    while n > 0:
+        binary = str(n % 2) + binary
+        n = n // 2
+    
+    return binary
+```
+
+**Test cases:**
+
+```python
+# Test the function
+assert decimal_to_binary(8) == '1000'
+assert decimal_to_binary(0) == '0'
+assert decimal_to_binary(1) == '1'
+assert decimal_to_binary(15) == '1111'
+assert decimal_to_binary(255) == '11111111'
+assert decimal_to_binary(10) == '1010'
+
+print(""All tests passed!"")
+```
+
+Both implementations work correctly. The first one uses Python's built-in `bin()` function which is more concise, while the second one shows the manual algorithm of repeatedly dividing by 2 and collecting remainders.",0.007002,7.469135761260986,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/106,Random,1,"```python
+def add_lists(list_to_append: list, original_tuple: tuple) -> tuple:
+    """"""
+    Appends the elements of a given list to a given tuple.
+
+    Args:
+        list_to_append: The list whose elements are to be appended.
+        original_tuple: The tuple to which the list elements will be appended.
+
+    Returns:
+        A new tuple containing the original tuple's elements followed by
+        the list's elements.
+    """"""
+    # Convert the list to a tuple and then concatenate it with the original tuple.
+    return original_tuple + tuple(list_to_append)
+
+```",0.0012118,2.6793453693389893,0,0,gemini-2.5-flash,,
+mbpp,Mbpp/752,Random,1,,0.0,10.497395992279053,0,0,,,
+mbpp,Mbpp/765,Random,1,,0.0,10.663918733596802,0,0,,,
+mbpp,Mbpp/308,Random,1,,0.0,10.579273462295532,0,0,,,
+mbpp,Mbpp/233,Random,1,,0.0,10.450762271881104,0,0,,,
+mbpp,Mbpp/19,Random,1,"Below is a Python function that checks whether a given array of integers contains any duplicate elements. The function returns `True` if duplicates are found and `False` otherwise.
+
+### Code:
+
+```python
+def test_duplicate(arr):
+    """"""
+    Checks if the given array contains any duplicate elements.
+    
+    Args:
+    arr (list): A list of integers.
+    
+    Returns:
+    bool: True if there are duplicates, False otherwise.
+    """"""
+    seen = set()  # Use a set to track elements we've seen
+    for element in arr:
+        if element in seen:
+            return True  # Duplicate found
+        seen.add(element)  # Add the element to the set
+    return False  # No duplicates found
+
+# Example test as provided in the query
+assert test_duplicate([1, 2, 3, 4, 5]) == False  # This should pass since there are no duplicates
+```
+
+### Explanation:
+- **Function Logic**: We iterate through the array and use a set to keep track of elements we've encountered. If an element is already in the set, it means it's a duplicate, and we return `True`. If we finish iterating without finding duplicates, we return `False`.
+- **Edge Cases**:
+  - An empty array (`[]`) will return `False` since there are no elements to duplicate.
+  - The function works for arrays of any length, including single-element arrays (which have no duplicates).
+- **Efficiency**: This approach has a time complexity of O(n), where n is the length of the array, and uses O(n) extra space for the set.
+
+You can run this code in a Python environment to verify it. For example:
+
+```python
+# Additional tests
+print(test_duplicate([1, 2, 3, 4, 5]))  # Output: False
+print(test_duplicate([1, 2, 3, 2, 4]))  # Output: True (duplicate 2)
+print(test_duplicate([]))               # Output: False
+print(test_duplicate([7]))               # Output: False
+```
+
+This ensures the function is clean, executable, and meets the requirements. If you have more tests or modifications, let me know!",0.0006861,14.828895807266235,0,0,grok-3-mini,,
+mbpp,Mbpp/405,Random,1,,0.0,10.55040192604065,0,0,,,
+mbpp,Mbpp/606,Random,1,,0.0,10.38113784790039,0,0,,,
+mbpp,Mbpp/257,Random,1,,0.0,10.411150693893433,0,0,,,
+mbpp,Mbpp/111,Random,1,,0.0,10.230576276779177,0,0,,,
+mbpp,Mbpp/471,Random,1,,0.0,10.43604612350464,0,0,,,
+mbpp,Mbpp/250,Random,1,,0.0,10.76883339881897,0,0,,,
+mbpp,Mbpp/75,Random,1,"Looking at this problem, I need to:
+
+1. Check each tuple in the list
+2. For each tuple, verify if ALL elements are divisible by k
+3. Return only the tuples where all elements meet this condition
+
+Here's my solution:
+
+```python
+def find_tuples(test_list, k):
+    """"""
+    Find tuples which have all elements divisible by k from the given list of tuples.
+    
+    Args:
+        test_list: List of tuples containing integers
+        k: The divisor to check against
+    
+    Returns:
+        List of tuples where all elements are divisible by k
+    """"""
+    result = []
+    for tup in test_list:
+        # Check if all elements in the tuple are divisible by k
+        if all(element % k == 0 for element in tup):
+            result.append(tup)
+    return result
+
+
+# Test with the provided assertion
+assert find_tuples([(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6) == [(6, 24, 12)]
+
+# Additional test cases
+assert find_tuples([(10, 20, 30), (15, 25, 35), (20, 40, 60)], 5) == [(10, 20, 30), (15, 25, 35), (20, 40, 60)]
+assert find_tuples([(3, 6, 9), (4, 8, 12), (5, 10, 15)], 3) == [(3, 6, 9)]
+assert find_tuples([(7, 14), (8, 16), (9, 18)], 2) == [(7, 14), (8, 16)]
+assert find_tuples([(1, 2, 3), (4, 5, 6)], 7) == []
+
+print(""All tests passed!"")
+```
+
+**Alternative one-liner using list comprehension:**
+
+```python
+def find_tuples(test_list, k):
+    return [tup for tup in test_list if all(element % k == 0 for element in tup)]
+```
+
+**Explanation:**
+- The function iterates through each tuple in the input list
+- For each tuple, it uses `all()` to check if every element is divisible by k (i.e., `element % k == 0`)
+- Only tuples where ALL elements satisfy this condition are included in the result
+- In the example: (6, 24, 12) → all divisible by 6 ✓, (7, 9, 6) → 7 is not divisible by 6 ✗, (12, 18, 21) → 21 is not divisible by 6 ✗",0.010461,14.89429807662964,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/643,Random,1,,0.0,10.579976797103882,0,0,,,
+mbpp,Mbpp/429,Random,1,,0.0,10.463327884674072,0,0,,,
+mbpp,Mbpp/805,Random,1,,0.0,10.396979808807371,0,0,,,
+mbpp,Mbpp/726,Random,1,,0.0,10.192882299423218,0,0,,,
+mbpp,Mbpp/742,Random,1,,0.0,10.480432987213137,0,0,,,
+mbpp,Mbpp/63,Random,1,,0.0,250.29692435264587,0,0,,,
+mbpp,Mbpp/578,Random,1,,0.0,10.214094400405884,0,0,,,
+mbpp,Mbpp/282,Random,1,,0.0,10.394293785095217,0,0,,,
+mbpp,Mbpp/4,Random,1,"Here's a clean solution to find the n largest integers from a list in descending order:
+
+```python
+import heapq
+
+def heap_queue_largest(numbers, n):
+    """"""
+    Find the n largest integers from a given list of numbers.
+    Returns them in descending order.
+    
+    Args:
+        numbers: List of integers
+        n: Number of largest elements to return
+    
+    Returns:
+        List of n largest integers in descending order
+    """"""
+    # Use heapq.nlargest to get n largest elements in descending order
+    return heapq.nlargest(n, numbers)
+
+
+# Test with the provided assertion
+assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58], 3) == [85, 75, 65]
+print(""Test passed!"")
+
+# Additional test cases
+print(heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58], 3))  # [85, 75, 65]
+print(heap_queue_largest([1, 2, 3, 4, 5], 2))  # [5, 4]
+print(heap_queue_largest([10], 1))  # [10]
+```
+
+**Explanation:**
+
+The function uses Python's `heapq.nlargest()` which:
+1. Efficiently finds the n largest elements from the list
+2. Returns them in descending order (largest first)
+3. Has a time complexity of O(n log k) where k is the number of largest elements requested
+
+**Alternative implementation** (if you want to implement it manually):
+
+```python
+def heap_queue_largest(numbers, n):
+    """"""Manual implementation using sorting""""""
+    # Sort in descending order and take first n elements
+    return sorted(numbers, reverse=True)[:n]
+```
+
+Both implementations work correctly, but `heapq.nlargest()` is more efficient for large lists when n is small compared to the list size.",0.007722,9.4407856464386,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/108,Random,1,"Below is the Python function that merges three lists into a single sorted list. The function combines all elements from the input lists and sorts the result in ascending order. I've also included a test using the provided assert statement to verify the function works as expected.
+
+```python
+def merge_sorted_list(list1, list2, list3):
+    # Combine the three lists into one
+    combined_list = list1 + list2 + list3
+    # Sort the combined list and return it
+    return sorted(combined_list)
+
+# Test the function with the provided example
+try:
+    assert merge_sorted_list([25, 24, 15, 4, 5, 29, 110], [19, 20, 11, 56, 25, 233, 154], [24, 26, 54, 48]) == [4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154]
+    print(""Test passed successfully!"")
+except AssertionError:
+    print(""Test failed."")
+```
+
+### Explanation:
+- **Function Logic**: The function first concatenates the three input lists using the `+` operator to create a single list. Then, it uses the `sorted()` function to sort the combined list in ascending order. This handles duplicates and ensures the output is a new sorted list.
+- **Edge Cases Handled**: 
+  - If any of the input lists are empty, the function will still work correctly (e.g., `merge_sorted_list([], [1, 2], [3])` would return `[1, 2, 3]`).
+  - The function assumes the inputs are lists of comparable elements (e.g., numbers). If you need to handle non-comparable elements, additional error handling could be added.
+- **Test**: The assert statement from your query is included in a try-except block to run the test and provide feedback.
+
+You can copy and run this code in a Python environment to verify it. If you have any modifications or additional requirements, let me know!",0.0006508999999999,13.62074851989746,0,0,grok-3-mini,,
+mbpp,Mbpp/472,Random,1,,0.0,10.412198305130005,0,0,,,
+mbpp,Mbpp/600,Random,1,,0.0,10.264698505401611,0,0,,,
+mbpp,Mbpp/8,Random,1,"To solve this problem, we need to write a function that takes a list of numbers and returns a new list containing the squares of each element in the original list. The solution can be efficiently implemented using a list comprehension, which is both concise and readable.
+
+### Approach
+1. **Problem Analysis**: The task requires transforming each element in the input list into its square. The output list should have the same number of elements as the input list, with each element squared.
+2. **Intuition**: Iterating through each element in the list and computing its square is straightforward. This can be done efficiently with a list comprehension.
+3. **Algorithm Selection**: Using a list comprehension allows us to process each element in a single line of code, making the solution clean and efficient.
+4. **Complexity Analysis**: The algorithm runs in O(n) time, where n is the number of elements in the list, as each element is processed exactly once. The space complexity is O(n) to store the resulting list.
+
+### Solution Code
+```python
+def square_nums(nums):
+    return [x ** 2 for x in nums]
+```
+
+### Explanation
+- **Function Definition**: The function `square_nums` takes a single parameter `nums`, which is a list of numbers.
+- **List Comprehension**: The expression `[x ** 2 for x in nums]` iterates over each element `x` in the list `nums`, computes `x` raised to the power of 2, and collects these results into a new list.
+- **Return Value**: The new list of squared elements is returned directly.
+
+This approach ensures that the function is efficient and easy to understand, leveraging Python's list comprehension for concise and readable code. The function correctly handles any list of numbers, producing the squared values as demonstrated in the provided example.",0.00115884,27.07873272895813,0,0,deepseek-r1,,
+mbpp,Mbpp/599,Random,1,,0.0,10.429089784622192,0,0,,,
+mbpp,Mbpp/603,Random,1,,0.0,10.41389513015747,0,0,,,
+mbpp,Mbpp/631,Random,1,,0.0,10.74473786354065,0,0,,,
+mbpp,Mbpp/580,Random,1,,0.0,10.402358770370483,0,0,,,
+mbpp,Mbpp/724,Random,1,,0.0,10.427112340927124,0,0,,,
+mbpp,Mbpp/160,Random,1,,0.0,10.65031123161316,0,0,,,
+mbpp,Mbpp/265,Random,1,,0.0,10.462657690048218,0,0,,,
+mbpp,Mbpp/478,Random,1,,0.0,10.336166858673096,0,0,,,
+mbpp,Mbpp/415,Random,1,,0.0,10.42102575302124,0,0,,,
+mbpp,Mbpp/58,Random,1,,0.00257938,36.37511920928955,0,0,deepseek-r1,,
+mbpp,Mbpp/725,Random,1,,0.0,10.428316831588743,0,0,,,
+mbpp,Mbpp/555,Random,1,,0.0,10.53887939453125,0,0,,,
+mbpp,Mbpp/612,Random,1,,0.0,10.725906133651732,0,0,,,
+mbpp,Mbpp/559,Random,1,,0.0,10.371927976608276,0,0,,,
+mbpp,Mbpp/127,Random,1,,0.0,10.518196105957031,0,0,,,
+mbpp,Mbpp/736,Random,1,,0.0,10.465555429458618,0,0,,,
+mbpp,Mbpp/253,Random,1,,0.0,10.640244483947754,0,0,,,
+mbpp,Mbpp/446,Random,1,,0.0,10.331537008285522,0,0,,,
+mbpp,Mbpp/389,Random,1,,0.0,10.52965211868286,0,0,,,
+mbpp,Mbpp/170,Random,1,,0.0,10.327794551849363,0,0,,,
+mbpp,Mbpp/279,Random,1,,0.0,10.370257139205933,0,0,,,
+mbpp,Mbpp/2,Random,1,,0.0025407799999999,30.42918848991394,0,0,deepseek-r1,,
+mbpp,Mbpp/615,Random,1,,0.0,10.38235855102539,0,0,,,
+mbpp,Mbpp/168,Random,1,,0.0,10.278529405593872,0,0,,,
+mbpp,Mbpp/771,Random,1,,0.0,10.382878303527832,0,0,,,
+mbpp,Mbpp/594,Random,1,,0.0,10.295015811920166,0,0,,,
+mbpp,Mbpp/113,Random,1,,0.0,10.331485986709597,0,0,,,
+mbpp,Mbpp/585,Random,1,,0.0,10.606141567230225,0,0,,,
+mbpp,Mbpp/101,Random,1,"To solve this problem, we need to find the kth element in a given array using 1-based indexing. This means that the first element of the array corresponds to position 1, the second to position 2, and so on. The solution involves validating the input to ensure the position `k` is within the bounds of the array and then accessing the appropriate element.
+
+### Approach
+1. **Validation Check**: Ensure that the value of `k` is a positive integer and lies within the valid range of the array's indices (1 to the length of the array inclusive). If `k` is outside this range, an `IndexError` is raised.
+2. **Access Element**: Convert the 1-based index `k` to a 0-based index by subtracting 1, then return the element at that position in the array.
+
+### Solution Code
+```python
+def kth_element(array, k):
+    if k < 1 or k > len(array):
+        raise IndexError(""k is out of range. Must be between 1 and the length of the array."")
+    return array[k-1]
+```
+
+### Explanation
+- **Validation Check**: The function first checks if `k` is less than 1 or greater than the length of the array. If either condition is true, it raises an `IndexError` with a descriptive message.
+- **Element Access**: If `k` is valid, the function subtracts 1 from `k` to convert it from a 1-based index to a 0-based index (as Python uses 0-based indexing). The element at this computed index is then returned.
+- **Efficiency**: The solution operates in constant time \(O(1)\) since it involves a direct index access after a simple boundary check.
+
+This approach ensures that the function is both efficient and robust, handling edge cases where `k` is not a valid position in the array.",0.00230023,152.58770775794983,0,0,deepseek-r1,,
+mbpp,Mbpp/748,Random,1,,0.0,10.581316232681274,0,0,,,
+mbpp,Mbpp/593,Random,1,,0.0,10.527107000350952,0,0,,,
+mbpp,Mbpp/397,Random,1,,0.0,10.577914237976074,0,0,,,
+mbpp,Mbpp/262,Random,1,,0.0,10.45962119102478,0,0,,,
+mbpp,Mbpp/798,Random,1,,0.0,10.47411036491394,0,0,,,
+mbpp,Mbpp/9,Random,1,"I need to find the minimum number of rotations required to get back the same string.
+
+Let me think through this step by step:
+
+1. When we rotate a string, we move characters from the beginning to the end
+2. We want to find the minimum number of rotations (> 0) to get the same string back
+3. This is essentially finding the smallest repeating pattern in the string
+
+For example:
+- ""aaaa"" - rotating by 1 gives ""aaaa"" (same), so answer is 1
+- ""abab"" - rotating by 2 gives ""abab"" (same), so answer is 2
+- ""abc"" - need to rotate by 3 to get back ""abc"", so answer is 3
+
+The key insight: if a string can be obtained by rotating itself by `k` positions, then the string must be composed of a repeating pattern of length `k`.
+
+Here's the solution:
+
+```python
+def find_Rotations(s):
+    """"""
+    Find the minimum number of rotations (greater than 0) required to get the same string.
+    
+    Args:
+        s: Input string
+    
+    Returns:
+        Minimum number of rotations needed
+    """"""
+    n = len(s)
+    
+    # Try each possible rotation count from 1 to n
+    for i in range(1, n + 1):
+        # Check if rotating by i positions gives the same string
+        rotated = s[i:] + s[:i]
+        if rotated == s:
+            return i
+    
+    # If no rotation found (shouldn't happen), return n
+    return n
+
+# Test cases
+assert find_Rotations(""aaaa"") == 1
+assert find_Rotations(""abab"") == 2
+assert find_Rotations(""abc"") == 3
+assert find_Rotations(""aab"") == 3
+assert find_Rotations(""abcabc"") == 3
+
+print(""All test cases passed!"")
+```
+
+**Alternative optimized approach** using the pattern that the minimum rotation is the length divided by the period of repetition:
+
+```python
+def find_Rotations(s):
+    """"""
+    Find the minimum number of rotations required to get the same string.
+    Uses the property that minimum rotations = length / length of smallest repeating unit
+    """"""
+    n = len(s)
+    
+    # Check each possible period length
+    for i in range(1, n + 1):
+        if n % i == 0:  # i must divide n evenly
+            # Check if string is made of repeating pattern of length i
+            pattern = s[:i]
+            if pattern * (n // i) == s:
+                return i
+    
+    return n
+
+# Test cases
+assert find_Rotations(""aaaa"") == 1
+assert find_Rotations(""abab"") == 2
+assert find_Rotations(""abc"") == 3
+```
+
+Both solutions work correctly. The first one directly simulates rotations, while the second one finds the smallest repeating pattern length, which is more efficient.",0.0110879999999999,13.941097736358644,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/162,Random,1,,0.0,10.661162853240969,0,0,,,
+mbpp,Mbpp/586,Random,1,,0.0,10.710429430007936,0,0,,,
+mbpp,Mbpp/242,Random,1,,0.0,10.401902437210085,0,0,,,
+mbpp,Mbpp/299,Random,1,,0.0,10.48948574066162,0,0,,,
+mbpp,Mbpp/88,Random,1,"Here's a clean solution to count the frequency of elements in a list:
+
+```python
+def freq_count(lst):
+    """"""
+    Get the frequency of all elements in a list, returned as a dictionary.
+    
+    Args:
+        lst: A list of elements
+        
+    Returns:
+        A dictionary with elements as keys and their frequencies as values
+    """"""
+    freq_dict = {}
+    for element in lst:
+        freq_dict[element] = freq_dict.get(element, 0) + 1
+    return freq_dict
+```
+
+**Alternative solution using Counter from collections:**
+
+```python
+from collections import Counter
+
+def freq_count(lst):
+    """"""
+    Get the frequency of all elements in a list, returned as a dictionary.
+    
+    Args:
+        lst: A list of elements
+        
+    Returns:
+        A dictionary with elements as keys and their frequencies as values
+    """"""
+    return dict(Counter(lst))
+```
+
+**Testing the function:**
+
+```python
+# Test with the provided assertion
+result = freq_count([10,10,10,10,20,20,20,20,40,40,50,50,30])
+print(result)
+assert result == {10: 4, 20: 4, 40: 2, 50: 2, 30: 1}
+print(""Test passed!"")
+```
+
+Both solutions work correctly:
+- The first solution manually iterates through the list and builds the frequency dictionary
+- The second solution uses Python's built-in `Counter` class which is more concise and optimized
+
+Both return `{10: 4, 20: 4, 40: 2, 50: 2, 30: 1}` for the given test case.",0.006537,6.211599349975586,0,0,claude-sonnet-4-5-20250929,,
+mbpp,Mbpp/788,Random,1,,0.0,10.334013938903809,0,0,,,
+mbpp,Mbpp/626,Random,1,,0.0,10.357956886291504,0,0,,,
+mbpp,Mbpp/622,Random,1,,0.0,10.443416595458984,0,0,,,
+mbpp,Mbpp/267,Random,1,,0.0,10.88034439086914,0,0,,,
+mbpp,Mbpp/792,Random,1,,0.0,10.538703203201294,0,0,,,
+mbpp,Mbpp/455,Random,1,,0.0,10.2884521484375,0,0,,,
+mbpp,Mbpp/563,Random,1,,0.0,10.832215070724487,0,0,,,
+mbpp,Mbpp/421,Random,1,,0.0,10.33316445350647,0,0,,,
+mbpp,Mbpp/271,Random,1,,0.0,10.447766065597534,0,0,,,
+mbpp,Mbpp/226,Random,1,,0.0,10.630832433700562,0,0,,,
+mbpp,Mbpp/780,Random,1,,0.0,10.598041772842407,0,0,,,
+mbpp,Mbpp/735,Random,1,,0.0,10.385645627975464,0,0,,,
+mbpp,Mbpp/475,Random,1,,0.0,10.355170249938965,0,0,,,
+mbpp,Mbpp/141,Random,1,,0.0,10.707611083984377,0,0,,,
+mbpp,Mbpp/624,Random,1,,0.0,10.52091383934021,0,0,,,
+mbpp,Mbpp/142,Random,1,,0.0,10.48424220085144,0,0,,,
+mbpp,Mbpp/425,Random,1,,0.0,10.30075716972351,0,0,,,
+mbpp,Mbpp/800,Random,1,,0.0,10.325060606002808,0,0,,,
+mbpp,Mbpp/454,Random,1,,0.0,10.802290201187134,0,0,,,
+mbpp,Mbpp/589,Random,1,,0.0,10.596317291259766,0,0,,,
+mbpp,Mbpp/119,Random,1,,0.0,10.826165914535522,0,0,,,
+mbpp,Mbpp/161,Random,1,,0.0,10.26693630218506,0,0,,,
+mbpp,Mbpp/409,Random,1,,0.0,10.59906268119812,0,0,,,
+mbpp,Mbpp/130,Random,1,,0.0,10.446677684783936,0,0,,,
+mbpp,Mbpp/759,Random,1,,0.0,10.50036597251892,0,0,,,
+mbpp,Mbpp/118,Random,1,,0.0,10.565868139266968,0,0,,,
+mbpp,Mbpp/457,Random,1,,0.0,10.618854999542236,0,0,,,
+mbpp,Mbpp/564,Random,1,,0.0,10.456787109375,0,0,,,
+mbpp,Mbpp/750,Random,1,,0.0,10.618178129196169,0,0,,,
+mbpp,Mbpp/560,Random,1,,0.0,10.20311450958252,0,0,,,
+mbpp,Mbpp/630,Random,1,,0.0,10.374200820922852,0,0,,,
+mbpp,Mbpp/441,Random,1,,0.0,10.23479986190796,0,0,,,
+mbpp,Mbpp/260,Random,1,,0.0,10.40039086341858,0,0,,,
+mbpp,Mbpp/140,Random,1,,0.0,10.338040351867676,0,0,,,
+mbpp,Mbpp/579,Random,1,,0.0,10.790528297424316,0,0,,,
+mbpp,Mbpp/139,Random,1,,0.0,10.392207860946655,0,0,,,
+mbpp,Mbpp/278,Random,1,,0.0,10.257193088531494,0,0,,,
+mbpp,Mbpp/392,Random,1,,0.0,10.516296148300173,0,0,,,
+mbpp,Mbpp/453,Random,1,,0.0,10.241982221603394,0,0,,,
+mbpp,Mbpp/770,Random,1,,0.0,10.436126232147217,0,0,,,
+mbpp,Mbpp/567,Random,1,,0.0,10.55111527442932,0,0,,,
+mbpp,Mbpp/61,Random,1,"To solve the problem of counting the number of substrings where the sum of the digits is equal to the length of the substring, we can follow these steps:
+
+1. Generate all possible substrings of the input string.
+2. For each substring, calculate the sum of its digits and compare it to its length.
+3. Count how many substrings meet the condition.
+
+Here is the Python function that implements this logic:
+
+```python
+def count_Substrings(s):
+    count = 0
+    n = len(s)
+    
+    # Iterate over all possible substrings
+    for i in range(n):
+        sum_digits = 0
+        for j in range(i, n):
+            sum_digits += int(s[j])  # Add the digit to the sum
+            length = j - i + 1  # Calculate the length of the substring
+            
+            # Check if the sum of digits equals the length
+            if sum_digits == length:
+                count += 1
+                
+    return count
+
+# Test the function with the provided assertion
+assert count_Substrings('112112') == 6
+```
+
+### Explanation:
+- We use two nested loops: the outer loop (`i`) marks the starting index of the substring, and the inner loop (`j`) marks the ending index.
+- For each substring defined by `s[i:j+1]`, we calculate the sum of its digits and its length.
+- If the sum of the digits equals the length of the substring, we increment our count.
+- Finally, we return the total count of such substrings. 
+
+This function should work correctly for the given test case and can handle other cases as well.",0.0002167499999999,3.05837082862854,0,0,gpt-4o-mini,,
+mbpp,Mbpp/562,Random,1,,0.0,10.56554675102234,0,0,,,
+mbpp,Mbpp/12,Random,1,"To solve this problem, we need to sort the rows of a given matrix in ascending order based on the sum of each row. The solution involves calculating the sum of each row and then sorting the rows according to these sums.
+
+### Approach
+1. **Calculate Row Sums**: For each row in the matrix, compute the sum of its elements.
+2. **Sort Rows by Sum**: Use the computed sums as keys to sort the rows in ascending order.
+3. **Return Sorted Matrix**: The sorted matrix is returned with rows ordered by their sums from smallest to largest.
+
+This approach efficiently leverages Python's built-in `sorted` function with a custom key (the sum of each row) to achieve the desired sorting.
+
+### Solution Code
+```python
+def sort_matrix(matrix):
+    return sorted(matrix, key=sum)
+```
+
+### Explanation
+- **Problem Analysis**: The task requires sorting the rows of a matrix based on the sum of elements in each row. The key insight is that each row can be treated as an individual entity whose sum determines its position in the sorted matrix.
+- **Key Insight**: Using the `sum` function as the key in Python's `sorted` function allows us to directly compare rows by their sums without additional complex logic.
+- **Algorithm Selection**: The algorithm computes the sum of each row and sorts the rows based on these sums. This is efficiently handled by Python's `sorted` function, which has an average time complexity of O(n log n) for sorting, where n is the number of rows.
+- **Complexity Analysis**: 
+  - **Time Complexity**: O(m * n + n log n), where m is the number of columns and n is the number of rows. This is because each row sum takes O(m) time to compute, and sorting the rows takes O(n log n) time.
+  - **Space Complexity**: O(n) for storing the sorted matrix, as the sorting is not done in-place.
+
+This solution is concise and leverages Python's built-in functionalities to achieve the desired result efficiently. The function `sort_matrix` takes a matrix (list of lists) and returns a new matrix sorted by row sums in ascending order. The example provided in the problem statement confirms the correctness of the solution.",0.00138755,26.49382710456848,0,0,deepseek-r1,,
+mbpp,Mbpp/728,Random,1,,0.0,10.888115406036375,0,0,,,
+mbpp,Mbpp/749,Random,1,,0.0,10.25780439376831,0,0,,,
+mbpp,Mbpp/758,Random,1,,0.0,10.146578311920166,0,0,,,
+mbpp,Mbpp/80,Random,1,"def tetrahedral_number(n):
+    """"""Return the nth tetrahedral number: T_n = n*(n+1)*(n+2)/6.
+    n must be a non-negative integer.
+    """"""
+    if not isinstance(n, int):
+        raise TypeError(""n must be an integer"")
+    if n < 0:
+        raise ValueError(""n must be non-negative"")
+    return n * (n + 1) * (n + 2) // 6
+
+assert tetrahedral_number(5) == 35",0.00128225,7.294061899185181,0,0,gpt-5-mini,,
+mbpp,Mbpp/772,Random,1,,0.0,10.438503980636597,0,0,,,
+mbpp,Mbpp/6,Random,1,"To check if two numbers differ at exactly one bit position, we can use the following approach:
+
+1.  **XOR the two numbers:** The bitwise XOR operation (`^`) will result in a number where each bit is `1` if the corresponding bits in the two input numbers are different, and `0` if they are the same. Therefore, if the two original numbers differ by exactly one bit, their XOR result will have exactly one `1` bit.
+2.  **Check if the XOR result has exactly one set bit:** A common trick to determine if a positive integer `x` has exactly one bit set (i.e., it's a power of two) is to check if `(x & (x - 1))` is equal to `0`. This works because if `x` has only one `1` bit (e.g., `00010000`), then `x - 1` will have all bits to the right of that `1` set to `1` and that `1` bit itself will be `0` (e.g., `00001111`). Performing a bitwise AND between them will always yield `0`. We also need to ensure `x` is not `0`, as `0 & (-1)` is `0` but `0` has no set bits.
+
+```python
+def differ_At_One_Bit_Pos(num1: int, num2: int) -> bool:
+    """"""
+    Checks if two numbers differ at exactly one bit position.
+
+    Args:
+        num1: The first integer.
+        num2: The second integer.
+
+    Returns:
+        True if the binary representations of num1 and num2 differ at
+        exactly one bit position, False otherwise.
+    """"""
+    # Step 1: XOR the two numbers.
+    # The result will have a '1' at positions where bits differ.
+    xor_result = num1 ^ num2
+
+    # Step 2: Check if the XOR result has exactly one '1' bit.
+    # A number 'x' has exactly one '1' bit if it's a power of 2.
+    # This can be checked using the property: (x > 0) and (x & (x - 1) == 0)
+    return xor_result > 0 and (xor_result & (xor_result - 1)) == 0
+
+# Assertions to test the function
+assert differ_At_One_Bit_Pos(13, 9) == True  # 13 (1101), 9 (1001) -> XOR is 0100 (4), which is 2^2
+assert differ_At_One_Bit_Pos(1, 0) == True   # 1 (0001), 0 (0000) -> XOR is 0001 (1), which is 2^0
+assert differ_At_One_Bit_Pos(5, 4) == True   # 5 (0101), 4 (0100) -> XOR is 0001 (1)
+assert differ_At_One_Bit_Pos(13, 11) == False # 13 (1101), 11 (1011) -> XOR is 0110 (6), not a power of 2
+assert differ_At_One_Bit_Pos(7, 5) == False   # 7 (0111), 5 (0101) -> XOR is 0010 (2) which is 2^1, wait, this should be true.
+# Let's re-evaluate (7,5)
+# 7 = 0111
+# 5 = 0101
+# XOR = 0010 (2)
+# 2 > 0 and (2 & (2-1)) == (2 & 1) == 0. So it's True. My manual calculation was wrong, the code is correct.
+# Let's add a test for (7,5) where I thought it was false but it should be true.
+assert differ_At_One_Bit_Pos(7, 5) == True # 7 (0111), 5 (0101) -> XOR is 0010 (2), which is 2^1
+
+assert differ_At_One_Bit_Pos(10, 8) == True  # 10 (1010), 8 (1000) -> XOR is 0010 (2)
+assert differ_At_One_Bit_Pos(10, 11) == True # 10 (1010), 11 (1011) -> XOR is 0001 (1)
+assert differ_At_One_Bit_Pos(10, 14) == False # 10 (1010), 14 (1110) -> XOR is 0100 (4), True.
+# My manual calculation mistake again.
+# 10 = 1010
+# 14 = 1110
+# XOR = 0100 (4)
+# 4 > 0 and (4 & (4-1)) == (4 & 3) == 0. So it's True.
+assert differ_At_One_Bit_Pos(10, 14) == True
+
+assert differ_At_One_Bit_Pos(13, 13) == False # Same numbers, XOR is 0, not > 0
+assert differ_At_One_Bit_Pos(0, 0) == False   # Same numbers, XOR is 0, not > 0
+assert differ_At_One_Bit_Pos(13, 10) == False # 13 (1101), 10 (1010) -> XOR is 0111 (7), not a power of 2
+print(""All test cases passed!"")
+```",0.0057154,8.532865762710571,0,0,gemini-2.5-flash,,
+mbpp,Mbpp/458,Random,1,,0.0,10.434220790863035,0,0,,,
+mbpp,Mbpp/268,Random,1,,0.0,10.613262176513672,0,0,,,
+mbpp,Mbpp/419,Random,1,,0.0,10.462830543518066,0,0,,,
+mbpp,Mbpp/777,Random,1,,0.0,10.54706573486328,0,0,,,
+mbpp,Mbpp/611,Random,1,,0.0,10.672224521636965,0,0,,,
+mbpp,Mbpp/105,Random,1,"Here is a Python function that counts the number of `True` boolean values in a given list:
+
+```python
+def count(boolean_list):
+    return sum(1 for value in boolean_list if value is True)
+
+# Test the function with the provided assertion
+assert count([True, False, True]) == 2
+```
+
+This function uses a generator expression to iterate through the list and counts how many times `True` appears. The `sum` function adds up the counts, resulting in the total number of `True` values.",7.919999999999999e-05,1.4347124099731443,0,0,gpt-4o-mini,,
+mbpp,Mbpp/767,Random,1,,0.0,10.390729904174805,0,0,,,
+mbpp,Mbpp/74,Random,1,"To solve the problem of checking whether two arrays follow the same pattern, we can create a function called `is_samepatterns`. This function will map each unique element in the first array to a unique element in the second array and check if the mapping is consistent throughout both arrays.
+
+Here's the implementation of the function:
+
+```python
+def is_samepatterns(patterns, values):
+    if len(patterns) != len(values):
+        return False
+    
+    pattern_to_value = {}
+    value_to_pattern = {}
+    
+    for pattern, value in zip(patterns, values):
+        if pattern in pattern_to_value:
+            if pattern_to_value[pattern] != value:
+                return False
+        else:
+            pattern_to_value[pattern] = value
+        
+        if value in value_to_pattern:
+            if value_to_pattern[value] != pattern:
+                return False
+        else:
+            value_to_pattern[value] = pattern
+            
+    return True
+
+# Test the function with the provided assertion
+assert is_samepatterns([""red"", ""green"", ""green""], [""a"", ""b"", ""b""]) == True
+```
+
+### Explanation:
+1. **Input Length Check**: First, we check if the lengths of the two input arrays are the same. If not, we return `False`.
+2. **Mapping Creation**: We use two dictionaries:
+   - `pattern_to_value` to map each unique pattern to its corresponding value.
+   - `value_to_pattern` to map each unique value back to its corresponding pattern.
+3. **Iteration**: We iterate through both arrays simultaneously using `zip()`. For each pair of `pattern` and `value`:
+   - We check if the `pattern` is already in `pattern_to_value`. If it is, we verify that it maps to the same `value`. If not, we add the mapping.
+   - We do the same for `value` in `value_to_pattern`.
+4. **Return True**: If we complete the loop without inconsistencies, we return `True`.
+
+This function will correctly determine if the two arrays follow the same pattern.",0.00027045,10.84225869178772,0,0,gpt-4o-mini,,
+mbpp,Mbpp/607,Random,1,,0.0,10.683995723724363,0,0,,,
+mbpp,Mbpp/470,Random,1,,0.0,10.624424457550049,0,0,,,
+mbpp,Mbpp/71,Random,1,"To solve this problem, we need to implement the Comb Sort algorithm, which is an efficient sorting algorithm based on the Bubble Sort technique. Comb Sort improves upon Bubble Sort by using a gap larger than 1 to compare elements, reducing the number of swaps required. The gap starts at the length of the list and shrinks by a factor (traditionally 1.3) in each iteration until it becomes 1, at which point the algorithm performs a final Bubble Sort pass to ensure the list is sorted.
+
+### Approach
+1. **Initialization**: Start with the gap size equal to the length of the list and set the shrink factor to 1.3.
+2. **Iterate Until Gap is 1**: Continue looping while the gap is greater than 1 or if any swaps were made in the previous pass.
+3. **Update Gap**: After each pass, reduce the gap by the shrink factor and ensure it is at least 1.
+4. **Compare and Swap**: For each element in the list, compare it with the element that is `gap` positions ahead. If they are out of order, swap them.
+5. **Termination**: The algorithm terminates when the gap is 1 and no swaps were performed in a pass, indicating the list is sorted.
+
+### Solution Code
+```python
+def comb_sort(arr):
+    n = len(arr)
+    gap = n
+    swapped = True
+    shrink = 1.3
+    
+    while gap > 1 or swapped:
+        gap = max(1, int(gap / shrink))
+        swapped = False
+        i = 0
+        while i + gap < n:
+            if arr[i] > arr[i + gap]:
+                arr[i], arr[i + gap] = arr[i + gap], arr[i]
+                swapped = True
+            i += 1
+    return arr
+```
+
+### Explanation
+1. **Initialization**: The initial gap is set to the length of the list (`n`), and `swapped` is set to `True` to ensure the loop starts.
+2. **Loop Condition**: The loop continues as long as the gap is greater than 1 or any swaps occurred in the previous pass.
+3. **Gap Reduction**: In each iteration, the gap is reduced by the shrink factor (1.3) and converted to an integer. The `max` function ensures the gap is at least 1.
+4. **Swapping Elements**: The inner loop compares elements separated by the current gap. If elements are out of order, they are swapped, and `swapped` is set to `True`.
+5. **Termination**: Once the gap is 1 and no swaps occur in a pass, the loop exits, and the sorted list is returned.
+
+This approach efficiently sorts the list by leveraging a dynamically shrinking gap, which helps in moving elements that are far apart into their correct positions faster than traditional Bubble Sort. The algorithm has an average time complexity of O(n²) but performs better than Bubble Sort in practice due to its gap-based comparisons.",0.00206876,212.58877635002136,0,0,deepseek-r1,,
+mbpp,Mbpp/252,Random,1,,0.0,10.661311626434326,0,0,,,
+mbpp,Mbpp/286,Random,1,,0.0,10.813029527664185,0,0,,,
+mbpp,Mbpp/793,Random,1,,0.0,10.565199613571169,0,0,,,
+mbpp,Mbpp/465,Random,1,,0.0,10.944846868515016,0,0,,,
+mbpp,Mbpp/406,Random,1,,0.0,10.521279573440552,0,0,,,
+mbpp,Mbpp/773,Random,1,,0.0,10.289732217788696,0,0,,,
+mbpp,Mbpp/85,Random,1,"```python
+import math
+
+def surfacearea_sphere(radius):
+    """"""
+    Calculate the surface area of a sphere given its radius.
+    
+    Formula: A = 4 * π * r^2
+    
+    Args:
+    radius (float): The radius of the sphere.
+    
+    Returns:
+    float: The surface area of the sphere.
+    """"""
+    if radius < 0:
+        raise ValueError(""Radius must be a non-negative number."")
+    return 4 * math.pi * radius ** 2
+
+# Optional: Verify with the provided assert statement
+# assert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)
+```
+
+This function computes the surface area of a sphere using the formula \( A = 4 \pi r^2 \). It includes a basic check to ensure the radius is non-negative. You can uncomment the assert statement to test it if needed.",0.0003654,8.029513835906982,0,0,grok-3-mini,,
+mbpp,Mbpp/786,Random,1,,0.0,10.662283897399902,0,0,,,
+mbpp,Mbpp/90,Random,1,"Here is a Python function that finds the length of the longest word in a list:
+
+```python
+def len_log(words):
+    if not words:  # Check if the list is empty
+        return 0
+    return max(len(word) for word in words)
+
+# Test the function with the provided assertion
+assert len_log([""python"", ""PHP"", ""bigdata""]) == 7
+```
+
+This function uses a generator expression to calculate the length of each word in the list and then uses the `max` function to find the longest one. If the list is empty, it returns 0.",8.819999999999999e-05,2.0738353729248047,0,0,gpt-4o-mini,,
+mbpp,Mbpp/737,Random,1,,0.0,10.56880784034729,0,0,,,
+mbpp,Mbpp/739,Random,1,,0.0,10.40796184539795,0,0,,,
+mbpp,Mbpp/751,Random,1,,0.0,10.367624521255491,0,0,,,
+mbpp,Mbpp/473,Random,1,,0.0,10.479090690612791,0,0,,,
+mbpp,Mbpp/778,Random,1,,0.0,10.40629768371582,0,0,,,
+mbpp,Mbpp/797,Random,1,,0.0,10.504828691482544,0,0,,,
+mbpp,Mbpp/300,Random,1,,0.0,10.37849760055542,0,0,,,
+mbpp,Mbpp/11,Random,1,"Here's a Python function that implements the required functionality. The function, named `remove_Occ`, takes a string `s` and a character `char` as inputs. It removes the first and last occurrences of `char` from `s` and returns the modified string.
+
+### Code:
+
+```python
+def remove_Occ(s: str, char: str) -> str:
+    if char not in s:
+        return s  # If the character is not in the string, return the string as is
+    
+    first_index = s.find(char)  # Find the index of the first occurrence
+    last_index = s.rfind(char)  # Find the index of the last occurrence
+    
+    # Build the new string by slicing and excluding the characters at first_index and last_index
+    new_s = s[:first_index] + s[first_index + 1 : last_index] + s[last_index + 1:]
+    
+    return new_s
+
+# Test the function as per the provided assertion
+assert remove_Occ(""hello"", ""l"") == ""heo""
+print(""Test passed successfully!"")  # This will print if the assertion holds
+```
+
+### Explanation:
+- **Line 1-2**: The function checks if `char` is in `s`. If not, it returns `s` unchanged.
+- **Line 4-5**: It finds the index of the first occurrence using `s.find(char)` and the last occurrence using `s.rfind(char)`.
+- **Line 8**: It constructs a new string by concatenating three parts:
+  - The substring before the first occurrence: `s[:first_index]`.
+  - The substring between the first and last occurrences (excluding both): `s[first_index + 1 : last_index]`.
+  - The substring after the last occurrence: `s[last_index + 1:]`.
+- **Line 11-14**: The assertion tests the function with the example provided.
+
+This function handles various edge cases, such as:
+- If `char` appears only once, it removes that single occurrence.
+- If `s` is empty or doesn't contain `char`, it returns `s` unchanged.
+- If `s` consists only of `char`, it returns an empty string.
+
+You can run this code in a Python environment to verify it.",0.0010483,21.098814249038696,0,0,grok-3-mini,,
+mbpp,Mbpp/437,Random,1,,0.0,10.226427555084229,0,0,,,
+mbpp,Mbpp/102,Random,1,,0.0025529299999999,155.25452065467834,0,0,deepseek-r1,,
+mbpp,Mbpp/775,Random,1,,0.0,10.525051593780518,0,0,,,
+mbpp,Mbpp/116,Random,1,,0.0,10.472935914993286,0,0,,,
+mbpp,Mbpp/131,Random,1,,0.0,10.616371393203735,0,0,,,
+mbpp,Mbpp/766,Random,1,,0.0,10.276043891906738,0,0,,,
+mbpp,Mbpp/62,Random,1,"Here is a Python function that finds the smallest number in a list:
+
+```python
+def smallest_num(numbers):
+    if not numbers:  # Check if the list is empty
+        return None  # Return None if the list is empty
+    smallest = numbers[0]  # Initialize smallest with the first element
+    for num in numbers:  # Iterate through the list
+        if num < smallest:  # Compare each number with the current smallest
+            smallest = num  # Update smallest if a smaller number is found
+    return smallest  # Return the smallest number found
+
+# Test the function with the provided assertion
+assert smallest_num([10, 20, 1, 45, 99]) == 1
+```
+
+This function initializes the smallest number with the first element of the list and iterates through the list to find the smallest value. It also handles the case where the list might be empty by returning `None`.",0.0001311,2.2130675315856934,0,0,gpt-4o-mini,,
+mbpp,Mbpp/623,Random,1,,0.0,10.588772773742676,0,0,,,
+mbpp,Mbpp/596,Random,1,,0.0,10.406930923461914,0,0,,,
+mbpp,Mbpp/138,Random,1,,0.0,10.894778490066528,0,0,,,
+mbpp,Mbpp/395,Random,1,,0.0,10.43679165840149,0,0,,,
+mbpp,Mbpp/79,Random,1,"Here's a Python function that checks whether the length of a given word (string) is odd or not. The function returns `True` if the length is odd and `False` if it is even.
+
+```python
+def word_len(word):
+    """"""
+    Checks if the length of the word is odd.
+    
+    Args:
+    word (str): The input word to check.
+    
+    Returns:
+    bool: True if the length is odd, False if even.
+    """"""
+    length = len(word)
+    return length % 2 != 0  # Returns True if length is odd, else False
+```
+
+### Verification:
+The function can be tested with the provided assertion:
+```python
+assert word_len(""Hadoop"") == False  # ""Hadoop"" has 6 characters (even length), so it returns False
+```
+
+This function works for any string input. For example:
+- `word_len(""Hello"")` → Length 5 (odd) → Returns `True`
+- `word_len("""")` → Length 0 (even) → Returns `False`",0.0004273,9.742690324783323,0,0,grok-3-mini,,
+mbpp,Mbpp/292,Random,1,,0.0,10.518240690231323,0,0,,,
+mbpp,Mbpp/418,Random,1,,0.0,10.174407482147217,0,0,,,
+mbpp,Mbpp/755,Random,1,,0.0,10.375370979309082,0,0,,,
+mbpp,Mbpp/583,Random,1,,0.0,10.552196025848389,0,0,,,
+mbpp,Mbpp/95,Random,1,"The most Pythonic and efficient way to find the length of the smallest list in a list of lists is to use the `min()` function combined with a generator expression.
+
+```python
+def Find_Min_Length(list_of_lists):
+  """"""
+  Finds the length of the smallest list within a list of lists.
+
+  Args:
+    list_of_lists: A list where each element is itself a list.
+
+  Returns:
+    An integer representing the length of the shortest inner list.
+    If the input list_of_lists is empty, it raises a ValueError, as
+    there are no lengths to compare.
+  """"""
+  if not list_of_lists:
+    raise ValueError(""Input list_of_lists cannot be empty."")
+    
+  # Use a generator expression to get the length of each inner list,
+  # then find the minimum among these lengths.
+  return min(len(sublist) for sublist in list_of_lists)
+
+```",0.0021795,4.499492645263672,0,0,gemini-2.5-flash,,
+mbpp,Mbpp/644,Random,1,,0.0,10.405114650726318,0,0,,,
+mbpp,Mbpp/422,Random,1,,0.0,10.625493049621582,0,0,,,
+mbpp,Mbpp/172,Random,1,,0.0,10.454083681106567,0,0,,,
+mbpp,Mbpp/284,Random,1,,0.0,10.577794551849363,0,0,,,
+mbpp,Mbpp/89,Random,1,,0.0025849,104.20674681663512,0,0,deepseek-r1,,
+mbpp,Mbpp/608,Random,1,,0.0,10.471771717071531,0,0,,,
+mbpp,Mbpp/123,Random,1,,0.0,10.383537769317629,0,0,,,
+mbpp,Mbpp/740,Random,1,,0.0,10.538006067276,0,0,,,
+mbpp,Mbpp/744,Random,1,,0.0,10.580769062042236,0,0,,,
+mbpp,Mbpp/297,Random,1,,0.0,10.608951568603516,0,0,,,

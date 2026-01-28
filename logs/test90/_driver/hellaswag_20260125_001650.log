@@ -1,0 +1,26 @@
+=
+[DATASET] hellaswag
+[TIME] 2026-01-25 00:42:24
+[RUN_BEST] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_test90_best.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --seed 1 --timeout_sec 9000
+[RUN] hellaswag -> /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[LOG] /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/logs/test90/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.log
+[CMD] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/run_exp.py --method TrustRoute --input /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90/hellaswag_test90.jsonl --seed 1 --tau1 0.95 --tau2 1.0 --max_k 3 --budget_usd 5.0 --eta 0.3 --w_q 0.25 --w_r 0.6 --w_c 0.15 --min_rep 0.0 --out /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv
+[FILTER_BASELINES] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/filter_baselines_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --selected_dir /data_huawei/jiakun/ISSTA/final_experiments/selected --prefer_evaluated --seeds 1
+[OK] hellaswag seed1 Cascade: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_Cascade_seed1.csv (900/900)
+[OK] hellaswag seed1 FrugalGPT: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_FrugalGPT_seed1.csv (900/900)
+[OK] hellaswag seed1 MV-3: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_MV-3_seed1.csv (900/900)
+[OK] hellaswag seed1 Oracle: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_Oracle_seed1.csv (900/900)
+[OK] hellaswag seed1 Random: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_Random_seed1.csv (900/900)
+[OK] hellaswag seed1 SA: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_SA_seed1.csv (900/900)
+[OK] hellaswag seed1 SC-10: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_SC-10_seed1.csv (900/900)
+[OK] hellaswag seed1 SC-3: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_SC-3_seed1.csv (900/900)
+[OK] hellaswag seed1 SC-5: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_SC-5_seed1.csv (900/900)
+[OK] hellaswag seed1 TrustRoute-NoCostAware: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_TrustRoute-NoCostAware_seed1.csv (900/900)
+[OK] hellaswag seed1 TrustRoute-NoCost: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_TrustRoute-NoCost_seed1.csv (900/900)
+[OK] hellaswag seed1 TrustRoute-NoParallel: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_TrustRoute-NoParallel_seed1.csv (900/900)
+[OK] hellaswag seed1 TrustRoute-NoRep: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_TrustRoute-NoRep_seed1.csv (900/900)
+[OK] hellaswag seed1 TrustRoute: wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag/hellaswag_TrustRoute_seed1.csv (900/900)
+[DONE] hellaswag: outputs=14 out_dir=/data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/baseline_test90/hellaswag
+[SUMMARIZE] python -u /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/scripts/summarize_test90.py --dataset hellaswag --exp_root /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para --timeout_s 10 --include_per_seed
+[OK] wrote /data_huawei/jiakun/ISSTA/11111A_rerun_adj_para/test90_summary/hellaswag_test90_summary.csv
