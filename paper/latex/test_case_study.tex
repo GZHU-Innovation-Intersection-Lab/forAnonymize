@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{llp{4.2cm}p{6.6cm}}
+\toprule
+Method & Answer & Cost USD (seed1/2/3) & Latency s (seed1/2/3) \\
+\midrule
+TrustRoute & C/C/C & 0.0010121 / 0.0022353 / 0.0027053 & 238.8557 / 5.9455 / 7.3625 \\
+TrustRoute-NoCost & C/C/C & 0.0000288 / 0.0019188 / 0.0020294 & 1.1347 / 5.6836 / 7.2196 \\
+TrustRoute-NoCostAware & C/C/C & 0.0027413 / 0.0018569 / 0.0029738 & 7.0318 / 10.0442 / 8.0167 \\
+TrustRoute-NoRep & C/C/C & 0.0000288 / 0.0019028 / 0.0007078 & 1.1036 / 5.1689 / 4.6743 \\
+TrustRoute-NoParallel & C/C/C & 0.0000288 / 0.0015403 / 0.0007078 & 0.9499 / 4.1341 / 3.7691 \\
+\midrule
+Cascade & C/C/C & 0.0031868 / 0.0046915 / 0.0051079 & 284.2671 / 60.1767 / 69.3467 \\
+Oracle & C/C/C & 0.0006780 / 0.0006780 / 0.0006780 & 2.3169 / 2.0730 / 2.1098 \\
+Random & C/C/C & 0.0013803 / 0.0013553 / 0.0014778 & 4.2044 / 3.8346 / 4.2875 \\
+MV-3 & C/C/C & 0.0037771 / 0.0014139 / 0.0043661 & 128.5524 / 5.4790 / 12.3376 \\
+FrugalGPT & C/C/C & 0.0000288 / 0.0000288 / 0.0000288 & 20.3677 / 19.7429 / 19.5097 \\
+SA & C/C/C & 0.0000288 / 0.0000288 / 0.0000288 & 1.4867 / 0.9801 / 1.0590 \\
+SC-3 & C/C/C & 0.0000858 / 0.0000864 / 0.0000864 & 3.6139 / 3.0879 / 3.2656 \\
+SC-5 & C/C/C & 0.0001440 / 0.0001440 / 0.0001440 & 5.6266 / 5.4946 / 6.2459 \\
+SC-10 & C/C/C & 0.0002862 / 0.0002880 / 0.0002862 & 11.9258 / 12.1361 / 11.4812 \\
+\bottomrule
+\end{tabular}
+\caption{Case study for MMLU task mmlu-10247. All methods output the same answer (C), but cost/latency and routing behaviors differ across methods and seeds. Values are extracted from results/selected/mmlu\_*.csv.}
+\label{tab:case-mmlu-10247-compact}
+\end{table*}

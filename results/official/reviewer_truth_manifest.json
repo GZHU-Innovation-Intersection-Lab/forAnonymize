@@ -1,0 +1,234 @@
+{
+  "submission_line": "7 benchmark + test90 + mixed-source TrustRoute",
+  "default_cli_params": {
+    "tau1": 0.95,
+    "tau2": 0.8,
+    "max_k": 3,
+    "budget_usd": 5.0,
+    "eta": 0.3,
+    "max_retries": 1,
+    "w_q": 1.0,
+    "w_r": 0.3,
+    "w_c": 0.2,
+    "min_rep": 0.0
+  },
+  "runtime_truth": {
+    "run_exp_passes_router_none": true,
+    "run_exp_passes_judge_none": true,
+    "run_exp_passes_tau_literal_0_6": true,
+    "executor_has_judge_stub": true,
+    "executor_judge_stub_returns_constant": true,
+    "lite_utils_uses_static_pricing": true,
+    "lite_utils_uses_rep_state": true,
+    "lite_utils_has_no_observed_latency_ema": true
+  },
+  "dataset_split_counts": {
+    "arc_challenge": {
+      "dev10": 117,
+      "test90": 1055
+    },
+    "humaneval": {
+      "dev10": 16,
+      "test90": 148
+    },
+    "mbpp": {
+      "dev10": 37,
+      "test90": 341
+    },
+    "gsm8k": {
+      "dev10": 200,
+      "test90": 1119
+    },
+    "hellaswag": {
+      "dev10": 100,
+      "test90": 900
+    },
+    "mmlu": {
+      "dev10": 100,
+      "test90": 900
+    },
+    "winogrande": {
+      "dev10": 126,
+      "test90": 1141
+    }
+  },
+  "dataset_best_cfg": {
+    "arc_challenge": {
+      "dataset": "arc_challenge",
+      "tau1": 0.85,
+      "tau2": 0.67,
+      "w_q": 0.25,
+      "w_r": 0.6,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 0.9743589743589743,
+      "dev_cost_mean": 2.112948717948718e-05,
+      "dev_latency_mean": 1.4168183986957257,
+      "dev_n_present": 117.0,
+      "dev_n_total": 117.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/arc_challenge/arc_challenge_TrustRoute_tau1_0.85_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "humaneval": {
+      "dataset": "humaneval",
+      "tau1": 0.95,
+      "tau2": 1.0,
+      "w_q": 0.25,
+      "w_r": 0.6,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 1.0,
+      "dev_cost_mean": 0.0009874625,
+      "dev_latency_mean": 8.212206438183784,
+      "dev_n_present": 16.0,
+      "dev_n_total": 16.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/humaneval/humaneval_TrustRoute_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "mbpp": {
+      "dataset": "mbpp",
+      "tau1": 0.95,
+      "tau2": 0.67,
+      "w_q": 0.25,
+      "w_r": 0.6,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 0.9459459459459459,
+      "dev_cost_mean": 0.0036533502702702707,
+      "dev_latency_mean": 15.137714108905277,
+      "dev_n_present": 37.0,
+      "dev_n_total": 37.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/mbpp/mbpp_TrustRoute_tau1_0.95_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "gsm8k": {
+      "dataset": "gsm8k",
+      "tau1": 0.75,
+      "tau2": 0.67,
+      "w_q": 0.25,
+      "w_r": 0.6,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 0.9,
+      "dev_cost_mean": 0.0037180743,
+      "dev_latency_mean": 13.13363826751709,
+      "dev_n_present": 200.0,
+      "dev_n_total": 200.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/gsm8k/gsm8k_TrustRoute_tau1_0.75_tau2_0.67_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "hellaswag": {
+      "dataset": "hellaswag",
+      "tau1": 0.95,
+      "tau2": 1.0,
+      "w_q": 0.25,
+      "w_r": 0.6,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 0.88,
+      "dev_cost_mean": 0.0022664522,
+      "dev_latency_mean": 10.383013801574707,
+      "dev_n_present": 100.0,
+      "dev_n_total": 100.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/hellaswag/hellaswag_TrustRoute_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "mmlu": {
+      "dataset": "mmlu",
+      "tau1": 0.95,
+      "tau2": 0.67,
+      "w_q": 0.6,
+      "w_r": 0.25,
+      "w_c": 0.15,
+      "min_rep": 0.0,
+      "dev_acc": 0.91,
+      "dev_cost_mean": 0.0010687028,
+      "dev_latency_mean": 5.913413109779358,
+      "dev_n_present": 100.0,
+      "dev_n_total": 100.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/mmlu/mmlu_TrustRoute_tau1_0.95_tau2_0.67_wq_0.6_wr_0.25_wc_0.15_mr_0.0_seed1.csv"
+    },
+    "winogrande": {
+      "dataset": "winogrande",
+      "tau1": 0.95,
+      "tau2": 1.0,
+      "w_q": 0.25,
+      "w_r": 0.25,
+      "w_c": 0.5,
+      "min_rep": 0.0,
+      "dev_acc": 0.9444444444444444,
+      "dev_cost_mean": 0.0009451919047619048,
+      "dev_latency_mean": 4.450762661676558,
+      "dev_n_present": 126.0,
+      "dev_n_total": 126.0,
+      "grid_csv": "omitted_raw_runs/dev_grid/winogrande/winogrande_TrustRoute_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv"
+    }
+  },
+  "trustroute_selected_sources": {
+    "arc_challenge": {
+      "source": "real_eval_locked",
+      "trustroute_candidate": "TrustRoute",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/final_experiments/selected/arc_challenge_TrustRoute_seed1.csv|omitted_raw_runs/final_experiments/selected/arc_challenge_TrustRoute_seed2.csv|omitted_raw_runs/final_experiments/selected/arc_challenge_TrustRoute_seed3.csv",
+      "acc": "0.9706161137440757",
+      "cost": "0.00022593548183252876",
+      "lat": "2.1113970858979187"
+    },
+    "hellaswag": {
+      "source": "best_cfg_full",
+      "trustroute_candidate": "TrustRoute(best_cfg)",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed1.csv|omitted_raw_runs/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed2.csv|omitted_raw_runs/test90_runs/hellaswag/hellaswag_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.6_wc_0.15_mr_0.0_seed3.csv",
+      "acc": "0.8522222222223332",
+      "cost": "0.0023456821816666665",
+      "lat": "11.802369065373"
+    },
+    "winogrande": {
+      "source": "best_cfg_full",
+      "trustroute_candidate": "TrustRoute(best_cfg)",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/test90_runs/winogrande/winogrande_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed1.csv|omitted_raw_runs/test90_runs/winogrande/winogrande_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed2.csv|omitted_raw_runs/test90_runs/winogrande/winogrande_TrustRoute_best_tau1_0.95_tau2_1.0_wq_0.25_wr_0.25_wc_0.5_mr_0.0_seed3.csv",
+      "acc": "0.8878177037686666",
+      "cost": "0.000935709723",
+      "lat": "4.282825975642333"
+    },
+    "mmlu": {
+      "source": "real_eval_locked",
+      "trustroute_candidate": "TrustRoute",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/final_experiments/selected/mmlu_TrustRoute_seed1.csv|omitted_raw_runs/final_experiments/selected/mmlu_TrustRoute_seed2.csv|omitted_raw_runs/final_experiments/selected/mmlu_TrustRoute_seed3.csv",
+      "acc": "0.8959259259259259",
+      "cost": "0.001743893540740729",
+      "lat": "4.3738101313732285"
+    },
+    "humaneval": {
+      "source": "real_eval_locked",
+      "trustroute_candidate": "TrustRoute",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/final_experiments/selected/humaneval_TrustRoute_seed1.csv|omitted_raw_runs/final_experiments/selected/humaneval_TrustRoute_seed2.csv|omitted_raw_runs/final_experiments/selected/humaneval_TrustRoute_seed3.csv",
+      "acc": "0.9774774774774775",
+      "cost": "0.0022730283783783697",
+      "lat": "8.238771420341354"
+    },
+    "mbpp": {
+      "source": "paper_main_v1",
+      "trustroute_candidate": "TrustRoute(paper_main_v1)",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/final_experiments/paper_main_v1/mbpp/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1.csv|omitted_raw_runs/final_experiments/paper_main_v1/mbpp/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed2.csv|omitted_raw_runs/final_experiments/paper_main_v1/mbpp/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed3.csv",
+      "acc": "0.9247311827956989",
+      "cost": "0.002580655258285621",
+      "lat": "8.184373116346732"
+    },
+    "gsm8k": {
+      "source": "paper_main_v1",
+      "trustroute_candidate": "TrustRoute(paper_main_v1)",
+      "n_seeds_used": "3",
+      "selected_files": "omitted_raw_runs/final_experiments/paper_main_v1/gsm8k/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed1.csv|omitted_raw_runs/final_experiments/paper_main_v1/gsm8k/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed2.csv|omitted_raw_runs/final_experiments/paper_main_v1/gsm8k/TrustRoute_t1_0.75_t2_0.5_wq_0.4_wr_0.3_wc_0.3_mr_0.0_seed3.csv",
+      "acc": "0.8927613941018766",
+      "cost": "0.0022901871434905193",
+      "lat": "13.247450216995835"
+    }
+  },
+  "derived_from": {
+    "run_exp": "artifact/scripts/run_exp.py",
+    "executor": "src/runner/executor.py",
+    "lite_utils": "src/runner/lite_utils.py",
+    "fixed_report": "omitted_raw_runs/test90_summary/final_report_test90_fixed.csv",
+    "protocol_manifest": "omitted_raw_runs/test90_summary/protocol_manifest_test90.csv"
+  }
+}

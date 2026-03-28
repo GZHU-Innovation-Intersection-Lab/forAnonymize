@@ -1,0 +1,6 @@
+dataset,runtime_mode,n_raw_files,n_rows_total,n_rows_valid,n_rows_error,mean_rows_per_seed,stage1_early_stop_pct,stage2_vote_pct,stage2_confidence_pct,stage2_verified_pct,top_reason,top_reason_pct,n_unique_agents,top_agent,top_agent_pct
+arc_challenge,MCQ letter heuristic + majority vote,3,3165,3165,0,1055.0,0.9889415481832543,0.007582938388625593,0.0034755134281200632,0.0,stage1_early_stop,0.9889415481832543,3,cand-gpt-5-mini,0.9946287519747236
+gsm8k,format-only confidence + majority vote,3,3357,3357,0,1119.0,0.0002978850163836759,0.9499553172475425,0.04974679773607388,0.0,stage2_vote,0.9499553172475425,3,cand-gpt-4o-mini,0.9186773905272565
+hellaswag,MCQ letter heuristic + majority vote,3,2702,2700,2,900.6666666666666,0.38555555555555554,0.3907407407407407,0.2237037037037037,0.0,stage2_vote,0.3907407407407407,6,cand-gemini-2.5-flash,0.4177777777777778
+mmlu,MCQ letter heuristic + majority vote,3,2700,2700,0,900.0,0.9948148148148148,0.0025925925925925925,0.0025925925925925925,0.0,stage1_early_stop,0.9948148148148148,5,cand-gemini-2.5-flash,0.6662962962962963
+winogrande,MCQ letter heuristic + majority vote,3,3423,3423,0,1141.0,0.9713701431492843,0.011393514460999123,0.017236342389716622,0.0,stage1_early_stop,0.9713701431492843,6,cand-gemini-2.5-flash,0.6649138182880514

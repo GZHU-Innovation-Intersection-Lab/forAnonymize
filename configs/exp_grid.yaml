@@ -1,0 +1,27 @@
+# Which methods to run and params
+methods:
+  - SA
+  - SC-3
+  - Ours-Full
+  - TrustRoute-NoRep            # 消融1：无信誉机制
+  - TrustRoute-NoCost           # 消融2：无成本排序
+  - TrustRoute-NoDiversity    # 消融3：无多样性（可选）
+  - RouteLLM                    # 新增：基于启发式的路由
+  - FrugalGPT                   # 新增：级联调用
+  - SC-5                      # 扩展：更多样本
+  - SC-10                     # 扩展：更多样本
+# For later expansion (will be added in next step):
+#  - SC-10
+#  - MAD-1R
+#  - MAD-2R
+#  - Reflexion
+#  - ToT
+#  - GEval-k
+#  - MV-k
+
+seeds: [1, 2]
+datasets:
+  - gsm8k
+  - humaneval
+  - mbpp
+# Add bbh later

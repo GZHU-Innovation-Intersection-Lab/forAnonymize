@@ -1,0 +1,2706 @@
+dataset,task_id,method,seed,answer,cost_usd,latency_s,prompt_tokens,completion_tokens,agent_used,reason,error
+mbpp,Mbpp/620,TrustRoute-StrongestQueried,3,"```python
+def largest_subset(nums):
+    if not nums:
+        return 0
+    nums = sorted(nums)
+    n = len(nums)
+    dp = [1]*n
+    best = 1
+    for i in range(n):
+        for j in range(i):
+            if nums[i] % nums[j] == 0 and dp[j] + 1 > dp[i]:
+                dp[i] = dp[j] + 1
+        if dp[i] > best:
+            best = dp[i]
+    return best
+
+assert largest_subset([1, 3, 6, 13, 17, 18]) == 4
+```",0.00281665,30.675838947296143,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/637,TrustRoute-StrongestQueried,3,"def noprofit_noloss(cost, selling):
+    return cost == selling
+
+# example
+assert noprofit_noloss(1500, 1200) == False",0.00107195,11.119465827941895,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/133,TrustRoute-StrongestQueried,3,"def sum_negativenum(nums):
+    return sum(x for x in nums if x < 0)
+
+assert sum_negativenum([2, 4, -6, -9, 11, -12, 14, -5, 17]) == -32",0.00123885,13.287722826004028,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/56,TrustRoute-StrongestQueried,3,"def check(n):
+    s = str(n)
+    r = int(s[:0:-1]) if s[0] == '-' else int(s[::-1])
+    return n == 2 * r - 1
+
+assert check(70) == False",0.00144535,13.804251432418823,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/413,TrustRoute-StrongestQueried,3,"def extract_nth_element(lst, n):
+    return [t[n] for t in lst]
+
+assert extract_nth_element([('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)], 0) == ['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']",0.0009316499999999999,10.551933526992798,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/70,TrustRoute-StrongestQueried,3,"def get_equal(tuples):
+    if not tuples:
+        return True
+    it = iter(tuples)
+    first_len = len(next(it))
+    return all(len(t) == first_len for t in it)
+
+assert get_equal([(11, 22, 33), (44, 55, 66)]) == True",0.00103895,11.136114120483398,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/424,TrustRoute-StrongestQueried,3,"def extract_rear(strings):
+    return [s[-1] for s in strings]
+
+assert extract_rear(('Mers', 'for', 'Vers')) == ['s', 'r', 's']",0.00119155,9.110777854919434,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/803,TrustRoute-StrongestQueried,3,"def is_perfect_square(n):
+    import math
+    if not isinstance(n, int) or n < 0:
+        return False
+    r = math.isqrt(n)
+    return r * r == n
+
+assert not is_perfect_square(10)",0.00142145,17.81564426422119,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/426,TrustRoute-StrongestQueried,3,"def filter_oddnumbers(nums):
+    return [n for n in nums if n % 2 != 0]
+
+assert filter_oddnumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 3, 5, 7, 9]",0.00080595,8.897240161895752,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/126,TrustRoute-StrongestQueried,3,"import math
+
+def sum(a, b):
+    g = math.gcd(a, b)
+    if g == 0:
+        return 0
+    s = 0
+    i = 1
+    while i * i <= g:
+        if g % i == 0:
+            s += i
+            j = g // i
+            if j != i:
+                s += j
+        i += 1
+    return s
+
+assert sum(10, 15) == 6",0.00207005,25.79393482208252,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/565,TrustRoute-StrongestQueried,3,"def split(s):
+    return list(s)
+
+# test
+assert split('python') == ['p','y','t','h','o','n']",0.00064105,8.047908306121826,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/448,TrustRoute-StrongestQueried,3,,0.00310895,23.015453100204468,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/581,TrustRoute-StrongestQueried,3,"```python
+def surface_Area(base_edge, height):
+    """"""
+    Calculates the surface area of a square pyramid.
+
+    Args:
+        base_edge (float): The length of the base edge of the pyramid.
+        height (float): The slant height of the pyramid (not the vertical height).
+
+    Returns:
+        float: The total surface area of the square pyramid.
+    """"""
+    base_area = base_edge ** 2
+    lateral_area = 2 * base_edge * height
+    return base_area + lateral_area
+
+```",0.00484905,18.163387775421143,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/573,TrustRoute-StrongestQueried,3,"```python
+def unique_product(numbers):
+    unique_nums = set(numbers)
+    product = 1
+    for num in unique_nums:
+        product *= num
+    return product
+```",0.0015183999999999998,13.421708106994629,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/616,TrustRoute-StrongestQueried,3,"```python
+def tuple_modulo(t1, t2):
+    """"""
+    Performs element-wise modulo on two tuples of the same length.
+    """"""
+    return tuple(x % y for x, y in zip(t1, t2))
+```",0.0016367,10.167774200439453,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/310,TrustRoute-StrongestQueried,3,"```python
+def string_to_tuple(s: str) -> tuple:
+    return tuple(s)
+```",0.00053115,9.343116521835327,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/591,TrustRoute-StrongestQueried,3,"```python
+def swap_List(list_data):
+    if len(list_data) < 2:
+        return list_data
+    list_data[0], list_data[-1] = list_data[-1], list_data[0]
+    return list_data
+```",0.0012775999999999998,13.822788715362549,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/635,TrustRoute-StrongestQueried,3,"```python
+def heap_sort(arr):
+    n = len(arr)
+
+    # Build a maxheap
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract elements
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]  # Swap
+        heapify(arr, i, 0) # Call heapify on the reduced heap
+
+    return arr
+
+def heapify(arr, n, i):
+    largest = i  # Initialize largest as root
+    left = 2 * i + 1  # left child
+    right = 2 * i + 2  # right child
+
+    # See if left child of root exists and is greater than root
+    if left < n and arr[left] > arr[largest]:
+        largest = left
+
+    # See if right child of root exists and is greater than current largest
+    if right < n and arr[right] > arr[largest]:
+        largest = right
+
+    # Change root, if needed
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]  # Swap
+        # Heapify the root.
+        heapify(arr, n, largest)
+```",0.0027982000000000003,18.66323685646057,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/430,TrustRoute-StrongestQueried,3,,0.00410035,104.14780235290527,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/294,TrustRoute-StrongestQueried,3,"```python
+def max_val(data_list):
+    numeric_values = [item for item in data_list if isinstance(item, (int, float))]
+    return max(numeric_values)
+```",0.00204585,10.817546844482422,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/394,TrustRoute-StrongestQueried,3,"def check_distinct(t):
+    try:
+        return len(t) == len(set(t))
+    except TypeError:
+        seen = []
+        for x in t:
+            if x in seen:
+                return False
+            seen.append(x)
+        return True
+
+assert check_distinct((1, 4, 5, 6, 1, 4)) == False",0.00099795,8.987987279891968,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/3,TrustRoute-StrongestQueried,3,"```python
+def is_not_prime(n: int) -> bool:
+    if n < 2:
+        return True
+    if n == 2:
+        return False
+    if n % 2 == 0:
+        return True
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return True
+    return False
+```",0.0031245,12.76400089263916,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/67,TrustRoute-StrongestQueried,3,"```python
+def bell_number(n):
+    if n == 0:
+        return 1
+    bell = [[0] * (n + 1) for _ in range(n + 1)]
+    bell[0][0] = 1
+    for i in range(1, n + 1):
+        bell[i][0] = bell[i - 1][i - 1]
+        for j in range(1, i + 1):
+            bell[i][j] = bell[i - 1][j - 1] + bell[i][j - 1]
+    return bell[n][0]
+```",0.00101036,34.61674404144287,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/7,TrustRoute-StrongestQueried,3,"```python
+def find_char_long(text):
+    return [word for word in text.split() if len(word) >= 4]
+```",0.00053494,26.626075744628906,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/66,TrustRoute-StrongestQueried,3,"def pos_count(lst):
+    return sum(1 for x in lst if x > 0)
+
+assert pos_count([1, -2, 3, -4]) == 2",0.0008333500000000001,8.965256690979004,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/763,TrustRoute-StrongestQueried,3,"```python
+def find_min_diff(arr, n):
+    arr_list = sorted(list(arr))
+    min_diff = float('inf')
+
+    for i in range(n - 1):
+        min_diff = min(min_diff, arr_list[i+1] - arr_list[i])
+        
+    return min_diff
+
+```",0.00306615,22.84428119659424,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/17,TrustRoute-StrongestQueried,3,"```python
+def square_perimeter(side):
+    return 4 * side
+```",0.00030426000000000004,32.736040353775024,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/760,TrustRoute-StrongestQueried,3,"def unique_Element(lst):
+    return len(set(lst)) == 1
+
+assert unique_Element([1,1,1]) == True
+assert unique_Element([1,2,1]) == False
+assert unique_Element([42]) == True
+assert unique_Element([]) == False",0.00094705,7.9682183265686035,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/459,TrustRoute-StrongestQueried,3,"def remove_uppercase(s):
+    return ''.join(c for c in s if not c.isupper())
+
+assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'",0.00189755,23.439334630966187,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/791,TrustRoute-StrongestQueried,3,"def remove_nested(t):
+    return tuple(x for x in t if not isinstance(x, tuple))
+
+assert remove_nested((1, 5, 7, (4, 6), 10)) == (1, 5, 7, 10)",0.00118575,9.827735900878906,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/259,TrustRoute-StrongestQueried,3,"```python
+def maximize_elements(tuple1, tuple2):
+    return tuple(
+        tuple(max(e1, e2) for e1, e2 in zip(inner1, inner2))
+        for inner1, inner2 in zip(tuple1, tuple2)
+    )
+```",0.00399815,13.554991006851196,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/568,TrustRoute-StrongestQueried,3,"```python
+def empty_list(N):
+    return [{} for _ in range(N)]
+```",0.00037391999999999997,13.026470184326172,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/450,TrustRoute-StrongestQueried,3,"```python
+def extract_string(lst, n):
+    return [s for s in lst if len(s) == n]
+```",0.0005710800000000001,28.79009509086609,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/276,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def volume_cylinder(radius, height):
+    return math.pi * radius**2 * height
+```",0.00055418,19.143757820129395,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/125,TrustRoute-StrongestQueried,3,"```python
+def find_length(s):
+    max_diff = 0
+    curr = 0
+    for c in s:
+        if c == '0':
+            curr += 1
+        else:
+            curr -= 1
+        if curr < 0:
+            curr = 0
+        max_diff = max(max_diff, curr)
+    
+    curr = 0
+    for c in s:
+        if c == '1':
+            curr += 1
+        else:
+            curr -= 1
+        if curr < 0:
+            curr = 0
+        max_diff = max(max_diff, curr)
+    
+    return max_diff
+```",0.0016085599999999998,29.10996127128601,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/238,TrustRoute-StrongestQueried,3,"def number_of_substrings(s: str) -> int:
+    n = len(s)
+    return n * (n + 1) // 2
+
+assert number_of_substrings(""abc"") == 6",0.00083665,9.045318126678467,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/769,TrustRoute-StrongestQueried,3,"def Diff(a, b):
+    s = set(b)
+    rem = [(i, x) for i, x in enumerate(a) if x not in s]
+    return [x for i, x in rem if i % 2 == 0] + [x for i, x in rem if i % 2 == 1]
+
+assert Diff([10, 15, 20, 25, 30, 35, 40], [25, 40, 35]) == [10, 20, 30, 15]",0.00269825,17.95586609840393,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/723,TrustRoute-StrongestQueried,3,"```python
+def count_same_pair(list1, list2):
+    """"""
+    Counts the number of indices where two lists of the same length have equal values.
+    """"""
+    return sum(a == b for a, b in zip(list1, list2))
+```",0.00211035,11.320509910583496,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/280,TrustRoute-StrongestQueried,3,"```python
+def sequential_search(arr, element):
+    for i, item in enumerate(arr):
+        if item == element:
+            return (True, i)
+    return (False, -1)
+```",0.0007799999999999999,8.449047803878784,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/632,TrustRoute-StrongestQueried,3,"```python
+def move_zero(arr):
+    non_zeros = [x for x in arr if x != 0]
+    zeros_count = len(arr) - len(non_zeros)
+    return non_zeros + [0] * zeros_count
+```",0.0076901,16.85709309577942,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/745,TrustRoute-StrongestQueried,3,"```python
+def divisible_by_digits(startnum, endnum):
+    result = []
+    for num in range(startnum, endnum + 1):
+        # Convert number to string to easily iterate over digits
+        num_str = str(num)
+        is_valid = True
+        for digit_char in num_str:
+            digit = int(digit_char)
+            # A number cannot be divisible by zero
+            # And it must be divisible by all its non-zero digits
+            if digit == 0 or num % digit != 0:
+                is_valid = False
+                break
+        if is_valid:
+            result.append(num)
+    return result
+```",0.0042102500000000005,19.817933082580566,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/86,TrustRoute-StrongestQueried,3,"```python
+def centered_hexagonal_number(n: int) -> int:
+    """"""
+    Finds the nth centered hexagonal number.
+    """"""
+    return 3 * n * (n - 1) + 1
+```",0.0014477000000000001,9.875298976898193,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/100,TrustRoute-StrongestQueried,3,"```python
+def next_smallest_palindrome(num):
+    num += 1
+    while str(num) != str(num)[::-1]:
+        num += 1
+    return num
+```",0.0007654999999999999,34.372395515441895,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/605,TrustRoute-StrongestQueried,3,"import math
+
+def prime_num(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0:
+        return False
+    r = math.isqrt(n)
+    for i in range(3, r + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+assert prime_num(13) == True",0.00116625,11.657175064086914,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/293,TrustRoute-StrongestQueried,3,"import math
+
+def otherside_rightangle(a, b):
+    return math.sqrt(a*a + b*b)
+
+assert otherside_rightangle(7, 8) == 10.63014581273465",0.00124005,15.177581548690796,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/468,TrustRoute-StrongestQueried,3,,0.003909650000000001,42.42314147949219,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/306,TrustRoute-StrongestQueried,3,"The problem asks us to find the maximum sum of an increasing subsequence that includes elements from `arr[0...i]` (referred to as the ""prefix"") and also *must* include `arr[k]`, where `k > i`. The `arr[k]` element must be the last element in the increasing subsequence.
+
+Here's the approach:
+1.  **Calculate Maximum Sum Increasing Subsequence (MSIS) for prefixes:**
+    We use dynamic programming to calculate `dp[j]`, which represents the maximum sum of an increasing subsequence ending at index `j` (considering elements `arr[0...j]`). We only need to compute these values up to index `i`.
+    `dp[j]` is initialized with `arr[j]`. Then, for every `p < j`, if `arr[j] > arr[p]`, we can potentially extend the increasing subsequence ending at `p` with `arr[j]`. So, `dp[j] = max(dp[j], arr[j] + dp[p])`.
+
+2.  **Find the best prefix to precede `arr[k]`:**
+    After computing `dp` values up to `i`, we iterate through `j` from `0` to `i`. For each `arr[j]`, we check if it can precede `arr[k]` in an increasing subsequence (i.e., `arr[j] < arr[k]`).
+    If this condition holds, `dp[j]` represents the maximum sum of an increasing subsequence ending at `arr[j]`. We want to find the maximum such `dp[j]`. Let's call this `max_prefix_sum`.
+
+3.  **Construct the final sum:**
+    *   If we found at least one `arr[j]` (where `j <= i`) such that `arr[j] < arr[k]`, then the maximum sum of the full increasing subsequence is `max_prefix_sum + arr[k]`.
+    *   If no such `arr[j]` exists (i.e., no element in `arr[0...i]` can precede `arr[k]` while maintaining the increasing property), then the only way to satisfy the requirement of ""including a given kth element"" is to have the subsequence consist solely of `arr[k]`. In this case, the sum is simply `arr[k]`.
+
+This approach ensures that `arr[k]` is always included and is the largest element in the subsequence (as it's at the end), and that the preceding part of the subsequence (if any) is also increasing and contributes the maximum possible sum from `arr[0...i]`.
+
+```python
+def max_sum_increasing_subseq(arr, n, i, k):
+    dp = [0] * (i + 1)
+
+    for j in range(i + 1):
+        dp[j] = arr[j]
+        for p in range(j):
+            if arr[j] > arr[p]:
+                dp[j] = max(dp[j], arr[j] + dp[p])
+
+    max_prefix_sum = float('-inf')
+    found_valid_prefix = False
+
+    for j in range(i + 1):
+        if arr[j] < arr[k]:
+            max_prefix_sum = max(max_prefix_sum, dp[j])
+            found_valid_prefix = True
+            
+    if found_valid_prefix:
+        return max_prefix_sum + arr[k]
+    else:
+        return arr[k]
+
+```",0.0224967,45.1924614906311,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/64,TrustRoute-StrongestQueried,3,"```python
+def sort_tuples_by_second_value(tuples_list):
+    """"""
+    Sorts a list of tuples based on the second value of each tuple.
+    """"""
+    return sorted(tuples_list, key=lambda x: x[1])
+```",0.0007629,8.680781602859497,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/247,TrustRoute-StrongestQueried,3,"```python
+def lps(s: str) -> int:
+    n = len(s)
+    
+    if n == 0:
+        return 0
+
+    dp = [[0] * n for _ in range(n)]
+
+    # All single characters are palindromic subsequences of length 1
+    for i in range(n):
+        dp[i][i] = 1
+    
+    # Fill the DP table for lengths from 2 to n
+    for length in range(2, n + 1):
+        for i in range(n - length + 1):
+            j = i + length - 1
+            if s[i] == s[j]:
+                # If characters match, add 2 to the LPS of the inner substring
+                # The condition `i + 1 <= j - 1` handles cases where the inner substring is empty (length 0 or 1)
+                dp[i][j] = 2 + (dp[i+1][j-1] if i + 1 <= j - 1 else 0)
+            else:
+                # If characters don't match, take the maximum of
+                # LPS excluding s[i] or LPS excluding s[j]
+                dp[i][j] = max(dp[i+1][j], dp[i][j-1])
+                
+    return dp[0][n-1]
+
+```",0.0266272,47.7796573638916,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/124,TrustRoute-StrongestQueried,3,"```python
+import cmath
+
+def angle_complex(z: complex) -> float:
+    """"""
+    Calculates the angle (argument) of a complex number.
+
+    Args:
+        z: The complex number.
+
+    Returns:
+        The angle of the complex number in radians.
+    """"""
+    return cmath.phase(z)
+```",0.0014274000000000001,21.29348373413086,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/270,TrustRoute-StrongestQueried,3,"```python
+def sum_even_and_even_index(nums):
+    return sum(num for i, num in enumerate(nums) if i % 2 == 0 and num % 2 == 0)
+```",0.0005777800000000001,35.02604532241821,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/790,TrustRoute-StrongestQueried,3,"```python
+def even_position(numbers):
+    """"""
+    Checks whether every even index contains an even number in a given list.
+
+    Args:
+        numbers: A list of integers.
+
+    Returns:
+        True if all numbers at even indices are even, False otherwise.
+    """"""
+    for i, num in enumerate(numbers):
+        if i % 2 == 0 and num % 2 != 0:
+            return False
+    return True
+```",0.0014609000000000002,10.2610445022583,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/602,TrustRoute-StrongestQueried,3,"def first_repeated_char(s):
+    """"""Return the first character that repeats in s, or None if none exists.""""""
+    seen = set()
+    for ch in s:
+        if ch in seen:
+            return ch
+        seen.add(ch)
+    return None
+
+assert first_repeated_char(""abcabc"") == ""a""",0.00117935,11.933796644210815,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/16,TrustRoute-StrongestQueried,3,"import re
+
+def text_lowercase_underscore(s):
+    return bool(re.fullmatch(r'[a-z]+_[a-z]+', s))
+
+assert text_lowercase_underscore(""aab_cbbbc"") == True",0.00169315,21.95176362991333,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/98,TrustRoute-StrongestQueried,3,"def multiply_num(iterable):
+    prod = 1
+    count = 0
+    for x in iterable:
+        prod *= x
+        count += 1
+    if count == 0:
+        raise ValueError(""empty iterable"")
+    return prod / count
+
+import math
+assert math.isclose(multiply_num((8, 2, 3, -1, 7)), -67.2, rel_tol=0.001)",0.00185345,14.415425777435303,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/84,TrustRoute-StrongestQueried,3,"```python
+def sequence(n):
+    if n <= 2:
+        return 1
+    memo = [0] * (n + 1)
+    memo[1] = memo[2] = 1
+    for i in range(3, n + 1):
+        memo[i] = memo[memo[i - 1]] + memo[i - memo[i - 1]]
+    return memo[n]
+```",0.00086614,42.622193336486816,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/587,TrustRoute-StrongestQueried,3,"```python
+def list_tuple(lst):
+    return tuple(lst)
+```",0.00044022,20.07573127746582,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/614,TrustRoute-StrongestQueried,3,"```python
+def cummulative_sum(tuple_list):
+    return sum(sum(t) for t in tuple_list)
+```",0.00074212,29.98356342315674,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/743,TrustRoute-StrongestQueried,3,"```python
+def rotate_right(lst, k):
+    if not lst:
+        return []
+    
+    n = len(lst)
+    k %= n
+    return lst[n - k:] + lst[:n - k]
+```",0.0024754499999999997,12.098419666290283,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/809,TrustRoute-StrongestQueried,3,"def check_smaller(a: tuple, b: tuple) -> bool:
+    if len(a) != len(b):
+        return False
+    return all(bi < ai for ai, bi in zip(a, b))
+
+assert check_smaller((1, 2, 3), (2, 3, 4)) == False",0.0012798500000000001,16.334508419036865,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/65,TrustRoute-StrongestQueried,3,"```python
+def recursive_list_sum(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, list):
+            total += recursive_list_sum(item)
+        else:
+            total += item
+    return total
+```",0.0023776,13.797590255737305,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/245,TrustRoute-StrongestQueried,3,"The solution uses dynamic programming to find the maximum sum of a bitonic subsequence. A bitonic subsequence is characterized by an increasing part followed by a decreasing part, with a peak element where the sequence transitions.
+
+The approach involves two main steps:
+1.  **Calculate `inc_sum` array**: For each element `arr[i]`, `inc_sum[i]` stores the maximum sum of an increasing subsequence that *ends* at `arr[i]`. This is computed by iterating from left to right, considering all previous elements `arr[j]` (where `j < i`). If `arr[i] > arr[j]`, then `arr[i]` can extend the increasing subsequence ending at `arr[j]`, and we update `inc_sum[i]` accordingly.
+2.  **Calculate `dec_sum` array**: For each element `arr[i]`, `dec_sum[i]` stores the maximum sum of a decreasing subsequence that *starts* at `arr[i]`. This is computed by iterating from right to left, considering all subsequent elements `arr[j]` (where `j > i`). If `arr[i] > arr[j]`, then `arr[i]` can start a decreasing subsequence that continues with `arr[j]`, and we update `dec_sum[i]` accordingly.
+
+After computing both `inc_sum` and `dec_sum` arrays, the maximum sum of a bitonic subsequence is found by iterating through all possible peak elements `arr[i]`. If `arr[i]` is the peak, the sum of the bitonic subsequence would be `inc_sum[i] + dec_sum[i] - arr[i]`. We subtract `arr[i]` once because it's included in both `inc_sum[i]` and `dec_sum[i]`. The maximum value among these sums is the final answer.
+
+```python
+def max_sum(arr: list[int]) -> int:
+    n = len(arr)
+
+    if n == 0:
+        return 0
+
+    # inc_sum[i] stores the maximum sum of an increasing subsequence ending at arr[i]
+    # Initialize with arr[i] itself as a subsequence of length 1
+    inc_sum = list(arr)
+    for i in range(1, n):
+        for j in range(i):
+            if arr[i] > arr[j]:
+                inc_sum[i] = max(inc_sum[i], inc_sum[j] + arr[i])
+
+    # dec_sum[i] stores the maximum sum of a decreasing subsequence starting at arr[i]
+    # Initialize with arr[i] itself as a subsequence of length 1
+    dec_sum = list(arr)
+    for i in range(n - 2, -1, -1):
+        for j in range(n - 1, i, -1):
+            if arr[i] > arr[j]:
+                dec_sum[i] = max(dec_sum[i], dec_sum[j] + arr[i])
+
+    # The maximum sum of a bitonic subsequence is the maximum of
+    # (inc_sum[i] + dec_sum[i] - arr[i]) for all possible peak elements arr[i].
+    # arr[i] is subtracted because it is counted in both the increasing and decreasing parts.
+    max_total_sum = -float('inf')
+    for i in range(n):
+        max_total_sum = max(max_total_sum, inc_sum[i] + dec_sum[i] - arr[i])
+    
+    return max_total_sum
+
+```",0.02763325,49.722413778305054,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/597,TrustRoute-StrongestQueried,3,"```python
+def find_kth(arr1, arr2, k):
+    i, j = 0, 0
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] < arr2[j]:
+            k -= 1
+            if k == 0:
+                return arr1[i]
+            i += 1
+        else:
+            k -= 1
+            if k == 0:
+                return arr2[j]
+            j += 1
+    while i < len(arr1):
+        k -= 1
+        if k == 0:
+            return arr1[i]
+        i += 1
+    while j < len(arr2):
+        k -= 1
+        if k == 0:
+            return arr2[j]
+        j += 1
+    return None
+```",0.00141453,97.7686276435852,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/734,TrustRoute-StrongestQueried,3,"```python
+def sum_Of_Subarray_Prod(arr):
+    total = 0
+    n = len(arr)
+    
+    for i in range(n):
+        prod = 1
+        for j in range(i, n):
+            prod *= arr[j]
+            total += prod
+    
+    return total
+```",0.00125419,99.15446543693542,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/440,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def find_adverb_position(sentence):
+    pattern = r'\b\w+ly\b'
+    match = re.search(pattern, sentence)
+    if match:
+        return (match.start(), match.end(), match.group())
+    return None
+```",0.0014361,46.184112548828125,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/137,TrustRoute-StrongestQueried,3,"```python
+def zero_count(arr):
+    zeros = arr.count(0)
+    non_zeros = len(arr) - zeros
+    return zeros / non_zeros if non_zeros > 0 else 0
+```",0.0007998899999999999,51.88019824028015,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/224,TrustRoute-StrongestQueried,3,"```python
+def count_Set_Bits(n):
+    return bin(n).count('1')
+```",0.000616,20.185169219970703,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/757,TrustRoute-StrongestQueried,3,"```python
+def count_reverse_pairs(strings):
+    seen = set()
+    count = 0
+    for s in strings:
+        rev = s[::-1]
+        if rev in seen:
+            count += 1
+        seen.add(s)
+    return count
+```",0.00128115,27.105894327163696,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/132,TrustRoute-StrongestQueried,3,"```python
+def tup_string(tup):
+    return ''.join(tup)
+```",0.00039146,20.411519527435303,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/171,TrustRoute-StrongestQueried,3,"```python
+def perimeter_pentagon(side):
+    return side * 5
+```",0.00034543999999999997,21.374817848205566,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/428,TrustRoute-StrongestQueried,3,"```python
+def shell_sort(arr):
+    n = len(arr)
+    gap = n // 2
+    
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+            arr[j] = temp
+        gap //= 2
+    return arr
+```",0.0008594599999999999,85.40832805633545,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/433,TrustRoute-StrongestQueried,3,"```python
+def check_greater(arr, num):
+    return all(num > x for x in arr)
+```",0.00049181,93.84109926223755,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/732,TrustRoute-StrongestQueried,3,"```python
+def replace_specialchar(text):
+    import re
+    return re.sub(r'[ ,.]', ':', text)
+```",0.00080686,25.187690258026123,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/633,TrustRoute-StrongestQueried,3,"```python
+def pair_xor_Sum(arr, n):
+    total = 0
+    for i in range(n):
+        for j in range(i+1, n):
+            total += arr[i] ^ arr[j]
+    return total
+```",0.00074893,20.071473836898804,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/145,TrustRoute-StrongestQueried,3,"```python
+def max_Abs_Diff(arr):
+    return max(arr) - min(arr)
+
+assert max_Abs_Diff((2, 1, 5, 3)) == 4
+```",0.0004965,253.9890365600586,0,0,cand-gpt-4o-mini,stage2_strongest_queried,
+mbpp,Mbpp/404,TrustRoute-StrongestQueried,3,"```python
+def minimum(a, b):
+    return a if a < b else b
+
+assert minimum(1, 2) == 1
+```",0.00032040000000000004,252.97963523864746,0,0,cand-gpt-4o-mini,stage2_strongest_queried,
+mbpp,Mbpp/628,TrustRoute-StrongestQueried,3,"```python
+def replace_spaces(s):
+    return s.replace(' ', '%20')
+
+# Test the function
+assert replace_spaces(""My Name is Dawood"") == 'My%20Name%20is%20Dawood'
+```",0.00027185,253.35681891441345,0,0,cand-gpt-4o-mini,stage2_strongest_queried,
+mbpp,Mbpp/290,TrustRoute-StrongestQueried,3,"```python
+def max_length(lst):
+    if not lst:
+        return (0, [])
+    max_list = max(lst, key=len)
+    return (len(max_list), max_list)
+```",0.0006189,24.198814153671265,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/610,TrustRoute-StrongestQueried,3,"```python
+def remove_kth_element(lst, k):
+    return lst[:k-1] + lst[k:]
+```",0.0022533500000000003,24.80306339263916,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/412,TrustRoute-StrongestQueried,3,"```python
+def remove_odd(numbers):
+    return [num for num in numbers if num % 2 == 0]
+```",0.0006309499999999999,8.961155652999878,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/274,TrustRoute-StrongestQueried,3,"```python
+def even_binomial_Coeff_Sum(n: int) -> int:
+    """"""
+    Calculates the sum of even-indexed binomial coefficients for a positive integer n.
+    This sum is equal to 2^(n-1).
+    """"""
+    return 2**(n - 1)
+
+```",0.00294115,14.99424934387207,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/281,TrustRoute-StrongestQueried,3,"```python
+def all_unique(lst):
+    return len(lst) == len(set(lst))
+```",0.00037551999999999996,18.63502550125122,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/59,TrustRoute-StrongestQueried,3,"```python
+def is_octagonal(n):
+    return n * (3 * n - 2)
+```",0.0005444600000000001,55.972532749176025,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/721,TrustRoute-StrongestQueried,3,"```python
+def maxAverageOfPath(matrix):
+    n = len(matrix)
+    dp_sum = [[0]*n for _ in range(n)]
+    dp_len = [[0]*n for _ in range(n)]
+    
+    dp_sum[0][0] = matrix[0][0]
+    dp_len[0][0] = 1
+    
+    for i in range(1, n):
+        dp_sum[i][0] = dp_sum[i-1][0] + matrix[i][0]
+        dp_len[i][0] = dp_len[i-1][0] + 1
+    
+    for j in range(1, n):
+        dp_sum[0][j] = dp_sum[0][j-1] + matrix[0][j]
+        dp_len[0][j] = dp_len[0][j-1] + 1
+    
+    for i in range(1, n):
+        for j in range(1, n):
+            from_top_sum = dp_sum[i-1][j] + matrix[i][j]
+            from_top_len = dp_len[i-1][j] + 1
+            from_left_sum = dp_sum[i][j-1] + matrix[i][j]
+            from_left_len = dp_len[i][j-1] + 1
+            
+            top_avg = from_top_sum / from_top_len
+            left_avg = from_left_sum / from_left_len
+            
+            if top_avg > left_avg:
+                dp_sum[i][j] = from_top_sum
+                dp_len[i][j] = from_top_len
+            else:
+                dp_sum[i][j] = from_left_sum
+                dp_len[i][j] = from_left_len
+    
+    return dp_sum[n-1][n-1] / dp_len[n-1][n-1]
+```",0.0022234000000000004,226.282231092453,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/556,TrustRoute-StrongestQueried,3,"```python
+def find_Odd_Pair(arr, n):
+    count = 0
+    odd_count = sum(1 for x in arr if x % 2 == 1)
+    even_count = n - odd_count
+    count = odd_count * even_count
+    return count
+```",0.0008457599999999999,62.34549856185913,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/82,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def volume_sphere(radius):
+    return (4/3) * math.pi * radius**3
+```",0.00040211,20.75130009651184,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/807,TrustRoute-StrongestQueried,3,"```python
+def first_odd(numbers):
+    for num in numbers:
+        if num % 2 != 0:
+            return num
+    return None
+```",0.00045809,20.044189453125,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/733,TrustRoute-StrongestQueried,3,"```python
+def find_first_occurrence(arr, target):
+    left, right = 0, len(arr) - 1
+    result = -1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            result = mid
+            right = mid - 1
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return result
+```",0.0008760199999999999,49.78159260749817,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/435,TrustRoute-StrongestQueried,3,"```python
+def last_Digit(n):
+    return abs(n) % 10
+```",0.0006852200000000001,33.09366703033447,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/731,TrustRoute-StrongestQueried,3,"import math
+
+def lateralsurface_cone(r, h):
+    return math.pi * r * math.hypot(r, h)
+
+assert lateralsurface_cone(5, 12) == 204.20352248333654",0.0010937499999999999,9.982694387435913,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/388,TrustRoute-StrongestQueried,3,"def highest_Power_of_2(n):
+    if n < 1:
+        return 0
+    return 1 << (n.bit_length() - 1)
+
+assert highest_Power_of_2(10) == 8",0.00135505,14.056672096252441,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/592,TrustRoute-StrongestQueried,3,"import math
+
+def sum_Of_product(n):
+    return math.comb(2*n, n+1)
+
+assert sum_Of_product(3) == 15",0.0022563500000000003,15.521496057510376,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/261,TrustRoute-StrongestQueried,3,"def division_elements(a: tuple, b: tuple) -> tuple:
+    if len(a) != len(b):
+        raise ValueError(""Tuples must have the same length"")
+    return tuple(x // y for x, y in zip(a, b))
+
+assert division_elements((10, 4, 6, 9), (5, 2, 3, 3)) == (2, 2, 2, 3)",0.00146425,12.24213194847107,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/420,TrustRoute-StrongestQueried,3,"```python
+def cube_Sum(n):
+    """"""
+    Calculates the sum of the cubes of the first n even natural numbers.
+
+    Args:
+        n: A non-negative integer representing the count of even natural numbers.
+
+    Returns:
+        The sum of the cubes of the first n even natural numbers.
+    """"""
+    return 8 * ((n * (n + 1)) // 2)**2
+
+```",0.0043945,16.121614456176758,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/68,TrustRoute-StrongestQueried,3,"```python
+def is_Monotonic(array):
+    if len(array) <= 1:
+        return True
+
+    is_non_decreasing = True
+    is_non_increasing = True
+
+    for i in range(len(array) - 1):
+        if array[i] > array[i+1]:
+            is_non_decreasing = False
+        if array[i] < array[i+1]:
+            is_non_increasing = False
+            
+    return is_non_decreasing or is_non_increasing
+```",0.0062640000000000005,17.419428825378418,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/14,TrustRoute-StrongestQueried,3,"def find_Volume(base, tri_height, length):
+    return base * tri_height * length / 2
+
+assert find_Volume(10, 8, 6) == 240",0.00121095,9.302299976348877,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/557,TrustRoute-StrongestQueried,3,"```python
+def toggle_string(s):
+    return s.swapcase()
+```",0.00043349999999999997,32.30317783355713,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/804,TrustRoute-StrongestQueried,3,"```python
+def is_product_even(arr):
+    for num in arr:
+        if num % 2 == 0:
+            return True
+    return False
+```",0.00043742,35.83584022521973,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/479,TrustRoute-StrongestQueried,3,"```python
+def first_Digit(n):
+    return int(str(n)[0])
+```",0.0012217,13.572174072265625,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/57,TrustRoute-StrongestQueried,3,"```python
+def find_Max_Num(digits):
+    """"""
+    Finds the largest number that can be formed with the given list of digits.
+    """"""
+    s_digits = [str(d) for d in digits]
+    s_digits.sort(reverse=True)
+    return int("""".join(s_digits))
+
+```",0.0011327,11.680944919586182,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/432,TrustRoute-StrongestQueried,3,"```python
+def median_trapezium(side1, side2, side3=None):
+  """"""
+  Calculates the median length of a trapezium.
+
+  The median of a trapezium is the average of the lengths of its two parallel sides.
+  This function assumes the first two arguments are the lengths of the parallel sides.
+  The third argument, if provided, is ignored as it's not needed for the median calculation.
+  """"""
+  return (side1 + side2) / 2
+```",0.0029116999999999997,21.544363975524902,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/456,TrustRoute-StrongestQueried,3,"def reverse_string_list(strings):
+    return [s[::-1] for s in strings]
+
+assert reverse_string_list(['Red', 'Green', 'Blue', 'White', 'Black']) == ['deR', 'neerG', 'eulB', 'etihW', 'kcalB']",0.0011069500000000002,10.303776741027832,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/638,TrustRoute-StrongestQueried,3,"import math
+
+def wind_chill(v, t):
+    wc = 13.12 + 0.6215 * t - 11.37 * (v ** 0.16) + 0.3965 * t * (v ** 0.16)
+    return int(round(wc))",0.0018661500000000002,13.723771810531616,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/476,TrustRoute-StrongestQueried,3,"```python
+def big_sum(arr):
+  """"""
+  Finds the sum of the largest and smallest value in a given array.
+  """"""
+  return min(arr) + max(arr)
+```",0.0007434,10.318409442901611,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/427,TrustRoute-StrongestQueried,3,"```python
+def change_date_format(date_str: str) -> str:
+    """"""
+    Converts a date string from 'yyyy-mm-dd' format to 'dd-mm-yyyy' format.
+    """"""
+    parts = date_str.split('-')
+    return f""{parts[2]}-{parts[1]}-{parts[0]}""
+```",0.0010521,9.686533451080322,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/309,TrustRoute-StrongestQueried,3,"```python
+def maximum(a, b):
+    return a if a > b else b
+```",0.0004289,30.544983386993408,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/754,TrustRoute-StrongestQueried,3,"Here’s the function:
+
+```python
+def extract_index_list(l1, l2, l3):
+    return [x for i, x in enumerate(l1) if i < len(l2) and i < len(l3) and x == l2[i] == l3[i]]
+```",0.00088333,73.69791173934937,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/576,TrustRoute-StrongestQueried,3,"```python
+def is_Sub_Array(A, B):
+    n, m = len(A), len(B)
+    if m == 0:
+        return True
+    if n < m:
+        return False
+    
+    for i in range(n - m + 1):
+        if A[i:i+m] == B:
+            return True
+    return False
+```",0.0010394699999999998,22.861758708953857,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/391,TrustRoute-StrongestQueried,3,"```python
+def convert_list_dictionary(outer_keys, inner_keys, values):
+    """"""
+    Converts three lists into a list of nested dictionaries.
+
+    Args:
+        outer_keys (list): A list of keys for the outer dictionaries.
+        inner_keys (list): A list of keys for the inner dictionaries.
+        values (list): A list of values for the inner dictionaries.
+
+    Returns:
+        list: A list of dictionaries, where each dictionary contains 
+              one outer key mapping to a nested dictionary with one 
+              inner key-value pair.
+    """"""
+    return [{outer_k: {inner_k: val}} for outer_k, inner_k, val in zip(outer_keys, inner_keys, values)]
+```",0.00331795,19.5973961353302,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/554,TrustRoute-StrongestQueried,3,"def Split(nums):
+    return [x for x in nums if x % 2]
+
+assert Split([1,2,3,4,5,6]) == [1,3,5]",0.00100385,10.684800386428833,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/167,TrustRoute-StrongestQueried,3,"```python
+def next_power_of_2(n):
+    if n <= 1:
+        return 1
+    return 1 << (n - 1).bit_length()
+```",0.0007486399999999999,30.191468954086304,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/165,TrustRoute-StrongestQueried,3,"```python
+def count_char_position(s):
+    s = s.lower()
+    return sum(1 for i, ch in enumerate(s) if ord(ch) - ord('a') == i)
+```",0.00075788,174.6207320690155,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/305,TrustRoute-StrongestQueried,3,"```python
+def start_withp(words):
+    result = []
+    for phrase in words:
+        for word in phrase.split():
+            if word.lower().startswith('p'):
+                result.append(word)
+                if len(result) == 2:
+                    return tuple(result)
+    return tuple(result)
+```",0.00106565,43.950984477996826,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/753,TrustRoute-StrongestQueried,3,"Here's a concise solution to find the minimum k records from a list of tuples:
+
+```python
+def min_k(records, k):
+    return sorted(records, key=lambda x: x[1])[:k]
+
+# Test case
+assert min_k([('Manjeet', 10), ('Akshat', 4), ('Akash', 2), ('Nikhil', 8)], 2) == [('Akash', 2), ('Akshat', 4)]
+```",0.0005644,253.63668775558472,0,0,cand-gpt-4o-mini,stage2_strongest_queried,
+mbpp,Mbpp/460,TrustRoute-StrongestQueried,3,"```python
+def Extract(lst):
+    return [sublist[0] for sublist in lst]
+```",0.00039673,167.05473709106445,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/94,TrustRoute-StrongestQueried,3,"```python
+def index_minimum(lst):
+    return min(lst, key=lambda x: x[1])[0]
+```",0.00058622,106.15238571166992,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/796,TrustRoute-StrongestQueried,3,"```python
+def return_sum(data_dict: dict) -> int:
+    """"""
+    Finds the sum of all numerical items (values) in the given dictionary.
+
+    Args:
+        data_dict: A dictionary where values are numbers.
+
+    Returns:
+        The sum of all values in the dictionary.
+    """"""
+    return sum(data_dict.values())
+```",0.0008109999999999999,9.903074026107788,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/787,TrustRoute-StrongestQueried,3,"import re
+
+def text_match_three(text):
+    return bool(re.search(r'ab{3}', text))
+
+assert not text_match_three(""ac"")",0.00205315,20.283618211746216,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/239,TrustRoute-StrongestQueried,3,,0.00343015,33.19239115715027,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/799,TrustRoute-StrongestQueried,3,"```python
+def left_rotate(n, d):
+    return ((n << d) | (n >> (32 - d))) & 0xFFFFFFFF
+```",0.00101586,25.388774633407593,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/730,TrustRoute-StrongestQueried,3,"```python
+def consecutive_duplicates(lst):
+    return [lst[i] for i in range(len(lst)) if i == 0 or lst[i] != lst[i-1]]
+```",0.00091466,19.683159351348877,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/588,TrustRoute-StrongestQueried,3,"```python
+def big_diff(nums):
+    return max(nums) - min(nums)
+```",0.00037184,48.63722586631775,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/234,TrustRoute-StrongestQueried,3,"```python
+def volume_cube(side):
+    return side ** 3
+```",0.00037258,19.369019508361816,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/445,TrustRoute-StrongestQueried,3,"```python
+def index_multiplication(tuple1, tuple2):
+    return tuple(
+        tuple(a * b for a, b in zip(sub1, sub2))
+        for sub1, sub2 in zip(tuple1, tuple2)
+    )
+```",0.0008418099999999999,17.75363063812256,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/92,TrustRoute-StrongestQueried,3,"```python
+def is_undulating(num: int) -> bool:
+    s = str(num)
+    length = len(s)
+
+    if length < 3:
+        return False
+
+    d1 = s[0]
+    d2 = s[1]
+
+    if d1 == d2:
+        return False
+
+    for i in range(2, length):
+        if i % 2 == 0:
+            if s[i] != d1:
+                return False
+        else:
+            if s[i] != d2:
+                return False
+
+    return True
+```",0.00838975,24.190992832183838,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/272,TrustRoute-StrongestQueried,3,"```python
+def rear_extract(lst):
+    return [t[-1] for t in lst]
+```",0.00048552999999999997,37.039697885513306,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/720,TrustRoute-StrongestQueried,3,"```python
+def add_dict_to_tuple(original_tuple: tuple, new_dict: dict) -> tuple:
+    """"""
+    Adds a dictionary to the end of a tuple.
+
+    Args:
+        original_tuple: The initial tuple.
+        new_dict: The dictionary to add.
+
+    Returns:
+        A new tuple with the dictionary appended.
+    """"""
+    return original_tuple + (new_dict,)
+```",0.00142635,12.447745323181152,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/273,TrustRoute-StrongestQueried,3,"```python
+def substract_elements(tuple1, tuple2):
+    return tuple(a - b for a, b in zip(tuple1, tuple2))
+```",0.00065536,14.496063709259033,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/572,TrustRoute-StrongestQueried,3,"```python
+def two_unique_nums(nums):
+    return [num for num in nums if nums.count(num) == 1]
+```",0.0006600600000000001,71.59499931335449,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/806,TrustRoute-StrongestQueried,3,"import re
+
+def max_run_uppercase(s):
+    return max((len(m) for m in re.findall(r'[A-Z]+', s)), default=0)
+
+assert max_run_uppercase('GeMKSForGERksISBESt') == 5",0.00130555,17.908668518066406,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/109,TrustRoute-StrongestQueried,3,"A number represented by a binary string is odd if its least significant bit (rightmost character) is '1'.
+
+When a binary string `s` is rotated by moving its first character to the end, the new string becomes `s[1:] + s[0]`. The least significant bit of this rotated string is `s[0]`.
+
+After the second rotation, the string becomes `s[2:] + s[0] + s[1]`. Its least significant bit is `s[1]`.
+
+In general, after `k` rotations, the least significant bit of the resulting string is `s[(k-1) % len(s)]` from the *original* string. The problem asks us to count odd numbers for `n` rotations. This means we consider the states after 1st rotation, 2nd rotation, ..., up to `n`-th rotation.
+
+For each rotation `i` (from 1 to `n`), we check the character at index `(i-1) % L` in the original string `s`, where `L` is the length of `s`. If this character is '1', we increment our count.
+
+```python
+def odd_Equivalent(s: str, n: int) -> int:
+    odd_count = 0
+    L = len(s)
+    for i in range(n):
+        # The character that becomes the LSB after the (i+1)-th rotation
+        # is s[i % L] from the original string.
+        if s[i % L] == '1':
+            odd_count += 1
+    return odd_count
+
+```",0.012989599999999999,42.5617573261261,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/18,TrustRoute-StrongestQueried,3,"def remove_dirty_chars(s, dirty):
+    dirty_set = set(dirty)
+    return ''.join(ch for ch in s if ch not in dirty_set)
+
+assert remove_dirty_chars(""probasscurve"", ""pros"") == 'bacuve'",0.00105585,14.798905372619629,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/569,TrustRoute-StrongestQueried,3,"```python
+def sort_sublists(lst):
+    return [sorted(sublist) for sublist in lst]
+```",0.00050341,11.395287275314331,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/398,TrustRoute-StrongestQueried,3,"```python
+def sum_of_digits(numbers):
+    return sum(int(d) for num in numbers for d in str(num))
+```",0.0005261300000000001,12.390099287033081,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/255,TrustRoute-StrongestQueried,3,"```python
+from itertools import combinations_with_replacement
+
+def combinations_colors(colors, n):
+    return list(combinations_with_replacement(colors, n))
+```",0.0011329800000000002,27.04888677597046,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/166,TrustRoute-StrongestQueried,3,"```python
+def find_even_pair(lst):
+    count = 0
+    for i in range(len(lst)):
+        for j in range(i + 1, len(lst)):
+            if (lst[i] ^ lst[j]) % 2 == 0:
+                count += 1
+    return count
+```",0.0007423200000000001,14.786742210388184,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/269,TrustRoute-StrongestQueried,3,"```python
+def ascii_value(char):
+  """"""
+  Finds the ASCII value of a character.
+  """"""
+  return ord(char)
+```",0.0004618,9.606924533843994,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/474,TrustRoute-StrongestQueried,3,"```python
+def replace_char(s: str, old_char: str, new_char: str) -> str:
+    return s.replace(old_char, new_char)
+```",0.0008451999999999999,10.58559536933899,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/266,TrustRoute-StrongestQueried,3,"def lateralsurface_cube(side):
+    return 4 * side * side
+
+assert lateralsurface_cube(5) == 100",0.0008897500000000001,11.502601385116577,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/227,TrustRoute-StrongestQueried,3,"def min_of_three(a, b, c):
+    return a if a <= b and a <= c else (b if b <= c else c)
+
+assert min_of_three(10, 20, 0) == 0",0.00092645,10.257598638534546,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/784,TrustRoute-StrongestQueried,3,"def mul_even_odd(lst):
+    even = odd = None
+    for x in lst:
+        if even is None and x % 2 == 0:
+            even = x
+        if odd is None and x % 2 != 0:
+            odd = x
+        if even is not None and odd is not None:
+            break
+    if even is None or odd is None:
+        raise ValueError(""list must contain at least one even and one odd"")
+    return even * odd
+
+assert mul_even_odd([1,3,5,7,4,1,6,8]) == 4",0.00178225,16.610028743743896,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/230,TrustRoute-StrongestQueried,3,"def replace_blank(s, ch):
+    return s.replace(' ', ch)
+
+assert replace_blank(""hello people"", '@') == ""hello@people""",0.00102045,9.312690258026123,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/808,TrustRoute-StrongestQueried,3,"def check_K(tup, k):
+    return k in tup
+
+assert check_K((10, 4, 5, 6, 8), 6) == True",0.00093475,9.791219711303711,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/120,TrustRoute-StrongestQueried,3,"def max_product_tuple(pairs):
+    if not pairs:
+        raise ValueError(""pairs list is empty"")
+    return max(abs(a * b) for a, b in pairs)
+
+assert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)]) == 36",0.0015807500000000001,14.853145599365234,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/414,TrustRoute-StrongestQueried,3,"```python
+def overlapping(seq1, seq2):
+    return any(item in seq2 for item in seq1)
+```",0.0005037,36.87565493583679,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/128,TrustRoute-StrongestQueried,3,"```python
+def long_words(n, s):
+    return [word for word in s.split() if len(word) > n]
+```",0.00056829,16.74800443649292,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/451,TrustRoute-StrongestQueried,3,"```python
+def remove_whitespaces(s: str) -> str:
+    return """".join(s.split())
+```",0.0017626500000000002,12.897966623306274,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/590,TrustRoute-StrongestQueried,3,"```python
+import cmath
+import math
+
+def polar_rect(r, theta):
+    # Convert polar to rectangular
+    z = cmath.rect(r, theta)
+    
+    # Calculate magnitude and angle
+    magnitude = abs(z)
+    angle = math.atan2(z.imag, z.real)
+    
+    return ((magnitude, angle), z)
+```",0.0014038799999999997,46.99002981185913,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/436,TrustRoute-StrongestQueried,3,"```python
+def neg_nos(nums):
+    return [n for n in nums if n < 0]
+```",0.00037582,12.959217548370361,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/463,TrustRoute-StrongestQueried,3,"```python
+def max_subarray_product(nums):
+    if not nums:
+        return 0
+
+    overall_max = nums[0]
+    current_max = nums[0]
+    current_min = nums[0]
+
+    for num in nums[1:]:
+        # Store current_max before it's updated, as it's needed for current_min calculation
+        temp_current_max = current_max 
+
+        current_max = max(num, num * temp_current_max, num * current_min)
+        current_min = min(num, num * temp_current_max, num * current_min)
+        
+        overall_max = max(overall_max, current_max)
+    
+    return overall_max
+```",0.0262751,48.18244171142578,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/618,TrustRoute-StrongestQueried,3,"def div_list(a, b):
+    if len(a) != len(b):
+        raise ValueError(""Lists must have the same length"")
+    return [x / y for x, y in zip(a, b)]
+
+assert div_list([4, 5, 6], [1, 2, 3]) == [4.0, 2.5, 2.0]",0.00107505,10.769352436065674,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/237,TrustRoute-StrongestQueried,3,"```python
+def check_occurences(lst):
+    d = {}
+    for t in lst:
+        d[t] = d.get(t, 0) + 1
+    return d
+```",0.00104698,74.18155479431152,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/104,TrustRoute-StrongestQueried,3,"```python
+def sort_sublists(lst):
+    return [sorted(sublist) for sublist in lst]
+```",0.00062196,14.628591299057007,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/390,TrustRoute-StrongestQueried,3,"```python
+def add_string(data_list, format_str):
+  return [format_str.format(item) for item in data_list]
+```",0.0009901,13.753662347793579,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/87,TrustRoute-StrongestQueried,3,"def merge_dictionaries_three(d1, d2, d3):
+    return {**d1, **d2, **d3}
+
+assert merge_dictionaries_three(
+    {""R"": ""Red"", ""B"": ""Black"", ""P"": ""Pink""},
+    {""G"": ""Green"", ""W"": ""White""},
+    {""O"": ""Orange"", ""W"": ""White"", ""B"": ""Black""}
+) == {'B': 'Black', 'R': 'Red', 'P': 'Pink', 'G': 'Green', 'W': 'White', 'O': 'Orange'}",0.0014242500000000002,16.64025568962097,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/312,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def volume_cone(radius, height):
+    return (1/3) * math.pi * radius**2 * height
+```",0.00049406,20.907426595687866,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/577,TrustRoute-StrongestQueried,3,"def last_Digit_Factorial(n):
+    if n < 0:
+        raise ValueError(""n must be non-negative"")
+    if n >= 5:
+        return 0
+    res = 1
+    for i in range(2, n + 1):
+        res = (res * i) % 10
+    return res
+
+assert last_Digit_Factorial(4) == 4",0.00132285,16.750885486602783,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/77,TrustRoute-StrongestQueried,3,"def is_Diff(n):
+    n = int(n)
+    return abs(n) % 11 == 0
+
+assert is_Diff(12345) == False",0.0014036500000000002,13.327625036239624,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/129,TrustRoute-StrongestQueried,3,"def magic_square_test(m):
+    if not m or any(len(row) != len(m) for row in m):
+        return False
+    n = len(m)
+    vals = [x for row in m for x in row]
+    if set(vals) != set(range(1, n * n + 1)):
+        return False
+    target = sum(m[0])
+    if any(sum(row) != target for row in m):
+        return False
+    if any(sum(m[i][j] for i in range(n)) != target for j in range(n)):
+        return False
+    if sum(m[i][i] for i in range(n)) != target or sum(m[i][n-1-i] for i in range(n)) != target:
+        return False
+    return True
+
+# Example test
+assert magic_square_test([[7,12,1,14],[2,13,8,11],[16,3,10,5],[9,6,15,4]]) == True",0.00198795,18.782841205596924,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/794,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def text_starta_endb(text):
+    return bool(re.fullmatch(r'a.*b', text))
+```",0.00080089,22.27064609527588,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/96,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def divisor(n: int) -> int:
+    count = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            if i * i == n:
+                count += 1
+            else:
+                count += 2
+    return count
+
+```",0.0031925000000000005,12.071465492248535,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/764,TrustRoute-StrongestQueried,3,"def number_ctr(s):
+    return sum(ch.isdigit() for ch in s)
+
+assert number_ctr('program2bedone') == 1",0.00089315,9.660212516784668,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/97,TrustRoute-StrongestQueried,3,"```python
+def frequency_lists(lst):
+    freq = {}
+    for sublist in lst:
+        for item in sublist:
+            freq[item] = freq.get(item, 0) + 1
+    return freq
+```",0.0009454,30.579583168029785,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/782,TrustRoute-StrongestQueried,3,"```python
+def odd_length_sum(arr):
+    total_sum = 0
+    n = len(arr)
+    for i in range(n):
+        for j in range(i, n):
+            if (j - i + 1) % 2 == 1:  # Check if subarray length is odd
+                total_sum += sum(arr[i : j + 1])
+    return total_sum
+```",0.011813300000000002,22.48946452140808,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/72,TrustRoute-StrongestQueried,3,"```python
+def dif_Square(n: int) -> bool:
+    """"""
+    Checks whether the given integer can be represented as the difference of two squares.
+    An integer n can be represented as a^2 - b^2 if and only if n is not congruent to 2 mod 4.
+    This means n % 4 != 2.
+    """"""
+    return n % 4 != 2
+
+```",0.006328749999999999,17.52345037460327,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/566,TrustRoute-StrongestQueried,3,"def sum_digits(n):
+    return sum(int(d) for d in str(n))
+
+assert sum_digits(345) == 12",0.0008622500000000001,13.734886169433594,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/264,TrustRoute-StrongestQueried,3,,0.0026110499999999997,17.804319620132446,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/251,TrustRoute-StrongestQueried,3,"```python
+def insert_element(input_list: list, element) -> list:
+    """"""
+    Inserts the given element before each element in the input list.
+
+    Args:
+        input_list: The original list.
+        element: The element to insert.
+
+    Returns:
+        A new list with the element inserted before each original element.
+    """"""
+    return [val for item in input_list for val in (element, item)]
+```",0.0031092500000000005,19.654148817062378,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/283,TrustRoute-StrongestQueried,3,"```python
+def validate(n):
+    s = str(n)
+    for digit in set(s):
+        if s.count(digit) > int(digit):
+            return False
+    return True
+```",0.0009233800000000001,22.74021577835083,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/99,TrustRoute-StrongestQueried,3,"```python
+def decimal_to_binary(decimal_num: int) -> str:
+    """"""
+    Convert the given decimal number to its binary equivalent,
+    represented as a string with no leading zeros.
+    """"""
+    return bin(decimal_num)[2:]
+```",0.0010686,15.640921354293823,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/106,TrustRoute-StrongestQueried,3,"```python
+def add_lists(list_to_add, tuple_to_extend):
+    return tuple_to_extend + tuple(list_to_add)
+```",0.00060328,13.564103603363037,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/752,TrustRoute-StrongestQueried,3,"def jacobsthal_num(n):
+    if not isinstance(n, int) or n < 0:
+        raise ValueError(""n must be a non-negative integer"")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, b + 2 * a
+    return a
+
+assert jacobsthal_num(5) == 11",0.0018289500000000002,22.623061656951904,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/765,TrustRoute-StrongestQueried,3,,0.00396485,48.59648394584656,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/308,TrustRoute-StrongestQueried,3,"```python
+def large_product(list1, list2, n):
+    products = [x * y for x in list1 for y in list2]
+    products.sort(reverse=True)
+    return products[:n]
+```",0.00539055,14.773642778396606,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/233,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def lateralsuface_cylinder(radius, height):
+    return 2 * math.pi * radius * height
+```",0.0006081999999999999,10.253765344619751,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/19,TrustRoute-StrongestQueried,3,"```python
+def test_duplicate(nums: list[int]) -> bool:
+    return len(nums) != len(set(nums))
+```",0.0007324,11.857294082641602,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/405,TrustRoute-StrongestQueried,3,"```python
+def check_tuplex(tuplex, element):
+    return element in tuplex
+```",0.00040531,22.432488441467285,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/606,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def radian_degree(degrees):
+    return degrees * (math.pi / 180)
+```",0.0006533999999999999,12.539530754089355,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/257,TrustRoute-StrongestQueried,3,"```python
+def swap_numbers(num1, num2):
+  return (num2, num1)
+```",0.0005955,12.49442172050476,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/111,TrustRoute-StrongestQueried,3,"```python
+def common_in_nested_lists(nested_lists):
+    if not nested_lists:
+        return []
+    return list(set.intersection(*map(set, nested_lists)))
+```",0.00113717,25.462313413619995,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/471,TrustRoute-StrongestQueried,3,"```python
+def find_remainder(arr, n):
+    """"""
+    Finds the product of the array multiplication modulo n.
+
+    Args:
+        arr: A list of integers.
+        n: The modulus integer.
+
+    Returns:
+        The product of all elements in arr modulo n.
+    """"""
+    product = 1
+    for num in arr:
+        product = (product * num) % n
+    return product
+
+```",0.0037923999999999996,28.125656366348267,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/250,TrustRoute-StrongestQueried,3,"```python
+def count_X(tup, element):
+    """"""
+    Counts the occurrences of an element in a tuple.
+
+    Args:
+        tup: The input tuple.
+        element: The element to count.
+
+    Returns:
+        The number of times the element appears in the tuple.
+    """"""
+    return tup.count(element)
+```",0.0009566500000000001,11.796813011169434,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/75,TrustRoute-StrongestQueried,3,"```python
+def find_tuples(list_of_tuples, k):
+    return [tup for tup in list_of_tuples if all(x % k == 0 for x in tup)]
+```",0.00195295,11.119022607803345,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/643,TrustRoute-StrongestQueried,3,"```python
+def text_match_wordz_middle(text):
+    return 'z' in text and len(text) > 1 and text[0] != 'z' and text[-1] != 'z'
+```",0.005666050000000001,29.863357543945312,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/429,TrustRoute-StrongestQueried,3,"```python
+def and_tuples(tuple1, tuple2):
+    return tuple(a & b for a, b in zip(tuple1, tuple2))
+```",0.00054713,12.551490783691406,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/805,TrustRoute-StrongestQueried,3,"def max_sum_list(lists):
+    if not lists:
+        return []
+    return max(lists, key=sum)
+
+assert max_sum_list([[1,2,3], [4,5,6], [10,11,12], [7,8,9]]) == [10, 11, 12]",0.00103525,14.629051446914673,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/726,TrustRoute-StrongestQueried,3,"def multiply_elements(t):
+    return tuple(a * b for a, b in zip(t, t[1:]))
+
+assert multiply_elements((1, 5, 7, 8, 10)) == (5, 35, 56, 80)",0.0009945499999999999,12.146347522735596,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/742,TrustRoute-StrongestQueried,3,"def area_tetrahedron(a):
+    import math
+    return math.sqrt(3) * a * a
+
+assert area_tetrahedron(3) == 15.588457268119894",0.0009085500000000002,11.05121111869812,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/63,TrustRoute-StrongestQueried,3,"```python
+def max_difference(lst):
+    return max(abs(a - b) for a, b in lst)
+```",0.00050252,18.91627836227417,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/578,TrustRoute-StrongestQueried,3,"def interleave_lists(a, b, c):
+    assert len(a) == len(b) == len(c)
+    return [x for trip in zip(a, b, c) for x in trip]
+
+# test
+assert interleave_lists([1,2,3,4,5,6,7],[10,20,30,40,50,60,70],[100,200,300,400,500,600,700]) == [1, 10, 100, 2, 20, 200, 3, 30, 300, 4, 40, 400, 5, 50, 500, 6, 60, 600, 7, 70, 700]",0.00132235,16.261173009872437,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/282,TrustRoute-StrongestQueried,3,"```python
+def sub_list(list1, list2):
+    """"""
+    Subtracts two lists element-wise.
+
+    Args:
+        list1: The first list of numbers.
+        list2: The second list of numbers.
+
+    Returns:
+        A new list with elements subtracted element-wise (list1[i] - list2[i]).
+    """"""
+    return [a - b for a, b in zip(list1, list2)]
+```",0.0007611499999999999,8.956174850463867,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/4,TrustRoute-StrongestQueried,3,"```python
+import heapq
+
+def heap_queue_largest(numbers, n):
+  return heapq.nlargest(n, numbers)
+```",0.0008841000000000001,13.641939163208008,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/108,TrustRoute-StrongestQueried,3,"```python
+def merge_sorted_list(list1, list2, list3):
+    merged_list = list1 + list2 + list3
+    merged_list.sort()
+    return merged_list
+```",0.00081955,9.903792142868042,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/472,TrustRoute-StrongestQueried,3,"```python
+def check_Consecutive(lst):
+    if len(lst) < 2:
+        return False
+    
+    # Check if all elements are unique and the range (max - min + 1) equals the list length.
+    # If these two conditions are met, the numbers must be consecutive.
+    return (len(set(lst)) == len(lst)) and (max(lst) - min(lst) + 1 == len(lst))
+```",0.0140084,33.93983244895935,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/600,TrustRoute-StrongestQueried,3,"```python
+def is_Even(number: int) -> bool:
+    """"""
+    Checks if the given number is even.
+    """"""
+    return number % 2 == 0
+```",0.0006567999999999999,9.434173107147217,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/8,TrustRoute-StrongestQueried,3,"```python
+def square_nums(nums):
+  """"""
+  Finds squares of individual elements in a list.
+  """"""
+  return [num ** 2 for num in nums]
+```",0.0007136,8.545680046081543,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/599,TrustRoute-StrongestQueried,3,"```python
+def sum_average(n):
+  """"""
+  Calculates the sum and average of the first n natural numbers.
+
+  Args:
+    n: An integer representing the number of natural numbers.
+
+  Returns:
+    A tuple containing the sum and average (sum, average).
+  """"""
+  total_sum = n * (n + 1) // 2
+  average = (n + 1) / 2
+  return (total_sum, average)
+```",0.00111175,12.45027208328247,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/603,TrustRoute-StrongestQueried,3,"```python
+def get_ludic(n: int) -> list[int]:
+    """"""
+    Returns a list of all Ludic numbers less than or equal to a given integer n.
+    Ludic numbers are generated by a sieve process similar to the Sieve of Eratosthenes.
+
+    The process is as follows:
+    1. Start with a list of natural numbers from 1 to n.
+    2. The first number in the list (1) is a Ludic number. Add it to the result list.
+       Remove it from the working list of candidates.
+    3. Take the next number in the working list (let's call it 'L'). Add 'L' to the result list.
+    4. Remove every L-th element from the *remaining* working list of candidates.
+    5. Repeat steps 3-4 until the working list of candidates is empty.
+    """"""
+    if n <= 0:
+        return []
+
+    candidates = list(range(1, n + 1))
+    ludic_numbers = []
+
+    while candidates:
+        current_ludic = candidates[0]
+        ludic_numbers.append(current_ludic)
+
+        # Remove the current Ludic number from the list
+        candidates.pop(0)
+
+        # If candidates become empty after popping, we are done
+        if not candidates:
+            break
+
+        # Only perform sieving if current_ludic is greater than 1.
+        # The number 1 does not remove elements from the sequence by its rule.
+        if current_ludic > 1:
+            next_candidates = []
+            for i in range(len(candidates)):
+                # Keep elements whose 1-based index in the *current* candidates list
+                # is NOT a multiple of `current_ludic`.
+                if (i + 1) % current_ludic != 0:
+                    next_candidates.append(candidates[i])
+            candidates = next_candidates
+
+    return ludic_numbers
+```",0.0230472,115.13159918785095,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/631,TrustRoute-StrongestQueried,3,"```python
+def replace_spaces(s: str) -> str:
+    """"""
+    Replaces whitespace characters with an underscore.
+    """"""
+    return s.replace(' ', '_')
+```",0.006950350000000001,18.15477728843689,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/580,TrustRoute-StrongestQueried,3,"```python
+def extract_even(data):
+    """"""
+    Removes uneven elements from a nested mixed tuple.
+    Even numbers are kept, odd numbers are removed.
+    Tuples are processed recursively.
+    """"""
+    result = []
+    for item in data:
+        if isinstance(item, tuple):
+            processed_sub_tuple = extract_even(item)
+            if processed_sub_tuple:  # Only add non-empty processed sub-tuples
+                result.append(processed_sub_tuple)
+        elif isinstance(item, int) and item % 2 == 0:
+            result.append(item)
+    return tuple(result)
+```",0.0028006000000000003,24.082652807235718,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/724,TrustRoute-StrongestQueried,3,"```python
+def power_base_sum(base, power):
+    return sum(int(d) for d in str(base ** power))
+```",0.00044598,14.74595594406128,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/160,TrustRoute-StrongestQueried,3,"```python
+def find_solution(a, b, n):
+    from math import gcd
+    
+    g = gcd(a, b)
+    if n % g != 0:
+        return None
+    
+    a, b, n = a//g, b//g, n//g
+    
+    for x in range(b):
+        if (n - a*x) % b == 0:
+            y = (n - a*x) // b
+            return (x, y)
+    
+    return None
+```",0.00177972,101.94645738601685,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/265,TrustRoute-StrongestQueried,3,"```python
+def list_split(lst, n):
+    result = [[] for _ in range(n)]
+    for i, item in enumerate(lst):
+        result[i % n].append(item)
+    return result
+```",0.0007762399999999999,18.966599941253662,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/478,TrustRoute-StrongestQueried,3,"```python
+def remove_lowercase(s):
+    return ''.join(ch for ch in s if not ch.islower())
+```",0.0008194700000000001,18.664668321609497,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/415,TrustRoute-StrongestQueried,3,"```python
+def max_Product(arr):
+    if len(arr) < 2:
+        return None
+    
+    max1 = max2 = float('-inf')
+    min1 = min2 = float('inf')
+    
+    for num in arr:
+        if num > max1:
+            max2, max1 = max1, num
+        elif num > max2:
+            max2 = num
+            
+        if num < min1:
+            min2, min1 = min1, num
+        elif num < min2:
+            min2 = num
+    
+    if max1 * max2 > min1 * min2:
+        return (max2, max1)
+    else:
+        return (min1, min2)
+```",0.0018292,36.624571323394775,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/58,TrustRoute-StrongestQueried,3,"```python
+def opposite_Signs(x, y):
+    return (x ^ y) < 0
+```",0.00046807,11.881945848464966,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/725,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def extract_quotation(text):
+    return re.findall(r'""([^""]*)""', text)
+```",0.0005697999999999999,40.638771295547485,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/555,TrustRoute-StrongestQueried,3,"def difference(n):
+    s = n * (n + 1) // 2
+    return s * (s - 1)
+
+assert difference(3) == 30",0.00132375,13.055824756622314,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/612,TrustRoute-StrongestQueried,3,"def merge(pairs):
+    if not pairs:
+        return [[], []]
+    return [list(x) for x in zip(*pairs)]
+
+assert merge([['x', 'y'], ['a', 'b'], ['m', 'n']]) == [['x', 'a', 'm'], ['y', 'b', 'n']]",0.0011558500000000001,38.45664191246033,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/559,TrustRoute-StrongestQueried,3,"```python
+def max_sub_array_sum(arr, n):
+    if not arr:
+        return 0
+
+    max_so_far = arr[0]
+    current_max = arr[0]
+
+    for i in range(1, len(arr)):
+        current_max = max(arr[i], current_max + arr[i])
+        max_so_far = max(max_so_far, current_max)
+    
+    return max_so_far
+```",0.006801750000000001,15.715354919433594,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/127,TrustRoute-StrongestQueried,3,"```python
+def multiply_int(a, b):
+  return a * b
+```",0.00052555,10.498822927474976,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/736,TrustRoute-StrongestQueried,3,"```python
+import bisect
+
+def left_insertion(arr, x):
+    return bisect.bisect_left(arr, x)
+```",0.0010917000000000001,17.116925477981567,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/253,TrustRoute-StrongestQueried,3,"```python
+def count_integer(input_list: list) -> int:
+    """"""
+    Returns the number of integer elements in a given list.
+    """"""
+    return sum(1 for item in input_list if isinstance(item, int))
+```",0.00092365,9.155635356903076,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/446,TrustRoute-StrongestQueried,3,"from collections import Counter
+
+def count_Occurrence(tpl, lst):
+    c = Counter(tpl)
+    return sum(c[x] for x in set(lst))
+
+assert count_Occurrence(('a', 'a', 'c', 'b', 'd'), ['a', 'b']) == 3",0.0014707499999999998,12.374008893966675,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/389,TrustRoute-StrongestQueried,3,"```python
+def find_lucas(n):
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    
+    a, b = 2, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+```",0.00075874,25.810561895370483,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/170,TrustRoute-StrongestQueried,3,"```python
+def sum_range_list(lst, start, end):
+    return sum(lst[start:end+1])
+```",0.00053344,71.5056700706482,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/279,TrustRoute-StrongestQueried,3,"```python
+def is_num_decagonal(n):
+    return n * (4 * n - 3)
+```",0.0007348400000000001,110.38231134414673,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/2,TrustRoute-StrongestQueried,3,"```python
+def similar_elements(list1, list2):
+    return tuple(set(list1) & set(list2))
+```",0.0006627,27.016822576522827,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/615,TrustRoute-StrongestQueried,3,"```python
+def average_tuple(tuples):
+    return [sum(col) / len(col) for col in zip(*tuples)]
+```",0.00098274,22.881880044937134,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/168,TrustRoute-StrongestQueried,3,"```python
+def frequency(lst, num):
+    return lst.count(num)
+```",0.00041258,11.564279794692993,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/771,TrustRoute-StrongestQueried,3,"```python
+def check_expression(expr):
+    stack = []
+    pairs = {')': '(', '}': '{', ']': '['}
+    
+    for char in expr:
+        if char in '({[':
+            stack.append(char)
+        elif char in ')}]':
+            if not stack or stack.pop() != pairs[char]:
+                return False
+    return not stack
+```",0.00073259,34.39687752723694,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/594,TrustRoute-StrongestQueried,3,"```python
+def diff_even_odd(nums):
+    first_even = None
+    first_odd = None
+    
+    for num in nums:
+        if first_even is None and num % 2 == 0:
+            first_even = num
+        if first_odd is None and num % 2 != 0:
+            first_odd = num
+        if first_even is not None and first_odd is not None:
+            break
+    
+    return first_even - first_odd
+```",0.0010571,103.72858691215515,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/113,TrustRoute-StrongestQueried,3,"```python
+def check_integer(s: str) -> bool:
+    """"""
+    Checks if a string represents an integer.
+
+    Args:
+        s: The string to check.
+
+    Returns:
+        True if the string represents an integer, False otherwise.
+    """"""
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+```",0.00128985,12.217137813568115,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/585,TrustRoute-StrongestQueried,3,"def expensive_items(items, n):
+    if n <= 0:
+        return []
+    return sorted(items, key=lambda x: x.get('price', 0), reverse=True)[:n]
+
+assert expensive_items([{'name': 'Item-1', 'price': 101.1},{'name': 'Item-2', 'price': 555.22}],1)==[{'name': 'Item-2', 'price': 555.22}]",0.00146385,14.065571308135986,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/101,TrustRoute-StrongestQueried,3,"def kth_element(arr, k):
+    if k <= 0 or k > len(arr):
+        raise IndexError(""k out of range"")
+    return arr[k - 1]
+
+assert kth_element([12, 3, 5, 7, 19], 2) == 3",0.00109265,10.929943561553955,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/748,TrustRoute-StrongestQueried,3,"import re
+
+def capital_words_spaces(s):
+    s = re.sub(r'([A-Z]+)([A-Z][a-z])', r'\1 \2', s)
+    s = re.sub(r'([a-z0-9])([A-Z])', r'\1 \2', s)
+    return s
+
+assert capital_words_spaces(""Python"") == 'Python'",0.0025547499999999997,32.771432638168335,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/593,TrustRoute-StrongestQueried,3,"def removezero_ip(ip):
+    return '.'.join(str(int(o)) for o in ip.split('.'))
+
+assert removezero_ip(""216.08.094.196"") == '216.8.94.196'",0.00140045,15.69186520576477,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/397,TrustRoute-StrongestQueried,3,"def median_numbers(a, b, c):
+    return float(sorted((a, b, c))[1])
+
+assert median_numbers(25, 55, 65) == 55.0",0.0011941500000000002,9.495982885360718,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/262,TrustRoute-StrongestQueried,3,"def split_two_parts(lst, L):
+    return lst[:L], lst[L:]
+
+assert split_two_parts([1,1,2,3,4,4,5,1], 3) == ([1, 1, 2], [3, 4, 4, 5, 1])",0.00110005,12.68431830406189,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/798,TrustRoute-StrongestQueried,3,"def _sum(arr):
+    return sum(arr)
+
+assert _sum([1, 2, 3]) == 6",0.00079945,10.349108219146729,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/9,TrustRoute-StrongestQueried,3,,0.00301375,28.15544557571411,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/162,TrustRoute-StrongestQueried,3,"```python
+def sum_series(n: int) -> int:
+    """"""
+    Calculates the sum of (n - 2*i) from i=0 to n // 2.
+    For instance: n + (n-2) + (n-4)... (until n-x =< 0).
+    """"""
+    return sum(n - 2 * i for i in range(n // 2 + 1))
+
+```",0.0047234500000000006,16.143831729888916,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/586,TrustRoute-StrongestQueried,3,"def split_Arr(arr, n):
+    if not arr:
+        return arr
+    n %= len(arr)
+    return arr[n:] + arr[:n]
+
+assert split_Arr([12,10,5,6,52,36],2) == [5,6,52,36,12,10]",0.00145965,18.749730587005615,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/242,TrustRoute-StrongestQueried,3,"def count_charac(s):
+    return len(s)
+
+assert count_charac(""python programming"") == 18",0.00092285,13.046841859817505,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/299,TrustRoute-StrongestQueried,3,"from collections import defaultdict
+
+def max_aggregate(pairs):
+    if not pairs:
+        raise ValueError(""Empty input"")
+    sums = defaultdict(int)
+    for name, val in pairs:
+        sums[name] += val
+    name, total = max(sums.items(), key=lambda kv: kv[1])
+    return (name, total)
+
+assert max_aggregate([('Juan Whelan',90),('Sabah Colley',88),('Peter Nichols',7),('Juan Whelan',122),('Sabah Colley',84)])==('Juan Whelan', 212)",0.00132745,18.097495317459106,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/88,TrustRoute-StrongestQueried,3,"```python
+def freq_count(lst):
+    freq = {}
+    for item in lst:
+        freq[item] = freq.get(item, 0) + 1
+    return freq
+```",0.00056697,22.594189882278442,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/788,TrustRoute-StrongestQueried,3,"```python
+def new_tuple(lst, s):
+    return tuple(lst + [s])
+```",0.00046302,34.653905391693115,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/626,TrustRoute-StrongestQueried,3,,0.00249545,16.98161792755127,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/622,TrustRoute-StrongestQueried,3,"```python
+def get_median(list1, list2, n):
+    merged_list = sorted(list1 + list2)
+    # For a combined list of 2n elements, the median is the average of
+    # the (n-1)-th and n-th elements (0-indexed).
+    return (merged_list[n - 1] + merged_list[n]) / 2.0
+
+```",0.009907550000000001,22.6278076171875,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/267,TrustRoute-StrongestQueried,3,"```python
+def square_Sum(n):
+    return sum((2*i - 1)**2 for i in range(1, n+1))
+```",0.00052846,85.33799839019775,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/792,TrustRoute-StrongestQueried,3,"```python
+def count_list(lst):
+    return len(lst)
+```",0.0006798199999999998,43.51415681838989,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/455,TrustRoute-StrongestQueried,3,"```python
+def check_monthnumb_number(month):
+    return month in [1, 3, 5, 7, 8, 10, 12]
+```",0.0005541599999999999,15.477293252944946,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/563,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def extract_values(text):
+    return re.findall(r'""([^""]*)""', text)
+```",0.00048267,12.451294660568237,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/421,TrustRoute-StrongestQueried,3,"```python
+def concatenate_tuple(tup: tuple) -> str:
+    """"""
+    Concatenates each element of a tuple by a hyphen delimiter.
+
+    Args:
+        tup: The input tuple.
+
+    Returns:
+        A string with all tuple elements concatenated by hyphens.
+    """"""
+    return '-'.join(map(str, tup))
+```",0.0009436500000000001,14.88947868347168,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/271,TrustRoute-StrongestQueried,3,"```python
+def even_Power_Sum(n):
+    total = 0
+    for i in range(1, n + 1):
+        even_num = 2 * i
+        total += even_num ** 5
+    return total
+```",0.00061294,12.808694839477539,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/226,TrustRoute-StrongestQueried,3,"```python
+def odd_values_string(s):
+    return s[::2]
+```",0.00048105999999999995,16.03648042678833,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/780,TrustRoute-StrongestQueried,3,"```python
+def find_combinations(tuple_list):
+    result = []
+    n = len(tuple_list)
+    for i in range(n):
+        for j in range(i + 1, n):
+            sum1 = tuple_list[i][0] + tuple_list[j][0]
+            sum2 = tuple_list[i][1] + tuple_list[j][1]
+            result.append((sum1, sum2))
+    return result
+```",0.00106472,20.77510952949524,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/735,TrustRoute-StrongestQueried,3,"```python
+def toggle_middle_bits(num):
+    if num <= 2:
+        return num
+    bits = num.bit_length()
+    mask = (1 << (bits - 1)) - 2
+    return num ^ mask
+```",0.0017262999999999998,41.161200523376465,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/475,TrustRoute-StrongestQueried,3,"```python
+def sort_counter(d):
+    return sorted(d.items(), key=lambda item: item[1], reverse=True)
+```",0.00096255,9.485013961791992,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/141,TrustRoute-StrongestQueried,3,"```python
+def pancake_sort(arr):
+    n = len(arr)
+    if n <= 1:
+        return arr
+
+    def _flip(sub_arr, k):
+        left = 0
+        while left < k:
+            sub_arr[left], sub_arr[k] = sub_arr[k], sub_arr[left]
+            left += 1
+            k -= 1
+
+    for current_size in range(n, 1, -1):
+        max_idx = 0
+        for i in range(1, current_size):
+            if arr[i] > arr[max_idx]:
+                max_idx = i
+
+        if max_idx != current_size - 1:
+            _flip(arr, max_idx)
+            _flip(arr, current_size - 1)
+            
+    return arr
+```",0.0075514499999999995,16.608910083770752,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/624,TrustRoute-StrongestQueried,3,"```python
+def is_upper(s: str) -> str:
+    """"""
+    Converts a given string to uppercase.
+    """"""
+    return s.upper()
+```",0.0005444,10.769123077392578,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/142,TrustRoute-StrongestQueried,3,"def count_samepair(a, b, c):
+    return sum(1 for x, y, z in zip(a, b, c) if x == y == z)
+
+assert count_samepair([1,2,3,4,5,6,7,8],[2,2,3,1,2,6,7,9],[2,1,3,1,2,6,7,9]) == 3",0.0014772499999999998,13.994712591171265,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/425,TrustRoute-StrongestQueried,3,"```python
+def count_element_in_list(list_of_lists, element):
+    return sum(1 for sublist in list_of_lists if element in sublist)
+```",0.0019752,9.50046181678772,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/800,TrustRoute-StrongestQueried,3,"```python
+def remove_all_spaces(s: str) -> str:
+    return """".join(char for char in s if not char.isspace())
+```",0.0031201500000000004,10.993623733520508,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/454,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def text_match_wordz(text):
+    return bool(re.search(r'\bz\w*|\w*z\w*|\w*z\b', text))
+```",0.0005786400000000001,17.52773380279541,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/589,TrustRoute-StrongestQueried,3,"```python
+def perfect_squares(a, b):
+    return [i*i for i in range(int(a**0.5), int(b**0.5)+1) if i*i >= a]
+```",0.0008083400000000001,18.532430410385132,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/119,TrustRoute-StrongestQueried,3,"def search(nums):
+    lo, hi = 0, len(nums) - 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if mid % 2 == 1:
+            mid -= 1
+        if nums[mid] == nums[mid + 1]:
+            lo = mid + 2
+        else:
+            hi = mid
+    return nums[lo]
+
+assert search([1,1,2,2,3]) == 3",0.0023034500000000003,44.1349458694458,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/161,TrustRoute-StrongestQueried,3,"```python
+def remove_elements(lst, remove):
+    rem = set(remove)
+    return [x for x in lst if x not in rem]
+
+assert remove_elements([1,2,3,4,5,6,7,8,9,10], [2,4,6,8]) == [1,3,5,7,9,10]
+```",0.0010294500000000001,12.574165105819702,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/409,TrustRoute-StrongestQueried,3,"```python
+def min_product_tuple(nums):
+  return min(x * y for x, y in nums)
+```",0.00120575,12.696245670318604,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/130,TrustRoute-StrongestQueried,3,"```python
+def max_occurrences(lst):
+    return max(set(lst), key=lst.count)
+```",0.00082663,28.670942783355713,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/759,TrustRoute-StrongestQueried,3,"```python
+def is_decimal(s):
+    try:
+        float(s)
+        return '.' in s and len(s.split('.')[1]) == 2
+    except ValueError:
+        return False
+```",0.00083175,52.87750482559204,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/118,TrustRoute-StrongestQueried,3,"```python
+def string_to_list(s):
+    return s.split()
+```",0.00037525000000000004,32.083619356155396,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/457,TrustRoute-StrongestQueried,3,"```python
+def Find_Min(lst):
+    return min(lst, key=len)
+```",0.00048331000000000003,32.14505577087402,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/564,TrustRoute-StrongestQueried,3,"```python
+def count_Pairs(arr, n):
+    freq = {}
+    for num in arr:
+        freq[num] = freq.get(num, 0) + 1
+    
+    total_pairs = n * (n - 1) // 2
+    same_pairs = 0
+    for count in freq.values():
+        same_pairs += count * (count - 1) // 2
+    
+    return total_pairs - same_pairs
+```",0.00130066,29.260234355926514,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/750,TrustRoute-StrongestQueried,3,"```python
+def add_tuple(lst, tup):
+    return lst + list(tup)
+```",0.0004845199999999999,25.675458192825317,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/560,TrustRoute-StrongestQueried,3,"```python
+def union_elements(tuple1, tuple2):
+    return tuple(sorted(set(tuple1) | set(tuple2)))
+```",0.00054128,38.158026456832886,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/630,TrustRoute-StrongestQueried,3,"```python
+def get_coordinates(coord):
+    x, y = coord
+    return [[i, j] for i in range(x-1, x+2) for j in range(y-1, y+2)]
+```",0.0006751600000000001,23.838059663772583,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/441,TrustRoute-StrongestQueried,3,"```python
+def surfacearea_cube(a):
+    return 6 * a * a
+```",0.00044241999999999996,32.16632103919983,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/260,TrustRoute-StrongestQueried,3,,0.0036254499999999997,40.455841064453125,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/140,TrustRoute-StrongestQueried,3,"```python
+def extract_singly(lst):
+    return {num for tup in lst for num in tup}
+```",0.00055694,30.407520294189453,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/579,TrustRoute-StrongestQueried,3,"```python
+def find_dissimilar(tuple1, tuple2):
+    return tuple(set(tuple1) ^ set(tuple2))
+```",0.0015448600000000001,82.3541784286499,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/139,TrustRoute-StrongestQueried,3,"```python
+import math
+
+def circle_circumference(radius):
+    return 2 * math.pi * radius
+```",0.00038539999999999994,24.411699295043945,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/278,TrustRoute-StrongestQueried,3,"```python
+def count_first_elements(t):
+    for i, item in enumerate(t):
+        if isinstance(item, tuple):
+            return i
+    return len(t)
+```",0.0006381000000000001,22.687540292739868,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/392,TrustRoute-StrongestQueried,3,"```python
+import functools
+
+@functools.lru_cache(None)
+def get_max_sum(n: int) -> int:
+    if n == 0:
+        return 0
+    return max(get_max_sum(n // 2) + get_max_sum(n // 3) + get_max_sum(n // 4) + get_max_sum(n // 5), n)
+
+```",0.009119200000000001,19.667970657348633,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/453,TrustRoute-StrongestQueried,3,"```python
+def sumofFactors(n):
+    total = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            if i % 2 == 0:
+                total += i
+            if i != n // i and (n // i) % 2 == 0:
+                total += n // i
+    return total
+```",0.0008401000000000001,16.666521549224854,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/770,TrustRoute-StrongestQueried,3,"```python
+def odd_num_sum(n):
+    return sum((2*i + 1)**4 for i in range(n))
+```",0.00071136,71.40067458152771,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/567,TrustRoute-StrongestQueried,3,"```python
+def issort_list(lst):
+    return all(lst[i] <= lst[i+1] for i in range(len(lst)-1))
+```",0.00045423,94.23187804222107,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/61,TrustRoute-StrongestQueried,3,"```python
+def count_Substrings(s):
+    count = 0
+    n = len(s)
+    
+    for i in range(n):
+        current_sum = 0
+        for j in range(i, n):
+            current_sum += int(s[j])
+            length = j - i + 1
+            if current_sum == length:
+                count += 1
+    return count
+```",0.0013031800000000001,27.967379093170166,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/562,TrustRoute-StrongestQueried,3,"```python
+def Find_Max_Length(lst):
+    return max(len(sublist) for sublist in lst)
+```",0.00049296,30.675246715545654,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/12,TrustRoute-StrongestQueried,3,"```python
+def sort_matrix(matrix):
+    return sorted(matrix, key=sum)
+```",0.00053796,130.30629014968872,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/728,TrustRoute-StrongestQueried,3,"```python
+def sum_list(a, b):
+    return [x + y for x, y in zip(a, b)]
+```",0.0005248099999999999,11.619965314865112,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/749,TrustRoute-StrongestQueried,3,"```python
+def sort_numeric_strings(lst):
+    return sorted(lst, key=int)
+```",0.00075694,43.8568115234375,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/758,TrustRoute-StrongestQueried,3,"```python
+def unique_sublists(lst):
+    result = {}
+    for sublist in lst:
+        key = tuple(sublist)
+        result[key] = result.get(key, 0) + 1
+    return result
+```",0.00080376,17.058226585388184,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/80,TrustRoute-StrongestQueried,3,"```python
+def tetrahedral_number(n):
+    return n * (n + 1) * (n + 2) // 6
+```",0.00040715999999999994,9.899494171142578,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/772,TrustRoute-StrongestQueried,3,"```python
+def remove_length(s, k):
+    return ' '.join(word for word in s.split() if len(word) != k)
+```",0.00056858,12.656259298324585,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/6,TrustRoute-StrongestQueried,3,"```python
+def differ_At_One_Bit_Pos(a, b):
+    xor_val = a ^ b
+    return xor_val and (xor_val & (xor_val - 1)) == 0
+```",0.00051104,12.877706050872803,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/458,TrustRoute-StrongestQueried,3,"```python
+def rectangle_area(length, width):
+    return length * width
+```",0.00035926,11.357776165008545,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/268,TrustRoute-StrongestQueried,3,"```python
+def find_star_num(n):
+    return 6 * n * (n - 1) + 1
+```",0.00035921,12.4364173412323,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/419,TrustRoute-StrongestQueried,3,"```python
+def round_and_sum(numbers):
+    return sum(round(num) for num in numbers) * len(numbers)
+```",0.00121395,27.871309995651245,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/777,TrustRoute-StrongestQueried,3,"```python
+def find_sum(lst):
+    return sum(set(lst))
+```",0.0005899999999999999,14.513575792312622,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/611,TrustRoute-StrongestQueried,3,"```python
+def max_of_nth(matrix, n):
+    return max(row[n] for row in matrix)
+```",0.00055394,11.055310249328613,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/105,TrustRoute-StrongestQueried,3,"To solve this problem, we need to count the number of `True` values in a given list of booleans. The solution leverages Python's ability to treat `True` as `1` and `False` as `0` when performing arithmetic operations.
+
+### Approach
+1. **Problem Analysis**: The task involves iterating through a list of boolean values and counting how many `True` values are present. 
+2. **Insight**: Since Python internally represents `True` as `1` and `False` as `0`, we can directly sum the list to get the count of `True` values.
+3. **Algorithm Selection**: The built-in `sum()` function efficiently sums the elements of the list. Each `True` contributes `1` to the sum, and each `False` contributes `0`, resulting in the total count of `True` values.
+4. **Complexity Analysis**: The time complexity is O(n), where n is the length of the list, as we need to process each element once. The space complexity is O(1) since no additional space is used beyond the input list.
+
+### Solution Code
+```python
+def count(booleans):
+    return sum(booleans)
+```
+
+### Explanation
+- The function `count` takes a list `booleans` as input.
+- The `sum(booleans)` calculates the total of all elements in the list. Since `True` is equivalent to `1` and `False` to `0`, the sum directly gives the count of `True` values.
+- This approach is concise and efficient, leveraging Python's built-in features to solve the problem with minimal code.
+
+For example:
+- `count([True, False, True])` returns `2` because there are two `True` values in the list.",0.0015116700000000001,40.34701728820801,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/767,TrustRoute-StrongestQueried,3,"```python
+def get_pairs_count(arr, target_sum):
+    count = 0
+    freq = {}
+    for num in arr:
+        complement = target_sum - num
+        count += freq.get(complement, 0)
+        freq[num] = freq.get(num, 0) + 1
+    return count
+```",0.0008540399999999999,17.83526372909546,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/74,TrustRoute-StrongestQueried,3,"```python
+def is_samepatterns(colors, patterns):
+    if len(colors) != len(patterns):
+        return False
+    
+    mapping = {}
+    used = set()
+    
+    for c, p in zip(colors, patterns):
+        if c in mapping:
+            if mapping[c] != p:
+                return False
+        else:
+            if p in used:
+                return False
+            mapping[c] = p
+            used.add(p)
+    
+    return True
+```",0.0011133,59.69959378242493,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/607,TrustRoute-StrongestQueried,3,"```python
+import re
+
+def find_literals(text, pattern):
+    match = re.search(re.escape(pattern), text)
+    if match:
+        return (match.group(), match.start(), match.end())
+    return None
+```",0.0009398000000000002,29.36996817588806,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/470,TrustRoute-StrongestQueried,3,"```python
+def add_pairwise(t):
+    return tuple(t[i] + t[i+1] for i in range(len(t)-1))
+```",0.0005870299999999999,33.305790185928345,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/71,TrustRoute-StrongestQueried,3,"```python
+def comb_sort(arr):
+    n = len(arr)
+    gap = n
+    shrink_factor = 1.3
+    swapped = True
+
+    while gap > 1 or swapped:
+        gap = int(gap / shrink_factor)
+        if gap < 1:
+            gap = 1
+        
+        swapped = False
+        
+        for i in range(n - gap):
+            if arr[i] > arr[i + gap]:
+                arr[i], arr[i + gap] = arr[i + gap], arr[i]
+                swapped = True
+    return arr
+```",0.004812449999999999,17.957376718521118,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/252,TrustRoute-StrongestQueried,3,"```python
+import cmath
+
+def convert(z: complex) -> tuple[float, float]:
+    """"""
+    Converts a complex number to polar coordinates (magnitude, angle).
+    The angle is in radians.
+    """"""
+    return cmath.polar(z)
+
+```",0.0009641500000000001,13.486489057540894,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/286,TrustRoute-StrongestQueried,3,,0.00430755,58.514888048172,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/793,TrustRoute-StrongestQueried,3,"```python
+def last(arr, target):
+    left, right = 0, len(arr) - 1
+    result = -1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            result = mid
+            left = mid + 1
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return result
+```",0.0009268799999999999,37.54845380783081,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/465,TrustRoute-StrongestQueried,3,"```python
+def drop_empty(d):
+    return {k: v for k, v in d.items() if v not in [None, """", [], {}, ()]}
+```",0.0005016,54.30277872085571,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/406,TrustRoute-StrongestQueried,3,"```python
+def find_Parity(x):
+    return x & 1
+```",0.00044846,153.35872745513916,0,0,cand-deepseek-r1,stage2_strongest_queried,
+mbpp,Mbpp/773,TrustRoute-StrongestQueried,3,"```python
+def occurance_substring(text: str, sub: str) -> tuple[str, int, int] | None:
+    """"""
+    Finds the first occurrence and position of a substring within a string.
+
+    Args:
+        text: The main string to search within.
+        sub: The substring to search for.
+
+    Returns:
+        A tuple (substring, start_index, end_index) if found,
+        otherwise None.
+    """"""
+    start_index = text.find(sub)
+    if start_index == -1:
+        return None
+    end_index = start_index + len(sub)
+    return (sub, start_index, end_index)
+
+```",0.0019088,19.78149700164795,0,0,cand-gemini-2.5-flash,stage2_strongest_queried,
+mbpp,Mbpp/85,TrustRoute-StrongestQueried,3,"import math
+
+def surfacearea_sphere(r):
+    return 4 * math.pi * r * r
+
+assert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)",0.00087755,11.384002208709717,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/786,TrustRoute-StrongestQueried,3,"def right_insertion(a, x):
+    lo, hi = 0, len(a)
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if x < a[mid]:
+            hi = mid
+        else:
+            lo = mid + 1
+    return lo
+
+assert right_insertion([1,2,4,5], 6) == 4",0.00147305,17.64583110809326,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/90,TrustRoute-StrongestQueried,3,"def len_log(words):
+    return max((len(w) for w in words), default=0)
+
+assert len_log([""python"",""PHP"",""bigdata""]) == 7",0.0010046500000000002,11.661827087402344,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/737,TrustRoute-StrongestQueried,3,"import re
+
+def check_str(s: str) -> bool:
+    return bool(re.match(r'^[aeiou]', s, re.IGNORECASE))
+
+assert check_str(""annie"")",0.00109475,14.658620119094849,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/739,TrustRoute-StrongestQueried,3,,0.00246645,22.442259550094604,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/751,TrustRoute-StrongestQueried,3,"def check_min_heap(arr):
+    n = len(arr)
+    for i in range(n // 2):  # only need to check internal nodes
+        l = 2 * i + 1
+        r = 2 * i + 2
+        if l < n and arr[i] > arr[l]:
+            return False
+        if r < n and arr[i] > arr[r]:
+            return False
+    return True
+
+assert check_min_heap([1, 2, 3, 4, 5, 6]) == True",0.00148325,18.321136713027954,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/473,TrustRoute-StrongestQueried,3,"def tuple_intersection(a, b):
+    return {tuple(sorted(t)) for t in a} & {tuple(sorted(t)) for t in b}
+
+# test
+assert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)],
+                          [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}",0.0019870499999999998,21.836031436920166,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/778,TrustRoute-StrongestQueried,3,"from itertools import groupby
+
+def pack_consecutive_duplicates(lst):
+    return [list(g) for _, g in groupby(lst)]
+
+assert pack_consecutive_duplicates([0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4])==[[0, 0], [1], [2], [3], [4, 4], [5], [6, 6, 6], [7], [8], [9], [4, 4]]",0.00165605,17.416471481323242,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/797,TrustRoute-StrongestQueried,3,"def sum_in_range(l, r):
+    l, r = int(l), int(r)
+    if l > r: return 0
+    l = max(l, 1)
+    first = l if l % 2 else l + 1
+    last = r if r % 2 else r - 1
+    if first > last: return 0
+    n = (last - first) // 2 + 1
+    return n * (first + last) // 2
+
+assert sum_in_range(2, 5) == 8",0.0018874500000000002,14.267636775970459,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/300,TrustRoute-StrongestQueried,3,"import math
+
+def count_binary_seq(n):
+    return math.comb(2*n, n)
+
+assert math.isclose(count_binary_seq(1), 2.0, rel_tol=0.001)",0.00195325,27.446781635284424,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/11,TrustRoute-StrongestQueried,3,"```python
+def remove_Occ(s, ch):
+    if not ch:
+        return s
+    i = s.find(ch)
+    if i == -1:
+        return s
+    j = s.rfind(ch)
+    if i == j:
+        return s[:i] + s[i+len(ch):]
+    return s[:i] + s[i+len(ch):j] + s[j+len(ch):]
+
+assert remove_Occ(""hello"",""l"") == ""heo""
+```",0.0018560500000000001,17.726174116134644,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/437,TrustRoute-StrongestQueried,3,"def remove_odd(s):
+    return s[1::2]
+
+assert remove_odd(""python"")==(""yhn"")",0.00201495,18.838128089904785,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/102,TrustRoute-StrongestQueried,3,"def snake_to_camel(s):
+    return ''.join(w.capitalize() for w in s.split('_') if w)
+
+assert snake_to_camel('python_program') == 'PythonProgram'",0.00135595,14.108131408691406,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/775,TrustRoute-StrongestQueried,3,"def odd_position(lst):
+    return all(x % 2 != 0 for x in lst[1::2])
+
+assert odd_position([2,1,4,3,6,7,6,3]) == True",0.0009589500000000001,12.342350959777832,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/116,TrustRoute-StrongestQueried,3,"def tuple_to_int(t: tuple) -> int:
+    return int(''.join(map(str, t))) if t else 0
+
+assert tuple_to_int((1,2,3)) == 123",0.00123715,12.339163780212402,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/131,TrustRoute-StrongestQueried,3,"def reverse_vowels(s):
+    vowels = set('aeiouAEIOU')
+    chars = list(s)
+    i, j = 0, len(chars) - 1
+    while i < j:
+        if chars[i] not in vowels:
+            i += 1
+        elif chars[j] not in vowels:
+            j -= 1
+        else:
+            chars[i], chars[j] = chars[j], chars[i]
+            i += 1
+            j -= 1
+    return ''.join(chars)
+
+assert reverse_vowels(""Python"") == ""Python""",0.00156995,21.16565704345703,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/766,TrustRoute-StrongestQueried,3,"def pair_wise(lst):
+    return list(zip(lst, lst[1:]))
+
+assert pair_wise([1,1,2,3,3,4,4,5]) == [(1, 1), (1, 2), (2, 3), (3, 3), (3, 4), (4, 4), (4, 5)]",0.0009991499999999999,9.916135549545288,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/62,TrustRoute-StrongestQueried,3,"def smallest_num(lst):
+    if not lst:
+        raise ValueError(""empty list"")
+    m = lst[0]
+    for x in lst[1:]:
+        if x < m:
+            m = x
+    return m
+
+assert smallest_num([10, 20, 1, 45, 99]) == 1",0.0007752500000000001,7.366172552108765,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/623,TrustRoute-StrongestQueried,3,"def nth_nums(nums, n):
+    return [x ** n for x in nums]
+
+assert nth_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",0.0009819499999999999,12.085723400115967,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/596,TrustRoute-StrongestQueried,3,"import sys
+
+def tuple_size(t: tuple) -> int:
+    return sys.getsizeof(t)
+
+# Example check
+assert tuple_size((""A"", 1, ""B"", 2, ""C"", 3)) == sys.getsizeof((""A"", 1, ""B"", 2, ""C"", 3))",0.00087965,9.281801223754883,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/138,TrustRoute-StrongestQueried,3,"def is_Sum_Of_Powers_Of_Two(n):
+    """"""Return True if n can be expressed as a sum of non-zero powers of two (2^k with k>=1).""""""
+    return isinstance(n, int) and n > 0 and (n & 1) == 0
+
+assert is_Sum_Of_Powers_Of_Two(10) == True",0.0027693500000000003,25.586071014404297,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/395,TrustRoute-StrongestQueried,3,"from collections import Counter
+from typing import Optional
+
+def first_non_repeating_character(s: str) -> Optional[str]:
+    """"""Return the first non-repeated character or None if none exists.""""""
+    counts = Counter(s)
+    for ch in s:
+        if counts[ch] == 1:
+            return ch
+    return None
+
+assert first_non_repeating_character(""abcabc"") is None",0.00099335,11.601331949234009,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/79,TrustRoute-StrongestQueried,3,"def word_len(word):
+    return len(word) % 2 == 1
+
+assert word_len(""Hadoop"") == False",0.00108385,11.943751573562622,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/292,TrustRoute-StrongestQueried,3,"import math
+
+def find(a, b):
+    if b == 0:
+        raise ZeroDivisionError(""division by zero"")
+    return math.floor(a / b)
+
+assert find(10, 3) == 3",0.00130385,10.125787496566772,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/418,TrustRoute-StrongestQueried,3,"def Find_Max(lst):
+    return max(lst, key=len) if lst else None
+
+assert Find_Max([['A'], ['A','B'], ['A','B','C']]) == ['A','B','C']",0.00100885,12.17702603340149,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/755,TrustRoute-StrongestQueried,3,"def second_smallest(lst):
+    s = set(lst)
+    if len(s) < 2:
+        raise ValueError(""need at least two distinct values"")
+    return sorted(s)[1]
+
+assert second_smallest([1, 2, -8, -2, 0, -2]) == -2",0.00137965,12.80887746810913,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/583,TrustRoute-StrongestQueried,3,"import math
+
+def catalan_number(n):
+    if n < 0:
+        raise ValueError(""n must be non-negative"")
+    return math.comb(2*n, n) // (n+1)
+
+assert catalan_number(10) == 16796",0.00143175,14.9913010597229,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/95,TrustRoute-StrongestQueried,3,"def Find_Min_Length(lists):
+    if not lists:
+        return 0
+    return min(len(lst) for lst in lists)
+
+assert Find_Min_Length([[1],[1,2]]) == 1",0.00082405,10.631391763687134,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/644,TrustRoute-StrongestQueried,3,"def reverse_Array_Upto_K(arr, k):
+    return arr[:k][::-1] + arr[k:]
+
+assert reverse_Array_Upto_K([1, 2, 3, 4, 5, 6], 4) == [4, 3, 2, 1, 5, 6]",0.00139625,12.50021505355835,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/422,TrustRoute-StrongestQueried,3,"```python
+def find_Average_Of_Cube(n):
+    if n == 0:
+        return 0.0
+    return n * (n + 1) ** 2 / 4
+
+assert find_Average_Of_Cube(2) == 4.5
+```",0.0016696500000000002,14.059323787689209,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/172,TrustRoute-StrongestQueried,3,"def count_occurance(s):
+    return s.count(""std"")
+
+assert count_occurance(""letstdlenstdporstd"") == 3",0.0010979499999999999,13.508319854736328,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/284,TrustRoute-StrongestQueried,3,"def check_element(lst, elem):
+    return all(x == elem for x in lst)
+
+# test
+assert check_element([""green"", ""orange"", ""black"", ""white""], 'blue') == False",0.00070375,8.907095432281494,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/89,TrustRoute-StrongestQueried,3,"def closest_num(n):
+    return n - 1
+
+assert closest_num(11) == 10",0.0008138500000000001,10.428386211395264,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/608,TrustRoute-StrongestQueried,3,"def bell_Number(n):
+    if n < 0:
+        raise ValueError(""n must be non-negative"")
+    prev = [1]
+    for i in range(1, n + 1):
+        row = [prev[-1]]
+        for j in range(1, i + 1):
+            row.append(row[-1] + prev[j - 1])
+        prev = row
+    return prev[0]
+
+assert bell_Number(2) == 2",0.0025403500000000002,17.447929859161377,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/123,TrustRoute-StrongestQueried,3,"def amicable_numbers_sum(limit):
+    def spd(n, cache={}):
+        if n in cache:
+            return cache[n]
+        if n < 2:
+            cache[n] = 0
+            return 0
+        s = 1
+        r = int(n**0.5)
+        for i in range(2, r+1):
+            if n % i == 0:
+                j = n // i
+                s += i + (j if j != i else 0)
+        cache[n] = s
+        return s
+
+    total = 0
+    for a in range(1, limit + 1):
+        b = spd(a)
+        if b != a and spd(b) == a:
+            total += a
+    return total
+
+assert amicable_numbers_sum(999) == 504",0.0032149500000000003,30.635512828826904,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/740,TrustRoute-StrongestQueried,3,"def tuple_to_dict(t):
+    """"""Convert tuple to dict using adjacent elements as key/value pairs.""""""
+    return dict(zip(t[::2], t[1::2]))
+
+assert tuple_to_dict((1, 5, 7, 10, 13, 5)) == {1: 5, 7: 10, 13: 5}",0.00126815,16.983790636062622,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/744,TrustRoute-StrongestQueried,3,"def check_none(t):
+    return any(x is None for x in t)
+
+assert check_none((10, 4, 5, 6, None)) == True",0.00070505,8.625920057296753,0,0,cand-gpt-5-mini,stage2_strongest_queried,
+mbpp,Mbpp/297,TrustRoute-StrongestQueried,3,"def flatten_list(lst):
+    res = []
+    for x in lst:
+        if isinstance(x, list):
+            res += flatten_list(x)
+        else:
+            res.append(x)
+    return res
+
+assert flatten_list([0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]) == [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]",0.0016465499999999997,16.09721088409424,0,0,cand-gpt-5-mini,stage2_strongest_queried,

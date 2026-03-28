@@ -1,0 +1,139 @@
+# ISSTA/configs/agents.yaml
+agents:
+  # --- Judge (裁判) ---
+  - name: judge-claude-haiku-20241022
+    provider: gptsapi
+    model: claude-haiku-4-5-20251001  # 使用列表里的新款 Haiku
+    role: judge
+    temperature: 0.0
+    max_tokens: 1024
+    prompt_price_per_1k: 0.001
+    completion_price_per_1k: 0.005
+    base_latency_ms: 500
+    persona: rigorous
+    api_key_env: "GPTSAPI_API_KEY"
+
+  # --- Candidates (候选池) ---
+  # 1. Cost-Effective King
+  - name: cand-gpt-4o-mini
+    provider: gptsapi
+    model: gpt-4o-mini
+    role: candidate
+    tier: budget
+    quality: 0.86
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00015
+    completion_price_per_1k: 0.00060
+    base_latency_ms: 400
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+  # 2. The New Standard (2025)
+  - name: cand-gpt-5-mini
+    provider: gptsapi
+    model: gpt-5-mini
+    role: candidate
+    tier: standard
+    quality: 0.94
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00025
+    completion_price_per_1k: 0.00200
+    base_latency_ms: 550
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+  # 3. Google's Challenger
+  - name: cand-gemini-2.5-flash
+    provider: gptsapi
+    model: gemini-2.5-flash
+    role: candidate
+    tier: standard
+    quality: 0.96
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00030
+    completion_price_per_1k: 0.00250
+    base_latency_ms: 600
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+  # 4. Anthropic's Strong Model
+  - name: cand-claude-sonnet-4-5
+    provider: gptsapi
+    model: claude-sonnet-4-5-20250929  # ✅ 这才是你列表里的模型
+    role: candidate
+    tier: premium
+    quality: 0.99
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00300
+    completion_price_per_1k: 0.01500
+    base_latency_ms: 800
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+  # 5. X.AI's Entry
+  - name: cand-grok-3-mini
+    provider: gptsapi
+    model: grok-3-mini
+    role: candidate
+    tier: budget
+    quality: 0.84
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00030
+    completion_price_per_1k: 0.00050
+    base_latency_ms: 500
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+    # 6. 新增：DeepSeek-R1 (性价比之王)
+  # 如果你的 API 支持 deepseek-r1，加上它会让论文更有趣
+  - name: cand-deepseek-r1
+    provider: gptsapi
+    model: deepseek-r1
+    role: candidate
+    tier: standard
+    quality: 0.92
+    temperature: 0.2
+    max_tokens: 1024
+    prompt_price_per_1k: 0.00055
+    completion_price_per_1k: 0.00248
+    base_latency_ms: 600
+    persona: adaptive
+    api_key_env: "GPTSAPI_API_KEY"
+
+personas:
+  - name: rigorous
+    system: "You are a strict software testing oracle. Evaluate the correctness of the provided solution objectively."
+    delta_temp: -0.1
+
+  - name: code_writer
+    system: |
+      You are an expert Python developer for automated software testing.
+      Your goal is to solve the given problem by writing a self-contained, executable Python script.
+      
+      Constraints:
+      1. Output ONLY a single Markdown code block: ```python ... ```
+      2. The code must define a function (e.g., `solution()`) or script that solves the problem.
+      3. For reasoning problems, implement the logic in code and PRINT the final answer.
+      4. Do NOT include explanations, comments, or conversation.
+    delta_temp: 0.0
+
+  # 🔧 新增：推理 Persona（用于 GSM8K）
+  - name: math_reasoner
+    system: |
+      You are a mathematics expert. Solve the problem step by step.
+      Think carefully and show your work. Provide the final answer clearly.
+    delta_temp: 0.0
+
+  # 🔧 新增：自适应 Persona（通用）
+  - name: adaptive
+    system: |
+      You are a helpful AI assistant that adapts to different problem types.
+      For code generation tasks, write clean, executable code.
+      For reasoning tasks, think step by step and provide clear answers.
+      Follow the specific instructions in each prompt carefully.
+    delta_temp: 0.0
